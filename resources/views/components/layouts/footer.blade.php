@@ -49,7 +49,7 @@
             
             <div class="col-span-2 lg:col-span-4 flex flex-col lg:pr-12">
                 <h4 class="text-xs tracking-[0.3em] mb-8 uppercase text-cyan-400 font-bold glow-cyan-footer">
-                    Geely BSD <span class="text-white">/</span> Drive the Future.
+                    Geely Fatmawati <span class="text-white">/</span> Drive the Future.
                 </h4>
                 
                 <p class="text-gray-400 text-[11px] leading-relaxed uppercase tracking-[0.2em] font-light mb-8 max-w-xs">
@@ -60,12 +60,12 @@
                     <div class="flex items-start gap-4 group">
                         <svg class="w-4 h-4 text-gray-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                         <p class="text-gray-500 text-[10px] leading-relaxed uppercase tracking-widest">
-                            Kav. Commercial de Park, Jl. Boulevard Utara No.lot 2 no.17, Lengkong Wetan, Kec. Pagedangan, Kabupaten Tangerang, Banten 15331
+                            Jl. RS. Fatmawati Raya No.40 Blok 2, RT.2/RW.5, Cilandak Bar., Kec. Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12430
                         </p>
                     </div>
                     <div class="flex items-center gap-4 group">
                         <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                        <p class="text-gray-400 text-[10px] tracking-[0.2em] font-semibold">+62 857 8725 6844</p>
+                        <p class="text-gray-400 text-[10px] tracking-[0.2em] font-semibold">0857720873354</p>
                     </div>
                 </div>
             </div>

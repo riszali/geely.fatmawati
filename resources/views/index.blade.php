@@ -364,7 +364,7 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/20 to-transparent opacity-90"></div>
                     </div>
                     
-                    <div class="absolute bottom-6 left-6 right-6 glass-panel-dark rounded-3xl p-6 border border-white/10 shadow-2xl transform transition-transform duration-500 group-hover:-translate-y-2">
+                    <div class="absolute bottom-6 left-6 right-6 glass-panel-dark rounded-3xl p-6 border border-white/10 shadow-[0_15px_40px_-10px_rgba(16,185,129,0.2)] transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_30px_60px_-15px_rgba(16,185,129,0.5)]">
                         <span class="text-emerald-400 text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">{{ $car['type'] }}</span>
                         <h3 class="font-geely text-3xl text-white uppercase tracking-tight mb-2">{{ $car['name'] }}</h3>
                         <p class="text-gray-400 text-xs font-light leading-relaxed mb-4 line-clamp-2">{{ $car['desc'] }}</p>
@@ -393,8 +393,8 @@
 
     <section class="py-24 relative overflow-hidden flex items-center justify-center min-h-[60vh] bg-[#030712]">
         <div class="absolute inset-0 z-0">
-            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/2400x0-14-mxB2lNnxMqfjr7pG.webp" alt="Pembiayaan Geely Fatmawati" class="w-full h-full object-cover brightness-50 mix-blend-luminosity opacity-40">
-            <div class="absolute inset-0 bg-gradient-to-r from-[#030712] via-emerald-900/40 to-[#030712]"></div>
+            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/2400x0-14-mxB2lNnxMqfjr7pG.webp" alt="Pembiayaan Geely Fatmawati" class="w-full h-full object-cover opacity-50">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#030712]/90 via-emerald-900/40 to-[#030712]/90"></div>
         </div>
         
         <div class="relative z-10 w-full max-w-5xl mx-auto px-6 reveal-up">
@@ -581,7 +581,7 @@
                 <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png', '04 // Utility - Max Cargo', true)" class="col-span-1 md:col-span-1 md:row-span-1 glass-island rounded-[2rem] p-6 cursor-pointer flex flex-col justify-between relative group">
                     <div class="absolute inset-0 bg-gradient-to-b from-emerald-900/20 to-transparent rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div class="z-10">
-                        <span class="text-emerald-400 text-[8px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">Utility</span>
+                        <span class="textemerald-400 text-[8px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">Utility</span>
                         <h3 class="font-geely text-lg md:text-2xl text-white uppercase tracking-tight leading-none">Space Reimagined</h3>
                     </div>
                     <div class="relative w-full h-[60%] mt-auto flex items-end justify-center z-10 img-container">
@@ -649,7 +649,7 @@
 
     <div class="relative w-full pb-10 bg-[#030712]">
         
-        <div class="sticky top-0 w-full aspect-video md:h-[100vh] overflow-hidden z-0">
+        <div class="sticky top-[25vh] sm:top-[20vh] md:top-0 w-full h-[50vh] md:h-[100vh] overflow-hidden z-0 flex items-center justify-center">
             <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-lighten">
                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely---coming-soon-starray-em-i---geely-epping-1080p-h264-YZ9EbbbjRws55ErL.mp4" type="video/mp4">
             </video>
@@ -657,7 +657,7 @@
             <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#030712] to-transparent pointer-events-none z-10"></div>
         </div>
 
-        <section class="mt-[40vh] md:mt-[70vh] py-16 md:py-24 lg:py-32 bg-[#030712] relative z-30 shadow-[0_-30px_60px_rgba(3,7,18,1)] min-h-[100vh] rounded-t-[3rem] border-t border-white/5">
+        <section class="mt-[50vh] md:mt-[70vh] py-16 md:py-24 lg:py-32 bg-[#030712] relative z-30 shadow-[0_-30px_60px_rgba(3,7,18,1)] min-h-[100vh] rounded-t-[3rem] border-t border-white/5">
             <div class="absolute top-0 right-0 w-[500px] h-[500px] ambient-glow-emerald opacity-30 pointer-events-none z-0"></div>
             <div class="absolute bottom-0 left-0 w-[400px] h-[400px] ambient-glow-emerald opacity-30 pointer-events-none z-0"></div>
 

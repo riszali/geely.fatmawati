@@ -69,7 +69,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Animasi Text Gradient Premium & Smooth */
         .text-gradient-animated {
             background: linear-gradient(to right, #f8fafc 20%, #5eead4 40%, #14b8a6 60%, #f8fafc 80%);
             background-size: 200% auto;
@@ -239,7 +238,6 @@
                     </div>
                 </div>
 
-                <!-- Dock Swatch Warna: Lebar penuh di HP, Bulat Rapat di Desktop -->
                 <div class="glass-island flex flex-col md:inline-flex md:flex-row items-center justify-between md:justify-center p-4 md:py-4 md:px-8 rounded-[2rem] md:rounded-full shadow-2xl border-white/10 relative z-30 mx-auto w-full md:w-auto max-w-6xl reveal-up delay-200 gap-4 md:gap-10 backdrop-blur-3xl -mt-16 md:-mt-24">
                     
                     <div class="flex bg-black/20 p-1.5 rounded-full border border-white/5 shrink-0 w-full md:w-auto justify-center">
@@ -476,20 +474,32 @@
                     @endphp
 
                     @foreach($videos as $vid)
+                    <!-- Layout Card ADAS Video diperbaiki untuk Mobile agar teks tidak menimpa video -->
                     <div class="glass-island p-2 rounded-[2.5rem] overflow-hidden flex flex-col group border-white/5">
                         <div class="w-full aspect-video relative overflow-hidden rounded-[2rem] bg-black">
                             <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-60 mix-blend-screen group-hover:opacity-100 transition-opacity duration-700">
                                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/{{ $vid['vid'] }}" type="video/mp4">
                             </video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#03050a] to-transparent opacity-90"></div>
+                            <!-- Overlay hanya muncul di desktop -->
+                            <div class="hidden md:block absolute inset-0 bg-gradient-to-t from-[#03050a] to-transparent opacity-90"></div>
                             
-                            <div class="absolute bottom-6 left-6 pr-6">
+                            <!-- Teks Overlay khusus Desktop -->
+                            <div class="hidden md:block absolute bottom-6 left-6 pr-6">
                                 <div class="flex items-center gap-3 mb-2">
                                     <span class="text-teal-400 font-bold text-[10px] tracking-widest uppercase">{{ $vid['code'] }}</span>
                                     <h3 class="font-geely text-xl text-white uppercase tracking-tight">{{ $vid['name'] }}</h3>
                                 </div>
                                 <p class="text-gray-400 text-[11px] md:text-xs font-light leading-relaxed max-w-sm">{{ $vid['desc'] }}</p>
                             </div>
+                        </div>
+
+                        <!-- Konten Teks khusus Mobile (Muncul di bawah video) -->
+                        <div class="md:hidden p-5 pt-4">
+                             <div class="flex items-center gap-3 mb-2">
+                                <span class="text-teal-400 font-bold text-[10px] tracking-widest uppercase">{{ $vid['code'] }}</span>
+                                <h3 class="font-geely text-xl text-white uppercase tracking-tight">{{ $vid['name'] }}</h3>
+                            </div>
+                            <p class="text-gray-400 text-[11px] font-light leading-relaxed">{{ $vid['desc'] }}</p>
                         </div>
                     </div>
                     @endforeach
@@ -753,7 +763,7 @@
                     
                     const panoramaUrl = swatch.getAttribute('data-src');
                     const timestamp = new Date().getTime();
-                    wrapInt.innerHTML = `<iframe id="iframe-interior" src="https://cdn.pannellum.org/2.5/pannellum.htm?t=${timestamp}#panorama=${panoramaUrl}&autoLoad=true&autoRotate=-2" class="w-full h-full border-0" allowfullscreen></iframe>`;
+                    wrapInt.innerHTML = `<iframe id="iframe-interior" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=${panoramaUrl}&autoLoad=true&autoRotate=-2" class="w-full h-full border-0" allowfullscreen></iframe>`;
                 });
             });
 

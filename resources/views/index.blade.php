@@ -27,6 +27,18 @@
         }
 
         /* ==========================================
+           UTILITIES
+           ========================================== */
+        /* Menyembunyikan scrollbar untuk Section App Remote */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        /* ==========================================
            ULTRA-PREMIUM GLASSMORPHISM SYSTEM
            ========================================== */
         /* Dark Glass */
@@ -145,39 +157,56 @@
                 <div class="absolute -bottom-32 -right-32 w-96 h-96 ambient-glow-emerald z-0 pointer-events-none"></div>
                 
                 <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    <div class="lg:col-span-7">
-                        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-teal-500/30 bg-teal-500/10 mb-6 backdrop-blur-md">
+                    
+                    <div class="lg:col-span-7 flex flex-col">
+                        <!-- Badge -->
+                        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-teal-500/30 bg-teal-500/10 mb-6 backdrop-blur-md w-max">
                             <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse shadow-[0_0_10px_#2dd4bf]"></span>
                             <span class="text-teal-300 text-[10px] font-bold tracking-widest uppercase">Dealer Geely Fatmawati</span>
                         </div>
                         
-                        <h1 class="font-geely text-5xl sm:text-6xl md:text-7xl lg:text-[90px] text-white uppercase leading-[0.9] tracking-tighter mb-8 drop-shadow-lg">
+                        <!-- Judul -->
+                        <h1 class="font-geely text-5xl sm:text-6xl md:text-7xl lg:text-[90px] text-white uppercase leading-[0.9] tracking-tighter mb-4 lg:mb-8 drop-shadow-lg w-full">
                             Elevate <br>
                             <span class="text-gradient-premium">The Future.</span>
                         </h1>
+
+                        <!-- Gambar Mobil khusus HP (Disembunyikan di Desktop) -->
+                        <div class="flex lg:hidden justify-center items-center relative w-full my-8 sm:max-w-md self-center">
+                            <div class="w-64 h-64 sm:w-72 sm:h-72 border border-white/10 rounded-full absolute animate-[spin_30s_linear_infinite]"></div>
+                            <div class="w-48 h-48 sm:w-56 sm:h-56 border border-teal-500/30 rounded-full absolute animate-[spin_20s_linear_infinite_reverse]"></div>
+                            
+                            <div class="w-full transform z-10 p-[6px] rounded-[2rem] bg-white/5 border border-white/20 border-t-teal-400/40 border-l-white/30 backdrop-blur-md shadow-2xl relative">
+                                <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
+                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior-01-7JRFy88F1zfhn2Fx.webp" alt="Geely EV" class="w-full h-auto rounded-[1.65rem] object-cover relative z-10 pointer-events-none drop-shadow-lg">
+                            </div>
+                        </div>
                         
-                        <p class="text-gray-300 text-sm md:text-lg font-light leading-relaxed max-w-xl mb-10 border-l border-teal-500/50 pl-6">
-                            Pusat inovasi mobilitas premium di Jakarta Selatan. Temukan keseimbangan sempurna antara desain aerodinamis kelas dunia, ruang kabin futuristik, dan performa elektrik mutakhir tanpa kompromi.
+                        <!-- Deskripsi -->
+                        <p class="text-gray-300 text-sm md:text-lg font-light leading-relaxed max-w-xl mb-10 border-l border-teal-500/50 pl-6 w-full">
+                            Desain elegan, kabin nyaman, dan teknologi elektrik kini hadir di Jakarta Selatan untuk pengalaman berkendara yang lebih modern.
                         </p>
                         
-                        <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="/test-drive" class="relative group px-8 py-4 bg-white/10 border border-white/20 text-white font-bold text-[11px] tracking-[0.2em] uppercase overflow-hidden rounded-full flex items-center justify-center gap-3 hover:bg-teal-500 hover:border-teal-400 transition-all duration-500 shadow-[0_0_20px_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)]">
+                        <!-- Tombol -->
+                        <div class="flex flex-col sm:flex-row gap-4 w-full">
+                            <a href="/test-drive" class="relative group px-8 py-4 bg-white/10 border border-white/20 text-white font-bold text-[11px] tracking-[0.2em] uppercase overflow-hidden rounded-full flex items-center justify-center gap-3 hover:bg-teal-500 hover:border-teal-400 transition-all duration-500 shadow-[0_0_20px_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] w-max">
                                 <span>Book Test Drive</span>
                                 <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </a>
                         </div>
                     </div>
                     
-                    <div class="hidden lg:flex lg:col-span-5 justify-center items-center relative">
+                    <!-- Gambar Mobil khusus Desktop (Disembunyikan di HP) -->
+                    <div class="hidden lg:flex justify-center items-center relative lg:col-span-5">
                         <div class="w-72 h-72 border border-white/10 rounded-full absolute animate-[spin_30s_linear_infinite]"></div>
                         <div class="w-56 h-56 border border-teal-500/30 rounded-full absolute animate-[spin_20s_linear_infinite_reverse]"></div>
                         
-                        <!-- Frame Glassmorphism Tipis untuk Foto Mobil -->
                         <div class="w-[120%] max-w-none transform translate-x-10 scale-110 z-10 p-[6px] rounded-[2rem] bg-white/5 border border-white/20 border-t-teal-400/40 border-l-white/30 backdrop-blur-md shadow-2xl relative">
                             <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior-01-7JRFy88F1zfhn2Fx.webp" alt="Geely EV" class="w-full h-auto rounded-[1.65rem] object-cover relative z-10 pointer-events-none drop-shadow-lg">
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -325,16 +354,19 @@
     </section>
 
     <!-- ==========================================
-         SECTION 4: LINEUP (EMBEDDED GLASS CARDS)
+         SECTION 4: LINEUP (EMBEDDED GLASS CARDS - LIGHT THEME)
     =========================================== -->
-    <section id="lineup" class="py-24 lg:py-32 relative bg-noise-overlay">
-        <div class="absolute top-1/4 left-0 w-full h-[500px] ambient-glow-emerald opacity-50 z-0"></div>
+    <section id="lineup" class="py-24 lg:py-32 relative bg-white overflow-hidden border-y border-gray-200">
+        <!-- Background Putih Bercorak Hijau -->
+        <div class="absolute inset-0 z-0 opacity-30" style="background-image: radial-gradient(#10b981 1.5px, transparent 1.5px); background-size: 32px 32px;"></div>
+        <div class="absolute top-[-10%] right-[-5%] w-[400px] h-[400px] bg-emerald-200/50 rounded-full blur-[120px] pointer-events-none z-0"></div>
+        <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-teal-100/50 rounded-full blur-[120px] pointer-events-none z-0"></div>
         
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24 reveal-up">
-                <span class="text-teal-400 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Masterpiece Collection</span>
-                <h2 class="font-geely text-4xl sm:text-5xl md:text-7xl uppercase tracking-tighter text-white leading-none">
-                    Intelligent <span class="text-gray-600">Motion</span>
+                <span class="text-emerald-600 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Masterpiece Collection</span>
+                <h2 class="font-geely text-4xl sm:text-5xl md:text-7xl uppercase tracking-tighter text-gray-900 leading-none">
+                    Intelligent <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-emerald-500">Motion</span>
                 </h2>
             </div>
             
@@ -375,29 +407,29 @@
                 @endphp
 
                 @foreach($showcase as $car)
-                <div class="glass-island rounded-[2rem] h-[550px] flex flex-col relative reveal-up {{ $car['delay'] }}">
+                <div class="glass-island-light bg-white/40 border border-white/80 shadow-[0_20px_40px_-15px_rgba(16,185,129,0.1)] rounded-[2rem] h-[550px] flex flex-col relative reveal-up {{ $car['delay'] }}">
                     <div class="relative h-[65%] w-full rounded-t-[2rem] overflow-hidden img-container">
-                        <img src="{{ $car['img'] }}" alt="{{ $car['name'] }} - Dealer Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent opacity-90"></div>
+                        <img src="{{ $car['img'] }}" alt="{{ $car['name'] }} - Dealer Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center">
+                        <div class="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent opacity-90"></div>
                     </div>
                     
-                    <div class="absolute bottom-6 left-6 right-6 glass-panel-dark rounded-3xl p-6 border border-white/10 shadow-2xl transform transition-transform duration-500 hover:-translate-y-2">
-                        <span class="text-teal-400 text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">{{ $car['type'] }}</span>
-                        <h3 class="font-geely text-3xl text-white uppercase tracking-tight mb-2">{{ $car['name'] }}</h3>
-                        <p class="text-gray-400 text-xs font-light leading-relaxed mb-4 line-clamp-2">{{ $car['desc'] }}</p>
+                    <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-xl border border-white shadow-[0_15px_30px_-10px_rgba(0,0,0,0.1)] rounded-3xl p-6 transform transition-transform duration-500 hover:-translate-y-2">
+                        <span class="text-emerald-600 text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">{{ $car['type'] }}</span>
+                        <h3 class="font-geely text-3xl text-gray-900 uppercase tracking-tight mb-2">{{ $car['name'] }}</h3>
+                        <p class="text-gray-500 text-xs font-medium leading-relaxed mb-4 line-clamp-2">{{ $car['desc'] }}</p>
                         
-                        <div class="flex items-center justify-between border-t border-white/10 pt-4">
+                        <div class="flex items-center justify-between border-t border-gray-100 pt-4">
                             <div class="flex gap-4">
                                 <div>
-                                    <p class="text-white font-geely text-lg leading-none">{{ $car['stat1'] }}</p>
-                                    <p class="text-gray-500 text-[8px] uppercase tracking-widest">{{ $car['stat1_lbl'] }}</p>
+                                    <p class="text-gray-900 font-geely text-lg leading-none">{{ $car['stat1'] }}</p>
+                                    <p class="text-gray-400 text-[8px] uppercase tracking-widest">{{ $car['stat1_lbl'] }}</p>
                                 </div>
                                 <div>
-                                    <p class="text-white font-geely text-lg leading-none">{{ $car['stat2'] }}</p>
-                                    <p class="text-gray-500 text-[8px] uppercase tracking-widest">{{ $car['stat2_lbl'] }}</p>
+                                    <p class="text-gray-900 font-geely text-lg leading-none">{{ $car['stat2'] }}</p>
+                                    <p class="text-gray-400 text-[8px] uppercase tracking-widest">{{ $car['stat2_lbl'] }}</p>
                                 </div>
                             </div>
-                            <a href="{{ $car['link'] }}" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-teal-500 hover:border-teal-400 transition-colors">
+                            <a href="{{ $car['link'] }}" class="w-10 h-10 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 hover:bg-emerald-500 hover:border-emerald-400 hover:text-white transition-colors">
                                 <svg class="w-4 h-4 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </a>
                         </div>
@@ -443,16 +475,16 @@
         <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] ambient-glow-emerald opacity-40 z-0"></div>
 
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-16 items-center">
                 
-                <div class="lg:col-span-7 order-1 lg:order-2 reveal-right h-full">
-                    <div class="glass-island rounded-[2rem] p-2 relative h-[40vh] md:h-[50vh] lg:h-[600px] overflow-hidden">
+                <div class="lg:col-span-7 order-1 lg:order-2 reveal-right h-full relative z-10">
+                    <div class="glass-island rounded-[2rem] p-2 relative h-[50vh] lg:h-[600px] overflow-hidden">
                         <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative">
                             <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
                                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/say-hi-to-the-geely-ex5---geely-auto-uk-1080p-h264-_1-Sz3UdvLVUW0EehYY.mp4" type="video/mp4">
                             </video>
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#030712]/90 to-transparent"></div>
-                            <div class="absolute bottom-8 left-8">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#030712]/90 via-[#030712]/40 to-transparent"></div>
+                            <div class="absolute bottom-20 lg:bottom-8 left-6 lg:left-8 pr-6">
                                 <span class="text-teal-400 text-[10px] tracking-[0.3em] font-bold uppercase block mb-2 drop-shadow-md">Flyme Auto</span>
                                 <h4 class="font-geely text-2xl md:text-4xl uppercase tracking-tight text-white drop-shadow-lg leading-none">Future in Motion.</h4>
                             </div>
@@ -460,8 +492,8 @@
                     </div>
                 </div>
 
-                <div class="lg:col-span-5 order-2 lg:order-1 reveal-left relative z-20">
-                    <div class="glass-island p-8 md:p-12 lg:p-14 rounded-[3rem]">
+                <div class="lg:col-span-5 order-2 lg:order-1 reveal-left relative z-20 -mt-16 sm:-mt-24 lg:mt-0 mx-2 sm:mx-8 lg:mx-0">
+                    <div class="glass-island p-8 md:p-12 lg:p-14 rounded-[3rem] shadow-[0_-20px_40px_-15px_rgba(0,0,0,0.5)] lg:shadow-none bg-[#030712]/80 lg:bg-transparent backdrop-blur-3xl">
                         <div class="inline-flex items-center gap-3 mb-6 px-5 py-2.5 rounded-full border border-teal-500/30 bg-teal-500/10">
                             <span class="text-teal-400 text-[9px] font-bold tracking-[0.4em] uppercase">Redefining Joyful Rides</span>
                         </div>

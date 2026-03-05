@@ -58,13 +58,15 @@
 
                 <div class="space-y-4">
                     <div class="flex items-start gap-4 group">
-                        <svg class="w-4 h-4 text-gray-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <!-- Menambahkan flex-shrink-0 dan mengubah ukuran menjadi w-5 h-5 -->
+                        <svg class="w-5 h-5 flex-shrink-0 text-gray-500 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                         <p class="text-gray-500 text-[10px] leading-relaxed uppercase tracking-widest">
                             Jl. RS. Fatmawati Raya No.40 Blok 2, RT.2/RW.5, Cilandak Bar., Kec. Cilandak, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12430
                         </p>
                     </div>
                     <div class="flex items-center gap-4 group">
-                        <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <!-- Menambahkan flex-shrink-0 dan mengubah ukuran menjadi w-5 h-5 -->
+                        <svg class="w-5 h-5 flex-shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                         <p class="text-gray-400 text-[10px] tracking-[0.2em] font-semibold">0857720873354</p>
                     </div>
                 </div>
@@ -120,11 +122,11 @@
 
             <div class="flex flex-col items-center gap-4">
                 <p class="text-[10px] text-gray-500 uppercase tracking-[0.3em] font-medium">
-                    &copy; 2026 Geely BSD. All Rights Reserved.
+                    &copy; 2026 Geely Fatmawati. All Rights Reserved.
                 </p>
 
                 <div class="flex items-center gap-3 group">
-                    <p class="text-[10px] uppercase tracking-[0.3em] text-gray-300">Created by   |</p>
+                    <p class="text-[10px] uppercase tracking-[0.3em] text-gray-300">powered by   |</p>
                     <a href="https://lundorimagine.com" target="_blank" class="block transform transition-transform group-hover:scale-105">
                         <img class="h-5 md:h-6 w-auto opacity-100 group-hover:opacity-100 transition-all duration-500 sharp-img-footer hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]" 
                              src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/logo-pink-ma7HGZGFFvICMzRH.png" 

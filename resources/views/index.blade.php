@@ -593,63 +593,9 @@
         </div>
     </section>
 
-    <section class="py-24 lg:py-32 bg-[#030712] bg-noise-overlay overflow-hidden relative">
-        <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
-            
-            <div class="text-center max-w-4xl mx-auto mb-16 md:mb-20 reveal-up">
-                <span class="text-emerald-400 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Core Technology</span>
-                <h2 class="font-geely text-4xl sm:text-5xl md:text-7xl uppercase tracking-tighter text-white leading-[0.9] mb-6">
-                    Global <span class="text-gradient-premium">Architecture</span>
-                </h2>
-                <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed max-w-2xl mx-auto">
-                    Platform GEA mengintegrasikan superkomputer on-board dengan arsitektur baja boron terkuat, mendefinisikan ulang standar keselamatan dan kecerdasan mobil listrik dunia.
-                </p>
-            </div>
-
-            <div class="relative w-full aspect-video md:h-[650px] max-w-6xl mx-auto glass-island rounded-[2rem] p-2 flex items-center justify-center reveal-scale">
-                <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative z-10">
-                    <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-70 mix-blend-screen">
-                        <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-inside-the-gea-intelligent-electric-platform---geely-auto-720p-h264-tjCY49tcStbBVMrV.mp4" type="video/mp4">
-                    </video>
-                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#030712_100%)] opacity-80 pointer-events-none"></div>
-                </div>
-
-                <div class="absolute top-10 left-10 hidden md:block glass-panel-dark p-6 rounded-2xl border border-white/10 shadow-[0_20px_40px_rgba(16,185,129,0.15)] z-20 w-64 reveal-left delay-200">
-                    <span class="text-emerald-400 text-[9px] font-bold tracking-widest uppercase block mb-2">Neural Core</span>
-                    <h4 class="font-geely text-2xl text-white uppercase tracking-tight mb-2">AI Integration</h4>
-                    <p class="text-gray-400 text-[10px] leading-relaxed">Sinkronisasi millidetik sensor Lidar dan Radar pintar.</p>
-                </div>
-
-                <div class="absolute bottom-10 right-10 hidden md:block glass-panel-dark p-6 rounded-2xl border border-white/10 shadow-[0_20px_40px_rgba(16,185,129,0.15)] z-20 w-64 reveal-right delay-300">
-                    <span class="text-emerald-400 text-[9px] font-bold tracking-widest uppercase block mb-2">Thermal Mgmt</span>
-                    <h4 class="font-geely text-2xl text-white uppercase tracking-tight mb-2">Hyper Efficiency</h4>
-                    <p class="text-gray-400 text-[10px] leading-relaxed">Melindungi sel baterai dan memaksimalkan jarak tempuh absolut.</p>
-                </div>
-
-                <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 text-emerald-500/30 pointer-events-none animate-[spin_20s_linear_infinite] z-20" fill="none" viewBox="0 0 100 100">
-                    <circle cx="50" cy="50" r="48" stroke="currentColor" stroke-width="0.5" stroke-dasharray="4 8"/>
-                    <circle cx="50" cy="50" r="20" stroke="currentColor" stroke-width="1"/>
-                    <path d="M50 0v10M50 90v10M0 50h10M90 50h10" stroke="currentColor" stroke-width="1"/>
-                </svg>
-            </div>
-            
-            <div class="grid grid-cols-1 gap-4 mt-6 md:hidden">
-                 <div class="glass-island p-6 rounded-2xl">
-                    <h4 class="font-geely text-xl text-white uppercase mb-1">AI Integration</h4>
-                    <p class="text-gray-400 text-[10px]">Sinkronisasi millidetik sensor Lidar dan Radar pintar.</p>
-                </div>
-                <div class="glass-island p-6 rounded-2xl">
-                    <h4 class="font-geely text-xl text-white uppercase mb-1">Hyper Efficiency</h4>
-                    <p class="text-gray-400 text-[10px]">Manajemen termal canggih perlindungan baterai.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
     <div class="relative w-full pb-10 bg-[#030712]">
         
-        <div class="sticky top-[25vh] sm:top-[20vh] md:top-0 w-full h-[50vh] md:h-[100vh] overflow-hidden z-0 flex items-center justify-center">
+        <div class="sticky top-[calc(50vh-28.125vw)] md:top-0 w-full aspect-video md:aspect-auto md:h-[100vh] overflow-hidden z-0 flex items-center justify-center">
             <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-lighten">
                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely---coming-soon-starray-em-i---geely-epping-1080p-h264-YZ9EbbbjRws55ErL.mp4" type="video/mp4">
             </video>
@@ -657,10 +603,8 @@
             <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#030712] to-transparent pointer-events-none z-10"></div>
         </div>
 
-        <section class="mt-[50vh] md:mt-[70vh] py-16 md:py-24 lg:py-32 bg-[#030712] relative z-30 shadow-[0_-30px_60px_rgba(3,7,18,1)] min-h-[100vh] rounded-t-[3rem] border-t border-white/5">
-            <div class="absolute top-0 right-0 w-[500px] h-[500px] ambient-glow-emerald opacity-30 pointer-events-none z-0"></div>
-            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] ambient-glow-emerald opacity-30 pointer-events-none z-0"></div>
-
+        <section class="mt-[40vh] md:mt-[70vh] py-16 md:py-24 lg:py-32 bg-[#030712] relative z-30 min-h-[100vh] rounded-t-[2rem] md:rounded-t-[3rem] border-t-[3px] border-emerald-500 shadow-none">
+            
             <div class="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-20 lg:gap-y-12 items-center lg:items-start">
                 
                 <div class="order-1 lg:col-start-1 lg:row-start-1 flex flex-col justify-center">
@@ -685,8 +629,7 @@
                     </div>
                 </div>
 
-                <div class="order-3 lg:col-start-2 lg:row-start-2 glass-island p-8 rounded-[2rem] reveal-up delay-400 relative z-10 group overflow-hidden">
-                    <div class="absolute -right-10 -top-10 w-32 h-32 ambient-glow-emerald opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="order-3 lg:col-start-2 lg:row-start-2 glass-island p-8 rounded-[2rem] reveal-up delay-400 relative z-10 group overflow-hidden border-l-[3px] border-l-transparent hover:border-l-emerald-500 transition-all duration-300">
                     <h4 class="text-white font-geely text-2xl mb-4 relative z-10 group-hover:text-emerald-300 transition-colors drop-shadow-sm">
                         Highest Thermal Efficiency (46.5%)
                     </h4>
@@ -695,8 +638,7 @@
                     </p>
                 </div>
 
-                <div class="order-4 lg:col-start-1 lg:row-start-2 glass-island p-8 rounded-[2rem] reveal-up delay-300 relative group overflow-hidden">
-                    <div class="absolute -right-10 -top-10 w-32 h-32 ambient-glow-emerald opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div class="order-4 lg:col-start-1 lg:row-start-2 glass-island p-8 rounded-[2rem] reveal-up delay-300 relative group overflow-hidden border-l-[3px] border-l-transparent hover:border-l-emerald-500 transition-all duration-300">
                     <h4 class="text-white font-geely text-2xl mb-4 relative z-10 group-hover:text-emerald-300 transition-colors drop-shadow-sm">
                         High Efficiency Electric Drive
                     </h4>

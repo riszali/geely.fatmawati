@@ -84,6 +84,22 @@
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
             pointer-events: none; z-index: 10; mix-blend-mode: overlay;
         }
+        
+        /* Motif High-Tech Hexagon & Light Sweep 360 Viewer */
+        .bg-studio-motif {
+            background-image: 
+                linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.15) 38%, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0.15) 42%, transparent 50%),
+                radial-gradient(circle at 50% 100%, rgba(255,255,255,0.4) 0%, transparent 60%),
+                url("data:image/svg+xml,%3Csvg width='40' height='69.28203230275509' viewBox='0 0 40 69.28203230275509' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.05'%3E%3Cpath d='M0 22.82l20-11.547 20 11.547v23.094l-20 11.547-20-11.547V22.82zm2 3.464v16.17L19.236 51.7l17.528-9.246v-16.17L19.236 17.038 2 26.284z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-size: 200% 100%, 100% 100%, 60px 103.92px;
+            background-position: 100% 0, center bottom, center center;
+            animation: lightSweep 12s ease-in-out infinite alternate;
+        }
+
+        @keyframes lightSweep {
+            0% { background-position: 100% 0, center bottom, center center; }
+            100% { background-position: -100% 0, center bottom, center center; }
+        }
 
         .img-container { overflow: hidden; cursor: pointer; }
         .img-container img { transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1); }
@@ -138,13 +154,13 @@
                 <div class="inline-flex flex-col sm:flex-row items-center p-1.5 md:p-2 bg-white/5 border border-white/10 backdrop-blur-2xl rounded-full shadow-2xl mb-8 mx-auto reveal-up delay-100">
                     <div class="px-8 py-3 md:py-4 flex flex-col md:flex-row items-center gap-2">
                         <span class="text-gray-400 text-[9px] font-bold tracking-[0.3em] uppercase">PRO</span>
-                        <span class="font-geely text-lg md:text-xl text-white tracking-tight">Rp 229.900.000</span>
+                        <span class="font-geely text-lg md:text-xl text-white tracking-tight">Rp 229.9M</span>
                     </div>
                     <div class="hidden sm:block w-[1px] h-8 bg-white/10"></div>
                     <div class="w-full sm:hidden h-[1px] bg-white/10 my-1"></div>
                     <div class="px-8 py-3 md:py-4 flex flex-col md:flex-row items-center gap-2 bg-teal-500/10 rounded-full border border-teal-500/30">
                         <span class="text-teal-400 text-[9px] font-bold tracking-[0.3em] uppercase">MAX</span>
-                        <span class="font-geely text-lg md:text-xl text-white tracking-tight">Rp 259.900.000</span>
+                        <span class="font-geely text-lg md:text-xl text-white tracking-tight">Rp 259.9M</span>
                     </div>
                 </div>
 
@@ -209,7 +225,7 @@
         </section>
 
         <!-- ==========================================
-             SECTION 3: 360 VIEWER (APP-LIKE DOCK)
+             SECTION 3: 360 VIEWER DENGAN MOTIF STUDIO
         =========================================== -->
         <section id="specs" class="py-24 md:py-32 lg:py-48 relative z-30 overflow-hidden bg-[#03050a]">
             <!-- Subtle Background Glows -->
@@ -217,7 +233,7 @@
             
             <div class="max-w-[1600px] mx-auto px-4 md:px-12 relative z-10 text-center">
                 
-                <!-- Judul 1 baris -->
+                <!-- Judul 1 baris sesuai instruksi -->
                 <h2 class="font-geely text-3xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter mb-16 reveal-up leading-tight text-white drop-shadow-lg">
                     INTELLIGENT <span class="text-gradient-premium">DRIVING</span>
                 </h2>
@@ -226,8 +242,16 @@
                 <div class="glass-island p-2 md:p-3 rounded-[2rem] md:rounded-[3rem] overflow-hidden reveal-scale w-full relative z-10 mb-12 aspect-video max-w-6xl mx-auto shadow-2xl border-white/5">
                     <div class="relative w-full h-full rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden">
                         
+                        <!-- Studio Background dengan Animasi Light Sweep & Hexagon -->
                         <div id="360-bg-container" class="absolute inset-0 transition-colors duration-1000" style="background-color: #e2e8f0;">
-                            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.7)_0%,transparent_100%)]"></div>
+                            <!-- Motif Hexagon Grid & Sweeping Light yang menyatu dengan warna background -->
+                            <div class="absolute inset-0 bg-studio-motif mix-blend-overlay"></div>
+                            
+                            <!-- Pencahayaan Spotlight Tengah (Mengurangi kesan flat) -->
+                            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,rgba(0,0,0,0.4)_100%)] pointer-events-none mix-blend-overlay"></div>
+                            
+                            <!-- Bayangan Tepi/Vignette Halus -->
+                            <div class="absolute inset-0 shadow-[inset_0_0_120px_rgba(0,0,0,0.15)] pointer-events-none"></div>
                         </div>
                         
                         <div id="wrapper-exterior" class="absolute z-10 transition-opacity duration-700" style="top: -20%; left: -20%; width: 140%; height: 140%; opacity: 1; pointer-events: auto;">
@@ -288,8 +312,8 @@
                 </div>
 
                 <div class="relative reveal-up delay-200 w-full">
-                    <!-- Slider div dipertahankan untuk layout horizontal swipe (Tombol Dihilangkan) -->
-                    <div class="flex gap-6 overflow-x-auto no-scrollbar snap-x-mandatory pb-10">
+                    <!-- Slider horizontal swipe (Tanpa Tombol) -->
+                    <div class="flex gap-6 overflow-x-auto no-scrollbar snap-x-mandatory pb-10 cursor-grab active:cursor-grabbing">
                         
                         <!-- Slider Card 1 -->
                         <div class="min-w-[85vw] md:min-w-[450px] snap-center">
@@ -299,7 +323,7 @@
                                     <div class="absolute inset-0 bg-gradient-to-t from-[#03050a] via-transparent to-transparent opacity-80"></div>
                                     <div class="absolute bottom-8 left-8 right-8">
                                         <span class="text-teal-400 text-[9px] font-bold tracking-[0.3em] uppercase mb-2 block">Versatility</span>
-                                        <h3 class="font-geely text-2xl text-white uppercase tracking-tight">1320L Rear Trunk Capacity</h3>
+                                        <h3 class="font-geely text-2xl text-white uppercase tracking-tight">Kapasitas Bagasi Belakang 1320L</h3>
                                     </div>
                                 </div>
                             </div>
@@ -313,7 +337,7 @@
                                     <div class="absolute inset-0 bg-gradient-to-t from-[#03050a] via-transparent to-transparent opacity-80"></div>
                                     <div class="absolute bottom-8 left-8 right-8">
                                         <span class="text-emerald-400 text-[9px] font-bold tracking-[0.3em] uppercase mb-2 block">Smart Storage</span>
-                                        <h3 class="font-geely text-2xl text-white uppercase tracking-tight">70L Large Front Trunk</h3>
+                                        <h3 class="font-geely text-2xl text-white uppercase tracking-tight">Bagasi Depan 70L</h3>
                                     </div>
                                 </div>
                             </div>
@@ -327,7 +351,7 @@
                                     <div class="absolute inset-0 bg-gradient-to-t from-[#03050a] via-transparent to-transparent opacity-80"></div>
                                     <div class="absolute bottom-8 left-8 right-8">
                                         <span class="text-teal-400 text-[9px] font-bold tracking-[0.3em] uppercase mb-2 block">Interior Design</span>
-                                        <h3 class="font-geely text-2xl text-white uppercase tracking-tight">Bridge Style Storage</h3>
+                                        <h3 class="font-geely text-2xl text-white uppercase tracking-tight">Penyimpanan Gaya Jembatan</h3>
                                     </div>
                                 </div>
                             </div>
@@ -439,9 +463,9 @@
         <!-- ==========================================
              SECTION 7: SAFETY (ADAS DIGITAL CLUSTER)
         =========================================== -->
-        <section id="safety" class="py-16 md:py-24 lg:py-40 bg-[#03050a] relative overflow-hidden border-t border-white/5">
+        <section id="safety" class="py-24 lg:py-40 bg-[#03050a] relative overflow-hidden border-t border-white/5">
             <div class="max-w-[1200px] mx-auto px-6 relative z-10 text-center">
-                <div class="mb-12 md:mb-16 reveal-up">
+                <div class="mb-16 reveal-up">
                     <span class="text-teal-400 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Advanced Systems</span>
                     <h2 class="font-geely text-4xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-white mb-6 leading-[1]">
                         INTELLIGENT <span class="text-gradient-premium">SAFETY</span>
@@ -452,24 +476,23 @@
                 </div>
 
                 <!-- Digital Dashboard Layout for ADAS Icons -->
-                <div class="glass-island p-6 md:p-12 rounded-[2rem] md:rounded-[3rem] reveal-scale delay-200 shadow-2xl relative overflow-hidden">
+                <div class="glass-island p-8 md:p-12 rounded-[3rem] reveal-scale delay-200 shadow-2xl relative overflow-hidden">
                     <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(20,184,166,0.1)_0%,transparent_70%)]"></div>
                     
-                    <!-- Diubah menjadi flex horizontal scroll pada mobile untuk menghemat ruang -->
                     <div class="flex overflow-x-auto md:grid md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 relative z-10 no-scrollbar snap-x-mandatory pb-4 md:pb-0">
                         @php
                             $adas_features = [
                                 ['code' => 'ACC', 'name' => 'Adaptive<br>Cruise'],
-                                ['code' => 'AEB', 'name' => 'Auto<br>Braking'],
-                                ['code' => 'LDW', 'name' => 'Lane<br>Departure'],
-                                ['code' => 'FCW', 'name' => 'Forward<br>Collision'],
-                                ['code' => 'LCA', 'name' => 'Lane<br>Assist'],
-                                ['code' => 'DOW', 'name' => 'Door<br>Warning'],
-                                ['code' => 'ROW', 'name' => 'Rear<br>Collision'],
-                                ['code' => 'IHBC', 'name' => 'High Beam<br>Control'],
-                                ['code' => 'RCTA', 'name' => 'Cross Traffic<br>Alert'],
-                                ['code' => 'BSD', 'name' => 'Blind<br>Spot'],
-                                ['code' => 'FVDW', 'name' => 'Vehicle<br>Departure']
+                                ['code' => 'AEB', 'name' => 'Pengereman<br>Otomatis'],
+                                ['code' => 'LDW', 'name' => 'Peringatan<br>Jalur'],
+                                ['code' => 'FCW', 'name' => 'Benturan<br>Depan'],
+                                ['code' => 'LCA', 'name' => 'Bantuan<br>Jalur'],
+                                ['code' => 'DOW', 'name' => 'Peringatan<br>Pintu'],
+                                ['code' => 'ROW', 'name' => 'Benturan<br>Belakang'],
+                                ['code' => 'IHBC', 'name' => 'Kontrol<br>Lampu Jauh'],
+                                ['code' => 'RCTA', 'name' => 'Lalu Lintas<br>Silang'],
+                                ['code' => 'BSD', 'name' => 'Titik<br>Buta'],
+                                ['code' => 'FVDW', 'name' => 'Keberangkatan<br>Kendaraan Depan']
                             ];
                         @endphp
 
@@ -482,7 +505,7 @@
                         </div>
                         @endforeach
                     </div>
-
+                    
                     <!-- Indikator scroll untuk mobile -->
                     <div class="text-center mt-2 flex md:hidden justify-center items-center gap-2 text-teal-400 text-[8px] font-bold uppercase tracking-widest animate-pulse relative z-10">
                         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -577,7 +600,7 @@
                 <div class="text-center mb-16 lg:mb-24 reveal-up">
                     <span class="text-gray-500 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">The Blueprint</span>
                     <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl uppercase tracking-tighter text-white mb-6 leading-tight">
-                        Dive Into <span class="text-gradient-teal">The Details</span>
+                        DIVE INTO <span class="text-gradient-teal">THE DETAILS</span>
                     </h2>
                 </div>
 
@@ -587,20 +610,20 @@
                     <!-- Left: Navigation Links (Dipindah ke bawah pada versi mobile) -->
                     <div class="lg:col-span-6 flex flex-col gap-6 reveal-left order-2 lg:order-1">
                         
-                        <!-- Exterior -->
-                        <a href="{{ route('models.ex2.exterior') }}" class="glass-island p-2 rounded-[2rem] h-[160px] md:h-[200px] group img-container flex items-end relative overflow-hidden">
-                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/banner_ex2b-Rcl937dqFR7EP4xN.jpg" alt="Eksterior" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-50 group-hover:opacity-80 transition-opacity">
+                        <!-- Exterior (Current) -->
+                        <div class="glass-island p-2 rounded-[2rem] h-[160px] md:h-[200px] group flex items-end relative overflow-hidden border border-teal-500/50">
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/banner_ex2b-Rcl937dqFR7EP4xN.jpg" alt="Eksterior" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-40">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#03050a] to-transparent opacity-90"></div>
                             <div class="relative z-10 p-6 md:p-8 w-full flex justify-between items-end">
                                 <div>
-                                    <p class="text-teal-400 text-[9px] uppercase font-bold tracking-[0.3em] mb-2">Explore</p>
+                                    <p class="text-teal-400 text-[9px] uppercase font-bold tracking-[0.3em] mb-2">Currently Viewing</p>
                                     <h3 class="text-white font-geely text-3xl uppercase tracking-tighter">Exterior</h3>
                                 </div>
-                                <div class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white group-hover:bg-white group-hover:text-black transition-all">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                <div class="w-10 h-10 rounded-full border border-teal-500/50 bg-teal-500/20 flex items-center justify-center text-teal-400">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 </div>
                             </div>
-                        </a>
+                        </div>
 
                         <!-- Interior -->
                         <a href="{{ route('models.ex2.interior') }}" class="glass-island p-2 rounded-[2rem] h-[160px] md:h-[200px] group img-container flex items-end relative overflow-hidden">
@@ -633,54 +656,63 @@
                         </a>
                     </div>
 
-                    <!-- Right: Dimensions (Dipindah ke atas pada versi mobile) -->
+                    <!-- Right: Dimensions Box & Actions -->
                     <div class="lg:col-span-6 flex flex-col gap-6 reveal-right delay-200 order-1 lg:order-2">
+                        
+                        <!-- Dimensions Box -->
                         <div class="glass-island p-8 md:p-12 rounded-[2.5rem] flex flex-col relative overflow-hidden h-full">
                             <div class="absolute -top-20 -right-20 w-64 h-64 ambient-glow-teal opacity-20"></div>
                             
-                            <h4 class="text-white font-geely text-3xl mb-1">Dimensions</h4>
-                            <p class="text-gray-500 text-[9px] font-bold tracking-[0.3em] uppercase mb-10">(in millimeters)</p>
+                            <h4 class="text-white font-geely text-3xl mb-1 relative z-10">DIMENSIONS</h4>
+                            <p class="text-gray-500 text-[9px] md:text-[10px] font-bold tracking-widest uppercase mb-8 relative z-10">(in milimeters)</p>
                             
-                            <div class="grid grid-cols-2 gap-8 relative z-10 mb-8 border-t border-white/5 pt-8">
+                            <div class="grid grid-cols-2 gap-6 md:gap-8 relative z-10 mb-4 border-t border-white/5 pt-8">
                                 <div>
-                                    <p class="text-gray-500 text-[10px] uppercase tracking-widest mb-1">Length</p>
-                                    <p class="font-geely text-3xl text-white">4135</p>
+                                    <p class="text-gray-500 text-[10px] uppercase tracking-wider mb-1">Length</p>
+                                    <p class="font-geely text-3xl md:text-4xl text-white">4135</p>
                                 </div>
                                 <div>
-                                    <p class="text-gray-500 text-[10px] uppercase tracking-widest mb-1">Width</p>
-                                    <p class="font-geely text-3xl text-white">1805</p>
+                                    <p class="text-gray-500 text-[10px] uppercase tracking-wider mb-1">Width</p>
+                                    <p class="font-geely text-3xl md:text-4xl text-white">1805</p>
                                 </div>
                                 <div>
-                                    <p class="text-gray-500 text-[10px] uppercase tracking-widest mb-1">Height</p>
-                                    <p class="font-geely text-3xl text-white">1580</p>
+                                    <p class="text-gray-500 text-[10px] uppercase tracking-wider mb-1">Height</p>
+                                    <p class="font-geely text-3xl md:text-4xl text-white">1580</p>
                                 </div>
                                 <div>
-                                    <p class="text-gray-500 text-[10px] uppercase tracking-widest mb-1">Wheelbase</p>
-                                    <p class="font-geely text-3xl text-white">2650</p>
+                                    <p class="text-gray-500 text-[10px] uppercase tracking-wider mb-1">Wheelbase</p>
+                                    <p class="font-geely text-3xl md:text-4xl text-white">2650</p>
                                 </div>
                             </div>
 
-                            <div class="w-full relative mt-auto opacity-40 mix-blend-screen pointer-events-none">
-                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/sketch-ex2-9YIJTReOoLDy0jje.webp" alt="Sketsa Geely EX2" class="w-full h-auto object-contain filter invert">
+                            <div class="w-full relative mt-auto mix-blend-screen opacity-40 group-hover:opacity-60 transition-opacity duration-500 pointer-events-none">
+                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/sketch-ex2-9YIJTReOoLDy0jje.webp" alt="EX2 Sketch" class="w-full h-auto object-contain filter invert">
                             </div>
                         </div>
 
-                        <!-- Buttons Bottom -->
-                        <div class="flex flex-col sm:flex-row gap-4 w-full">
-                            <a href="#" class="w-full sm:w-1/2 py-4 rounded-full border border-white/10 text-white font-bold text-[9px] tracking-[0.2em] uppercase text-center hover:bg-white/5 transition-colors flex items-center justify-center gap-2">
-                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-                                Brochure
+                        <!-- Action Buttons -->
+                        <div class="flex flex-col gap-3 w-full">
+                            <a href="{{ route('models.ex2.specification') }}" class="btn-shimmer w-full py-4 md:py-5 rounded-full bg-teal-500 text-white font-bold text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-center hover:scale-[1.02] transition-transform duration-300 shadow-[0_0_30px_rgba(20,184,166,0.3)]">
+                                Show Full Specs
                             </a>
-                            <a href="#" class="w-full sm:w-1/2 py-4 rounded-full border border-white/10 text-white font-bold text-[9px] tracking-[0.2em] uppercase text-center hover:bg-white/5 transition-colors flex items-center justify-center gap-2">
-                                <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                Owner's Manual
-                            </a>
+                            <div class="flex flex-col sm:flex-row gap-3 w-full">
+                                <a href="#" class="w-full sm:w-1/2 py-3 md:py-4 rounded-full border border-white/10 text-white font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-center hover:bg-white/5 transition-colors duration-300 flex items-center justify-center gap-2">
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                    Brochure
+                                </a>
+                                <a href="{{ route('test-drive') }}" class="w-full sm:w-1/2 py-3 md:py-4 rounded-full border border-white/10 text-white font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-center hover:bg-white/5 transition-colors duration-300 flex items-center justify-center gap-2">
+                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                    Book Test Drive
+                                </a>
+                            </div>
                         </div>
+
                     </div>
-
                 </div>
+
             </div>
         </section>
+
     </div>
 
     <!-- ==========================================
@@ -754,6 +786,7 @@
                 }
             });
 
+            // Exterior Swatches Click (Dengan reload iframe untuk atasi bug cache)
             const swatchesExt = document.querySelectorAll('.swatch-ext');
             swatchesExt.forEach(swatch => {
                 swatch.addEventListener('click', () => {
@@ -763,6 +796,7 @@
                     });
                     swatch.classList.add('active', 'border-white', 'ring-1', 'ring-white/50', 'ring-offset-2', 'ring-offset-transparent');
                     swatch.classList.remove('border-white/20');
+                    
                     colorNameDisplay.style.opacity = 0;
                     setTimeout(() => {
                         colorNameDisplay.textContent = swatch.getAttribute('data-name');
@@ -770,10 +804,13 @@
                         document.getElementById('360-bg-container').style.backgroundColor = swatch.getAttribute('data-bg-color');
                         colorNameDisplay.style.opacity = 1;
                     }, 150);
-                    frameExt.src = swatch.getAttribute('data-src');
+                    
+                    const extUrl = swatch.getAttribute('data-src');
+                    wrapExt.innerHTML = `<iframe id="iframe-exterior" src="${extUrl}" class="w-full h-full border-0" allowfullscreen></iframe>`;
                 });
             });
 
+            // Interior Swatches Click (Dengan reload iframe untuk atasi bug cache)
             const swatchesInt = document.querySelectorAll('.swatch-int');
             swatchesInt.forEach(swatch => {
                 swatch.addEventListener('click', () => {
@@ -783,14 +820,17 @@
                     });
                     swatch.classList.add('active', 'border-white', 'ring-1', 'ring-white/50', 'ring-offset-2', 'ring-offset-transparent');
                     swatch.classList.remove('border-white/20');
+                    
                     colorNameDisplay.style.opacity = 0;
                     setTimeout(() => {
                         colorNameDisplay.textContent = swatch.getAttribute('data-name');
                         colorNameDisplay.style.color = swatch.getAttribute('data-text-color');
                         colorNameDisplay.style.opacity = 1;
                     }, 150);
+                    
                     const panoramaUrl = swatch.getAttribute('data-src');
-                    frameInt.src = `https://cdn.pannellum.org/2.5/pannellum.htm?t=${new Date().getTime()}#panorama=${panoramaUrl}&autoLoad=true&autoRotate=-2`;
+                    const timestamp = new Date().getTime();
+                    wrapInt.innerHTML = `<iframe id="iframe-interior" src="https://cdn.pannellum.org/2.5/pannellum.htm?t=${timestamp}#panorama=${panoramaUrl}&autoLoad=true&autoRotate=-2" class="w-full h-full border-0" allowfullscreen></iframe>`;
                 });
             });
 

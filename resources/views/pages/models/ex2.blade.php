@@ -1,29 +1,23 @@
 <x-layouts.app>
-    <!-- ==========================================
-         ADVANCED SEO META TAGS FOR GEELY EX2 FATMAWATI
-    =========================================== -->
     @push('head')
         <title>Harga & Spesifikasi Geely EX2 2024 Jakarta | Crossover Listrik Modern</title>
         <meta name="description" content="Temukan Geely EX2, crossover listrik stylish dengan jarak tempuh 395km. Harga promo mulai Rp 229 Juta hanya di Dealer Resmi Geely Fatmawati Jakarta Selatan. Cek spesifikasi lengkap di sini!">
         <meta name="keywords" content="Geely EX2, Harga Geely EX2, Mobil Listrik Murah Jakarta, Crossover EV Jakarta, Geely Fatmawati, Promo Mobil Geely 2024, Spesifikasi Geely EX2 Indonesia">
         <link rel="canonical" href="https://geelyfatmawati.id/models/ex2">
         
-        <!-- Open Graph / Facebook -->
         <meta property="og:type" content="product">
         <meta property="og:url" content="https://geelyfatmawati.id/models/ex2">
         <meta property="og:title" content="Geely EX2: Crossover Listrik Cerdas Harga Mulai 229 Juta | Geely Fatmawati">
         <meta property="og:description" content="Bawa pulang Geely EX2 dengan fitur ADAS lengkap dan desain pemenang award. Kunjungi showroom Geely Fatmawati hari ini.">
         <meta property="og:image" content="https://assets.zyrosite.com/Yle46KEPN6IkVONg/banner_ex2b-Rcl937dqFR7EP4xN.jpg">
 
-        <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:title" content="Harga Geely EX2 2024 - Dealer Resmi Jakarta Selatan">
+        <meta property="twitter:url" content="https://geelyfatmawati.id/">
+        <meta property="twitter:title" content="Dealer Resmi Geely Fatmawati Jakarta | Kendaraan Listrik Premium">
+        <meta property="twitter:description" content="Kunjungi Showroom Dealer Resmi Geely Fatmawati Jakarta Selatan. Dapatkan promo terbaru dan test drive Geely EX5 & EX2.">
         <meta property="twitter:image" content="https://assets.zyrosite.com/Yle46KEPN6IkVONg/banner_ex2b-Rcl937dqFR7EP4xN.jpg">
     @endpush
 
-    <!-- ==========================================
-         ULTRA-PREMIUM MINIMALIST GLASS STYLES
-    =========================================== -->
     <style>
         html, body { 
             scroll-behavior: smooth; 
@@ -31,13 +25,10 @@
             max-width: 100vw;
             width: 100%;
             position: relative;
-            background-color: #03050a; /* Deepest blue/black slate */
+            background-color: #03050a;
             color: #f8fafc;
         }
 
-        /* -------------------------------------------
-           TRUE PREMIUM GLASSMORPHISM
-           ------------------------------------------- */
         .glass-island {
             background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(40px);
@@ -50,7 +41,7 @@
 
         .glass-island:hover {
             background: rgba(255, 255, 255, 0.04);
-            border-top: 1px solid rgba(45, 212, 191, 0.3); /* Very subtle teal highlight */
+            border-top: 1px solid rgba(45, 212, 191, 0.3);
             box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.1);
             transform: translateY(-4px);
         }
@@ -63,7 +54,6 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         }
 
-        /* Editorial Gradients & Lights */
         .ambient-glow-teal { background: radial-gradient(circle, rgba(20, 184, 166, 0.12) 0%, rgba(0, 0, 0, 0) 70%); mix-blend-mode: screen; }
         .ambient-glow-emerald { background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, rgba(0, 0, 0, 0) 70%); mix-blend-mode: screen; }
 
@@ -79,13 +69,26 @@
             -webkit-text-fill-color: transparent;
         }
 
+        /* Animasi Text Gradient Premium & Smooth */
+        .text-gradient-animated {
+            background: linear-gradient(to right, #f8fafc 20%, #5eead4 40%, #14b8a6 60%, #f8fafc 80%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: premiumShine 6s cubic-bezier(0.25, 0.1, 0.25, 1) infinite alternate;
+        }
+
+        @keyframes premiumShine {
+            0% { background-position: 0% center; }
+            100% { background-position: 100% center; }
+        }
+
         .bg-noise-overlay::before {
             content: ""; position: absolute; inset: 0;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.025'/%3E%3C/svg%3E");
             pointer-events: none; z-index: 10; mix-blend-mode: overlay;
         }
         
-        /* Motif High-Tech Hexagon & Light Sweep 360 Viewer */
         .bg-studio-motif {
             background-image: 
                 linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.15) 38%, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0.15) 42%, transparent 50%),
@@ -105,7 +108,6 @@
         .img-container img { transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1); }
         .glass-island:hover .img-container img { transform: scale(1.05); }
 
-        /* Animation Classes */
         .reveal-up { opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal-left { opacity: 0; transform: translateX(-30px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
         .reveal-right { opacity: 0; transform: translateX(30px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
@@ -124,43 +126,35 @@
 
     <div class="w-full overflow-hidden bg-[#03050a] font-inter">
 
-        <!-- ==========================================
-             SECTION 1: HERO (EDITORIAL ENTRANCE)
-        =========================================== -->
-        <section class="relative min-h-[100svh] w-full flex flex-col justify-end pb-20 md:pb-32 overflow-hidden bg-[#03050a]">
-            <!-- Hero Background Video -->
+        <section class="relative min-h-[100svh] w-full flex flex-col justify-center pt-24 pb-16 md:justify-end md:pt-0 md:pb-32 overflow-hidden bg-[#03050a]">
             <div class="absolute inset-0 z-0 bg-noise-overlay">
                 <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-60 mix-blend-lighten transform scale-105">
                     <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-more-space-than-you-think---geely-auto-indonesia-720p-h264-vEUDO2JgiwOk2CFi.mp4" type="video/mp4">
                 </video>
-                <!-- Heavy Vignette to keep focus on center and text -->
                 <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#03050a_100%)] opacity-90"></div>
                 <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#03050a] via-[#03050a]/80 to-transparent"></div>
             </div>
 
-            <!-- Content Area -->
-            <div class="relative z-20 w-full max-w-[1400px] mx-auto px-6 text-center reveal-up">
+            <div class="relative z-20 w-full max-w-[1400px] mx-auto px-6 text-center reveal-up flex flex-col items-center">
                 
                 <div class="inline-flex items-center gap-3 mb-6 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md">
                     <span class="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse shadow-[0_0_8px_#2dd4bf]"></span>
                     <span class="text-gray-300 text-[9px] md:text-[10px] tracking-[0.4em] font-medium uppercase">Geely EX2</span>
                 </div>
 
-                <h1 class="font-geely text-[70px] sm:text-8xl md:text-9xl lg:text-[150px] text-white uppercase leading-[0.8] tracking-tighter drop-shadow-2xl mb-10">
+                <h1 class="font-geely text-[70px] sm:text-8xl md:text-9xl lg:text-[150px] text-white uppercase leading-[0.8] tracking-tighter drop-shadow-2xl mb-10 w-full">
                     <span class="text-gradient-premium">EX2</span>
                 </h1>
 
-                <!-- Sleek Integrated Pricing Pill -->
-                <div class="inline-flex flex-col sm:flex-row items-center p-1.5 md:p-2 bg-white/5 border border-white/10 backdrop-blur-2xl rounded-full shadow-2xl mb-8 mx-auto reveal-up delay-100">
-                    <div class="px-8 py-3 md:py-4 flex flex-col md:flex-row items-center gap-2">
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center p-2 sm:p-1.5 md:p-2 bg-white/5 border border-white/10 backdrop-blur-2xl rounded-3xl sm:rounded-full shadow-2xl mb-8 w-full max-w-xs sm:max-w-max reveal-up delay-100 gap-2 sm:gap-0">
+                    <div class="px-6 py-3 md:py-4 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2">
                         <span class="text-gray-400 text-[9px] font-bold tracking-[0.3em] uppercase">PRO</span>
-                        <span class="font-geely text-lg md:text-xl text-white tracking-tight">Rp 229.9M</span>
+                        <span class="font-geely text-lg md:text-xl text-white tracking-tight whitespace-nowrap">Rp 229.900.000</span>
                     </div>
-                    <div class="hidden sm:block w-[1px] h-8 bg-white/10"></div>
-                    <div class="w-full sm:hidden h-[1px] bg-white/10 my-1"></div>
-                    <div class="px-8 py-3 md:py-4 flex flex-col md:flex-row items-center gap-2 bg-teal-500/10 rounded-full border border-teal-500/30">
+                    <div class="hidden sm:block w-[1px] h-8 bg-white/10 mx-2"></div>
+                    <div class="px-6 py-3 md:py-4 flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 bg-teal-500/10 rounded-2xl sm:rounded-full border border-teal-500/30">
                         <span class="text-teal-400 text-[9px] font-bold tracking-[0.3em] uppercase">MAX</span>
-                        <span class="font-geely text-lg md:text-xl text-white tracking-tight">Rp 259.9M</span>
+                        <span class="font-geely text-lg md:text-xl text-white tracking-tight whitespace-nowrap">Rp 259.900.000</span>
                     </div>
                 </div>
 
@@ -168,7 +162,7 @@
                     *OTR Jakarta & Khusus SPK hingga 15 Februari 2026<br class="hidden sm:block"> atau 2000 Pelanggan SPK Pertama
                 </p>
 
-                <div class="flex justify-center reveal-up delay-300">
+                <div class="flex justify-center reveal-up delay-300 w-full">
                     <a href="#award" class="group flex flex-col items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
                         <span class="text-[9px] tracking-[0.3em] uppercase text-white font-medium">Explore Design</span>
                         <div class="w-[1px] h-12 bg-gradient-to-b from-white to-transparent group-hover:h-16 transition-all duration-500"></div>
@@ -177,14 +171,10 @@
             </div>
         </section>
 
-        <!-- ==========================================
-             SECTION 2: EUROPEAN PRODUCT DESIGN AWARD
-        =========================================== -->
         <section id="award" class="relative py-24 md:py-32 lg:py-48 bg-[#03050a] overflow-hidden border-t border-white/5">
             <div class="max-w-[1400px] mx-auto px-6 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
                     
-                    <!-- Content Side -->
                     <div class="lg:col-span-5 reveal-left">
                         <h2 class="font-geely text-4xl md:text-5xl lg:text-6xl text-white uppercase tracking-tighter leading-[1] mb-8">
                             AWARD-WINNING <br> <span class="text-gradient-teal">EXCELLENCE.</span>
@@ -206,14 +196,12 @@
                         </div>
                     </div>
 
-                    <!-- Image/Badge Side -->
                     <div class="lg:col-span-7 relative reveal-right">
                         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 ambient-glow-teal opacity-40 z-0 pointer-events-none"></div>
                         
                         <div class="glass-island p-3 rounded-[2.5rem] relative z-10 img-container shadow-2xl">
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/banner_ex2b-Rcl937dqFR7EP4xN.jpg" alt="Latar Belakang Desain EX2" class="w-full h-auto rounded-[2rem] object-cover mix-blend-luminosity opacity-80 hover:opacity-100 transition-opacity duration-700">
                             
-                            <!-- Floating Badge -->
                             <div class="absolute -bottom-6 -left-6 md:-bottom-10 md:-left-10 w-40 md:w-56 glass-island p-4 md:p-6 rounded-3xl border border-white/10 flex flex-col items-center text-center shadow-2xl">
                                 <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/screenshot-2026-02-24-201054-hyZg0pSUXLAu1Xx3.png" alt="Lencana Penghargaan" class="w-20 md:w-28 mb-3">
                                 <span class="text-teal-400 text-[8px] md:text-[10px] font-bold tracking-widest uppercase">Winner 2024</span>
@@ -224,33 +212,21 @@
             </div>
         </section>
 
-        <!-- ==========================================
-             SECTION 3: 360 VIEWER DENGAN MOTIF STUDIO
-        =========================================== -->
         <section id="specs" class="py-24 md:py-32 lg:py-48 relative z-30 overflow-hidden bg-[#03050a]">
-            <!-- Subtle Background Glows -->
             <div class="absolute top-0 right-0 w-[800px] h-[800px] ambient-glow-teal opacity-20 pointer-events-none"></div>
             
             <div class="max-w-[1600px] mx-auto px-4 md:px-12 relative z-10 text-center">
                 
-                <!-- Judul 1 baris sesuai instruksi -->
                 <h2 class="font-geely text-3xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter mb-16 reveal-up leading-tight text-white drop-shadow-lg">
-                    INTELLIGENT <span class="text-gradient-premium">DRIVING</span>
+                    INTELLIGENT <span class="text-gradient-animated">DRIVING</span>
                 </h2>
 
-                <!-- The 360 Viewer Canvas -->
-                <div class="glass-island p-2 md:p-3 rounded-[2rem] md:rounded-[3rem] overflow-hidden reveal-scale w-full relative z-10 mb-12 aspect-video max-w-6xl mx-auto shadow-2xl border-white/5">
+                <div class="glass-island p-2 md:p-3 rounded-[2rem] md:rounded-[3rem] overflow-hidden reveal-scale w-full relative z-10 mb-8 aspect-video max-w-6xl mx-auto shadow-2xl border-white/5">
                     <div class="relative w-full h-full rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden">
                         
-                        <!-- Studio Background dengan Animasi Light Sweep & Hexagon -->
                         <div id="360-bg-container" class="absolute inset-0 transition-colors duration-1000" style="background-color: #e2e8f0;">
-                            <!-- Motif Hexagon Grid & Sweeping Light yang menyatu dengan warna background -->
                             <div class="absolute inset-0 bg-studio-motif mix-blend-overlay"></div>
-                            
-                            <!-- Pencahayaan Spotlight Tengah (Mengurangi kesan flat) -->
                             <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.4)_0%,rgba(0,0,0,0.4)_100%)] pointer-events-none mix-blend-overlay"></div>
-                            
-                            <!-- Bayangan Tepi/Vignette Halus -->
                             <div class="absolute inset-0 shadow-[inset_0_0_120px_rgba(0,0,0,0.15)] pointer-events-none"></div>
                         </div>
                         
@@ -263,21 +239,18 @@
                     </div>
                 </div>
 
-                <!-- Floating App-Like Dock for Controls -->
-                <div class="glass-island inline-flex flex-col md:flex-row items-center p-4 md:p-4 rounded-[2rem] md:rounded-full shadow-2xl border-white/10 relative z-30 mx-auto reveal-up delay-200 gap-6 md:gap-10 backdrop-blur-3xl -mt-20 md:-mt-24">
+                <!-- Dock Swatch Warna: Lebar penuh di HP, Bulat Rapat di Desktop -->
+                <div class="glass-island flex flex-col md:inline-flex md:flex-row items-center justify-between md:justify-center p-4 md:py-4 md:px-8 rounded-[2rem] md:rounded-full shadow-2xl border-white/10 relative z-30 mx-auto w-full md:w-auto max-w-6xl reveal-up delay-200 gap-4 md:gap-10 backdrop-blur-3xl -mt-16 md:-mt-24">
                     
-                    <!-- Tabs -->
-                    <div class="flex bg-black/20 p-1.5 rounded-full border border-white/5 shrink-0">
+                    <div class="flex bg-black/20 p-1.5 rounded-full border border-white/5 shrink-0 w-full md:w-auto justify-center">
                         <button id="btn-tab-exterior" class="px-6 py-2.5 rounded-full text-white text-[10px] font-bold tracking-[0.2em] uppercase bg-white/10 shadow-md transition-all">Exterior</button>
                         <button id="btn-tab-interior" class="px-6 py-2.5 rounded-full text-gray-500 hover:text-white text-[10px] font-bold tracking-[0.2em] uppercase transition-all">Interior</button>
                     </div>
 
-                    <!-- Divider -->
                     <div class="hidden md:block w-[1px] h-10 bg-white/10 shrink-0"></div>
-                    <p id="active-color-name" class="md:hidden text-[10px] font-bold tracking-[0.3em] uppercase" style="color: #cbd5e1;">Pearl White</p>
+                    <p id="active-color-name" class="md:hidden text-[10px] md:text-[12px] font-bold tracking-[0.3em] uppercase text-center flex-1 transition-colors duration-300 my-2 md:my-0" style="color: #cbd5e1;">Pearl White</p>
 
-                    <!-- Swatches -->
-                    <div class="flex items-center gap-4">
+                    <div class="flex items-center gap-4 shrink-0 justify-center w-full md:w-auto">
                         <div id="swatches-exterior" class="flex flex-wrap justify-center gap-3 transition-all duration-500">
                             <button class="swatch-ext active w-8 h-8 rounded-full border border-white ring-1 ring-white/50 ring-offset-2 ring-offset-transparent transition-all" style="background-color: #f8f9fa;" data-src="https://riszali.sirv.com/Spins/ex2/White.spin" data-name="Pearl White" data-text-color="#cbd5e1" data-bg-color="#e2e8f0"></button>
                             <button class="swatch-ext w-8 h-8 rounded-full border border-white/20 hover:border-white/60 transition-all" style="background-color: #ffd1dc;" data-src="https://riszali.sirv.com/Spins/ex2/IceBerryPink.spin" data-name="Ice Berry Pink" data-text-color="#f472b6" data-bg-color="#fbcfe8"></button>
@@ -296,15 +269,12 @@
             </div>
         </section>
 
-        <!-- ==========================================
-             SECTION 4: THE SPACE
-        =========================================== -->
         <section id="space" class="py-24 lg:py-40 bg-[#03050a] relative overflow-hidden border-t border-white/5">
             <div class="max-w-[1600px] mx-auto px-6 relative z-10">
                 
                 <div class="mb-16 lg:mb-24 reveal-up text-center">
                     <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl uppercase tracking-tighter text-white mb-4">
-                        THE <span class="text-gradient-premium">SPACE</span>
+                        THE <span class="text-gradient-animated">SPACE</span>
                     </h2>
                     <p class="text-gray-400 text-sm md:text-base font-light tracking-wide leading-relaxed max-w-2xl mx-auto">
                         Dirancang lebih dari sekadar tempat penyimpanan, kabin EX2 lega, serbaguna, dan cerdas. Membuat setiap perjalanan terasa dua kali lebih menyenangkan.
@@ -312,10 +282,8 @@
                 </div>
 
                 <div class="relative reveal-up delay-200 w-full">
-                    <!-- Slider horizontal swipe (Tanpa Tombol) -->
                     <div class="flex gap-6 overflow-x-auto no-scrollbar snap-x-mandatory pb-10 cursor-grab active:cursor-grabbing">
                         
-                        <!-- Slider Card 1 -->
                         <div class="min-w-[85vw] md:min-w-[450px] snap-center">
                             <div class="glass-island rounded-[2.5rem] p-2 h-full group img-container flex flex-col">
                                 <div class="w-full h-[300px] rounded-[2rem] overflow-hidden relative">
@@ -329,7 +297,6 @@
                             </div>
                         </div>
 
-                        <!-- Slider Card 2 -->
                         <div class="min-w-[85vw] md:min-w-[450px] snap-center">
                             <div class="glass-island rounded-[2.5rem] p-2 h-full group img-container flex flex-col">
                                 <div class="w-full h-[300px] rounded-[2rem] overflow-hidden relative">
@@ -343,7 +310,6 @@
                             </div>
                         </div>
 
-                        <!-- Slider Card 3 -->
                         <div class="min-w-[85vw] md:min-w-[450px] snap-center">
                             <div class="glass-island rounded-[2.5rem] p-2 h-full group img-container flex flex-col">
                                 <div class="w-full h-[300px] rounded-[2rem] overflow-hidden relative">
@@ -362,21 +328,14 @@
             </div>
         </section>
 
-        <!-- ==========================================
-             SECTION 5: AMBIENT LIGHTING (FULL BACKGROUND)
-        =========================================== -->
         <section id="ambient" class="relative py-32 lg:py-48 overflow-hidden flex flex-col justify-between min-h-[80vh] md:min-h-[100vh]">
-            <!-- Full Width Image Background -->
             <div class="absolute inset-0 z-0">
                 <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ambient-lighting-1-YCHFgHZwRQjP7gVB.webp" alt="Pencahayaan Kabin EX2" class="w-full h-full object-cover object-center transform scale-105 opacity-80 mix-blend-lighten">
-                
-                <!-- Vignette and Dark Gradients to ensure text readability -->
                 <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#03050a] to-transparent"></div>
                 <div class="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-[#03050a] via-[#03050a]/80 to-transparent"></div>
                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#03050a_100%)] opacity-70"></div>
             </div>
             
-            <!-- Teks di bagian ATAS section -->
             <div class="max-w-[1400px] w-full mx-auto px-6 relative z-20 mt-12 md:mt-20">
                 <div class="reveal-up text-center">
                     <span class="text-teal-400 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4 drop-shadow-md">Cockpit Aura</span>
@@ -390,7 +349,6 @@
                 </div>
             </div>
 
-            <!-- Indikator Warna di bagian BAWAH section -->
             <div class="max-w-[1400px] w-full mx-auto px-6 relative z-20 mb-12 flex justify-center">
                 <div class="glass-island px-8 py-4 rounded-full border border-white/10 backdrop-blur-2xl flex items-center gap-4 shadow-2xl reveal-up delay-200">
                     <div class="flex -space-x-2">
@@ -405,9 +363,6 @@
             </div>
         </section>
 
-        <!-- ==========================================
-             SECTION 6: DRIVING PLEASURE
-        =========================================== -->
         <section id="driving" class="py-24 lg:py-40 bg-[#03050a] relative overflow-hidden bg-noise-overlay border-t border-white/5">
             <div class="max-w-[1600px] mx-auto px-6 relative z-10">
                 <div class="text-center mb-16 lg:mb-24">
@@ -421,7 +376,6 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 reveal-up delay-200">
                     
-                    <!-- Card 1 -->
                     <div class="glass-island p-2 rounded-[2rem] flex flex-col img-container group">
                         <div class="w-full h-[250px] lg:h-[300px] rounded-[1.5rem] overflow-hidden relative mb-6">
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/gambar-9-driving-pleasure-geely-ex2-mrThxF1DGtduy9Ih.webp" alt="Sistem penggerak belakang cerdas" class="w-full h-full object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700">
@@ -433,7 +387,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 2 -->
                     <div class="glass-island p-2 rounded-[2rem] flex flex-col img-container group delay-100">
                         <div class="w-full h-[250px] lg:h-[300px] rounded-[1.5rem] overflow-hidden relative mb-6">
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/gambar-10-driving-pleasure-geely-ex2-MJhRNhH2mxqA4wUU.webp" alt="Radius putar 4.95m" class="w-full h-full object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700">
@@ -445,7 +398,6 @@
                         </div>
                     </div>
 
-                    <!-- Card 3 -->
                     <div class="glass-island p-2 rounded-[2rem] flex flex-col img-container group delay-200">
                         <div class="w-full h-[250px] lg:h-[300px] rounded-[1.5rem] overflow-hidden relative mb-6">
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/gambar-11-driving-pleasure-geely-ex2-revv-L9dvXtn7UMFfh2D3.webp" alt="Stabilitas Dinamis" class="w-full h-full object-cover mix-blend-luminosity group-hover:mix-blend-normal transition-all duration-700">
@@ -460,9 +412,6 @@
             </div>
         </section>
 
-        <!-- ==========================================
-             SECTION 7: SAFETY (ADAS DIGITAL CLUSTER)
-        =========================================== -->
         <section id="safety" class="py-24 lg:py-40 bg-[#03050a] relative overflow-hidden border-t border-white/5">
             <div class="max-w-[1200px] mx-auto px-6 relative z-10 text-center">
                 <div class="mb-16 reveal-up">
@@ -475,7 +424,6 @@
                     </p>
                 </div>
 
-                <!-- Digital Dashboard Layout for ADAS Icons -->
                 <div class="glass-island p-8 md:p-12 rounded-[3rem] reveal-scale delay-200 shadow-2xl relative overflow-hidden">
                     <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(20,184,166,0.1)_0%,transparent_70%)]"></div>
                     
@@ -506,7 +454,6 @@
                         @endforeach
                     </div>
                     
-                    <!-- Indikator scroll untuk mobile -->
                     <div class="text-center mt-2 flex md:hidden justify-center items-center gap-2 text-teal-400 text-[8px] font-bold uppercase tracking-widest animate-pulse relative z-10">
                         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         Geser untuk melihat
@@ -515,9 +462,6 @@
             </div>
         </section>
 
-        <!-- ==========================================
-             SECTION 8: ADAS VIDEO SHOWCASE
-        =========================================== -->
         <section id="adas-videos" class="pb-24 lg:pb-40 bg-[#03050a] relative overflow-hidden">
             <div class="max-w-[1400px] mx-auto px-6 relative z-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 reveal-up delay-100">
@@ -554,9 +498,6 @@
             </div>
         </section>
 
-        <!-- ==========================================
-             SECTION 9: SIX AIRBAGS (CINEMATIC)
-        =========================================== -->
         <section id="airbags" class="relative py-32 lg:py-48 bg-[#03050a] overflow-hidden flex items-center min-h-[80vh]">
             <div class="absolute inset-0 z-0">
                 <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/airbags-ex2-SGRbNrAPL4garbQk.jpg" alt="Perlindungan Enam Airbag" class="w-full h-full object-cover object-center mix-blend-lighten opacity-40 transform scale-105">
@@ -591,9 +532,6 @@
             </div>
         </section>
 
-        <!-- ==========================================
-             SECTION 10: DIVE INTO THE DETAILS (BENTO)
-        =========================================== -->
         <section id="details" class="py-24 lg:py-40 relative z-30 bg-[#03050a] overflow-hidden border-t border-white/5 bg-noise-overlay">
             
             <div class="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 relative z-10">
@@ -604,13 +542,10 @@
                     </h2>
                 </div>
 
-                <!-- Bento Grid Detail -->
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
                     
-                    <!-- Left: Navigation Links (Dipindah ke bawah pada versi mobile) -->
                     <div class="lg:col-span-6 flex flex-col gap-6 reveal-left order-2 lg:order-1">
                         
-                        <!-- Exterior (Current) -->
                         <div class="glass-island p-2 rounded-[2rem] h-[160px] md:h-[200px] group flex items-end relative overflow-hidden border border-teal-500/50">
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/banner_ex2b-Rcl937dqFR7EP4xN.jpg" alt="Eksterior" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-40">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#03050a] to-transparent opacity-90"></div>
@@ -625,7 +560,6 @@
                             </div>
                         </div>
 
-                        <!-- Interior -->
                         <a href="{{ route('models.ex2.interior') }}" class="glass-island p-2 rounded-[2rem] h-[160px] md:h-[200px] group img-container flex items-end relative overflow-hidden">
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/skyline-white-YQe9py6QFEDr79dt.webp" alt="Interior" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-50 group-hover:opacity-80 transition-opacity">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#03050a] to-transparent opacity-90"></div>
@@ -640,7 +574,6 @@
                             </div>
                         </a>
 
-                        <!-- Specs -->
                         <a href="{{ route('models.ex2.specification') }}" class="glass-island p-2 rounded-[2rem] h-[160px] md:h-[200px] group img-container flex items-end relative overflow-hidden">
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/gambar-9-driving-pleasure-geely-ex2-mrThxF1DGtduy9Ih.webp" alt="Spesifikasi" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-50 group-hover:opacity-80 transition-opacity">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#03050a] to-transparent opacity-90"></div>
@@ -656,10 +589,8 @@
                         </a>
                     </div>
 
-                    <!-- Right: Dimensions Box & Actions -->
                     <div class="lg:col-span-6 flex flex-col gap-6 reveal-right delay-200 order-1 lg:order-2">
                         
-                        <!-- Dimensions Box -->
                         <div class="glass-island p-8 md:p-12 rounded-[2.5rem] flex flex-col relative overflow-hidden h-full">
                             <div class="absolute -top-20 -right-20 w-64 h-64 ambient-glow-teal opacity-20"></div>
                             
@@ -690,7 +621,6 @@
                             </div>
                         </div>
 
-                        <!-- Action Buttons -->
                         <div class="flex flex-col gap-3 w-full">
                             <a href="{{ route('models.ex2.specification') }}" class="btn-shimmer w-full py-4 md:py-5 rounded-full bg-teal-500 text-white font-bold text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-center hover:scale-[1.02] transition-transform duration-300 shadow-[0_0_30px_rgba(20,184,166,0.3)]">
                                 Show Full Specs
@@ -715,13 +645,9 @@
 
     </div>
 
-    <!-- ==========================================
-         SCRIPTS (LOGIC DIPERTAHANKAN)
-    =========================================== -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             
-            /* --- 1. INTERSECTION OBSERVER --- */
             const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
             const revealObserver = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
@@ -733,7 +659,6 @@
             }, observerOptions);
             document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale').forEach(el => revealObserver.observe(el));
 
-            /* --- 2. 360 VIEWER LOGIC --- */
             const btnExt = document.getElementById('btn-tab-exterior');
             const btnInt = document.getElementById('btn-tab-interior');
             const wrapExt = document.getElementById('wrapper-exterior');
@@ -786,7 +711,6 @@
                 }
             });
 
-            // Exterior Swatches Click (Dengan reload iframe untuk atasi bug cache)
             const swatchesExt = document.querySelectorAll('.swatch-ext');
             swatchesExt.forEach(swatch => {
                 swatch.addEventListener('click', () => {
@@ -810,7 +734,6 @@
                 });
             });
 
-            // Interior Swatches Click (Dengan reload iframe untuk atasi bug cache)
             const swatchesInt = document.querySelectorAll('.swatch-int');
             swatchesInt.forEach(swatch => {
                 swatch.addEventListener('click', () => {
@@ -837,9 +760,6 @@
         });
     </script>
 
-    <!-- ==========================================
-         ADVANCED SEO SCHEMA FOR GEELY EX2 FATMAWATI
-    =========================================== -->
     <script type="application/ld+json">
     {
       "@@context": "https://schema.org/",

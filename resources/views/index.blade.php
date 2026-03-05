@@ -55,8 +55,8 @@
 
         .glass-island:hover {
             background: rgba(255, 255, 255, 0.05);
-            border-top: 1px solid rgba(20, 184, 166, 0.4); /* Teal highlight on hover */
-            box-shadow: 0 40px 70px -10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            border-top: 1px solid rgba(16, 185, 129, 0.4); /* Emerald highlight on hover */
+            box-shadow: 0 40px 70px -10px rgba(16, 185, 129, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
             transform: translateY(-5px);
         }
 
@@ -67,14 +67,16 @@
             -webkit-backdrop-filter: blur(24px);
             border: 1px solid rgba(255, 255, 255, 0.8);
             border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 1);
+            /* Bayangan Hijau Lembut Default */
+            box-shadow: 0 20px 40px -10px rgba(16, 185, 129, 0.15), inset 0 1px 0 rgba(255, 255, 255, 1);
             transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
         .glass-island-light:hover {
             background: rgba(255, 255, 255, 0.8);
-            border-top: 1px solid rgba(20, 184, 166, 0.5); /* Teal highlight on hover */
-            box-shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 1);
+            border-top: 1px solid rgba(16, 185, 129, 0.5); /* Emerald highlight on hover */
+            /* Bayangan Hijau Lebih Kuat saat Hover */
+            box-shadow: 0 30px 60px -10px rgba(16, 185, 129, 0.35), inset 0 1px 0 rgba(255, 255, 255, 1);
             transform: translateY(-5px);
         }
 
@@ -83,16 +85,12 @@
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15); /* Aksen Hijau */
         }
 
-        /* Ambient Glow Orbs behind Glass */
-        .ambient-glow-teal {
-            background: radial-gradient(circle, rgba(20, 184, 166, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
-            mix-blend-mode: screen;
-        }
+        /* Ambient Glow Orbs behind Glass (Hanya Hijau) */
         .ambient-glow-emerald {
-            background: radial-gradient(circle, rgba(16, 185, 129, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
             mix-blend-mode: screen;
         }
 
@@ -153,16 +151,16 @@
 
         <div class="relative z-20 w-full max-w-[1400px] mx-auto px-6 mt-16 reveal-up">
             <div class="glass-island rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 lg:p-20 relative overflow-hidden">
-                <div class="absolute -top-32 -left-32 w-96 h-96 ambient-glow-teal z-0 pointer-events-none"></div>
+                <div class="absolute -top-32 -left-32 w-96 h-96 ambient-glow-emerald z-0 pointer-events-none"></div>
                 <div class="absolute -bottom-32 -right-32 w-96 h-96 ambient-glow-emerald z-0 pointer-events-none"></div>
                 
                 <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     
                     <div class="lg:col-span-7 flex flex-col">
                         <!-- Badge -->
-                        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-teal-500/30 bg-teal-500/10 mb-6 backdrop-blur-md w-max">
-                            <span class="w-2 h-2 rounded-full bg-teal-400 animate-pulse shadow-[0_0_10px_#2dd4bf]"></span>
-                            <span class="text-teal-300 text-[10px] font-bold tracking-widest uppercase">Dealer Geely Fatmawati</span>
+                        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 mb-6 backdrop-blur-md w-max">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_10px_#34d399]"></span>
+                            <span class="text-emerald-300 text-[10px] font-bold tracking-widest uppercase">Dealer Geely Fatmawati</span>
                         </div>
                         
                         <!-- Judul -->
@@ -174,22 +172,22 @@
                         <!-- Gambar Mobil khusus HP (Disembunyikan di Desktop) -->
                         <div class="flex lg:hidden justify-center items-center relative w-full my-8 sm:max-w-md self-center">
                             <div class="w-64 h-64 sm:w-72 sm:h-72 border border-white/10 rounded-full absolute animate-[spin_30s_linear_infinite]"></div>
-                            <div class="w-48 h-48 sm:w-56 sm:h-56 border border-teal-500/30 rounded-full absolute animate-[spin_20s_linear_infinite_reverse]"></div>
+                            <div class="w-48 h-48 sm:w-56 sm:h-56 border border-emerald-500/30 rounded-full absolute animate-[spin_20s_linear_infinite_reverse]"></div>
                             
-                            <div class="w-full transform z-10 p-[6px] rounded-[2rem] bg-white/5 border border-white/20 border-t-teal-400/40 border-l-white/30 backdrop-blur-md shadow-2xl relative">
+                            <div class="w-full transform z-10 p-[6px] rounded-[2rem] bg-white/5 border border-white/20 border-t-emerald-400/40 border-l-white/30 backdrop-blur-md shadow-[0_25px_50px_-12px_rgba(16,185,129,0.25)] relative">
                                 <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
                                 <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior-01-7JRFy88F1zfhn2Fx.webp" alt="Geely EV" class="w-full h-auto rounded-[1.65rem] object-cover relative z-10 pointer-events-none drop-shadow-lg">
                             </div>
                         </div>
                         
                         <!-- Deskripsi -->
-                        <p class="text-gray-300 text-sm md:text-lg font-light leading-relaxed max-w-xl mb-10 border-l border-teal-500/50 pl-6 w-full">
+                        <p class="text-gray-300 text-sm md:text-lg font-light leading-relaxed max-w-xl mb-10 border-l border-emerald-500/50 pl-6 w-full">
                             Desain elegan, kabin nyaman, dan teknologi elektrik kini hadir di Jakarta Selatan untuk pengalaman berkendara yang lebih modern.
                         </p>
                         
                         <!-- Tombol -->
                         <div class="flex flex-col sm:flex-row gap-4 w-full">
-                            <a href="/test-drive" class="relative group px-8 py-4 bg-white/10 border border-white/20 text-white font-bold text-[11px] tracking-[0.2em] uppercase overflow-hidden rounded-full flex items-center justify-center gap-3 hover:bg-teal-500 hover:border-teal-400 transition-all duration-500 shadow-[0_0_20px_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_rgba(20,184,166,0.4)] w-max">
+                            <a href="/test-drive" class="relative group px-8 py-4 bg-white/10 border border-white/20 text-white font-bold text-[11px] tracking-[0.2em] uppercase overflow-hidden rounded-full flex items-center justify-center gap-3 hover:bg-emerald-500 hover:border-emerald-400 transition-all duration-500 shadow-[0_0_20px_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] w-max">
                                 <span>Book Test Drive</span>
                                 <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </a>
@@ -199,9 +197,9 @@
                     <!-- Gambar Mobil khusus Desktop (Disembunyikan di HP) -->
                     <div class="hidden lg:flex justify-center items-center relative lg:col-span-5">
                         <div class="w-72 h-72 border border-white/10 rounded-full absolute animate-[spin_30s_linear_infinite]"></div>
-                        <div class="w-56 h-56 border border-teal-500/30 rounded-full absolute animate-[spin_20s_linear_infinite_reverse]"></div>
+                        <div class="w-56 h-56 border border-emerald-500/30 rounded-full absolute animate-[spin_20s_linear_infinite_reverse]"></div>
                         
-                        <div class="w-[120%] max-w-none transform translate-x-10 scale-110 z-10 p-[6px] rounded-[2rem] bg-white/5 border border-white/20 border-t-teal-400/40 border-l-white/30 backdrop-blur-md shadow-2xl relative">
+                        <div class="w-[120%] max-w-none transform translate-x-10 scale-110 z-10 p-[6px] rounded-[2rem] bg-white/5 border border-white/20 border-t-emerald-400/40 border-l-white/30 backdrop-blur-md shadow-[0_25px_50px_-12px_rgba(16,185,129,0.25)] relative">
                             <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior-01-7JRFy88F1zfhn2Fx.webp" alt="Geely EV" class="w-full h-auto rounded-[1.65rem] object-cover relative z-10 pointer-events-none drop-shadow-lg">
                         </div>
@@ -217,17 +215,17 @@
     =========================================== -->
     <section class="py-24 lg:py-32 relative bg-[#f8fafc] overflow-hidden border-y border-white/10">
         <!-- Light Ambient Glows untuk background terang -->
-        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-teal-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
-        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-green-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
         <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPHBhdGggZD0iTTAgNDBMMCAwTDIwIDBMNDAgMEw0MCA0MEwyMCA0MEwwIDQweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgc3Ryb2tlLXdpZHRoPSIxIi8+Cjwvc3ZnPg==')] pointer-events-none z-0"></div>
 
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             
             <!-- Header Section Grand Opening -->
             <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
-                <span class="text-teal-600 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Milestone Moment</span>
+                <span class="text-emerald-600 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Milestone Moment</span>
                 <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl uppercase tracking-tighter text-gray-900 leading-[1.1] mb-6">
-                    Grand <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-emerald-500">Opening</span>
+                    Grand <span class="text-emerald-500">Opening</span>
                 </h2>
                 <p class="text-gray-600 text-sm md:text-base leading-relaxed font-medium">
                     Menandai babak baru mobilitas premium di Jakarta Selatan. Geely Fatmawati resmi beroperasi penuh untuk menghadirkan layanan kelas dunia, inovasi mutakhir, dan pengalaman kendaraan listrik yang tak terlupakan.
@@ -243,7 +241,7 @@
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-diresmikan-sO5Dd7FcvFkX3wX5.jpg" alt="Peresmian Showroom Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6">
-                            <span class="text-teal-400 text-[10px] font-bold tracking-[0.3em] uppercase mb-1 block drop-shadow-md">Celebration</span>
+                            <span class="text-emerald-400 text-[10px] font-bold tracking-[0.3em] uppercase mb-1 block drop-shadow-md">Celebration</span>
                             <h3 class="font-geely text-2xl md:text-4xl text-white uppercase tracking-tight">Resmi Beroperasi</h3>
                         </div>
                         <!-- Zoom Icon overlay -->
@@ -282,14 +280,14 @@
          SECTION 3: SHOWROOM (OASIS OF INNOVATION)
     =========================================== -->
     <section id="experience" class="py-24 lg:py-32 relative bg-[#030712]">
-        <div class="absolute right-0 bottom-0 w-[800px] h-[800px] ambient-glow-teal opacity-30 pointer-events-none"></div>
+        <div class="absolute right-0 bottom-0 w-[800px] h-[800px] ambient-glow-emerald opacity-30 pointer-events-none"></div>
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6 reveal-up">
                 <div class="max-w-2xl">
                     <div class="inline-flex items-center gap-4 mb-6">
-                        <div class="w-10 h-[1px] bg-teal-500"></div>
-                        <span class="text-teal-400 text-[10px] font-bold tracking-[0.4em] uppercase">Eksklusivitas Geely Fatmawati</span>
+                        <div class="w-10 h-[1px] bg-emerald-500"></div>
+                        <span class="text-emerald-400 text-[10px] font-bold tracking-[0.4em] uppercase">Eksklusivitas Geely Fatmawati</span>
                     </div>
                     <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-white leading-[0.9]">
                         Oasis of <br>
@@ -297,7 +295,7 @@
                     </h2>
                 </div>
                 <div class="md:text-right max-w-sm">
-                    <p class="text-gray-400 text-sm md:text-base leading-relaxed font-light border-l md:border-l-0 md:border-r border-teal-500/30 pl-4 md:pl-0 md:pr-4">
+                    <p class="text-gray-400 text-sm md:text-base leading-relaxed font-light border-l md:border-l-0 md:border-r border-emerald-500/30 pl-4 md:pl-0 md:pr-4">
                         Arsitektur showroom modern yang dirancang khusus untuk kenyamanan Anda. Rasakan pengalaman layanan VIP sejak langkah pertama Anda di Jakarta Selatan.
                     </p>
                 </div>
@@ -312,9 +310,9 @@
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/showroom-fatmawati-cV9nMqwkCe4Ay47Y.jpg" alt="Showroom Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#030712]/90 via-transparent to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6">
-                            <span class="text-teal-400 text-[9px] font-bold tracking-[0.3em] uppercase mb-1 block">Flagship Dealer</span>
+                            <span class="text-emerald-400 text-[9px] font-bold tracking-[0.3em] uppercase mb-1 block">Flagship Dealer</span>
                             <h3 class="font-geely text-3xl md:text-5xl text-white uppercase tracking-tight">Geely Fatmawati</h3>
-                            <a href="/location" class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-white hover:text-teal-400 uppercase tracking-widest transition-colors">Lihat Lokasi <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
+                            <a href="/location" class="mt-4 inline-flex items-center gap-2 text-xs font-bold text-white hover:text-emerald-400 uppercase tracking-widest transition-colors">Lihat Lokasi <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg></a>
                         </div>
                     </div>
                 </div>
@@ -334,7 +332,7 @@
                 <!-- Kotak Info (Mengisi Baris Bawah) -->
                 <div class="glass-island rounded-[2rem] p-8 flex flex-col justify-center relative overflow-hidden reveal-up delay-200 group min-h-[200px] md:min-h-[250px]">
                     <div class="absolute top-0 right-0 w-32 h-32 ambient-glow-emerald opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="w-12 h-12 rounded-full border border-teal-500/30 bg-teal-500/10 flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform">
+                    <div class="w-12 h-12 rounded-full border border-emerald-500/30 bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
                     <h4 class="font-geely text-2xl text-white uppercase tracking-tight mb-2">Fast Charging</h4>
@@ -342,8 +340,8 @@
                 </div>
 
                 <div class="glass-island rounded-[2rem] p-8 flex flex-col justify-center relative overflow-hidden reveal-up delay-300 group min-h-[200px] md:min-h-[250px]">
-                    <div class="absolute top-0 right-0 w-32 h-32 ambient-glow-teal opacity-50 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="w-12 h-12 rounded-full border border-teal-500/30 bg-teal-500/10 flex items-center justify-center text-teal-400 mb-6 group-hover:scale-110 transition-transform">
+                    <div class="absolute top-0 right-0 w-32 h-32 ambient-glow-emerald opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="w-12 h-12 rounded-full border border-emerald-500/30 bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
                     </div>
                     <h4 class="font-geely text-2xl text-white uppercase tracking-tight mb-2">VIP Concierge</h4>
@@ -354,19 +352,16 @@
     </section>
 
     <!-- ==========================================
-         SECTION 4: LINEUP (EMBEDDED GLASS CARDS - LIGHT THEME)
+         SECTION 4: LINEUP (EMBEDDED GLASS CARDS - DARK THEME)
     =========================================== -->
-    <section id="lineup" class="py-24 lg:py-32 relative bg-white overflow-hidden border-y border-gray-200">
-        <!-- Background Putih Bercorak Hijau -->
-        <div class="absolute inset-0 z-0 opacity-30" style="background-image: radial-gradient(#10b981 1.5px, transparent 1.5px); background-size: 32px 32px;"></div>
-        <div class="absolute top-[-10%] right-[-5%] w-[400px] h-[400px] bg-emerald-200/50 rounded-full blur-[120px] pointer-events-none z-0"></div>
-        <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-teal-100/50 rounded-full blur-[120px] pointer-events-none z-0"></div>
+    <section id="lineup" class="py-24 lg:py-32 relative bg-[#030712] bg-noise-overlay overflow-hidden border-y border-white/5">
+        <div class="absolute top-1/4 left-0 w-full h-[500px] ambient-glow-emerald opacity-50 z-0"></div>
         
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24 reveal-up">
-                <span class="text-emerald-600 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Masterpiece Collection</span>
-                <h2 class="font-geely text-4xl sm:text-5xl md:text-7xl uppercase tracking-tighter text-gray-900 leading-none">
-                    Intelligent <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-emerald-500">Motion</span>
+                <span class="text-emerald-400 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Masterpiece Collection</span>
+                <h2 class="font-geely text-4xl sm:text-5xl md:text-7xl uppercase tracking-tighter text-white leading-none">
+                    Intelligent <span class="text-gray-600">Motion</span>
                 </h2>
             </div>
             
@@ -407,30 +402,29 @@
                 @endphp
 
                 @foreach($showcase as $car)
-                <!-- Bayangan hijau khusus untuk Card Mobil -->
-                <div class="bg-white/60 backdrop-blur-2xl border border-white/80 shadow-[0_15px_40px_-10px_rgba(16,185,129,0.2)] hover:shadow-[0_30px_60px_-15px_rgba(16,185,129,0.5)] rounded-[2rem] h-[550px] flex flex-col relative reveal-up {{ $car['delay'] }} transition-all duration-500 group cursor-pointer">
+                <div class="glass-island rounded-[2rem] h-[550px] flex flex-col relative reveal-up {{ $car['delay'] }} group cursor-pointer transition-all duration-500">
                     <div class="relative h-[65%] w-full rounded-t-[2rem] overflow-hidden img-container">
-                        <img src="{{ $car['img'] }}" alt="{{ $car['name'] }} - Dealer Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center">
-                        <div class="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent opacity-90"></div>
+                        <img src="{{ $car['img'] }}" alt="{{ $car['name'] }} - Dealer Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/20 to-transparent opacity-90"></div>
                     </div>
                     
-                    <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-xl border border-white shadow-[0_10px_20px_-5px_rgba(0,0,0,0.05)] rounded-3xl p-6 transform transition-transform duration-500 group-hover:-translate-y-2">
-                        <span class="text-emerald-600 text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">{{ $car['type'] }}</span>
-                        <h3 class="font-geely text-3xl text-gray-900 uppercase tracking-tight mb-2">{{ $car['name'] }}</h3>
-                        <p class="text-gray-500 text-xs font-medium leading-relaxed mb-4 line-clamp-2">{{ $car['desc'] }}</p>
+                    <div class="absolute bottom-6 left-6 right-6 glass-panel-dark rounded-3xl p-6 border border-white/10 shadow-2xl transform transition-transform duration-500 group-hover:-translate-y-2">
+                        <span class="text-emerald-400 text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">{{ $car['type'] }}</span>
+                        <h3 class="font-geely text-3xl text-white uppercase tracking-tight mb-2">{{ $car['name'] }}</h3>
+                        <p class="text-gray-400 text-xs font-light leading-relaxed mb-4 line-clamp-2">{{ $car['desc'] }}</p>
                         
-                        <div class="flex items-center justify-between border-t border-gray-100 pt-4">
+                        <div class="flex items-center justify-between border-t border-white/10 pt-4">
                             <div class="flex gap-4">
                                 <div>
-                                    <p class="text-gray-900 font-geely text-lg leading-none">{{ $car['stat1'] }}</p>
-                                    <p class="text-gray-400 text-[8px] uppercase tracking-widest">{{ $car['stat1_lbl'] }}</p>
+                                    <p class="text-white font-geely text-lg leading-none">{{ $car['stat1'] }}</p>
+                                    <p class="text-gray-500 text-[8px] uppercase tracking-widest">{{ $car['stat1_lbl'] }}</p>
                                 </div>
                                 <div>
-                                    <p class="text-gray-900 font-geely text-lg leading-none">{{ $car['stat2'] }}</p>
-                                    <p class="text-gray-400 text-[8px] uppercase tracking-widest">{{ $car['stat2_lbl'] }}</p>
+                                    <p class="text-white font-geely text-lg leading-none">{{ $car['stat2'] }}</p>
+                                    <p class="text-gray-500 text-[8px] uppercase tracking-widest">{{ $car['stat2_lbl'] }}</p>
                                 </div>
                             </div>
-                            <a href="{{ $car['link'] }}" class="w-10 h-10 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 hover:bg-emerald-500 hover:border-emerald-400 hover:text-white transition-colors">
+                            <a href="{{ $car['link'] }}" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-emerald-500 group-hover:border-emerald-400 transition-colors">
                                 <svg class="w-4 h-4 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </a>
                         </div>
@@ -447,21 +441,21 @@
     <section class="py-24 relative overflow-hidden flex items-center justify-center min-h-[60vh] bg-[#030712]">
         <div class="absolute inset-0 z-0">
             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/2400x0-14-mxB2lNnxMqfjr7pG.webp" alt="Pembiayaan Geely Fatmawati" class="w-full h-full object-cover brightness-50 mix-blend-luminosity opacity-40">
-            <div class="absolute inset-0 bg-gradient-to-r from-[#030712] via-teal-900/40 to-[#030712]"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#030712] via-emerald-900/40 to-[#030712]"></div>
         </div>
         
         <div class="relative z-10 w-full max-w-5xl mx-auto px-6 reveal-up">
-            <div class="glass-island rounded-[3rem] p-10 md:p-16 text-center border-t border-teal-500/30">
-                <div class="inline-block p-4 rounded-full bg-teal-500/10 border border-teal-500/20 text-teal-400 mb-6">
+            <div class="glass-island rounded-[3rem] p-10 md:p-16 text-center border-t border-emerald-500/30">
+                <div class="inline-block p-4 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 mb-6">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </div>
                 <h2 class="font-geely text-3xl md:text-5xl text-white uppercase tracking-tighter mb-4">
-                    Program Finansial <span class="text-teal-400">Transparan</span>
+                    Program Finansial <span class="text-emerald-400">Transparan</span>
                 </h2>
                 <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-10 max-w-2xl mx-auto">
                     Miliki kendaraan masa depan tanpa beban. Kalkulator pintar kami akan menyesuaikan skema cicilan terbaik dengan fleksibilitas penuh khusus area Jakarta Selatan.
                 </p>
-                <a href="/credit-simulation" class="btn-shimmer inline-flex px-10 py-5 bg-teal-500 text-white font-bold text-[11px] uppercase tracking-widest rounded-full hover:scale-105 hover:shadow-[0_0_40px_rgba(20,184,166,0.5)] transition-all duration-300">
+                <a href="/credit-simulation" class="btn-shimmer inline-flex px-10 py-5 bg-emerald-500 text-white font-bold text-[11px] uppercase tracking-widest rounded-full hover:scale-105 hover:shadow-[0_0_40px_rgba(16,185,129,0.5)] transition-all duration-300">
                     Mulai Simulasi Kredit
                 </a>
             </div>
@@ -472,7 +466,7 @@
          SECTION 6: KESEIMBANGAN SEMPURNA (RESTORED & UPGRADED)
     =========================================== -->
     <section class="py-24 lg:py-32 bg-[#030712] relative overflow-hidden border-t border-white/5">
-        <div class="absolute top-32 right-[-10%] w-[600px] h-[600px] ambient-glow-teal opacity-40 z-0"></div>
+        <div class="absolute top-32 right-[-10%] w-[600px] h-[600px] ambient-glow-emerald opacity-40 z-0"></div>
         <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] ambient-glow-emerald opacity-40 z-0"></div>
 
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
@@ -486,7 +480,7 @@
                             </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-[#030712]/90 via-[#030712]/40 to-transparent"></div>
                             <div class="absolute bottom-20 lg:bottom-8 left-6 lg:left-8 pr-6">
-                                <span class="text-teal-400 text-[10px] tracking-[0.3em] font-bold uppercase block mb-2 drop-shadow-md">Flyme Auto</span>
+                                <span class="text-emerald-400 text-[10px] tracking-[0.3em] font-bold uppercase block mb-2 drop-shadow-md">Flyme Auto</span>
                                 <h4 class="font-geely text-2xl md:text-4xl uppercase tracking-tight text-white drop-shadow-lg leading-none">Future in Motion.</h4>
                             </div>
                         </div>
@@ -495,8 +489,8 @@
 
                 <div class="lg:col-span-5 order-2 lg:order-1 reveal-left relative z-20 -mt-16 sm:-mt-24 lg:mt-0 mx-2 sm:mx-8 lg:mx-0">
                     <div class="glass-island p-8 md:p-12 lg:p-14 rounded-[3rem] shadow-[0_-20px_40px_-15px_rgba(0,0,0,0.5)] lg:shadow-none bg-[#030712]/80 lg:bg-transparent backdrop-blur-3xl">
-                        <div class="inline-flex items-center gap-3 mb-6 px-5 py-2.5 rounded-full border border-teal-500/30 bg-teal-500/10">
-                            <span class="text-teal-400 text-[9px] font-bold tracking-[0.4em] uppercase">Redefining Joyful Rides</span>
+                        <div class="inline-flex items-center gap-3 mb-6 px-5 py-2.5 rounded-full border border-emerald-500/30 bg-emerald-500/10">
+                            <span class="text-emerald-400 text-[9px] font-bold tracking-[0.4em] uppercase">Redefining Joyful Rides</span>
                         </div>
                         
                         <h2 class="font-geely text-3xl sm:text-4xl md:text-5xl uppercase tracking-tighter text-white mb-6 leading-[1.1]">
@@ -519,7 +513,7 @@
          SECTION 7: IMMERSIVE ATMOSPHERE / STATS (RESTORED & UPGRADED)
     =========================================== -->
     <section class="py-24 lg:py-32 relative w-full overflow-hidden bg-[#030712]">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] ambient-glow-teal opacity-20 pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] ambient-glow-emerald opacity-20 pointer-events-none"></div>
 
         <div class="relative z-20 w-full max-w-[1400px] mx-auto px-6 md:px-12">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
@@ -534,7 +528,7 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent opacity-90"></div>
                             <div class="absolute bottom-8 left-8 z-20">
                                 <p class="font-geely text-2xl md:text-4xl uppercase tracking-tight mb-1 text-white">Immersive Atmosphere</p>
-                                <p class="text-teal-400 text-[10px] tracking-[0.2em] uppercase font-bold">Premium Cabin Experience</p>
+                                <p class="text-emerald-400 text-[10px] tracking-[0.2em] uppercase font-bold">Premium Cabin Experience</p>
                             </div>
                         </div>
                     </div>
@@ -543,7 +537,7 @@
                     <div class="grid grid-cols-3 gap-3 md:gap-6 relative z-20">
                         <div class="glass-island p-4 md:p-8 rounded-[1.5rem] flex flex-col justify-center items-center text-center">
                             <p class="text-gray-400 text-[7px] md:text-[9px] tracking-[0.2em] font-bold uppercase mb-2">Up to</p>
-                            <h3 class="font-geely text-2xl md:text-5xl text-white mb-2"><span class="text-teal-400">495</span><span class="text-[10px] md:text-sm text-gray-500 ml-1">km*</span></h3>
+                            <h3 class="font-geely text-2xl md:text-5xl text-white mb-2"><span class="text-emerald-400">495</span><span class="text-[10px] md:text-sm text-gray-500 ml-1">km*</span></h3>
                             <p class="text-gray-500 text-[6px] md:text-[9px] tracking-widest uppercase">NEDC Range</p>
                         </div>
                         <div class="glass-island p-4 md:p-8 rounded-[1.5rem] flex flex-col justify-center items-center text-center">
@@ -553,7 +547,7 @@
                         </div>
                         <div class="glass-island p-4 md:p-8 rounded-[1.5rem] flex flex-col justify-center items-center text-center">
                             <p class="text-gray-400 text-[7px] md:text-[9px] tracking-[0.2em] font-bold uppercase mb-2">Acceleration</p>
-                            <h3 class="font-geely text-2xl md:text-5xl text-white mb-2"><span class="text-teal-400">6.9</span><span class="text-[10px] md:text-sm text-gray-500 ml-1">sec</span></h3>
+                            <h3 class="font-geely text-2xl md:text-5xl text-white mb-2"><span class="text-emerald-400">6.9</span><span class="text-[10px] md:text-sm text-gray-500 ml-1">sec</span></h3>
                             <p class="text-gray-500 text-[6px] md:text-[9px] tracking-widest uppercase">0-100 km/h</p>
                         </div>
                     </div>
@@ -563,14 +557,14 @@
                 <div class="order-2 lg:col-span-5 glass-island p-8 md:p-12 rounded-[2rem] flex flex-col justify-center reveal-right relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-64 h-64 ambient-glow-emerald opacity-50 z-0"></div>
                     <div class="relative z-10">
-                        <span class="text-teal-400 text-[10px] md:text-xs tracking-[0.4em] font-bold uppercase mb-4 block">All-New EX5</span>
+                        <span class="text-emerald-400 text-[10px] md:text-xs tracking-[0.4em] font-bold uppercase mb-4 block">All-New EX5</span>
                         <h2 class="font-geely text-4xl md:text-6xl uppercase tracking-tighter mb-8 leading-[0.9] text-white">
                             Ready To <br> <span class="text-gray-600">Explore</span>
                         </h2>
                         <p class="text-gray-400 text-sm md:text-base leading-relaxed font-light mb-10">
                             Rasakan kebebasan berkendara tanpa batas dengan arsitektur baterai mutakhir dan efisiensi aerodinamis kelas dunia. Geely EX5 dirancang secara presisi memadukan performa elektrik superior dengan tata ruang kabin yang lapang.
                         </p>
-                        <a href="/test-drive" class="inline-flex items-center gap-3 text-teal-400 text-[10px] font-bold tracking-[0.2em] uppercase hover:text-white transition-colors w-max pb-2 border-b border-teal-500/30">
+                        <a href="/test-drive" class="inline-flex items-center gap-3 text-emerald-400 text-[10px] font-bold tracking-[0.2em] uppercase hover:text-white transition-colors w-max pb-2 border-b border-emerald-500/30">
                             Book Test Drive <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                         </a>
                     </div>
@@ -612,7 +606,7 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent opacity-90"></div>
                         <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
                             <div>
-                                <span class="text-teal-400 text-[10px] font-bold tracking-[0.3em] uppercase block mb-2">Exterior</span>
+                                <span class="text-emerald-400 text-[10px] font-bold tracking-[0.3em] uppercase block mb-2">Exterior</span>
                                 <h3 class="font-geely text-3xl md:text-5xl text-white uppercase tracking-tight">Designed for the City</h3>
                             </div>
                             <div class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white border border-white/20">
@@ -628,7 +622,7 @@
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg" alt="Interior Kabin Geely EX2" class="absolute inset-0 w-full h-full object-cover object-[center_60%]">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent opacity-90"></div>
                         <div class="absolute bottom-6 left-6">
-                            <span class="text-teal-400 text-[9px] font-bold tracking-[0.3em] uppercase block mb-2">Cockpit</span>
+                            <span class="text-emerald-400 text-[9px] font-bold tracking-[0.3em] uppercase block mb-2">Cockpit</span>
                             <h3 class="font-geely text-2xl md:text-4xl text-white uppercase tracking-tight">Built Around You</h3>
                         </div>
                     </div>
@@ -640,7 +634,7 @@
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp" alt="Gaya Hidup Berkendara EV" class="absolute inset-0 w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#030712] to-transparent opacity-90"></div>
                         <div class="absolute bottom-6 left-6">
-                            <span class="text-teal-400 text-[8px] font-bold tracking-[0.3em] uppercase block mb-1">Lifestyle</span>
+                            <span class="text-emerald-400 text-[8px] font-bold tracking-[0.3em] uppercase block mb-1">Lifestyle</span>
                             <h3 class="font-geely text-lg md:text-2xl text-white uppercase tracking-tight leading-none">Effortless Mobility</h3>
                         </div>
                     </div>
@@ -648,7 +642,7 @@
 
                 <!-- 04 // Utility -->
                 <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png', '04 // Utility - Max Cargo', true)" class="col-span-1 md:col-span-1 md:row-span-1 glass-island rounded-[2rem] p-6 cursor-pointer flex flex-col justify-between relative group">
-                    <div class="absolute inset-0 bg-gradient-to-b from-teal-900/20 to-transparent rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="absolute inset-0 bg-gradient-to-b from-emerald-900/20 to-transparent rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div class="z-10">
                         <span class="text-emerald-400 text-[8px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">Utility</span>
                         <h3 class="font-geely text-lg md:text-2xl text-white uppercase tracking-tight leading-none">Space Reimagined</h3>
@@ -669,7 +663,7 @@
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             
             <div class="text-center max-w-4xl mx-auto mb-16 md:mb-20 reveal-up">
-                <span class="text-teal-400 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Core Technology</span>
+                <span class="text-emerald-400 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Core Technology</span>
                 <h2 class="font-geely text-4xl sm:text-5xl md:text-7xl uppercase tracking-tighter text-white leading-[0.9] mb-6">
                     Global <span class="text-gradient-premium">Architecture</span>
                 </h2>
@@ -686,19 +680,19 @@
                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#030712_100%)] opacity-80 pointer-events-none"></div>
                 </div>
 
-                <div class="absolute top-10 left-10 hidden md:block glass-panel-dark p-6 rounded-2xl border border-white/10 shadow-2xl z-20 w-64 reveal-left delay-200">
-                    <span class="text-teal-400 text-[9px] font-bold tracking-widest uppercase block mb-2">Neural Core</span>
+                <div class="absolute top-10 left-10 hidden md:block glass-panel-dark p-6 rounded-2xl border border-white/10 shadow-[0_20px_40px_rgba(16,185,129,0.15)] z-20 w-64 reveal-left delay-200">
+                    <span class="text-emerald-400 text-[9px] font-bold tracking-widest uppercase block mb-2">Neural Core</span>
                     <h4 class="font-geely text-2xl text-white uppercase tracking-tight mb-2">AI Integration</h4>
                     <p class="text-gray-400 text-[10px] leading-relaxed">Sinkronisasi millidetik sensor Lidar dan Radar pintar.</p>
                 </div>
 
-                <div class="absolute bottom-10 right-10 hidden md:block glass-panel-dark p-6 rounded-2xl border border-white/10 shadow-2xl z-20 w-64 reveal-right delay-300">
+                <div class="absolute bottom-10 right-10 hidden md:block glass-panel-dark p-6 rounded-2xl border border-white/10 shadow-[0_20px_40px_rgba(16,185,129,0.15)] z-20 w-64 reveal-right delay-300">
                     <span class="text-emerald-400 text-[9px] font-bold tracking-widest uppercase block mb-2">Thermal Mgmt</span>
                     <h4 class="font-geely text-2xl text-white uppercase tracking-tight mb-2">Hyper Efficiency</h4>
                     <p class="text-gray-400 text-[10px] leading-relaxed">Melindungi sel baterai dan memaksimalkan jarak tempuh absolut.</p>
                 </div>
 
-                <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 text-teal-500/30 pointer-events-none animate-[spin_20s_linear_infinite] z-20" fill="none" viewBox="0 0 100 100">
+                <svg class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 text-emerald-500/30 pointer-events-none animate-[spin_20s_linear_infinite] z-20" fill="none" viewBox="0 0 100 100">
                     <circle cx="50" cy="50" r="48" stroke="currentColor" stroke-width="0.5" stroke-dasharray="4 8"/>
                     <circle cx="50" cy="50" r="20" stroke="currentColor" stroke-width="1"/>
                     <path d="M50 0v10M50 90v10M0 50h10M90 50h10" stroke="currentColor" stroke-width="1"/>
@@ -734,13 +728,13 @@
         </div>
 
         <section class="mt-[40vh] md:mt-[70vh] py-16 md:py-24 lg:py-32 bg-[#030712] relative z-30 shadow-[0_-30px_60px_rgba(3,7,18,1)] min-h-[100vh] rounded-t-[3rem] border-t border-white/5">
-            <div class="absolute top-0 right-0 w-[500px] h-[500px] ambient-glow-teal opacity-30 pointer-events-none z-0"></div>
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] ambient-glow-emerald opacity-30 pointer-events-none z-0"></div>
             <div class="absolute bottom-0 left-0 w-[400px] h-[400px] ambient-glow-emerald opacity-30 pointer-events-none z-0"></div>
 
             <div class="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-20 lg:gap-y-12 items-center lg:items-start">
                 
                 <div class="order-1 lg:col-start-1 lg:row-start-1 flex flex-col justify-center">
-                    <h3 class="text-teal-400 text-[10px] md:text-sm font-bold tracking-[0.3em] uppercase mb-4 reveal-up">
+                    <h3 class="text-emerald-400 text-[10px] md:text-sm font-bold tracking-[0.3em] uppercase mb-4 reveal-up">
                         Efficiency meets intelligent
                     </h3>
                     <h2 class="font-geely text-4xl md:text-5xl lg:text-7xl uppercase tracking-tighter text-white mb-6 reveal-up delay-100 leading-tight">
@@ -762,8 +756,8 @@
                 </div>
 
                 <div class="order-3 lg:col-start-2 lg:row-start-2 glass-island p-8 rounded-[2rem] reveal-up delay-400 relative z-10 group overflow-hidden">
-                    <div class="absolute -right-10 -top-10 w-32 h-32 ambient-glow-teal opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <h4 class="text-white font-geely text-2xl mb-4 relative z-10 group-hover:text-teal-300 transition-colors drop-shadow-sm">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 ambient-glow-emerald opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <h4 class="text-white font-geely text-2xl mb-4 relative z-10 group-hover:text-emerald-300 transition-colors drop-shadow-sm">
                         Highest Thermal Efficiency (46.5%)
                     </h4>
                     <p class="text-gray-400 text-sm md:text-base relative z-10 leading-relaxed font-light">
@@ -792,7 +786,7 @@
         <div class="max-w-[1400px] w-full mx-auto px-6 md:px-12 relative z-10">
             
             <div class="text-center mb-16 md:mb-24 reveal-up">
-                <span class="text-teal-400 text-[10px] font-bold tracking-[0.4em] uppercase mb-4 block">Flyme Auto</span>
+                <span class="text-emerald-400 text-[10px] font-bold tracking-[0.4em] uppercase mb-4 block">Flyme Auto</span>
                 <h2 class="font-geely text-4xl md:text-6xl uppercase tracking-tighter text-white mb-6">
                     Control At Your <span class="text-gray-600">Fingertips</span>
                 </h2>
@@ -803,10 +797,10 @@
                 <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island rounded-[2rem] p-3 flex flex-col reveal-up delay-100 group img-container">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/always-carghed.jpg-sPvzxctIegkiPhzC.webp" alt="Always Charged" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-teal-900/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
+                        <div class="absolute inset-0 bg-emerald-900/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
                     </div>
                     <div class="px-4 pb-4">
-                        <h4 class="text-white font-geely text-2xl uppercase tracking-tight mb-3 group-hover:text-teal-400 transition-colors">Always Charged</h4>
+                        <h4 class="text-white font-geely text-2xl uppercase tracking-tight mb-3 group-hover:text-emerald-400 transition-colors">Always Charged</h4>
                         <p class="text-gray-400 text-xs leading-relaxed font-light">Monitor daya baterai dan jadwalkan pengisian secara remote dari smartphone Anda.</p>
                     </div>
                 </div>
@@ -815,10 +809,10 @@
                 <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island rounded-[2rem] p-3 flex flex-col reveal-up delay-200 group img-container">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/never-lost.jpg-9JUUSHg9iMEbQsEN.webp" alt="Never Lost" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-teal-900/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
+                        <div class="absolute inset-0 bg-emerald-900/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
                     </div>
                     <div class="px-4 pb-4">
-                        <h4 class="text-white font-geely text-2xl uppercase tracking-tight mb-3 group-hover:text-teal-400 transition-colors">Never Lost</h4>
+                        <h4 class="text-white font-geely text-2xl uppercase tracking-tight mb-3 group-hover:text-emerald-400 transition-colors">Never Lost</h4>
                         <p class="text-gray-400 text-xs leading-relaxed font-light">Pelacakan posisi kendaraan presisi tinggi dengan fitur "Find My Car" real-time.</p>
                     </div>
                 </div>
@@ -827,16 +821,16 @@
                 <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island rounded-[2rem] p-3 flex flex-col reveal-up delay-300 group img-container">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/full-control.jpg-ycOYdP2jZuNB3u9w.webp" alt="Full Control" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-teal-900/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
+                        <div class="absolute inset-0 bg-emerald-900/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
                     </div>
                     <div class="px-4 pb-4">
-                        <h4 class="text-white font-geely text-2xl uppercase tracking-tight mb-3 group-hover:text-teal-400 transition-colors">Full Control</h4>
+                        <h4 class="text-white font-geely text-2xl uppercase tracking-tight mb-3 group-hover:text-emerald-400 transition-colors">Full Control</h4>
                         <p class="text-gray-400 text-xs leading-relaxed font-light">Kendalikan suhu kabin dan akses kunci pintu sebelum Anda tiba di mobil.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="text-center mt-4 flex md:hidden justify-center items-center gap-2 text-teal-400 text-[9px] font-bold uppercase tracking-widest animate-pulse">
+            <div class="text-center mt-4 flex md:hidden justify-center items-center gap-2 text-emerald-400 text-[9px] font-bold uppercase tracking-widest animate-pulse">
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 Swipe to explore
             </div>
@@ -850,10 +844,10 @@
         </button>
         <div class="relative w-full max-w-7xl h-full flex flex-col items-center justify-center p-4 md:p-12 pointer-events-none">
             <div class="relative max-h-[80vh] w-full flex justify-center items-center group pointer-events-auto">
-                <img id="lightbox-img" src="" alt="Fullscreen preview" class="max-w-full max-h-[75vh] md:max-h-[85vh] object-contain rounded-xl shadow-2xl transition-transform duration-300 transform scale-95">
+                <img id="lightbox-img" src="" alt="Fullscreen preview" class="max-w-full max-h-[75vh] md:max-h-[85vh] object-contain rounded-xl shadow-[0_25px_50px_-12px_rgba(16,185,129,0.25)] transition-transform duration-300 transform scale-95">
             </div>
             <div class="mt-6 md:mt-8 pointer-events-auto text-center">
-                <p id="lightbox-caption" class="font-geely text-teal-400 text-lg md:text-2xl tracking-widest uppercase drop-shadow-lg"></p>
+                <p id="lightbox-caption" class="font-geely text-emerald-400 text-lg md:text-2xl tracking-widest uppercase drop-shadow-lg"></p>
             </div>
         </div>
     </div>

@@ -407,13 +407,14 @@
                 @endphp
 
                 @foreach($showcase as $car)
-                <div class="glass-island-light bg-white/40 border border-white/80 shadow-[0_20px_40px_-15px_rgba(16,185,129,0.1)] rounded-[2rem] h-[550px] flex flex-col relative reveal-up {{ $car['delay'] }}">
+                <!-- Bayangan hijau khusus untuk Card Mobil -->
+                <div class="bg-white/60 backdrop-blur-2xl border border-white/80 shadow-[0_15px_40px_-10px_rgba(16,185,129,0.2)] hover:shadow-[0_30px_60px_-15px_rgba(16,185,129,0.5)] rounded-[2rem] h-[550px] flex flex-col relative reveal-up {{ $car['delay'] }} transition-all duration-500 group cursor-pointer">
                     <div class="relative h-[65%] w-full rounded-t-[2rem] overflow-hidden img-container">
                         <img src="{{ $car['img'] }}" alt="{{ $car['name'] }} - Dealer Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center">
                         <div class="absolute inset-0 bg-gradient-to-t from-white via-white/20 to-transparent opacity-90"></div>
                     </div>
                     
-                    <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-xl border border-white shadow-[0_15px_30px_-10px_rgba(0,0,0,0.1)] rounded-3xl p-6 transform transition-transform duration-500 hover:-translate-y-2">
+                    <div class="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-xl border border-white shadow-[0_10px_20px_-5px_rgba(0,0,0,0.05)] rounded-3xl p-6 transform transition-transform duration-500 group-hover:-translate-y-2">
                         <span class="text-emerald-600 text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">{{ $car['type'] }}</span>
                         <h3 class="font-geely text-3xl text-gray-900 uppercase tracking-tight mb-2">{{ $car['name'] }}</h3>
                         <p class="text-gray-500 text-xs font-medium leading-relaxed mb-4 line-clamp-2">{{ $car['desc'] }}</p>
@@ -776,7 +777,7 @@
                         High Efficiency Electric Drive
                     </h4>
                     <p class="text-gray-400 text-sm md:text-base relative z-10 leading-relaxed font-light">
-                        Class-leading PHEV with high-efficiency drive and continuous variable voltage performance.
+                        Class-leading PHEV with high-efficiency drive and continuous variable PHEV performance.
                     </p>
                 </div>
 

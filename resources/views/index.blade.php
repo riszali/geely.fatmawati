@@ -593,6 +593,54 @@
         </div>
     </section>
 
+    <section class="py-24 lg:py-32 bg-[#030712] bg-noise-overlay overflow-hidden relative">
+        <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
+            
+            <div class="text-center max-w-4xl mx-auto mb-16 md:mb-20 reveal-up">
+                <span class="text-emerald-400 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Core Technology</span>
+                <h2 class="font-geely text-4xl sm:text-5xl md:text-7xl uppercase tracking-tighter text-white leading-[0.9] mb-6">
+                    Global <span class="text-gradient-premium">Architecture</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed max-w-2xl mx-auto">
+                    Platform GEA mengintegrasikan superkomputer on-board dengan arsitektur baja boron terkuat, mendefinisikan ulang standar keselamatan dan kecerdasan mobil listrik dunia.
+                </p>
+            </div>
+
+            <div class="relative w-full aspect-video md:h-[650px] max-w-6xl mx-auto glass-island rounded-[2rem] p-2 flex items-center justify-center reveal-scale">
+                <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative z-10">
+                    <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-70 mix-blend-screen">
+                        <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-inside-the-gea-intelligent-electric-platform---geely-auto-720p-h264-tjCY49tcStbBVMrV.mp4" type="video/mp4">
+                    </video>
+                    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#030712_100%)] opacity-80 pointer-events-none"></div>
+                </div>
+
+                <div class="absolute top-10 left-10 hidden md:block glass-panel-dark p-6 rounded-2xl border border-white/10 shadow-[0_20px_40px_rgba(16,185,129,0.15)] z-20 w-64 reveal-left delay-200">
+                    <span class="text-emerald-400 text-[9px] font-bold tracking-widest uppercase block mb-2">Neural Core</span>
+                    <h4 class="font-geely text-2xl text-white uppercase tracking-tight mb-2">AI Integration</h4>
+                    <p class="text-gray-400 text-[10px] leading-relaxed">Sinkronisasi millidetik sensor Lidar dan Radar pintar.</p>
+                </div>
+
+                <div class="absolute bottom-10 right-10 hidden md:block glass-panel-dark p-6 rounded-2xl border border-white/10 shadow-[0_20px_40px_rgba(16,185,129,0.15)] z-20 w-64 reveal-right delay-300">
+                    <span class="text-emerald-400 text-[9px] font-bold tracking-widest uppercase block mb-2">Thermal Mgmt</span>
+                    <h4 class="font-geely text-2xl text-white uppercase tracking-tight mb-2">Hyper Efficiency</h4>
+                    <p class="text-gray-400 text-[10px] leading-relaxed">Melindungi sel baterai dan memaksimalkan jarak tempuh absolut.</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-4 mt-6 md:hidden">
+                 <div class="glass-island p-6 rounded-2xl">
+                    <h4 class="font-geely text-xl text-white uppercase mb-1">AI Integration</h4>
+                    <p class="text-gray-400 text-[10px]">Sinkronisasi millidetik sensor Lidar dan Radar pintar.</p>
+                </div>
+                <div class="glass-island p-6 rounded-2xl">
+                    <h4 class="font-geely text-xl text-white uppercase mb-1">Hyper Efficiency</h4>
+                    <p class="text-gray-400 text-[10px]">Manajemen termal canggih perlindungan baterai.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <div class="relative w-full pb-10 bg-[#030712]">
         
         <div class="sticky top-[calc(50vh-28.125vw)] md:top-0 w-full aspect-video md:aspect-auto md:h-[100vh] overflow-hidden z-0 flex items-center justify-center">
@@ -651,53 +699,57 @@
         </section>
     </div>
 
-    <section id="app-remote" class="py-24 lg:py-32 relative bg-[#030712] border-t border-white/5">
+    <section id="app-remote" class="py-24 lg:py-32 relative bg-[#f8fafc] overflow-hidden border-t border-gray-200">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-green-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPHBhdGggZD0iTTAgNDBMMCAwTDIwIDBMNDAgMEw0MCA0MEwyMCA0MEwwIDQweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgc3Ryb2tlLXdpZHRoPSIxIi8+Cjwvc3ZnPg==')] pointer-events-none z-0"></div>
+
         <div class="max-w-[1400px] w-full mx-auto px-6 md:px-12 relative z-10">
             
             <div class="text-center mb-16 md:mb-24 reveal-up">
-                <span class="text-emerald-400 text-[10px] font-bold tracking-[0.4em] uppercase mb-4 block">Flyme Auto</span>
-                <h2 class="font-geely text-4xl md:text-6xl uppercase tracking-tighter text-white mb-6">
-                    Control At Your <span class="text-gray-600">Fingertips</span>
+                <span class="text-emerald-600 text-[10px] font-bold tracking-[0.4em] uppercase mb-4 block">Flyme Auto</span>
+                <h2 class="font-geely text-4xl md:text-6xl uppercase tracking-tighter text-gray-900 mb-6">
+                    Control At Your <span class="text-emerald-500">Fingertips</span>
                 </h2>
             </div>
 
             <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-6 md:grid md:grid-cols-3 lg:gap-8 pb-8 md:pb-0 px-4 md:px-0">
                 
-                <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island rounded-[2rem] p-3 flex flex-col reveal-up delay-100 group img-container">
-                    <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/always-carghed.jpg-sPvzxctIegkiPhzC.webp" alt="Always Charged" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-emerald-900/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
+                <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-100 group img-container">
+                    <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6 shadow-sm">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/always-carghed.jpg-sPvzxctIegkiPhzC.webp" alt="Always Charged" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-emerald-500/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
                     </div>
                     <div class="px-4 pb-4">
-                        <h4 class="text-white font-geely text-2xl uppercase tracking-tight mb-3 group-hover:text-emerald-400 transition-colors">Always Charged</h4>
-                        <p class="text-gray-400 text-xs leading-relaxed font-light">Monitor daya baterai dan jadwalkan pengisian secara remote dari smartphone Anda.</p>
+                        <h4 class="text-gray-900 font-geely text-2xl uppercase tracking-tight mb-3 group-hover:text-emerald-600 transition-colors">Always Charged</h4>
+                        <p class="text-gray-600 text-xs leading-relaxed font-medium">Monitor daya baterai dan jadwalkan pengisian secara remote dari smartphone Anda.</p>
                     </div>
                 </div>
 
-                <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island rounded-[2rem] p-3 flex flex-col reveal-up delay-200 group img-container">
-                    <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/never-lost.jpg-9JUUSHg9iMEbQsEN.webp" alt="Never Lost" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-emerald-900/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
+                <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-200 group img-container">
+                    <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6 shadow-sm">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/never-lost.jpg-9JUUSHg9iMEbQsEN.webp" alt="Never Lost" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-emerald-500/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
                     </div>
                     <div class="px-4 pb-4">
-                        <h4 class="text-white font-geely text-2xl uppercase tracking-tight mb-3 group-hover:text-emerald-400 transition-colors">Never Lost</h4>
-                        <p class="text-gray-400 text-xs leading-relaxed font-light">Pelacakan posisi kendaraan presisi tinggi dengan fitur "Find My Car" real-time.</p>
+                        <h4 class="text-gray-900 font-geely text-2xl uppercase tracking-tight mb-3 group-hover:text-emerald-600 transition-colors">Never Lost</h4>
+                        <p class="text-gray-600 text-xs leading-relaxed font-medium">Pelacakan posisi kendaraan presisi tinggi dengan fitur "Find My Car" real-time.</p>
                     </div>
                 </div>
 
-                <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island rounded-[2rem] p-3 flex flex-col reveal-up delay-300 group img-container">
-                    <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/full-control.jpg-ycOYdP2jZuNB3u9w.webp" alt="Full Control" class="w-full h-full object-cover opacity-80">
-                        <div class="absolute inset-0 bg-emerald-900/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
+                <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-300 group img-container">
+                    <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6 shadow-sm">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/full-control.jpg-ycOYdP2jZuNB3u9w.webp" alt="Full Control" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-emerald-500/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
                     </div>
                     <div class="px-4 pb-4">
-                        <h4 class="text-white font-geely text-2xl uppercase tracking-tight mb-3 group-hover:text-emerald-400 transition-colors">Full Control</h4>
-                        <p class="text-gray-400 text-xs leading-relaxed font-light">Kendalikan suhu kabin dan akses kunci pintu sebelum Anda tiba di mobil.</p>
+                        <h4 class="text-gray-900 font-geely text-2xl uppercase tracking-tight mb-3 group-hover:text-emerald-600 transition-colors">Full Control</h4>
+                        <p class="text-gray-600 text-xs leading-relaxed font-medium">Kendalikan suhu kabin dan akses kunci pintu sebelum Anda tiba di mobil.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="text-center mt-4 flex md:hidden justify-center items-center gap-2 text-emerald-400 text-[9px] font-bold uppercase tracking-widest animate-pulse">
+            <div class="text-center mt-4 flex md:hidden justify-center items-center gap-2 text-emerald-600 text-[9px] font-bold uppercase tracking-widest animate-pulse">
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 Swipe to explore
             </div>

@@ -22,26 +22,19 @@
         html { scroll-behavior: smooth; }
         
         body {
-            background-color: #030712; /* Dark Slate background for ultra-premium glass contrast */
+            background-color: #030712;
             color: #f8fafc;
         }
 
-        /* ==========================================
-           UTILITIES
-           ========================================== */
-        /* Menyembunyikan scrollbar untuk Section App Remote */
         .hide-scrollbar::-webkit-scrollbar {
             display: none;
         }
+        
         .hide-scrollbar {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
 
-        /* ==========================================
-           ULTRA-PREMIUM GLASSMORPHISM SYSTEM
-           ========================================== */
-        /* Dark Glass */
         .glass-island {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(24px);
@@ -55,27 +48,24 @@
 
         .glass-island:hover {
             background: rgba(255, 255, 255, 0.05);
-            border-top: 1px solid rgba(16, 185, 129, 0.4); /* Emerald highlight on hover */
+            border-top: 1px solid rgba(16, 185, 129, 0.4);
             box-shadow: 0 40px 70px -10px rgba(16, 185, 129, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
             transform: translateY(-5px);
         }
 
-        /* Light Glass (Untuk Section Baru) */
         .glass-island-light {
             background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
             border: 1px solid rgba(255, 255, 255, 0.8);
             border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-            /* Bayangan Hijau Lembut Default */
             box-shadow: 0 20px 40px -10px rgba(16, 185, 129, 0.15), inset 0 1px 0 rgba(255, 255, 255, 1);
             transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
         .glass-island-light:hover {
             background: rgba(255, 255, 255, 0.8);
-            border-top: 1px solid rgba(16, 185, 129, 0.5); /* Emerald highlight on hover */
-            /* Bayangan Hijau Lebih Kuat saat Hover */
+            border-top: 1px solid rgba(16, 185, 129, 0.5);
             box-shadow: 0 30px 60px -10px rgba(16, 185, 129, 0.35), inset 0 1px 0 rgba(255, 255, 255, 1);
             transform: translateY(-5px);
         }
@@ -85,10 +75,9 @@
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15); /* Aksen Hijau */
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
         }
 
-        /* Ambient Glow Orbs behind Glass (Hanya Hijau) */
         .ambient-glow-emerald {
             background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
             mix-blend-mode: screen;
@@ -109,12 +98,10 @@
             z-index: 10;
         }
 
-        /* Image Hover Zoom within Glass */
         .img-container { overflow: hidden; cursor: pointer; }
         .img-container img { transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1); }
         .glass-island:hover .img-container img, .glass-island-light:hover .img-container img { transform: scale(1.08); }
 
-        /* Animation Classes */
         .reveal-up { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
         .reveal-left { opacity: 0; transform: translateX(-40px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
         .reveal-right { opacity: 0; transform: translateX(40px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
@@ -137,11 +124,7 @@
         body.lightbox-open { overflow: hidden; }
     </style>
 
-    <!-- ==========================================
-         SECTION 1: HERO (FLOATING GLASS ISLAND)
-    =========================================== -->
     <header class="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-[#030712]">
-        <!-- Full Background Video -->
         <div class="absolute inset-0 z-0">
             <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-60 mix-blend-lighten">
                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/say-hi-to-the-geely-ex5---geely-auto-uk-1080p-h264-_1-Sz3UdvLVUW0EehYY.mp4" type="video/mp4">
@@ -157,19 +140,16 @@
                 <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     
                     <div class="lg:col-span-7 flex flex-col">
-                        <!-- Badge -->
                         <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 mb-6 backdrop-blur-md w-max">
                             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_10px_#34d399]"></span>
                             <span class="text-emerald-300 text-[10px] font-bold tracking-widest uppercase">Dealer Geely Fatmawati</span>
                         </div>
                         
-                        <!-- Judul -->
                         <h1 class="font-geely text-5xl sm:text-6xl md:text-7xl lg:text-[90px] text-white uppercase leading-[0.9] tracking-tighter mb-4 lg:mb-8 drop-shadow-lg w-full">
                             Elevate <br>
                             <span class="text-gradient-premium">The Future.</span>
                         </h1>
 
-                        <!-- Gambar Mobil khusus HP (Disembunyikan di Desktop) -->
                         <div class="flex lg:hidden justify-center items-center relative w-full my-8 sm:max-w-md self-center">
                             <div class="w-64 h-64 sm:w-72 sm:h-72 border border-white/10 rounded-full absolute animate-[spin_30s_linear_infinite]"></div>
                             <div class="w-48 h-48 sm:w-56 sm:h-56 border border-emerald-500/30 rounded-full absolute animate-[spin_20s_linear_infinite_reverse]"></div>
@@ -180,12 +160,10 @@
                             </div>
                         </div>
                         
-                        <!-- Deskripsi -->
                         <p class="text-gray-300 text-sm md:text-lg font-light leading-relaxed max-w-xl mb-10 border-l border-emerald-500/50 pl-6 w-full">
                             Desain elegan, kabin nyaman, dan teknologi elektrik kini hadir di Jakarta Selatan untuk pengalaman berkendara yang lebih modern.
                         </p>
                         
-                        <!-- Tombol -->
                         <div class="flex flex-col sm:flex-row gap-4 w-full">
                             <a href="/test-drive" class="relative group px-8 py-4 bg-white/10 border border-white/20 text-white font-bold text-[11px] tracking-[0.2em] uppercase overflow-hidden rounded-full flex items-center justify-center gap-3 hover:bg-emerald-500 hover:border-emerald-400 transition-all duration-500 shadow-[0_0_20px_rgba(255,255,255,0.05)] hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] w-max">
                                 <span>Book Test Drive</span>
@@ -194,7 +172,6 @@
                         </div>
                     </div>
                     
-                    <!-- Gambar Mobil khusus Desktop (Disembunyikan di HP) -->
                     <div class="hidden lg:flex justify-center items-center relative lg:col-span-5">
                         <div class="w-72 h-72 border border-white/10 rounded-full absolute animate-[spin_30s_linear_infinite]"></div>
                         <div class="w-56 h-56 border border-emerald-500/30 rounded-full absolute animate-[spin_20s_linear_infinite_reverse]"></div>
@@ -210,18 +187,13 @@
         </div>
     </header>
 
-    <!-- ==========================================
-         SECTION 2 (BARU): GRAND OPENING (LIGHT BACKGROUND)
-    =========================================== -->
     <section class="py-24 lg:py-32 relative bg-[#f8fafc] overflow-hidden border-y border-white/10">
-        <!-- Light Ambient Glows untuk background terang -->
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
         <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-green-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
         <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPHBhdGggZD0iTTAgNDBMMCAwTDIwIDBMNDAgMEw0MCA0MEwyMCA0MEwwIDQweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgc3Ryb2tlLXdpZHRoPSIxIi8+Cjwvc3ZnPg==')] pointer-events-none z-0"></div>
 
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             
-            <!-- Header Section Grand Opening -->
             <div class="text-center max-w-3xl mx-auto mb-16 reveal-up">
                 <span class="text-emerald-600 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Milestone Moment</span>
                 <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl uppercase tracking-tighter text-gray-900 leading-[1.1] mb-6">
@@ -232,10 +204,8 @@
                 </p>
             </div>
 
-            <!-- Light Glass Bento Grid for Grand Opening Photos -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 h-auto md:h-[500px]">
                 
-                <!-- Main Image: Peresmian (Span 2 cols, 2 rows) -->
                 <div class="col-span-2 md:col-span-2 row-span-2 glass-island-light rounded-[2rem] p-2 relative reveal-up img-container" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-diresmikan-sO5Dd7FcvFkX3wX5.jpg', 'Grand Opening Geely Fatmawati', true)">
                     <div class="w-full h-[300px] md:h-full rounded-[1.5rem] overflow-hidden relative">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-diresmikan-sO5Dd7FcvFkX3wX5.jpg" alt="Peresmian Showroom Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center">
@@ -244,28 +214,24 @@
                             <span class="text-emerald-400 text-[10px] font-bold tracking-[0.3em] uppercase mb-1 block drop-shadow-md">Celebration</span>
                             <h3 class="font-geely text-2xl md:text-4xl text-white uppercase tracking-tight">Resmi Beroperasi</h3>
                         </div>
-                        <!-- Zoom Icon overlay -->
                         <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/40 opacity-0 group-hover:opacity-100 transition-opacity">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
                         </div>
                     </div>
                 </div>
 
-                <!-- Image 2: Ribbon/Event (Span 2 cols, 1 row) -->
                 <div class="col-span-2 md:col-span-2 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-left delay-100 img-container" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-3-RgnRXLNbpMYB75ky.webp', 'Suasana Kemeriahan Grand Opening', true)">
                     <div class="w-full h-[200px] md:h-full rounded-[1.5rem] overflow-hidden relative">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-3-RgnRXLNbpMYB75ky.webp" alt="Event Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center">
                     </div>
                 </div>
 
-                <!-- Image 3: Fasilitas/Lounge (Span 1 col, 1 row) -->
                 <div class="col-span-1 md:col-span-1 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-up delay-200 img-container" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-7-G2FMRCtHFFy6nvBp.jpeg', 'Penerimaan Pelanggan Perdana', true)">
                     <div class="w-full h-[200px] md:h-full rounded-[1.5rem] overflow-hidden relative">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-7-G2FMRCtHFFy6nvBp.jpeg" alt="Pelayanan Pelanggan Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-[center_60%]">
                     </div>
                 </div>
 
-                <!-- Image 4: Display Mobil Event (Span 1 col, 1 row) -->
                 <div class="col-span-1 md:col-span-1 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-up delay-300 img-container" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/p1010662-scaled-4y1qGH08npg8QHKO.jpg', 'Lini Kendaraan Masa Depan', true)">
                     <div class="w-full h-[200px] md:h-full rounded-[1.5rem] overflow-hidden relative">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/p1010662-scaled-4y1qGH08npg8QHKO.jpg" alt="Display Grand Opening Geely" class="absolute inset-0 w-full h-full object-cover object-center">
@@ -276,9 +242,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 3: SHOWROOM (OASIS OF INNOVATION)
-    =========================================== -->
     <section id="experience" class="py-24 lg:py-32 relative bg-[#030712]">
         <div class="absolute right-0 bottom-0 w-[800px] h-[800px] ambient-glow-emerald opacity-30 pointer-events-none"></div>
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
@@ -301,10 +264,8 @@
                 </div>
             </div>
 
-            <!-- Layout Diperbaiki: Rasio Foto 1:1 Square -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 
-                <!-- Foto 1: Main Showroom Image (Rasio 1:1) -->
                 <div class="glass-island rounded-[2rem] p-2 relative reveal-up img-container" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/showroom-fatmawati-cV9nMqwkCe4Ay47Y.jpg', 'Showroom Geely Fatmawati')">
                     <div class="w-full aspect-square rounded-[1.5rem] overflow-hidden relative">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/showroom-fatmawati-cV9nMqwkCe4Ay47Y.jpg" alt="Showroom Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
@@ -317,7 +278,6 @@
                     </div>
                 </div>
 
-                <!-- Foto 2: SPK Image (Rasio 1:1) -->
                 <div class="glass-island rounded-[2rem] p-2 relative reveal-up delay-100 img-container" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/spk-XGyyr4bmoYUWkhWY.jpeg', 'Penyerahan SPK Pelanggan Geely Fatmawati')">
                     <div class="w-full aspect-square rounded-[1.5rem] overflow-hidden relative">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/spk-XGyyr4bmoYUWkhWY.jpeg" alt="Penyerahan SPK Pelanggan Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
@@ -329,7 +289,6 @@
                     </div>
                 </div>
 
-                <!-- Kotak Info (Mengisi Baris Bawah) -->
                 <div class="glass-island rounded-[2rem] p-8 flex flex-col justify-center relative overflow-hidden reveal-up delay-200 group min-h-[200px] md:min-h-[250px]">
                     <div class="absolute top-0 right-0 w-32 h-32 ambient-glow-emerald opacity-50 group-hover:opacity-100 transition-opacity"></div>
                     <div class="w-12 h-12 rounded-full border border-emerald-500/30 bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
@@ -351,9 +310,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 4: LINEUP (EMBEDDED GLASS CARDS - DARK THEME)
-    =========================================== -->
     <section id="lineup" class="py-24 lg:py-32 relative bg-[#030712] bg-noise-overlay overflow-hidden border-y border-white/5">
         <div class="absolute top-1/4 left-0 w-full h-[500px] ambient-glow-emerald opacity-50 z-0"></div>
         
@@ -435,9 +391,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 5: PROMO FINANSIAL (RESTORED)
-    =========================================== -->
     <section class="py-24 relative overflow-hidden flex items-center justify-center min-h-[60vh] bg-[#030712]">
         <div class="absolute inset-0 z-0">
             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/2400x0-14-mxB2lNnxMqfjr7pG.webp" alt="Pembiayaan Geely Fatmawati" class="w-full h-full object-cover brightness-50 mix-blend-luminosity opacity-40">
@@ -462,9 +415,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 6: KESEIMBANGAN SEMPURNA (RESTORED & UPGRADED)
-    =========================================== -->
     <section class="py-24 lg:py-32 bg-[#030712] relative overflow-hidden border-t border-white/5">
         <div class="absolute top-32 right-[-10%] w-[600px] h-[600px] ambient-glow-emerald opacity-40 z-0"></div>
         <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] ambient-glow-emerald opacity-40 z-0"></div>
@@ -509,16 +459,12 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 7: IMMERSIVE ATMOSPHERE / STATS (RESTORED & UPGRADED)
-    =========================================== -->
     <section class="py-24 lg:py-32 relative w-full overflow-hidden bg-[#030712]">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] ambient-glow-emerald opacity-20 pointer-events-none"></div>
 
         <div class="relative z-20 w-full max-w-[1400px] mx-auto px-6 md:px-12">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
                 
-                <!-- Left: Video & Stats in Glass -->
                 <div class="order-1 lg:col-span-7 flex flex-col reveal-left relative z-10">
                     <div class="glass-island p-2 rounded-[2rem] mb-6 md:mb-8">
                         <div class="relative w-full aspect-video rounded-[1.5rem] overflow-hidden">
@@ -533,7 +479,6 @@
                         </div>
                     </div>
 
-                    <!-- 3 Glass Stats Cards -->
                     <div class="grid grid-cols-3 gap-3 md:gap-6 relative z-20">
                         <div class="glass-island p-4 md:p-8 rounded-[1.5rem] flex flex-col justify-center items-center text-center">
                             <p class="text-gray-400 text-[7px] md:text-[9px] tracking-[0.2em] font-bold uppercase mb-2">Up to</p>
@@ -553,7 +498,6 @@
                     </div>
                 </div>
 
-                <!-- Right: Text Block -->
                 <div class="order-2 lg:col-span-5 glass-island p-8 md:p-12 rounded-[2rem] flex flex-col justify-center reveal-right relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-64 h-64 ambient-glow-emerald opacity-50 z-0"></div>
                     <div class="relative z-10">
@@ -574,9 +518,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 8: SPOTLIGHT EX2 BENTO (RESTORED & UPGRADED)
-    =========================================== -->
     <section class="py-24 lg:py-32 bg-[#030712] relative overflow-hidden border-t border-white/5">
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             
@@ -599,7 +540,6 @@
 
             <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-none md:grid-rows-2 gap-4 md:gap-6 h-auto md:h-[700px] lg:h-[800px] reveal-up delay-100">
                 
-                <!-- 01 // Exterior -->
                 <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg', '01 // Exterior - Aero Stance')" class="col-span-2 md:col-span-2 md:row-span-2 glass-island rounded-[2rem] p-2 cursor-pointer img-container relative">
                     <div class="w-full h-[300px] md:h-full rounded-[1.5rem] overflow-hidden relative">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg" alt="Eksterior Depan Geely EX2 EV" class="absolute inset-0 w-full h-full object-cover">
@@ -616,7 +556,6 @@
                     </div>
                 </div>
 
-                <!-- 02 // Cockpit -->
                 <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg', '02 // Cockpit - Digital Oasis')" class="col-span-2 md:col-span-2 md:row-span-1 glass-island rounded-[2rem] p-2 cursor-pointer img-container relative">
                     <div class="w-full h-[220px] md:h-full rounded-[1.5rem] overflow-hidden relative">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg" alt="Interior Kabin Geely EX2" class="absolute inset-0 w-full h-full object-cover object-[center_60%]">
@@ -628,7 +567,6 @@
                     </div>
                 </div>
 
-                <!-- 03 // Lifestyle -->
                 <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp', '03 // Lifestyle - Agility')" class="col-span-1 md:col-span-1 md:row-span-1 glass-island rounded-[2rem] p-2 cursor-pointer img-container relative">
                     <div class="w-full h-[180px] md:h-full rounded-[1.5rem] overflow-hidden relative">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp" alt="Gaya Hidup Berkendara EV" class="absolute inset-0 w-full h-full object-cover">
@@ -640,7 +578,6 @@
                     </div>
                 </div>
 
-                <!-- 04 // Utility -->
                 <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png', '04 // Utility - Max Cargo', true)" class="col-span-1 md:col-span-1 md:row-span-1 glass-island rounded-[2rem] p-6 cursor-pointer flex flex-col justify-between relative group">
                     <div class="absolute inset-0 bg-gradient-to-b from-emerald-900/20 to-transparent rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div class="z-10">
@@ -656,9 +593,6 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 9: GEA PLATFORM (HUD DISPLAY LAYOUT)
-    =========================================== -->
     <section class="py-24 lg:py-32 bg-[#030712] bg-noise-overlay overflow-hidden relative">
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             
@@ -713,12 +647,8 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         SECTION 10: EM-I SUPER HYBRID (RESTORED & UPGRADED)
-    =========================================== -->
     <div class="relative w-full pb-10 bg-[#030712]">
         
-        <!-- Sticky Background Video -->
         <div class="sticky top-0 w-full aspect-video md:h-[100vh] overflow-hidden z-0">
             <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-lighten">
                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely---coming-soon-starray-em-i---geely-epping-1080p-h264-YZ9EbbbjRws55ErL.mp4" type="video/mp4">
@@ -779,9 +709,6 @@
         </section>
     </div>
 
-    <!-- ==========================================
-         SECTION 11: GEELY APP REMOTE
-    =========================================== -->
     <section id="app-remote" class="py-24 lg:py-32 relative bg-[#030712] border-t border-white/5">
         <div class="max-w-[1400px] w-full mx-auto px-6 md:px-12 relative z-10">
             
@@ -793,7 +720,7 @@
             </div>
 
             <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-6 md:grid md:grid-cols-3 lg:gap-8 pb-8 md:pb-0 px-4 md:px-0">
-                <!-- Card 1 -->
+                
                 <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island rounded-[2rem] p-3 flex flex-col reveal-up delay-100 group img-container">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/always-carghed.jpg-sPvzxctIegkiPhzC.webp" alt="Always Charged" class="w-full h-full object-cover opacity-80">
@@ -805,7 +732,6 @@
                     </div>
                 </div>
 
-                <!-- Card 2 -->
                 <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island rounded-[2rem] p-3 flex flex-col reveal-up delay-200 group img-container">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/never-lost.jpg-9JUUSHg9iMEbQsEN.webp" alt="Never Lost" class="w-full h-full object-cover opacity-80">
@@ -817,7 +743,6 @@
                     </div>
                 </div>
 
-                <!-- Card 3 -->
                 <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island rounded-[2rem] p-3 flex flex-col reveal-up delay-300 group img-container">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/full-control.jpg-ycOYdP2jZuNB3u9w.webp" alt="Full Control" class="w-full h-full object-cover opacity-80">
@@ -837,7 +762,6 @@
         </div>
     </section>
 
-    <!-- Lightbox Element (Sesuai original) -->
     <div id="lightbox" class="fixed inset-0 hidden items-center justify-center bg-[#030712]/95 backdrop-blur-md opacity-0 transition-opacity duration-300" style="z-index: 9999;" onclick="closeLightbox(event)">
         <button onclick="closeLightbox(event)" class="absolute top-6 right-6 md:top-10 md:right-10 text-white/60 hover:text-white transition-colors bg-white/5 p-2 rounded-full border border-white/10 hover:bg-white/10 cursor-pointer" style="z-index: 10000;">
             <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -852,7 +776,6 @@
         </div>
     </div>
 
-    <!-- Scripts Khusus Observer Transisi Fade-In -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const observerOptions = {
@@ -919,7 +842,6 @@
         });
     </script>
 
-    <!-- SCHEMA MARKUP FATMAWATI (Dipertahankan) -->
     <script type="application/ld+json">
     {
       "@@context": "https://schema.org",

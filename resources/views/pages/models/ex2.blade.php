@@ -556,7 +556,7 @@
                     
                     <div class="lg:col-span-6 flex flex-col gap-6 reveal-left order-2 lg:order-1">
                         
-                        <div class="glass-island p-2 rounded-[2rem] h-[160px] md:h-[200px] group flex items-end relative overflow-hidden border border-teal-500/50">
+                        <a href="{{ route('models.ex2.exterior') }}" class="glass-island p-2 rounded-[2rem] h-[160px] md:h-[200px] group flex items-end relative overflow-hidden border border-teal-500/50 cursor-pointer">
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/banner_ex2b-Rcl937dqFR7EP4xN.jpg" alt="Eksterior" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-40">
                             <div class="absolute inset-0 bg-gradient-to-t from-[#03050a] to-transparent opacity-90"></div>
                             <div class="relative z-10 p-6 md:p-8 w-full flex justify-between items-end">
@@ -568,7 +568,7 @@
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                                 </div>
                             </div>
-                        </div>
+                        </a>
 
                         <a href="{{ route('models.ex2.interior') }}" class="glass-island p-2 rounded-[2rem] h-[160px] md:h-[200px] group img-container flex items-end relative overflow-hidden">
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/skyline-white-YQe9py6QFEDr79dt.webp" alt="Interior" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-50 group-hover:opacity-80 transition-opacity">
@@ -632,7 +632,7 @@
                         </div>
 
                         <div class="flex flex-col gap-3 w-full">
-                            <a href="{{ route('models.ex2.specification') }}" class="btn-shimmer w-full py-4 md:py-5 rounded-full bg-teal-500 text-white font-bold text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-center hover:scale-[1.02] transition-transform duration-300 shadow-[0_0_30px_rgba(20,184,166,0.3)]">
+                            <a href="{{ route('models.ex2.specification') }}" class="btn-shimmer w-full py-4 md:py-5 rounded-full bg-teal-500 text-white font-bold text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-center hover:scale-[1.02] transition-transform duration-300 shadow-[0_0_30px_rgba(16,185,129,0.3)]">
                                 Show Full Specs
                             </a>
                             <div class="flex flex-col sm:flex-row gap-3 w-full">

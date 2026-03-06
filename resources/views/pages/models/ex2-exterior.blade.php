@@ -315,28 +315,46 @@
             </div>
         </section>
 
-        <!-- GALLERY FOTO EKSTERIOR (BACKGROUND HIJAU GRADASI HITAM) -->
+        <!-- GALLERY FOTO EKSTERIOR (BENTO GRID INOVATIF - BACKGROUND HIJAU GRADASI HITAM) -->
         <section class="py-16 md:py-32 relative z-20 overflow-hidden bg-gradient-to-b from-emerald-900 to-[#050505] bg-noise">
-            <div class="max-w-[1600px] mx-auto px-4 sm:px-6 relative z-10">
-                <div class="columns-1 sm:columns-2 lg:columns-4 gap-4 md:gap-6 space-y-4 md:space-y-6">
+            <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-500/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
+            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-teal-500/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
+
+            <div class="max-w-[1600px] mx-auto px-3 sm:px-6 relative z-10">
+
+                <div class="md:hidden flex items-center justify-end mb-6 px-2 reveal-up">
+                    <div class="flex items-center gap-1.5 text-gray-400">
+                        <span class="text-[9px] tracking-widest uppercase">Tap to expand</span>
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+                    </div>
+                </div>
+
+                <!-- Innovative Bento Grid for Mobile & Desktop -->
+                <div class="grid grid-cols-2 md:grid-cols-4 grid-flow-dense gap-2 sm:gap-4 md:gap-6 auto-rows-[140px] sm:auto-rows-[180px] md:auto-rows-[250px]">
                     @php
                         $gallery_images = [
-                            'https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg',
-                            'https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_01-AMqD4kzE6kiaXr9z.webp',
-                            'https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_02-m7VDK4jv0GtqJb72.webp',
-                            'https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp',
-                            'https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_06-AE074kxnb9cgqyy8.webp',
-                            'https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_04-Yg249ePvePs12lrB.webp',
-                            'https://assets.zyrosite.com/Yle46KEPN6IkVONg/banner-ex2-mePgnZaEZKcoBMRV.jpg',
-                            'https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_07-YZ9Ebkpj2BhoZKpN.webp'
+                            ['src' => 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg', 'class' => 'col-span-2 row-span-2 md:col-span-2 md:row-span-2', 'delay' => ''],
+                            ['src' => 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_01-AMqD4kzE6kiaXr9z.webp', 'class' => 'col-span-1 row-span-1 md:col-span-1 md:row-span-2', 'delay' => 'delay-100'],
+                            ['src' => 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_02-m7VDK4jv0GtqJb72.webp', 'class' => 'col-span-1 row-span-1 md:col-span-1 md:row-span-1', 'delay' => 'delay-200'],
+                            ['src' => 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp', 'class' => 'col-span-1 row-span-2 md:col-span-1 md:row-span-1', 'delay' => 'delay-300'],
+                            ['src' => 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_06-AE074kxnb9cgqyy8.webp', 'class' => 'col-span-1 row-span-1 md:col-span-2 md:row-span-1', 'delay' => ''],
+                            ['src' => 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_04-Yg249ePvePs12lrB.webp', 'class' => 'col-span-1 row-span-1 md:col-span-1 md:row-span-1', 'delay' => 'delay-100'],
+                            ['src' => 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/banner-ex2-mePgnZaEZKcoBMRV.jpg', 'class' => 'col-span-2 row-span-1 md:col-span-3 md:row-span-1', 'delay' => 'delay-200'],
+                            ['src' => 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_07-YZ9Ebkpj2BhoZKpN.webp', 'class' => 'col-span-2 row-span-2 md:col-span-1 md:row-span-2', 'delay' => 'delay-300']
                         ];
-                        
-                        $delays = ['', 'delay-100', 'delay-200', 'delay-300'];
                     @endphp
 
-                    @foreach($gallery_images as $index => $img)
-                        <div class="break-inside-avoid glass-panel p-2 rounded-[2rem] reveal-up {{ $delays[$index % 4] }} img-container group cursor-pointer" onclick="openLightbox('{{ $img }}')">
-                            <img src="{{ $img }}" alt="Gallery Geely EX2" loading="lazy" class="w-full h-auto rounded-[1.5rem] object-cover mix-blend-luminosity opacity-90 group-hover:mix-blend-normal group-hover:opacity-100 transition-all duration-700">
+                    @foreach($gallery_images as $img)
+                        <div class="glass-panel p-1 sm:p-2 rounded-[1rem] sm:rounded-[2rem] reveal-up {{ $img['delay'] }} {{ $img['class'] }} group cursor-pointer relative overflow-hidden active:scale-[0.98] transition-transform duration-300" onclick="openLightbox('{{ $img['src'] }}')">
+                            <div class="w-full h-full rounded-[0.75rem] sm:rounded-[1.5rem] overflow-hidden relative">
+                                <img src="{{ $img['src'] }}" alt="Gallery Geely EX2" loading="lazy" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:mix-blend-normal group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                
+                                <!-- Action Icon (Hover / Interactive) -->
+                                <div class="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0 border border-white/20">
+                                    <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+                                </div>
+                            </div>
                         </div>
                     @endforeach
                 </div>
@@ -404,38 +422,41 @@
             </div>
         </section>
 
-        <section class="py-24 md:py-32 bg-[#050505] relative z-20 overflow-hidden border-t border-white/5">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+        <!-- SECTION CAGE BODY -->
+        <section class="py-24 md:py-32 relative z-20 overflow-hidden border-t border-white/10 bg-gradient-to-b from-[#4a1000] to-[#050505] bg-noise">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-orange-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
             <div class="max-w-[1400px] mx-auto px-4 md:px-6 relative z-10">
-                <div class="relative w-full rounded-[2.5rem] md:rounded-[3rem] overflow-hidden border border-orange-500/20 shadow-[0_0_50px_rgba(234,88,12,0.05)] group">
-                    <div class="absolute inset-0 bg-[#08080a]"></div>
-                    <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2---vehicle-architecture-2DbmJoNAygKH9Fo7.jpg" 
-                         alt="Cage Body Structure" 
-                         class="w-full h-[550px] md:h-[650px] lg:h-[750px] object-cover object-center opacity-60 group-hover:opacity-80 transition-all duration-[2000ms] mix-blend-lighten scale-105 group-hover:scale-100">
-                    
-                    <div class="absolute inset-0 bg-gradient-to-r from-[#050505]/90 via-[#050505]/60 to-transparent"></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/80 via-transparent to-transparent"></div>
+                <div class="glass-panel p-2 rounded-[2.5rem] md:rounded-[3rem] overflow-hidden border border-orange-500/20 shadow-[0_0_50px_rgba(234,88,12,0.1)] group">
+                    <div class="relative w-full h-[550px] md:h-[650px] lg:h-[750px] rounded-[2rem] md:rounded-[2.5rem] overflow-hidden">
+                        <div class="absolute inset-0 bg-[#08080a]"></div>
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2---vehicle-architecture-2DbmJoNAygKH9Fo7.jpg" 
+                             alt="Cage Body Structure" 
+                             class="absolute inset-0 w-full h-full object-cover object-center opacity-60 group-hover:opacity-80 transition-all duration-[2000ms] mix-blend-lighten scale-105 group-hover:scale-100">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-r from-[#050505]/90 via-[#050505]/60 to-transparent"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/90 via-transparent to-transparent"></div>
 
-                    <div class="absolute inset-0 p-8 md:p-12 lg:p-20 flex flex-col justify-end lg:justify-center w-full lg:w-1/2 z-10">
-                        <div class="reveal-left">
-                            <div class="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 backdrop-blur-md">
-                                <span class="text-[9px] md:text-[10px] font-bold tracking-[0.3em] uppercase">Core Safety</span>
+                        <div class="absolute inset-0 p-8 md:p-12 lg:p-20 flex flex-col justify-end lg:justify-center w-full lg:w-1/2 z-10">
+                            <div class="reveal-left">
+                                <div class="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 backdrop-blur-md shadow-sm animate-float">
+                                    <span class="text-[9px] md:text-[10px] font-bold tracking-[0.3em] uppercase">Core Safety</span>
+                                </div>
+                                <h2 class="font-geely text-4xl sm:text-5xl md:text-7xl text-white uppercase tracking-tighter leading-tight mb-6 drop-shadow-2xl">
+                                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-500">CAGE</span> <br> BODY
+                                </h2>
+                                <div class="w-16 h-1 bg-gradient-to-r from-orange-500 to-red-600 mb-6 rounded-full shadow-[0_0_15px_rgba(234,88,12,0.5)]"></div>
+                                <p class="text-gray-300 text-sm md:text-base lg:text-lg leading-relaxed font-light drop-shadow-md max-w-md">
+                                    Rangka bodi berkekuatan tinggi meningkatkan kekakuan dan mendistribusikan gaya benturan secara merata, menjaga keselamatan penumpang dalam setiap situasi.
+                                </p>
                             </div>
-                            <h2 class="font-geely text-4xl sm:text-5xl md:text-7xl text-white uppercase tracking-tighter leading-tight mb-6 drop-shadow-2xl">
-                                <span class="text-orange-400">CAGE</span> <br> BODY
-                            </h2>
-                            <div class="w-16 h-1 bg-gradient-to-r from-orange-500 to-red-600 mb-6 rounded-full shadow-[0_0_15px_rgba(234,88,12,0.5)]"></div>
-                            <p class="text-gray-300 text-sm md:text-lg leading-relaxed font-light drop-shadow-md max-w-md">
-                                Rangka bodi berkekuatan tinggi meningkatkan kekakuan dan mendistribusikan gaya benturan secara merata, menjaga keselamatan penumpang dalam setiap situasi.
-                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-24 md:py-32 bg-[#08080a] relative z-20 overflow-hidden border-t border-white/5">
+        <section class="py-24 md:py-32 bg-[#08080a] relative z-20 overflow-hidden border-t border-white/5 bg-noise">
             <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-teal-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
             <div class="max-w-[1500px] mx-auto relative z-10">
@@ -470,7 +491,7 @@
             </div>
         </section>
 
-        <section class="py-24 md:py-32 bg-[#050505] relative z-20 overflow-hidden border-t border-white/5">
+        <section class="py-24 md:py-32 bg-[#050505] relative z-20 overflow-hidden border-t border-white/5 bg-noise">
             <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
 
             <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -498,18 +519,18 @@
         </section>
 
         <!-- SEKSI DIVE INTO DETAILS -->
-        <section id="details" class="py-16 md:py-24 lg:py-32 relative z-30 bg-white overflow-hidden border-t border-gray-200">
-            <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-teal-50 rounded-full blur-[150px] pointer-events-none z-0"></div>
+        <section id="details" class="py-16 md:py-24 lg:py-32 relative z-30 bg-[#050505] overflow-hidden border-t border-white/10">
+            <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-teal-600/20 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
             <div class="max-w-[1600px] w-full mx-auto px-4 sm:px-8 md:px-12 lg:px-16 relative z-10">
                 <div class="text-center mb-12 md:mb-20 max-w-4xl mx-auto px-4 reveal-up">
-                    <div class="inline-flex items-center gap-3 mb-4 px-4 py-2 rounded-full border border-gray-200 bg-gray-50 text-gray-600 shadow-sm animate-float">
+                    <div class="inline-flex items-center gap-3 mb-4 px-4 py-2 rounded-full border border-teal-500/30 bg-teal-500/10 text-teal-400 shadow-sm animate-float">
                         <span class="text-[10px] tracking-[0.3em] font-bold uppercase">The Blueprint</span>
                     </div>
-                    <h2 class="font-geely text-3xl sm:text-4xl md:text-5xl lg:text-7xl uppercase tracking-tighter text-gray-900 mb-6 leading-tight drop-shadow-sm">
-                        Dive Into <span class="text-gradient-dark-animated">The Details</span>
+                    <h2 class="font-geely text-3xl sm:text-4xl md:text-5xl lg:text-7xl uppercase tracking-tighter text-white mb-6 leading-tight drop-shadow-sm">
+                        Dive Into <span class="text-gradient-animated">The Details</span>
                     </h2>
-                    <p class="text-gray-500 text-xs sm:text-sm md:text-base lg:text-lg font-light leading-relaxed">
+                    <p class="text-gray-400 text-xs sm:text-sm md:text-base lg:text-lg font-light leading-relaxed">
                         Dapatkan pandangan lebih dekat pada fitur-fitur canggih dan spesifikasi Geely EX2, yang dirancang untuk menetapkan standar baru kendaraan elektrik urban.
                     </p>
                 </div>
@@ -531,7 +552,7 @@
                             </div>
                         </a>
 
-                        <a href="{{ route('models.ex2') }}#experience" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-gray-200">
+                        <a href="{{ route('models.ex2') }}#experience" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-white/10">
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/skyline-white-YQe9py6QFEDr79dt.webp" alt="Interior" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent"></div>
                             
@@ -546,7 +567,7 @@
                             </div>
                         </a>
 
-                        <a href="{{ route('models.ex2.specification') }}" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-gray-200">
+                        <a href="{{ route('models.ex2.specification') }}" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-white/10">
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/gambar-9-driving-pleasure-geely-ex2-mrThxF1DGtduy9Ih.webp" alt="Specification" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
                             <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent"></div>
                             
@@ -563,44 +584,44 @@
                     </div>
 
                     <div class="order-1 lg:order-2 lg:col-span-5 flex flex-col gap-8 reveal-right delay-200 w-full">
-                        <div class="bg-gray-50 border border-gray-200 p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] flex flex-col shadow-sm relative overflow-hidden group hover:border-gray-300 transition-colors duration-500">
-                            <h4 class="text-gray-900 font-geely text-2xl md:text-3xl mb-1 relative z-10 drop-shadow-sm">Dimensions</h4>
-                            <p class="text-gray-500 text-[10px] md:text-xs font-bold tracking-widest uppercase mb-8 relative z-10">(in milimeters)</p>
+                        <div class="glass-panel p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] flex flex-col shadow-2xl relative overflow-hidden group hover:border-white/20 transition-colors duration-500">
+                            <h4 class="text-white font-geely text-2xl md:text-3xl mb-1 relative z-10 drop-shadow-sm">Dimensions</h4>
+                            <p class="text-gray-400 text-[10px] md:text-xs font-bold tracking-widest uppercase mb-8 relative z-10">(in milimeters)</p>
                             
                             <div class="grid grid-cols-2 gap-6 md:gap-8 relative z-10 mb-4">
                                 <div class="border-l-2 border-teal-500 pl-4">
-                                    <p class="text-gray-500 text-[10px] uppercase tracking-wider mb-1">Length</p>
-                                    <p class="font-geely text-3xl md:text-4xl text-gray-900 drop-shadow-sm">4135</p>
+                                    <p class="text-gray-400 text-[10px] uppercase tracking-wider mb-1">Length</p>
+                                    <p class="font-geely text-3xl md:text-4xl text-white drop-shadow-sm">4135</p>
                                 </div>
                                 <div class="border-l-2 border-teal-500 pl-4">
-                                    <p class="text-gray-500 text-[10px] uppercase tracking-wider mb-1">Width</p>
-                                    <p class="font-geely text-3xl md:text-4xl text-gray-900 drop-shadow-sm">1805</p>
+                                    <p class="text-gray-400 text-[10px] uppercase tracking-wider mb-1">Width</p>
+                                    <p class="font-geely text-3xl md:text-4xl text-white drop-shadow-sm">1805</p>
                                 </div>
                                 <div class="border-l-2 border-teal-500 pl-4">
-                                    <p class="text-gray-500 text-[10px] uppercase tracking-wider mb-1">Height</p>
-                                    <p class="font-geely text-3xl md:text-4xl text-gray-900 drop-shadow-sm">1580</p>
+                                    <p class="text-gray-400 text-[10px] uppercase tracking-wider mb-1">Height</p>
+                                    <p class="font-geely text-3xl md:text-4xl text-white drop-shadow-sm">1580</p>
                                 </div>
                                 <div class="border-l-2 border-teal-500 pl-4">
-                                    <p class="text-gray-500 text-[10px] uppercase tracking-wider mb-1">Wheelbase</p>
-                                    <p class="font-geely text-3xl md:text-4xl text-gray-900 drop-shadow-sm">2650</p>
+                                    <p class="text-gray-400 text-[10px] uppercase tracking-wider mb-1">Wheelbase</p>
+                                    <p class="font-geely text-3xl md:text-4xl text-white drop-shadow-sm">2650</p>
                                 </div>
                             </div>
 
-                            <div class="w-full relative mt-8 mix-blend-multiply opacity-60 group-hover:opacity-80 transition-opacity duration-500">
+                            <div class="w-full relative mt-8 opacity-60 group-hover:opacity-80 transition-opacity duration-500 invert">
                                 <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/sketch-ex2-9YIJTReOoLDy0jje.webp" alt="EX2 Sketch" loading="lazy" class="w-full h-auto object-contain">
                             </div>
                         </div>
 
                         <div class="flex flex-col gap-3 w-full">
-                            <a href="{{ route('models.ex2.specification') }}" class="w-full py-4 md:py-5 rounded-full bg-gray-900 text-white font-bold text-[10px] md:text-xs tracking-[0.2em] uppercase text-center hover:bg-teal-600 transition-colors duration-300 shadow-md">
+                            <a href="{{ route('models.ex2.specification') }}" class="w-full py-4 md:py-5 rounded-full bg-emerald-500 text-white font-bold text-[10px] md:text-xs tracking-[0.2em] uppercase text-center hover:bg-emerald-400 transition-colors duration-300 shadow-[0_0_20px_rgba(16,185,129,0.3)] btn-shimmer">
                                 Show Full Specs
                             </a>
                             <div class="flex flex-col sm:flex-row gap-3 w-full">
-                                <a href="#" class="w-full sm:w-1/2 py-3 md:py-4 rounded-full border border-gray-300 text-gray-700 font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-center hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center gap-2">
+                                <a href="#" class="w-full sm:w-1/2 py-3 md:py-4 rounded-full border border-white/20 text-white font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-center hover:bg-white/10 transition-colors duration-300 flex items-center justify-center gap-2">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                                     Brochure
                                 </a>
-                                <a href="{{ route('test-drive') }}" class="w-full sm:w-1/2 py-3 md:py-4 rounded-full border border-gray-300 text-gray-700 font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-center hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center gap-2">
+                                <a href="{{ route('test-drive') }}" class="w-full sm:w-1/2 py-3 md:py-4 rounded-full border border-white/20 text-white font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-center hover:bg-white/10 transition-colors duration-300 flex items-center justify-center gap-2">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                                     Book Test Drive
                                 </a>

@@ -539,6 +539,8 @@
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
                     
                     <div class="lg:col-span-5 glass-panel p-8 md:p-10 lg:p-12 flex flex-col justify-center group hover:border-teal-500/30 transition-all duration-500 reveal-left">
+                        <div class="absolute top-0 left-0 w-64 h-64 bg-teal-500/30 rounded-full blur-[80px] pointer-events-none transition-colors duration-700 group-hover:bg-purple-500/30"></div>
+                        
                         <div class="relative z-10">
                             <span class="text-teal-400 text-[10px] md:text-xs tracking-[0.4em] font-bold uppercase mb-4 block drop-shadow-md">All-New EX5</span>
                             <h2 class="font-geely text-4xl md:text-5xl lg:text-6xl uppercase tracking-tighter mb-6 md:mb-8 leading-[0.9]">
@@ -571,6 +573,8 @@
                         </div>
 
                         <div class="grid grid-cols-3 gap-2 sm:gap-3 md:gap-4 lg:gap-6 -mt-6 sm:-mt-10 md:-mt-8 lg:mt-6 relative z-20 px-1 sm:px-4 md:px-0 lg:px-0">
+                            <div class="absolute inset-0 bg-gradient-to-r from-teal-500/20 via-purple-500/20 to-indigo-500/20 blur-[50px] rounded-full pointer-events-none z-0"></div>
+
                             <div class="glass-panel relative z-10 p-3 sm:p-5 md:p-6 lg:p-8 hover:border-teal-400/50 transition-all duration-500 shadow-xl flex flex-col justify-center items-center text-center">
                                 <p class="text-gray-300 text-[6px] sm:text-[9px] tracking-[0.1em] sm:tracking-[0.2em] font-bold uppercase mb-1 sm:mb-2 drop-shadow-sm whitespace-nowrap">Up to</p>
                                 <h3 class="font-geely flex items-baseline justify-center text-xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-1 sm:mb-2 drop-shadow-md">
@@ -677,11 +681,11 @@
             <!-- Ambient Glow -->
             <div class="absolute top-1/2 left-0 -translate-y-1/2 w-[300px] h-[300px] md:w-[500px] md:h-[500px] bg-yellow-600/30 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
-            <div class="max-w-[1400px] mx-auto px-6 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            <div class="max-w-[1400px] mx-auto px-4 sm:px-6 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
                     
-                    <!-- Text & Stats Side (Kiri) -->
-                    <div class="lg:col-span-5 reveal-left order-2 lg:order-1 flex flex-col justify-center">
+                    <!-- Text & Desc Side (Order 1 on mobile, Left Top on Desktop) -->
+                    <div class="lg:col-span-5 reveal-left order-1 lg:row-start-1 flex flex-col justify-end h-full relative z-20">
                         <div class="inline-flex items-center gap-3 mb-6 px-5 py-2.5 rounded-full border border-yellow-500/40 bg-yellow-500/10 backdrop-blur-2xl backdrop-saturate-200 shadow-[inset_0_1px_2px_rgba(255,255,255,0.3),0_0_30px_rgba(234,179,8,0.2)] w-max">
                             <span class="text-yellow-400 text-[9px] tracking-[0.4em] font-bold uppercase">Safety Performance</span>
                         </div>
@@ -690,44 +694,46 @@
                             EURO NCAP <br> <span class="text-yellow-500 drop-shadow-[0_0_20px_rgba(234,179,8,0.6)]">5-STAR</span> RATED
                         </h2>
                         
-                        <p class="text-gray-300 text-sm md:text-base leading-relaxed font-light mb-10 drop-shadow-md">
+                        <p class="text-gray-300 text-sm md:text-base leading-relaxed font-light drop-shadow-md">
                             Keamanan tanpa kompromi. Geely EX5 telah melalui serangkaian uji tabrak paling ketat dari Euro NCAP untuk memastikan perlindungan maksimal bagi Anda dan keluarga dalam setiap perjalanan.
                         </p>
-
-                        <!-- Cards Stats -->
-                        <div class="grid grid-cols-2 gap-4 relative">
-                            <!-- BOLA CAHAYA INI YANG SEBELUMNYA RELATIVE SEKARANG MENJADI ABSOLUTE DI BACKGROUND -->
-                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-yellow-500/30 rounded-full blur-[60px] pointer-events-none z-0"></div>
-
-                            <div class="glass-panel py-5 px-4 shadow-xl flex flex-col items-center group hover:border-yellow-500/60 transition-colors duration-500 relative z-10">
-                                <span class="text-3xl md:text-4xl font-geely text-white mb-1 group-hover:text-yellow-400 transition-colors drop-shadow-md">92%</span>
-                                <div class="h-[1px] w-6 bg-white/20 mb-2 group-hover:bg-yellow-500/60 transition-colors"></div>
-                                <span class="text-[8px] md:text-[9px] text-gray-400 uppercase tracking-widest font-bold text-center group-hover:text-gray-200 transition-colors">Adult Occupant</span>
-                            </div>
-                            
-                            <div class="glass-panel py-5 px-4 shadow-xl flex flex-col items-center group hover:border-yellow-500/60 transition-colors duration-500 relative z-10">
-                                <span class="text-3xl md:text-4xl font-geely text-white mb-1 group-hover:text-yellow-400 transition-colors drop-shadow-md">88%</span>
-                                <div class="h-[1px] w-6 bg-white/20 mb-2 group-hover:bg-yellow-500/60 transition-colors"></div>
-                                <span class="text-[8px] md:text-[9px] text-gray-400 uppercase tracking-widest font-bold text-center group-hover:text-gray-200 transition-colors">Child Occupant</span>
-                            </div>
-
-                            <div class="glass-panel py-5 px-4 shadow-xl flex flex-col items-center group hover:border-yellow-500/60 transition-colors duration-500 col-span-2 relative z-10">
-                                <span class="text-3xl md:text-4xl font-geely text-white mb-1 group-hover:text-yellow-400 transition-colors drop-shadow-md">85%</span>
-                                <div class="h-[1px] w-6 bg-white/20 mb-2 group-hover:bg-yellow-500/60 transition-colors"></div>
-                                <span class="text-[8px] md:text-[9px] text-gray-400 uppercase tracking-widest font-bold text-center group-hover:text-gray-200 transition-colors">Safety Assist</span>
-                            </div>
-                        </div>
                     </div>
 
-                    <!-- Video Side (Kanan) -->
-                    <div class="lg:col-span-7 reveal-right order-1 lg:order-2">
-                        <div class="relative w-full rounded-[2.5rem] md:rounded-[3rem] overflow-hidden shadow-[0_30px_60px_rgba(234,179,8,0.3)] border border-yellow-500/30 h-[40vh] md:h-[50vh] lg:h-[60vh] bg-black group">
+                    <!-- Video Side (Order 2 on mobile, Right Span on Desktop) -->
+                    <div class="lg:col-span-7 reveal-right order-2 lg:col-start-6 lg:row-span-2 flex flex-col justify-center relative z-10">
+                        <div class="relative w-full aspect-video rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-[0_30px_60px_rgba(234,179,8,0.3)] border border-yellow-500/30 bg-black group">
                             <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-[3s] ease-out">
                                 <source src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/euro-ncap-crash-safety-tests-of-geely-ex5-2025---euro-ncap-720p-h264-YKb3MOZVQjsbVQ84.mp4" type="video/mp4">
                             </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-                            <div class="absolute bottom-6 left-6 md:bottom-8 md:left-8 pointer-events-none">
+                            <div class="absolute bottom-16 sm:bottom-20 lg:bottom-8 left-6 md:left-8 pointer-events-none">
                                 <span class="text-yellow-400 text-[10px] md:text-xs tracking-[0.3em] font-bold uppercase drop-shadow-md">Crash Test</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cards Stats (Order 3 on mobile, Left Bottom on Desktop) -->
+                    <div class="lg:col-span-5 reveal-left order-3 lg:row-start-2 flex flex-col justify-start w-full relative z-30 -mt-16 sm:-mt-24 md:-mt-32 lg:mt-0 px-2 lg:px-0">
+                        <div class="grid grid-cols-3 gap-2 sm:gap-4 relative w-full">
+                            <!-- BOLA CAHAYA INI SEKARANG MENJADI ABSOLUTE DI BACKGROUND AGAR TIDAK MERUSAK LAYOUT -->
+                            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-32 bg-yellow-500/20 rounded-full blur-[60px] pointer-events-none z-0"></div>
+
+                            <div class="glass-panel py-4 px-2 sm:py-5 sm:px-4 shadow-xl flex flex-col items-center justify-center group hover:border-yellow-500/60 transition-colors duration-500 relative z-10 w-full">
+                                <span class="text-xl sm:text-3xl md:text-4xl font-geely text-white mb-1 group-hover:text-yellow-400 transition-colors drop-shadow-md">92%</span>
+                                <div class="h-[1px] w-4 sm:w-6 bg-white/20 mb-1.5 sm:mb-2 group-hover:bg-yellow-500/60 transition-colors"></div>
+                                <span class="text-[6px] sm:text-[8px] md:text-[9px] text-gray-400 uppercase tracking-wider font-bold text-center group-hover:text-gray-200 transition-colors leading-tight">Adult<br class="block sm:hidden"> Occupant</span>
+                            </div>
+                            
+                            <div class="glass-panel py-4 px-2 sm:py-5 sm:px-4 shadow-xl flex flex-col items-center justify-center group hover:border-yellow-500/60 transition-colors duration-500 relative z-10 w-full">
+                                <span class="text-xl sm:text-3xl md:text-4xl font-geely text-white mb-1 group-hover:text-yellow-400 transition-colors drop-shadow-md">88%</span>
+                                <div class="h-[1px] w-4 sm:w-6 bg-white/20 mb-1.5 sm:mb-2 group-hover:bg-yellow-500/60 transition-colors"></div>
+                                <span class="text-[6px] sm:text-[8px] md:text-[9px] text-gray-400 uppercase tracking-wider font-bold text-center group-hover:text-gray-200 transition-colors leading-tight">Child<br class="block sm:hidden"> Occupant</span>
+                            </div>
+
+                            <div class="glass-panel py-4 px-2 sm:py-5 sm:px-4 shadow-xl flex flex-col items-center justify-center group hover:border-yellow-500/60 transition-colors duration-500 relative z-10 w-full">
+                                <span class="text-xl sm:text-3xl md:text-4xl font-geely text-white mb-1 group-hover:text-yellow-400 transition-colors drop-shadow-md">85%</span>
+                                <div class="h-[1px] w-4 sm:w-6 bg-white/20 mb-1.5 sm:mb-2 group-hover:bg-yellow-500/60 transition-colors"></div>
+                                <span class="text-[6px] sm:text-[8px] md:text-[9px] text-gray-400 uppercase tracking-wider font-bold text-center group-hover:text-gray-200 transition-colors leading-tight">Safety<br class="block sm:hidden"> Assist</span>
                             </div>
                         </div>
                     </div>
@@ -774,14 +780,15 @@
 
                 <div class="block lg:hidden reveal-up delay-100 mb-8 w-full overflow-hidden mt-8">
                     <div class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-6 pt-2 hide-scrollbar px-2">
-                        <div class="snap-center shrink-0 w-[70vw] sm:w-[320px] overflow-hidden glass-panel-aurora p-1.5 shadow-xl relative">
-                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ex5-app---seamless-connection---no-text---m-m7VDpwpx5jS757y9.jpg" class="w-full h-auto rounded-[1.8rem] object-cover shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]" alt="Geely EX5 App Connection">
+                        <div class="snap-center shrink-0 w-[70vw] sm:w-[320px] relative">
+                            <!-- PERBAIKAN UKURAN FOTO AGAR SEMUA SAMA: ditambahkan w-full aspect-[4/5] object-cover -->
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ex5-app---seamless-connection---no-text---m-m7VDpwpx5jS757y9.jpg" class="w-full aspect-[4/5] rounded-[1.8rem] object-cover shadow-[0_10px_20px_rgba(0,0,0,0.1)]" alt="Geely EX5 App Connection">
                         </div>
-                        <div class="snap-center shrink-0 w-[70vw] sm:w-[320px] overflow-hidden glass-panel-aurora p-1.5 shadow-xl relative">
-                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ex5-app---one-tap-full-control---no-text---m-Yle4MvMBDvCB2RxJ.jpg" class="w-full h-auto rounded-[1.8rem] object-cover shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]" alt="Geely EX5 App Control">
+                        <div class="snap-center shrink-0 w-[70vw] sm:w-[320px] relative">
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ex5-app---one-tap-full-control---no-text---m-Yle4MvMBDvCB2RxJ.jpg" class="w-full aspect-[4/5] rounded-[1.8rem] object-cover shadow-[0_10px_20px_rgba(0,0,0,0.1)]" alt="Geely EX5 App Control">
                         </div>
-                        <div class="snap-center shrink-0 w-[70vw] sm:w-[320px] overflow-hidden glass-panel-aurora p-1.5 shadow-xl relative">
-                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ex5-app---always-charged---no-text---m-mePgLvL2qJce1ZJ3.jpg" class="w-full h-auto rounded-[1.8rem] object-cover shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]" alt="Geely EX5 App Status">
+                        <div class="snap-center shrink-0 w-[70vw] sm:w-[320px] relative">
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ex5-app---always-charged---no-text---m-mePgLvL2qJce1ZJ3.jpg" class="w-full aspect-[4/5] rounded-[1.8rem] object-cover shadow-[0_10px_20px_rgba(0,0,0,0.1)]" alt="Geely EX5 App Status">
                         </div>
                     </div>
                     
@@ -791,9 +798,9 @@
                     </div>
                 </div>
 
-                <div class="block lg:hidden reveal-up delay-300 mx-auto max-w-5xl mt-8">
-                    <div class="glass-panel-aurora p-2 relative shadow-xl">
-                        <div class="relative w-full h-[250px] sm:h-[300px] rounded-[1.8rem] overflow-hidden bg-black shadow-[inset_0_2px_4px_rgba(0,0,0,0.4)]">
+                <div class="block lg:hidden reveal-up delay-300 mx-auto max-w-5xl mt-8 px-4">
+                    <div class="relative shadow-[0_10px_30px_rgba(0,0,0,0.15)] rounded-[1.8rem]">
+                        <div class="relative w-full h-[250px] sm:h-[300px] rounded-[1.8rem] overflow-hidden bg-black">
                             <iframe class="absolute top-0 left-0 w-full h-full border-0" src="https://www.youtube.com/embed/ajyHC2pMJ24?start=11&rel=0" title="Geely EX5 App Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </div>
                     </div>
@@ -1001,7 +1008,7 @@
                 
                 swatchesIntGroup.classList.add('hidden', 'opacity-0', 'pointer-events-none');
                 swatchesExtGroup.classList.remove('hidden');
-                setTimeout(() => swatchesExtGroup.classList.remove('opacity-0', 'pointer-events-none'), 50);
+                setTimeout(() => swatchesIntGroup.classList.remove('opacity-0', 'pointer-events-none'), 50);
                 
                 const activeExt = document.querySelector('.swatch-ext.active');
                 if(activeExt) colorNameDisplay.textContent = activeExt.getAttribute('data-name');

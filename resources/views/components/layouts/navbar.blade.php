@@ -1,4 +1,16 @@
 <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-white/40 backdrop-blur-2xl backdrop-saturate-[1.5] border-b border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.06)]">
+    <style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+    
     <div class="absolute inset-0 bg-gradient-to-b from-white/60 to-transparent pointer-events-none"></div>
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-50">
@@ -92,8 +104,8 @@
     </div>
 
     <!-- BLACK/GREEN/WHITE GLASSMORPHISM MOBILE MENU (Floating Card Style) -->
-    <!-- Diubah ke bg-black/90 agar lebih solid dan tidak bertabrakan dengan halaman -->
-    <div id="mobile-menu" class="fixed top-24 right-4 left-4 sm:left-auto sm:w-[380px] max-h-[calc(100svh-7rem)] bg-black/90 backdrop-blur-[40px] backdrop-saturate-[1.5] z-40 opacity-0 pointer-events-none transition-all duration-400 ease-[cubic-bezier(0.3,0,0,1)] flex flex-col justify-start p-6 lg:hidden overflow-y-auto border border-white/20 rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.4)] scale-95 origin-top sm:origin-top-right overflow-hidden">
+    <!-- Diubah ke bg-black/90 agar lebih solid dan ditambahkan no-scrollbar -->
+    <div id="mobile-menu" class="fixed top-24 right-4 left-4 sm:left-auto sm:w-[380px] max-h-[calc(100svh-7rem)] bg-black/90 backdrop-blur-[40px] backdrop-saturate-[1.5] z-40 opacity-0 pointer-events-none transition-all duration-400 ease-[cubic-bezier(0.3,0,0,1)] flex flex-col justify-start p-6 lg:hidden overflow-y-auto no-scrollbar border border-white/20 rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.4)] scale-95 origin-top sm:origin-top-right">
         
         <!-- Decorative Orbs for Glass Effect -->
         <div class="absolute -top-10 -right-10 w-48 h-48 bg-emerald-500/20 rounded-full blur-[60px] pointer-events-none"></div>

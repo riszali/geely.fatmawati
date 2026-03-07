@@ -79,7 +79,7 @@
 
             <!-- Mobile Menu Button -->
             <div class="flex items-center lg:hidden relative z-50">
-                <button id="mobile-menu-btn" class="relative w-11 h-11 flex items-center justify-center focus:outline-none text-gray-800 z-50 bg-white/40 backdrop-blur-xl border border-white/60 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:bg-white/60 transition-all duration-300">
+                <button id="mobile-menu-btn" class="relative w-11 h-11 flex items-center justify-center focus:outline-none text-gray-800 z-50 bg-white/40 backdrop-blur-xl border border-white/60 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-300">
                     <svg id="icon-menu" class="w-5 h-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -91,59 +91,64 @@
         </div>
     </div>
 
-    <!-- LIGHT PREMIUM MOBILE MENU (Modern Floating Card Style) -->
-    <div id="mobile-menu" class="fixed top-24 right-4 left-4 sm:left-auto sm:w-[380px] max-h-[calc(100svh-7rem)] bg-white/95 backdrop-blur-2xl z-40 opacity-0 pointer-events-none transition-all duration-400 ease-[cubic-bezier(0.3,0,0,1)] flex flex-col justify-start p-6 lg:hidden overflow-y-auto border border-white/60 rounded-[2.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] scale-95 origin-top sm:origin-top-right">
+    <!-- BLACK/GREEN/WHITE GLASSMORPHISM MOBILE MENU (Floating Card Style) -->
+    <!-- Diubah ke bg-black/90 agar lebih solid dan tidak bertabrakan dengan halaman -->
+    <div id="mobile-menu" class="fixed top-24 right-4 left-4 sm:left-auto sm:w-[380px] max-h-[calc(100svh-7rem)] bg-black/90 backdrop-blur-[40px] backdrop-saturate-[1.5] z-40 opacity-0 pointer-events-none transition-all duration-400 ease-[cubic-bezier(0.3,0,0,1)] flex flex-col justify-start p-6 lg:hidden overflow-y-auto border border-white/20 rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.4)] scale-95 origin-top sm:origin-top-right overflow-hidden">
         
-        <div id="mobile-menu-content" class="flex flex-col space-y-6 transform translate-y-8 transition-transform duration-500 ease-out delay-75">
+        <!-- Decorative Orbs for Glass Effect -->
+        <div class="absolute -top-10 -right-10 w-48 h-48 bg-emerald-500/20 rounded-full blur-[60px] pointer-events-none"></div>
+        <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-white/10 rounded-full blur-[60px] pointer-events-none"></div>
+
+        <div id="mobile-menu-content" class="relative z-10 flex flex-col space-y-6 transform translate-y-8 transition-transform duration-500 ease-out delay-75">
             <!-- Home Link -->
-            <a href="{{ route('home') }}" class="font-geely text-xl font-bold tracking-widest text-gray-900 uppercase flex items-center justify-between group px-2">
+            <a href="{{ route('home') }}" class="font-geely text-xl font-bold tracking-widest text-white uppercase flex items-center justify-between group px-2">
                 <span>Home</span>
-                <span class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <span class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-center text-white group-hover:bg-emerald-500 group-hover:border-emerald-400 group-hover:text-black transition-all duration-300 shadow-[0_4px_15px_rgba(0,0,0,0.1)]">
+                    <svg class="w-4 h-4 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </span>
             </a>
             
             <!-- Separator Line -->
-            <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
             
             <div class="space-y-3">
                 <p class="text-[10px] font-bold tracking-[0.3em] text-gray-400 uppercase mb-4 px-2">Our Lineup</p>
                 
                 @foreach($models as $model)
-                <!-- Clean Soft Hover Card -->
-                <div class="bg-transparent hover:bg-gray-50/80 border border-transparent hover:border-gray-100 rounded-[2rem] p-4 transition-all duration-300 group">
+                <!-- Black Glass Hover Card -->
+                <div class="bg-white/5 hover:bg-white/10 backdrop-blur-lg border border-white/10 hover:border-emerald-500/50 rounded-[2rem] p-4 transition-all duration-300 group shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
                     <a href="{{ $model['url'] }}" class="flex justify-between items-center mb-4 px-2">
-                        <span class="font-geely text-base font-bold tracking-widest text-gray-800 uppercase group-hover:text-blue-600 transition-colors">{{ $model['name'] }}</span>
-                        <div class="w-7 h-7 rounded-full bg-white flex items-center justify-center text-gray-400 border border-gray-100 group-hover:text-blue-600 group-hover:border-blue-200 group-hover:shadow-sm transition-all duration-300">
+                        <span class="font-geely text-base font-bold tracking-widest text-white uppercase group-hover:text-emerald-400 transition-colors">{{ $model['name'] }}</span>
+                        <div class="w-7 h-7 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center text-white border border-white/10 group-hover:text-black group-hover:bg-emerald-500 group-hover:border-emerald-400 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.5)] transition-all duration-300">
                             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </div>
                     </a>
                     
                     <!-- Capsule Buttons -->
                     <div class="flex gap-2">
-                        <a href="{{ $model['exterior_url'] }}" class="py-2.5 px-2 rounded-2xl bg-white border border-gray-100 text-[9px] font-bold text-gray-500 hover:text-blue-600 hover:bg-blue-50/50 hover:border-blue-200 uppercase tracking-widest flex-1 text-center transition-all duration-300 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">Exterior</a>
-                        <a href="{{ $model['interior_url'] }}" class="py-2.5 px-2 rounded-2xl bg-white border border-gray-100 text-[9px] font-bold text-gray-500 hover:text-blue-600 hover:bg-blue-50/50 hover:border-blue-200 uppercase tracking-widest flex-1 text-center transition-all duration-300 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">Interior</a>
-                        <a href="{{ $model['specs_url'] }}" class="py-2.5 px-2 rounded-2xl bg-white border border-gray-100 text-[9px] font-bold text-gray-500 hover:text-blue-600 hover:bg-blue-50/50 hover:border-blue-200 uppercase tracking-widest flex-1 text-center transition-all duration-300 shadow-[0_2px_8px_rgba(0,0,0,0.02)]">Specs</a>
+                        <a href="{{ $model['exterior_url'] }}" class="py-2.5 px-2 rounded-2xl bg-black/40 border border-white/10 text-[9px] font-bold text-gray-300 hover:text-black hover:bg-emerald-500 hover:border-emerald-400 uppercase tracking-widest flex-1 text-center transition-all duration-300 shadow-[0_2px_8px_rgba(0,0,0,0.2)]">Exterior</a>
+                        <a href="{{ $model['interior_url'] }}" class="py-2.5 px-2 rounded-2xl bg-black/40 border border-white/10 text-[9px] font-bold text-gray-300 hover:text-black hover:bg-emerald-500 hover:border-emerald-400 uppercase tracking-widest flex-1 text-center transition-all duration-300 shadow-[0_2px_8px_rgba(0,0,0,0.2)]">Interior</a>
+                        <a href="{{ $model['specs_url'] }}" class="py-2.5 px-2 rounded-2xl bg-black/40 border border-white/10 text-[9px] font-bold text-gray-300 hover:text-black hover:bg-emerald-500 hover:border-emerald-400 uppercase tracking-widest flex-1 text-center transition-all duration-300 shadow-[0_2px_8px_rgba(0,0,0,0.2)]">Specs</a>
                     </div>
                 </div>
                 @endforeach
             </div>
             
             <!-- Separator Line -->
-            <div class="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+            <div class="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
             
             <!-- Test Drive Link -->
-            <a href="{{ route('test-drive') }}" class="font-geely text-xl font-bold tracking-widest text-gray-900 uppercase flex items-center justify-between group px-2">
+            <a href="{{ route('test-drive') }}" class="font-geely text-xl font-bold tracking-widest text-white uppercase flex items-center justify-between group px-2">
                 <span>Test Drive</span>
-                <span class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <span class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-center text-white group-hover:bg-emerald-500 group-hover:border-emerald-400 group-hover:text-black transition-all duration-300 shadow-[0_4px_15px_rgba(0,0,0,0.1)]">
+                    <svg class="w-4 h-4 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </span>
             </a>
         </div>
 
-        <div id="mobile-menu-footer" class="mt-8 transform translate-y-8 transition-transform duration-500 ease-out delay-150">
-            <!-- Modern Blue CTA Button -->
-            <a href="{{ route('credit-simulation') }}" class="w-full flex items-center justify-center gap-3 bg-blue-600 text-white py-4 rounded-3xl font-geely text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-[0_8px_20px_rgba(37,99,235,0.25)] hover:shadow-[0_12px_25px_rgba(37,99,235,0.4)] hover:-translate-y-0.5">
+        <div id="mobile-menu-footer" class="relative z-10 mt-8 transform translate-y-8 transition-transform duration-500 ease-out delay-150">
+            <!-- Glassy Green CTA Button -->
+            <a href="{{ route('credit-simulation') }}" class="w-full flex items-center justify-center gap-3 bg-emerald-500/90 backdrop-blur-xl border border-emerald-400/50 text-black py-4 rounded-3xl font-geely text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-[0_8px_20px_rgba(16,185,129,0.25)] hover:shadow-[0_12px_25px_rgba(16,185,129,0.4)] hover:bg-emerald-400 hover:-translate-y-0.5">
                 Credit Simulation 
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>

@@ -374,135 +374,125 @@
         </section>
 
         <!-- ==========================================
-             SECTION 6: DIVE INTO THE DETAILS (NAVIGATION)
+             SECTION 8: DIVE INTO THE DETAILS (OVERHAULED)
         =========================================== -->
-        <section id="details" class="py-16 md:py-24 lg:py-32 relative z-30 bg-[#050505] overflow-hidden border-t border-white/10 bg-noise">
-            <!-- Subtle Colorful Ambient Background Elements -->
-            <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-cyan-600/20 rounded-full blur-[150px] pointer-events-none z-0"></div>
-            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+        <section id="details" class="py-16 md:py-24 lg:py-32 relative z-30 bg-[#050505] overflow-hidden border-t border-white/10">
+            <!-- Glowing ambient background -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-teal-600/20 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
             <div class="max-w-[1600px] w-full mx-auto px-4 sm:px-8 md:px-12 lg:px-16 relative z-10">
                 <!-- Header -->
                 <div class="text-center mb-12 md:mb-20 max-w-4xl mx-auto px-4 reveal-up">
-                    <div class="inline-flex items-center gap-3 mb-4 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300">
-                        <span class="text-[10px] tracking-[0.3em] font-bold uppercase">The Blueprint</span>
+                    <div class="inline-flex items-center gap-3 mb-4 px-5 py-2.5 rounded-full border border-white/30 bg-white/5 backdrop-blur-2xl backdrop-saturate-200 shadow-[inset_0_1px_2px_rgba(255,255,255,0.4),0_10px_30px_rgba(0,0,0,0.5)]">
+                        <span class="text-teal-400 text-[9px] tracking-[0.4em] font-bold uppercase">The Blueprint</span>
                     </div>
-                    <h2 class="font-geely text-3xl sm:text-4xl md:text-5xl lg:text-7xl uppercase tracking-tighter text-white mb-6 leading-tight drop-shadow-lg">
-                        Dive Into <span class="text-gradient-cyan">The Details</span>
+                    <h2 class="font-geely text-3xl sm:text-4xl md:text-5xl lg:text-7xl uppercase tracking-tighter text-white mb-6 leading-tight drop-shadow-xl">
+                        Dive Into <span class="text-gradient-aurora">The Details</span>
                     </h2>
-                    <p class="text-gray-400 text-xs sm:text-sm md:text-base lg:text-lg font-light leading-relaxed">
-                        Get a closer look at the Geely EX5’s advanced features and specifications, designed to set a new standard for EV.
+                    <p class="text-gray-400 text-xs sm:text-sm md:text-base lg:text-lg font-light leading-relaxed relative z-10">
+                        Get a look at the Geely EX5’s advanced features and specifications, designed to set a new standard for EV.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start relative z-10">
                     
-                    <!-- Left: Navigation Link Cards -->
+                    <!-- Left: Navigation Link Cards (Di bawah pada Mobile) -->
                     <div class="order-2 lg:order-1 lg:col-span-7 flex flex-col gap-4 reveal-left w-full">
                         
-                        <!-- Exterior Link Card (Active/Current View) -->
-                        <a href="#" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-cyan-400">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2642-Aq2qroZX2GsMyae6.jpeg" alt="Exterior" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
-                            <!-- Overlay Gradient for Readability -->
-                            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
-                            
-                            <!-- Card Content -->
-                            <div class="absolute inset-0 p-6 md:p-8 flex items-end justify-between">
+                        <!-- Card Exterior -->
+                        <a href="{{ route('models.ex5.exterior') }}" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(45,212,191,0.3)] transition-all duration-500 border border-white/10 hover:border-teal-400">
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior-01-m2Wq42Nv3lFqrP1L.webp" alt="Geely EX5 Exterior" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[1.5s] ease-out z-0">
+                            <div class="absolute inset-0 bg-gradient-to-r from-[#050505]/90 via-black/40 to-transparent z-10 transition-opacity duration-500 opacity-90 group-hover:opacity-70"></div>
+                            <div class="absolute inset-0 p-6 md:p-8 z-20 flex justify-between items-end">
                                 <div>
-                                    <p class="text-cyan-400 text-[10px] uppercase font-bold tracking-widest mb-1 group-hover:text-cyan-300 transition-colors drop-shadow-md">Currently Viewing</p>
-                                    <h3 class="text-white font-geely text-2xl md:text-4xl uppercase tracking-tighter drop-shadow-md">Exterior</h3>
+                                    <span class="text-teal-400 text-[8px] md:text-[10px] tracking-[0.3em] font-bold uppercase mb-1 md:mb-2 block drop-shadow-md">Explore</span>
+                                    <h3 class="font-geely text-2xl md:text-4xl text-white uppercase tracking-tight drop-shadow-lg leading-none">Exterior</h3>
                                 </div>
-                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-cyan-600 backdrop-blur-md flex items-center justify-center text-white border border-cyan-400 transition-colors duration-300">
-                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full glass-panel flex items-center justify-center border border-white/30 group-hover:bg-teal-500 group-hover:border-teal-400 transition-all duration-500 transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                                    <svg class="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                                 </div>
                             </div>
                         </a>
 
-                        <!-- Interior Link Card -->
-                        <a href="/models/ex5" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-[0_20px_40px_rgba(34,211,238,0.2)] transition-all duration-500 border border-white/10 hover:border-cyan-400/50">
-                            <!-- Using EX5 interior image -->
-                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex5-interior-6-yd0bq7dwjki2vqwz-mp84nv1zw8hwGV83.jpg" alt="Interior" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out mirror-rhd">
-                            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
-                            
-                            <!-- Card Content -->
-                            <div class="absolute inset-0 p-6 md:p-8 flex items-end justify-between">
+                        <!-- Card Interior -->
+                        <a href="{{ route('models.ex5.interior') }}" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(45,212,191,0.3)] transition-all duration-500 border border-white/10 hover:border-teal-400">
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex5-interior-6-yd0bq7dwjki2vqwz-mp84nv1zw8hwGV83.jpg" alt="Geely EX5 Interior" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[1.5s] ease-out z-0 mirror-rhd">
+                            <div class="absolute inset-0 bg-gradient-to-r from-[#050505]/90 via-black/40 to-transparent z-10 transition-opacity duration-500 opacity-90 group-hover:opacity-70"></div>
+                            <div class="absolute inset-0 p-6 md:p-8 z-20 flex justify-between items-end">
                                 <div>
-                                    <p class="text-gray-400 text-[10px] uppercase font-bold tracking-widest mb-1 group-hover:text-cyan-300 transition-colors">Discover</p>
-                                    <h3 class="text-white font-geely text-2xl md:text-4xl uppercase tracking-tighter drop-shadow-md">Interior</h3>
+                                    <span class="text-teal-400 text-[8px] md:text-[10px] tracking-[0.3em] font-bold uppercase mb-1 md:mb-2 block drop-shadow-md">Discover</span>
+                                    <h3 class="font-geely text-2xl md:text-4xl text-white uppercase tracking-tight drop-shadow-lg leading-none">Interior</h3>
                                 </div>
-                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-cyan-600 transition-colors duration-300 border border-white/30 group-hover:border-cyan-400">
-                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full glass-panel flex items-center justify-center border border-white/30 group-hover:bg-teal-500 group-hover:border-teal-400 transition-all duration-500 transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                                    <svg class="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                                 </div>
                             </div>
                         </a>
 
-                        <!-- Specification Link Card -->
-                        <a href="/models/ex5" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-[0_20px_40px_rgba(34,211,238,0.2)] transition-all duration-500 border border-white/10 hover:border-cyan-400/50">
-                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ied-tF2sW5R0UW8pMCMV.webp" alt="Specification" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
-                            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
-                            
-                            <!-- Card Content -->
-                            <div class="absolute inset-0 p-6 md:p-8 flex items-end justify-between">
+                        <!-- Card Specification -->
+                        <a href="{{ route('models.ex5.specification') }}" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(45,212,191,0.3)] transition-all duration-500 border border-white/10 hover:border-teal-400">
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ied-tF2sW5R0UW8pMCMV.webp" alt="Geely EX5 Specification" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[1.5s] ease-out z-0">
+                            <div class="absolute inset-0 bg-gradient-to-r from-[#050505]/90 via-black/40 to-transparent z-10 transition-opacity duration-500 opacity-90 group-hover:opacity-70"></div>
+                            <div class="absolute inset-0 p-6 md:p-8 z-20 flex justify-between items-end">
                                 <div>
-                                    <p class="text-gray-400 text-[10px] uppercase font-bold tracking-widest mb-1 group-hover:text-cyan-300 transition-colors">Learn More</p>
-                                    <h3 class="text-white font-geely text-2xl md:text-4xl uppercase tracking-tighter drop-shadow-md">Specification</h3>
+                                    <span class="text-teal-400 text-[8px] md:text-[10px] tracking-[0.3em] font-bold uppercase mb-1 md:mb-2 block drop-shadow-md">Learn More</span>
+                                    <h3 class="font-geely text-2xl md:text-4xl text-white uppercase tracking-tight drop-shadow-lg leading-none">Specs</h3>
                                 </div>
-                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-cyan-600 transition-colors duration-300 border border-white/30 group-hover:border-cyan-400">
-                                    <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full glass-panel flex items-center justify-center border border-white/30 group-hover:bg-teal-500 group-hover:border-teal-400 transition-all duration-500 transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                                    <svg class="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                                 </div>
                             </div>
                         </a>
 
                     </div>
 
-                    <!-- Right: Dimensions Box & Actions -->
+                    <!-- Right: Dimensions Box (Di Atas pada Mobile) -->
                     <div class="order-1 lg:order-2 lg:col-span-5 flex flex-col gap-8 reveal-right delay-200 w-full">
                         
-                        <!-- Dimensions Box (Dark Colorful Glassmorphism) -->
-                        <div class="glass-panel border border-white/10 p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] flex flex-col shadow-2xl relative overflow-hidden group hover:border-cyan-400/50 transition-colors duration-500">
+                        <!-- Dimensions Box (Dark Theme Glassmorphism) -->
+                        <div class="glass-panel p-6 md:p-8 flex flex-col shadow-2xl relative overflow-hidden group hover:border-teal-400/50 transition-colors duration-500">
                             <!-- Background glow dalam kotak -->
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/20 rounded-full blur-[40px] group-hover:bg-cyan-400/30 transition-colors duration-500 pointer-events-none"></div>
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-teal-500/30 rounded-full blur-[50px] group-hover:bg-teal-400/40 transition-colors duration-500 pointer-events-none"></div>
 
                             <h4 class="text-white font-geely text-2xl md:text-3xl mb-1 relative z-10 drop-shadow-md">Dimensions</h4>
                             <p class="text-gray-400 text-[10px] md:text-xs font-bold tracking-widest uppercase mb-8 relative z-10">(in milimeters)</p>
                             
-                            <!-- EX5 Dimensions Data -->
                             <div class="grid grid-cols-2 gap-6 md:gap-8 relative z-10 mb-4">
-                                <div class="border-l-2 border-cyan-500 pl-4 group-hover:border-cyan-400 transition-colors">
+                                <div class="border-l-2 border-teal-500 pl-4 group-hover:border-teal-400 transition-colors">
                                     <p class="text-gray-400 text-[10px] uppercase tracking-wider mb-1">Length</p>
                                     <p class="font-geely text-3xl md:text-4xl text-white drop-shadow-md">4615</p>
                                 </div>
-                                <div class="border-l-2 border-cyan-500 pl-4 group-hover:border-cyan-400 transition-colors">
+                                <div class="border-l-2 border-teal-500 pl-4 group-hover:border-teal-400 transition-colors">
                                     <p class="text-gray-400 text-[10px] uppercase tracking-wider mb-1">Width</p>
                                     <p class="font-geely text-3xl md:text-4xl text-white drop-shadow-md">1901</p>
                                 </div>
-                                <div class="border-l-2 border-cyan-500 pl-4 group-hover:border-cyan-400 transition-colors">
+                                <div class="border-l-2 border-teal-500 pl-4 group-hover:border-teal-400 transition-colors">
                                     <p class="text-gray-400 text-[10px] uppercase tracking-wider mb-1">Height</p>
                                     <p class="font-geely text-3xl md:text-4xl text-white drop-shadow-md">1670</p>
                                 </div>
-                                <div class="border-l-2 border-cyan-500 pl-4 group-hover:border-cyan-400 transition-colors">
+                                <div class="border-l-2 border-teal-500 pl-4 group-hover:border-teal-400 transition-colors">
                                     <p class="text-gray-400 text-[10px] uppercase tracking-wider mb-1">Wheelbase</p>
                                     <p class="font-geely text-3xl md:text-4xl text-white drop-shadow-md">2750</p>
                                 </div>
                             </div>
 
-                            <!-- EX5 Sketch Image with inversion for dark mode -->
-                            <div class="w-full relative mt-8 mix-blend-screen opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                            <!-- Sketch Image -->
+                            <div class="w-full relative mt-8 mix-blend-screen opacity-80 group-hover:opacity-100 transition-opacity duration-500 z-10">
                                 <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/sketch-ex5-1-r25s8xkUhZrQbzAj.webp" alt="Geely EX5 Sketch" loading="lazy" class="w-full h-auto object-contain invert">
                             </div>
                         </div>
 
                         <!-- Action Buttons -->
-                        <div class="flex flex-col gap-3 w-full">
-                            <a href="#" class="w-full py-4 md:py-5 rounded-full bg-white text-black font-bold text-[10px] md:text-xs tracking-[0.2em] uppercase text-center hover:scale-[1.02] transition-transform duration-300 shadow-[0_10px_30px_rgba(255,255,255,0.15)]">
+                        <div class="flex flex-col gap-3 w-full relative z-10">
+                            <a href="{{ route('models.ex5.specification') }}" class="btn-shimmer w-full py-4 md:py-5 rounded-full bg-white text-black font-bold text-[10px] md:text-xs tracking-[0.2em] uppercase text-center hover:scale-[1.02] transition-transform duration-300 shadow-[0_10px_30px_rgba(255,255,255,0.15)]">
                                 Show Full Specs
                             </a>
                             <div class="flex flex-col sm:flex-row gap-3 w-full">
-                                <a href="#" class="w-full sm:w-1/2 py-3 md:py-4 rounded-full border border-white/20 glass-panel text-white font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-center hover:bg-white/10 hover:border-cyan-400/50 transition-colors duration-300 flex items-center justify-center gap-2">
+                                <a href="#" class="w-full sm:w-1/2 py-3 md:py-4 rounded-full border border-white/20 glass-panel text-white font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-center hover:bg-white/10 hover:border-white/40 transition-colors duration-300 flex items-center justify-center gap-2">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
                                     Brochure
                                 </a>
-                                <a href="#" class="w-full sm:w-1/2 py-3 md:py-4 rounded-full border border-white/20 glass-panel text-white font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-center hover:bg-white/10 hover:border-cyan-400/50 transition-colors duration-300 flex items-center justify-center gap-2">
+                                <a href="#" class="w-full sm:w-1/2 py-3 md:py-4 rounded-full border border-white/20 glass-panel text-white font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-center hover:bg-white/10 hover:border-white/40 transition-colors duration-300 flex items-center justify-center gap-2">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                                     Owner's Manual
                                 </a>

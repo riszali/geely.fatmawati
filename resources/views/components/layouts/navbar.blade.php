@@ -77,7 +77,7 @@
                 </a>
             </div>
 
-            <!-- Mobile Menu Button (Glassmorphism Style) -->
+            <!-- Mobile Menu Button -->
             <div class="flex items-center lg:hidden relative z-50">
                 <button id="mobile-menu-btn" class="relative w-11 h-11 flex items-center justify-center focus:outline-none text-gray-800 z-50 bg-white/40 backdrop-blur-xl border border-white/60 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:bg-white/60 transition-all duration-300">
                     <svg id="icon-menu" class="w-5 h-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -91,39 +91,50 @@
         </div>
     </div>
 
-    <div id="mobile-menu" class="fixed inset-0 h-[100svh] w-full bg-white/90 backdrop-blur-3xl z-40 opacity-0 pointer-events-none transition-all duration-700 ease-[cubic-bezier(0.7,0,0.3,1)] flex flex-col justify-between pt-24 pb-8 lg:hidden overflow-y-auto">
+    <!-- DARK PREMIUM MOBILE MENU (Floating Style) -->
+    <div id="mobile-menu" class="fixed top-24 right-4 left-4 sm:left-auto sm:w-[380px] max-h-[calc(100svh-7rem)] bg-gray-950/98 backdrop-blur-2xl z-40 opacity-0 pointer-events-none transition-all duration-400 ease-out flex flex-col justify-start py-6 lg:hidden overflow-y-auto border border-gray-800 rounded-[2rem] shadow-[0_20px_60px_rgba(0,0,0,0.6)] scale-95 origin-top sm:origin-top-right">
         
-        <div id="mobile-menu-content" class="px-6 flex flex-col space-y-6 transform translate-y-10 transition-transform duration-700 ease-out delay-100">
-            <a href="{{ route('home') }}" class="font-geely text-3xl font-bold tracking-tighter text-gray-900 uppercase pb-4 border-b border-gray-200/80">Home</a>
+        <div id="mobile-menu-content" class="px-6 flex flex-col space-y-6 transform translate-y-10 transition-transform duration-500 ease-out delay-100">
+            <!-- Home Link -->
+            <a href="{{ route('home') }}" class="font-geely text-xl font-bold tracking-widest text-white uppercase flex items-center justify-between group border-b border-gray-800 pb-4">
+                <span>Home</span>
+                <svg class="w-5 h-5 text-gray-600 group-hover:text-blue-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
             
-            <div class="space-y-4 pt-2">
-                <p class="text-[10px] font-bold tracking-widest text-blue-600 uppercase mb-4">Our Lineup</p>
+            <div class="space-y-4 pt-1">
+                <p class="text-[10px] font-bold tracking-[0.3em] text-gray-500 uppercase mb-3">Our Lineup</p>
                 
                 @foreach($models as $model)
-                <div class="bg-gray-50/80 border border-gray-200/60 rounded-[1.5rem] p-5 transition-all shadow-sm">
-                    <a href="{{ $model['url'] }}" class="flex justify-between items-center group">
-                        <span class="font-geely text-xl font-bold tracking-tight text-gray-900 uppercase">{{ $model['name'] }}</span>
-                        <div class="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-blue-600 border border-gray-100 group-hover:scale-110 transition-transform">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <!-- Dark Hover Card -->
+                <div class="bg-gray-900/50 border border-gray-800 rounded-3xl p-5 hover:border-blue-500/50 hover:bg-gray-900 transition-all duration-300 group shadow-lg">
+                    <a href="{{ $model['url'] }}" class="flex justify-between items-center mb-4">
+                        <span class="font-geely text-base font-bold tracking-widest text-white uppercase group-hover:text-blue-400 transition-colors">{{ $model['name'] }}</span>
+                        <div class="w-7 h-7 rounded-full bg-gray-950 flex items-center justify-center text-gray-400 border border-gray-800 group-hover:text-white group-hover:bg-blue-600 group-hover:border-blue-500 transition-all duration-300 shadow-[0_0_15px_rgba(0,0,0,0.3)]">
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </div>
                     </a>
                     
-                    <div class="flex gap-2 mt-5 pt-4 border-t border-gray-200/60">
-                        <a href="{{ $model['exterior_url'] }}" class="px-2 py-2.5 rounded-full bg-white border border-gray-200/80 text-[9px] font-bold text-gray-600 hover:text-blue-600 hover:border-blue-200 uppercase tracking-widest flex-1 text-center shadow-[0_2px_10px_rgba(0,0,0,0.02)] transition-colors">Exterior</a>
-                        <a href="{{ $model['interior_url'] }}" class="px-2 py-2.5 rounded-full bg-white border border-gray-200/80 text-[9px] font-bold text-gray-600 hover:text-blue-600 hover:border-blue-200 uppercase tracking-widest flex-1 text-center shadow-[0_2px_10px_rgba(0,0,0,0.02)] transition-colors">Interior</a>
-                        <a href="{{ $model['specs_url'] }}" class="px-2 py-2.5 rounded-full bg-white border border-gray-200/80 text-[9px] font-bold text-gray-600 hover:text-blue-600 hover:border-blue-200 uppercase tracking-widest flex-1 text-center shadow-[0_2px_10px_rgba(0,0,0,0.02)] transition-colors">Specs</a>
+                    <div class="flex gap-2">
+                        <a href="{{ $model['exterior_url'] }}" class="py-2.5 px-2 rounded-xl bg-gray-950 border border-gray-800 text-[9px] font-bold text-gray-400 hover:text-white hover:bg-blue-600/20 hover:border-blue-500 uppercase tracking-widest flex-1 text-center transition-all duration-300">Exterior</a>
+                        <a href="{{ $model['interior_url'] }}" class="py-2.5 px-2 rounded-xl bg-gray-950 border border-gray-800 text-[9px] font-bold text-gray-400 hover:text-white hover:bg-blue-600/20 hover:border-blue-500 uppercase tracking-widest flex-1 text-center transition-all duration-300">Interior</a>
+                        <a href="{{ $model['specs_url'] }}" class="py-2.5 px-2 rounded-xl bg-gray-950 border border-gray-800 text-[9px] font-bold text-gray-400 hover:text-white hover:bg-blue-600/20 hover:border-blue-500 uppercase tracking-widest flex-1 text-center transition-all duration-300">Specs</a>
                     </div>
                 </div>
                 @endforeach
             </div>
             
-            <a href="{{ route('test-drive') }}" class="font-geely text-2xl font-bold tracking-tighter text-gray-900 uppercase pt-4 border-t border-gray-200/80">Test Drive</a>
+            <!-- Test Drive Link -->
+            <a href="{{ route('test-drive') }}" class="font-geely text-xl font-bold tracking-widest text-white uppercase flex items-center justify-between group border-t border-gray-800 pt-5 mt-2">
+                <span>Test Drive</span>
+                <svg class="w-5 h-5 text-gray-600 group-hover:text-blue-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </a>
         </div>
 
-        <div id="mobile-menu-footer" class="px-6 mt-8 transform translate-y-10 transition-transform duration-700 ease-out delay-200">
-            <a href="{{ route('credit-simulation') }}" class="w-full flex items-center justify-center gap-3 bg-gray-900 text-white py-4 md:py-5 rounded-2xl font-geely text-xs font-bold tracking-widest uppercase shadow-[0_10px_30px_rgba(0,0,0,0.2)] active:scale-95 transition-transform">
+        <div id="mobile-menu-footer" class="px-6 mt-6 transform translate-y-10 transition-transform duration-500 ease-out delay-200">
+            <!-- Glow CTA Button -->
+            <a href="{{ route('credit-simulation') }}" class="w-full flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-500 text-white py-3.5 rounded-2xl font-geely text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-[0_0_20px_rgba(37,99,235,0.25)] hover:shadow-[0_0_30px_rgba(37,99,235,0.4)]">
                 Credit Simulation 
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
             </a>
         </div>
     </div>
@@ -144,6 +155,7 @@
             
             if (isOpen) {
                 menu.classList.replace('opacity-100', 'opacity-0');
+                menu.classList.replace('scale-100', 'scale-95'); // Added scaling down animation
                 menu.classList.add('pointer-events-none');
                 
                 iconMenu.classList.remove('opacity-0', 'scale-50');
@@ -163,6 +175,7 @@
                 }
             } else {
                 menu.classList.replace('opacity-0', 'opacity-100');
+                menu.classList.replace('scale-95', 'scale-100'); // Added scaling up animation
                 menu.classList.remove('pointer-events-none');
                 
                 iconMenu.classList.remove('opacity-100');

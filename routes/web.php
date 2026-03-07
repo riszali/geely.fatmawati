@@ -76,6 +76,7 @@ Route::get('/credit-simulation', [PageController::class, 'creditSimulation'])->n
 // SEO & XML SITEMAP
 // =============================================================
 
-Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+// Rute dinonaktifkan karena kita menggunakan file sitemap.xml statis di folder public
+// Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
 // End of file

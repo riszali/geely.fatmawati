@@ -6,4 +6,4 @@ Disallow: /admin
 Disallow: /login
 
 # Memberitahu Google lokasi sitemap dinamis kita
-Sitemap: https://geelybsd.id/sitemap.xml
+Sitemap: https://geelyfatmawati.id/sitemap.xml

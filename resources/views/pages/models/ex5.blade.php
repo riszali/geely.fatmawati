@@ -1028,7 +1028,7 @@
                 wrapInt.style.zIndex = '10';
                 
                 swatchesExtGroup.classList.add('hidden', 'opacity-0', 'pointer-events-none');
-                swatchesExtGroup.classList.remove('hidden');
+                swatchesIntGroup.classList.remove('hidden');
                 setTimeout(() => swatchesIntGroup.classList.remove('opacity-0', 'pointer-events-none'), 50);
                 
                 const activeInt = document.querySelector('.swatch-int.active');

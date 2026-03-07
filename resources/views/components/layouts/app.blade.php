@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="google306b9f5674f8c96f" />
+
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}?v={{ time() }}">
     <link rel="apple-touch-icon" href="{{ asset('favicon.png') }}?v={{ time() }}">
 
@@ -88,3 +91,4 @@
 
 </body>
 </html>
+```

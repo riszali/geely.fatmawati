@@ -1,21 +1,46 @@
 <x-layouts.app>
-    @push('head')
-        <title>Dealer Resmi Geely Fatmawati Jakarta | Test Drive Geely EX5 & EX2</title>
-        <meta name="description" content="Kunjungi Showroom Dealer Resmi Geely Fatmawati, Jakarta Selatan. Temukan era baru mobilitas, dapatkan promo terbaru, dan booking test drive Geely EX5 & EX2 hari ini!">
-        <meta name="keywords" content="Geely Fatmawati, Dealer Geely Jakarta, Dealer Geely Jakarta Selatan, Mobil Listrik Geely, Geely EX5, Geely EX2, Harga Geely, Test Drive Geely, Showroom Geely Jakarta">
-        <link rel="canonical" href="https://geelyfatmawati.id/">
-        
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://geelyfatmawati.id/">
-        <meta property="og:title" content="Dealer Resmi Geely Fatmawati Jakarta | Kendaraan Listrik Premium">
-        <meta property="og:description" content="Kunjungi Showroom Dealer Resmi Geely Fatmawati Jakarta Selatan. Dapatkan promo terbaru dan test drive Geely EX5 & EX2.">
-        <meta property="og:image" content="https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG">
-
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:url" content="https://geelyfatmawati.id/">
-        <meta property="twitter:title" content="Dealer Resmi Geely Fatmawati Jakarta | Kendaraan Listrik Premium">
-        <meta property="twitter:description" content="Kunjungi Showroom Dealer Resmi Geely Fatmawati Jakarta Selatan. Dapatkan promo terbaru dan test drive Geely EX5 & EX2.">
-        <meta property="twitter:image" content="https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG">
+    <!-- OPTIMASI SEO ON-PAGE -->
+    @section('title', 'Dealer Resmi Geely Fatmawati Jakarta Selatan | Promo & Test Drive')
+    @section('meta_description', 'Kunjungi Showroom Dealer Resmi Geely Fatmawati Jakarta Selatan. Dapatkan promo harga terbaru, simulasi kredit, dan booking test drive Geely EX5, EX2 & Starray.')
+    @section('og_image', 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG')
+    
+    @push('schema')
+    <script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@graph": [
+        {
+          "@@type": "AutoDealer",
+          "name": "Dealer Resmi Geely Fatmawati Jakarta",
+          "image": "https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG",
+          "@@id": "https://geelyfatmawati.id",
+          "url": "https://geelyfatmawati.id",
+          "telephone": "+6285772087335", 
+          "description": "Dealer mobil listrik resmi Geely Fatmawati Jakarta Selatan. Melayani test drive, pembelian tunai/kredit, dan servis resmi Geely EX5, EX2, dan Starray EM-i.",
+          "address": {
+            "@@type": "PostalAddress",
+            "streetAddress": "Jl. RS. Fatmawati Raya",
+            "addressLocality": "Jakarta Selatan",
+            "addressRegion": "DKI Jakarta",
+            "postalCode": "12430",
+            "addressCountry": "ID"
+          },
+          "geo": {
+            "@@type": "GeoCoordinates",
+            "latitude": -6.2945, 
+            "longitude": 106.7994
+          },
+          "openingHoursSpecification": {
+            "@@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "08:30",
+            "closes": "17:30"
+          },
+          "priceRange": "$$$"
+        }
+      ]
+    }
+    </script>
     @endpush
 
     <style>
@@ -142,7 +167,7 @@
                     <div class="lg:col-span-7 flex flex-col">
                         <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 mb-6 backdrop-blur-md w-max">
                             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_10px_#34d399]"></span>
-                            <span class="text-emerald-300 text-[10px] font-bold tracking-widest uppercase">Dealer Geely Fatmawati</span>
+                            <span class="text-emerald-300 text-[10px] font-bold tracking-widest uppercase">Dealer Resmi Geely Fatmawati</span>
                         </div>
                         
                         <h1 class="font-geely text-5xl sm:text-6xl md:text-7xl lg:text-[90px] text-white uppercase leading-[0.9] tracking-tighter mb-4 lg:mb-8 drop-shadow-lg w-full">
@@ -156,7 +181,7 @@
                             
                             <div class="w-full transform z-10 p-[6px] rounded-[2rem] bg-white/5 border border-white/20 border-t-emerald-400/40 border-l-white/30 backdrop-blur-md shadow-[0_25px_50px_-12px_rgba(16,185,129,0.25)] relative">
                                 <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
-                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior-01-7JRFy88F1zfhn2Fx.webp" alt="Geely EV" class="w-full h-auto rounded-[1.65rem] object-cover relative z-10 pointer-events-none drop-shadow-lg">
+                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior-01-7JRFy88F1zfhn2Fx.webp" alt="Mobil Listrik Geely EX5 Warna Putih Jakarta Selatan" class="w-full h-auto rounded-[1.65rem] object-cover relative z-10 pointer-events-none drop-shadow-lg">
                             </div>
                         </div>
                         
@@ -178,7 +203,7 @@
                         
                         <div class="w-[120%] max-w-none transform translate-x-10 scale-110 z-10 p-[6px] rounded-[2rem] bg-white/5 border border-white/20 border-t-emerald-400/40 border-l-white/30 backdrop-blur-md shadow-[0_25px_50px_-12px_rgba(16,185,129,0.25)] relative">
                             <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
-                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior-01-7JRFy88F1zfhn2Fx.webp" alt="Geely EV" class="w-full h-auto rounded-[1.65rem] object-cover relative z-10 pointer-events-none drop-shadow-lg">
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior-01-7JRFy88F1zfhn2Fx.webp" alt="Tampilan Eksterior Depan Mobil Listrik Geely EX5 Jakarta" class="w-full h-auto rounded-[1.65rem] object-cover relative z-10 pointer-events-none drop-shadow-lg">
                         </div>
                     </div>
 
@@ -208,7 +233,7 @@
                 
                 <div class="col-span-2 md:col-span-2 row-span-2 glass-island-light rounded-[2rem] p-2 relative reveal-up img-container" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-diresmikan-sO5Dd7FcvFkX3wX5.jpg', 'Grand Opening Geely Fatmawati', true)">
                     <div class="w-full h-[300px] md:h-full rounded-[1.5rem] overflow-hidden relative">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-diresmikan-sO5Dd7FcvFkX3wX5.jpg" alt="Peresmian Showroom Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-diresmikan-sO5Dd7FcvFkX3wX5.jpg" alt="Peresmian Dealer Showroom Geely Fatmawati Jakarta Selatan" class="absolute inset-0 w-full h-full object-cover object-center">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6">
                             <span class="text-emerald-400 text-[10px] font-bold tracking-[0.3em] uppercase mb-1 block drop-shadow-md">Celebration</span>
@@ -222,19 +247,19 @@
 
                 <div class="col-span-2 md:col-span-2 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-left delay-100 img-container" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-3-RgnRXLNbpMYB75ky.webp', 'Suasana Kemeriahan Grand Opening', true)">
                     <div class="w-full h-[200px] md:h-full rounded-[1.5rem] overflow-hidden relative">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-3-RgnRXLNbpMYB75ky.webp" alt="Event Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-3-RgnRXLNbpMYB75ky.webp" alt="Suasana Event Peluncuran Dealer Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center">
                     </div>
                 </div>
 
                 <div class="col-span-1 md:col-span-1 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-up delay-200 img-container" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-7-G2FMRCtHFFy6nvBp.jpeg', 'Penerimaan Pelanggan Perdana', true)">
                     <div class="w-full h-[200px] md:h-full rounded-[1.5rem] overflow-hidden relative">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-7-G2FMRCtHFFy6nvBp.jpeg" alt="Pelayanan Pelanggan Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-[center_60%]">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-7-G2FMRCtHFFy6nvBp.jpeg" alt="Layanan Pelanggan Dealer Resmi Geely" class="absolute inset-0 w-full h-full object-cover object-[center_60%]">
                     </div>
                 </div>
 
                 <div class="col-span-1 md:col-span-1 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-up delay-300 img-container" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/p1010662-scaled-4y1qGH08npg8QHKO.jpg', 'Lini Kendaraan Masa Depan', true)">
                     <div class="w-full h-[200px] md:h-full rounded-[1.5rem] overflow-hidden relative">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/p1010662-scaled-4y1qGH08npg8QHKO.jpg" alt="Display Grand Opening Geely" class="absolute inset-0 w-full h-full object-cover object-center">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/p1010662-scaled-4y1qGH08npg8QHKO.jpg" alt="Mobil Display Geely di Showroom Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center">
                     </div>
                 </div>
 
@@ -268,7 +293,7 @@
                 
                 <div class="glass-island rounded-[2rem] p-2 relative reveal-up img-container" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/showroom-fatmawati-cV9nMqwkCe4Ay47Y.jpg', 'Showroom Geely Fatmawati')">
                     <div class="w-full aspect-square rounded-[1.5rem] overflow-hidden relative">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/showroom-fatmawati-cV9nMqwkCe4Ay47Y.jpg" alt="Showroom Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/showroom-fatmawati-cV9nMqwkCe4Ay47Y.jpg" alt="Bangunan Showroom Dealer Geely Fatmawati Jakarta" class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#030712]/90 via-transparent to-transparent"></div>
                         <div class="absolute bottom-6 left-6 right-6">
                             <span class="text-emerald-400 text-[9px] font-bold tracking-[0.3em] uppercase mb-1 block">Flagship Dealer</span>
@@ -280,7 +305,7 @@
 
                 <div class="glass-island rounded-[2rem] p-2 relative reveal-up delay-100 img-container" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/spk-XGyyr4bmoYUWkhWY.jpeg', 'Penyerahan SPK Pelanggan Geely Fatmawati')">
                     <div class="w-full aspect-square rounded-[1.5rem] overflow-hidden relative">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/spk-XGyyr4bmoYUWkhWY.jpeg" alt="Penyerahan SPK Pelanggan Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/spk-XGyyr4bmoYUWkhWY.jpeg" alt="Penyerahan Mobil Geely ke Pelanggan Dealer Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#030712]/90 via-[#030712]/20 to-transparent"></div>
                         <div class="absolute bottom-6 left-6">
                             <h4 class="font-geely text-2xl md:text-3xl text-white uppercase tracking-tight">Customer Trust</h4>
@@ -295,7 +320,7 @@
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
                     <h4 class="font-geely text-2xl text-white uppercase tracking-tight mb-2">Fast Charging</h4>
-                    <p class="text-gray-400 text-xs font-light leading-relaxed">Prioritas pengisian daya cepat eksklusif untuk efisiensi waktu Anda.</p>
+                    <p class="text-gray-400 text-xs font-light leading-relaxed">Prioritas pengisian daya cepat eksklusif untuk efisiensi waktu Anda di area dealer kami.</p>
                 </div>
 
                 <div class="glass-island rounded-[2rem] p-8 flex flex-col justify-center relative overflow-hidden reveal-up delay-300 group min-h-[200px] md:min-h-[250px]">
@@ -304,7 +329,7 @@
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
                     </div>
                     <h4 class="font-geely text-2xl text-white uppercase tracking-tight mb-2">VIP Concierge</h4>
-                    <p class="text-gray-400 text-xs font-light leading-relaxed">Asisten pribadi terdedikasi untuk perawatan mobil Anda.</p>
+                    <p class="text-gray-400 text-xs font-light leading-relaxed">Asisten pribadi terdedikasi untuk segala urusan perawatan mobil Geely Anda.</p>
                 </div>
             </div>
         </div>
@@ -360,7 +385,7 @@
                 @foreach($showcase as $car)
                 <div class="glass-island rounded-[2rem] h-[550px] flex flex-col relative reveal-up {{ $car['delay'] }} group cursor-pointer transition-all duration-500">
                     <div class="relative h-[65%] w-full rounded-t-[2rem] overflow-hidden img-container">
-                        <img src="{{ $car['img'] }}" alt="{{ $car['name'] }} - Dealer Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
+                        <img src="{{ $car['img'] }}" alt="Spesifikasi {{ $car['name'] }} di Dealer Geely Fatmawati Jakarta" class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/20 to-transparent opacity-90"></div>
                     </div>
                     
@@ -393,7 +418,7 @@
 
     <section class="py-24 relative overflow-hidden flex items-center justify-center min-h-[60vh] bg-[#030712]">
         <div class="absolute inset-0 z-0">
-            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/2400x0-14-mxB2lNnxMqfjr7pG.webp" alt="Pembiayaan Geely Fatmawati" class="w-full h-full object-cover opacity-50">
+            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/2400x0-14-mxB2lNnxMqfjr7pG.webp" alt="Layanan Pembiayaan Kredit Dealer Geely Fatmawati" class="w-full h-full object-cover opacity-50">
             <div class="absolute inset-0 bg-gradient-to-r from-[#030712]/90 via-emerald-900/40 to-[#030712]/90"></div>
         </div>
         
@@ -425,7 +450,7 @@
                 <div class="lg:col-span-7 order-1 lg:order-2 reveal-right h-full relative z-10">
                     <div class="glass-island rounded-[2rem] p-2 relative h-[50vh] lg:h-[600px] overflow-hidden">
                         <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative">
-                            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+                            <video autoplay muted loop playsinline aria-label="Geely EX5 Video Showcase" class="absolute inset-0 w-full h-full object-cover">
                                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/say-hi-to-the-geely-ex5---geely-auto-uk-1080p-h264-_1-Sz3UdvLVUW0EehYY.mp4" type="video/mp4">
                             </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-[#030712]/90 via-[#030712]/40 to-transparent"></div>
@@ -468,7 +493,7 @@
                 <div class="order-1 lg:col-span-7 flex flex-col reveal-left relative z-10">
                     <div class="glass-island p-2 rounded-[2rem] mb-6 md:mb-8">
                         <div class="relative w-full aspect-video rounded-[1.5rem] overflow-hidden">
-                            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+                            <video autoplay muted loop playsinline aria-label="Interior Geely Atmosphere" class="absolute inset-0 w-full h-full object-cover">
                                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/video_atmosphere-WPk8K2f2d7da9R4C.mp4" type="video/mp4">
                             </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent opacity-90"></div>
@@ -542,7 +567,7 @@
                 
                 <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg', '01 // Exterior - Aero Stance')" class="col-span-2 md:col-span-2 md:row-span-2 glass-island rounded-[2rem] p-2 cursor-pointer img-container relative">
                     <div class="w-full h-[300px] md:h-full rounded-[1.5rem] overflow-hidden relative">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg" alt="Eksterior Depan Geely EX2 EV" class="absolute inset-0 w-full h-full object-cover">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg" alt="Desain Eksterior Depan Geely EX2 EV" class="absolute inset-0 w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent opacity-90"></div>
                         <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
                             <div>
@@ -558,7 +583,7 @@
 
                 <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg', '02 // Cockpit - Digital Oasis')" class="col-span-2 md:col-span-2 md:row-span-1 glass-island rounded-[2rem] p-2 cursor-pointer img-container relative">
                     <div class="w-full h-[220px] md:h-full rounded-[1.5rem] overflow-hidden relative">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg" alt="Interior Kabin Geely EX2" class="absolute inset-0 w-full h-full object-cover object-[center_60%]">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg" alt="Desain Interior Kabin Mobil Geely EX2" class="absolute inset-0 w-full h-full object-cover object-[center_60%]">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent opacity-90"></div>
                         <div class="absolute bottom-6 left-6">
                             <span class="text-emerald-400 text-[9px] font-bold tracking-[0.3em] uppercase block mb-2">Cockpit</span>
@@ -569,7 +594,7 @@
 
                 <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp', '03 // Lifestyle - Agility')" class="col-span-1 md:col-span-1 md:row-span-1 glass-island rounded-[2rem] p-2 cursor-pointer img-container relative">
                     <div class="w-full h-[180px] md:h-full rounded-[1.5rem] overflow-hidden relative">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp" alt="Gaya Hidup Berkendara EV" class="absolute inset-0 w-full h-full object-cover">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp" alt="Gaya Hidup Pengguna Geely EX2" class="absolute inset-0 w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#030712] to-transparent opacity-90"></div>
                         <div class="absolute bottom-6 left-6">
                             <span class="text-emerald-400 text-[8px] font-bold tracking-[0.3em] uppercase block mb-1">Lifestyle</span>
@@ -581,11 +606,11 @@
                 <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png', '04 // Utility - Max Cargo', true)" class="col-span-1 md:col-span-1 md:row-span-1 glass-island rounded-[2rem] p-6 cursor-pointer flex flex-col justify-between relative group">
                     <div class="absolute inset-0 bg-gradient-to-b from-emerald-900/20 to-transparent rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div class="z-10">
-                        <span class="textemerald-400 text-[8px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">Utility</span>
+                        <span class="text-emerald-400 text-[8px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">Utility</span>
                         <h3 class="font-geely text-lg md:text-2xl text-white uppercase tracking-tight leading-none">Space Reimagined</h3>
                     </div>
                     <div class="relative w-full h-[60%] mt-auto flex items-end justify-center z-10 img-container">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png" alt="Kapasitas Bagasi Geely EX2" class="w-full h-full object-contain origin-bottom">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png" alt="Kapasitas Bagasi Luas Geely EX2" class="w-full h-full object-contain origin-bottom">
                     </div>
                 </div>
 
@@ -608,7 +633,7 @@
 
             <div class="relative w-full aspect-video md:h-[650px] max-w-6xl mx-auto glass-island rounded-[2rem] p-2 flex items-center justify-center reveal-scale">
                 <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative z-10">
-                    <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-70 mix-blend-screen">
+                    <video autoplay muted loop playsinline aria-label="Teknologi Platform GEA Geely" class="w-full h-full object-cover opacity-70 mix-blend-screen">
                         <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-inside-the-gea-intelligent-electric-platform---geely-auto-720p-h264-tjCY49tcStbBVMrV.mp4" type="video/mp4">
                     </video>
                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#030712_100%)] opacity-80 pointer-events-none"></div>
@@ -644,7 +669,7 @@
     <div class="relative w-full pb-10 bg-[#030712]">
         
         <div class="sticky top-[calc(50vh-28.125vw)] md:top-0 w-full aspect-video md:aspect-auto md:h-[100vh] overflow-hidden z-0 flex items-center justify-center">
-            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-lighten">
+            <video autoplay muted loop playsinline aria-label="Teknologi EM-i Hybrid Geely" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-lighten">
                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely---coming-soon-starray-em-i---geely-epping-1080p-h264-YZ9EbbbjRws55ErL.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#030712] to-transparent pointer-events-none z-10"></div>
@@ -670,7 +695,7 @@
                 <div class="order-2 lg:col-start-2 lg:row-start-1 relative reveal-left delay-300">
                     <div class="glass-island p-2 rounded-[2rem] relative z-10">
                         <div class="relative w-full aspect-video rounded-[1.5rem] overflow-hidden img-container">
-                            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+                            <video autoplay muted loop playsinline aria-label="Geely Starray EM-i Engine" class="absolute inset-0 w-full h-full object-cover">
                                 <source src="https://geelyprod-assets.oss-ap-southeast-5.aliyuncs.com/products/starray-emi/section-2/EM-i-Super-Hybrid.mp4" type="video/mp4">
                             </video>
                         </div>
@@ -717,7 +742,7 @@
                 
                 <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-100 group img-container">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6 shadow-sm">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/always-carghed.jpg-sPvzxctIegkiPhzC.webp" alt="Always Charged" class="w-full h-full object-cover">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/always-carghed.jpg-sPvzxctIegkiPhzC.webp" alt="Fitur Aplikasi Geely Always Charged" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-emerald-500/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
                     </div>
                     <div class="px-4 pb-4">
@@ -728,7 +753,7 @@
 
                 <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-200 group img-container">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6 shadow-sm">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/never-lost.jpg-9JUUSHg9iMEbQsEN.webp" alt="Never Lost" class="w-full h-full object-cover">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/never-lost.jpg-9JUUSHg9iMEbQsEN.webp" alt="Fitur Aplikasi Geely GPS Never Lost" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-emerald-500/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
                     </div>
                     <div class="px-4 pb-4">
@@ -739,7 +764,7 @@
 
                 <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-300 group img-container">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6 shadow-sm">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/full-control.jpg-ycOYdP2jZuNB3u9w.webp" alt="Full Control" class="w-full h-full object-cover">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/full-control.jpg-ycOYdP2jZuNB3u9w.webp" alt="Fitur Aplikasi Geely Full Remote Control" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-emerald-500/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
                     </div>
                     <div class="px-4 pb-4">
@@ -834,42 +859,5 @@
                 closeLightbox();
             }
         });
-    </script>
-
-    <script type="application/ld+json">
-    {
-      "@@context": "https://schema.org",
-      "@@graph": [
-        {
-          "@@type": "AutoDealer",
-          "name": "Dealer Resmi Geely Fatmawati Jakarta",
-          "image": "https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG",
-          "@@id": "https://geelyfatmawati.id",
-          "url": "https://geelyfatmawati.id",
-          "telephone": "+628111234567", 
-          "description": "Dealer mobil listrik resmi Geely Fatmawati Jakarta Selatan. Melayani test drive, pembelian tunai/kredit, dan servis resmi Geely EX5, EX2, dan Starray EM-i.",
-          "address": {
-            "@@type": "PostalAddress",
-            "streetAddress": "Jl. RS. Fatmawati Raya",
-            "addressLocality": "Jakarta Selatan",
-            "addressRegion": "DKI Jakarta",
-            "postalCode": "12430",
-            "addressCountry": "ID"
-          },
-          "geo": {
-            "@@type": "GeoCoordinates",
-            "latitude": -6.2945, 
-            "longitude": 106.7994
-          },
-          "openingHoursSpecification": {
-            "@@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "08:30",
-            "closes": "17:30"
-          },
-          "priceRange": "$$$"
-        }
-      ]
-    }
     </script>
 </x-layouts.app>

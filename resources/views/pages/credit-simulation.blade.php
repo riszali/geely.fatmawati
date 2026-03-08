@@ -1,4 +1,9 @@
 <x-layouts.app>
+    <!-- OPTIMASI SEO ON-PAGE -->
+    @section('title', 'Simulasi Kredit Geely Jakarta | EX5, EX2 & Starray EM-i')
+    @section('meta_description', 'Hitung estimasi cicilan bulanan, TDP, dan bunga kredit mobil Geely EX5, EX2, dan Starray di Dealer Resmi Geely Fatmawati Jakarta Selatan.')
+    @section('keywords', 'Simulasi Kredit Geely, Cicilan Geely EX5, Kredit Geely EX2 Jakarta, DP Mobil Geely, Promo Kredit Geely Fatmawati')
+    
     <!-- ==========================================
          ULTRA-PREMIUM GLOBAL STYLES
     =========================================== -->
@@ -82,6 +87,16 @@
             background-color: #111;
             color: #fff;
         }
+
+        /* Visual Feedback Pulse */
+        @keyframes result-pulse {
+            0% { box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 0 rgba(34, 211, 238, 0.4); }
+            70% { box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 15px rgba(34, 211, 238, 0); }
+            100% { box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 0 rgba(34, 211, 238, 0); }
+        }
+        .animate-pulse-cyan {
+            animation: result-pulse 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+        }
     </style>
 
     <div class="relative min-h-screen bg-[#050505] overflow-hidden pb-24">
@@ -95,13 +110,13 @@
         =========================================== -->
         <section class="relative z-10 pt-24 md:pt-32 pb-12 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full border border-cyan-500/20 bg-cyan-500/5 text-cyan-400 backdrop-blur-md">
-                <span class="text-[10px] font-bold tracking-[0.3em] uppercase">Financial Services</span>
+                <span class="text-[10px] font-bold tracking-[0.3em] uppercase">Layanan Finansial Dealer Geely</span>
             </div>
             <h1 class="font-geely text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-tighter mb-6 drop-shadow-xl">
                 Simulasi <span class="text-liquid">Kredit</span>
             </h1>
             <p class="text-gray-400 text-sm md:text-base font-light max-w-2xl mx-auto leading-relaxed mb-12">
-                Rencanakan kepemilikan kendaraan Geely Anda dengan kalkulator pintar kami. Pilih model favorit Anda, putar 360°, dan dapatkan estimasi cicilan terbaik.
+                Rencanakan kepemilikan kendaraan Geely Anda dengan kalkulator pintar kami. Pilih model favorit Anda, putar 360°, dan dapatkan estimasi cicilan terbaik khusus area Jakarta.
             </p>
 
             <!-- Model Selection Pills -->
@@ -121,8 +136,7 @@
             <div class="glass-panel p-2 md:p-4 rounded-[2rem] md:rounded-[2.5rem] w-full max-w-5xl mx-auto h-[40vh] md:h-[50vh] min-h-[300px] relative overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.8)] mb-16">
                 <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-b from-white/5 to-transparent pointer-events-none z-20"></div>
                 <div class="relative w-full h-full rounded-[1.5rem] md:rounded-[2rem] overflow-hidden flex items-center justify-center">
-                    <!-- CSS Hack: Ukuran ditingkatkan menjadi 120% agar watermark di ujung benar-benar terpotong oleh overflow-hidden -->
-                    <iframe id="car-spin-iframe" src="https://riszali.sirv.com/Spins/ex5/white.spin" class="absolute top-1/2 left-1/2 w-[120%] h-[120%] -translate-x-1/2 -translate-y-1/2 border-0" allowfullscreen></iframe>
+                    <iframe id="car-spin-iframe" title="Tampilan 360 Derajat Geely" src="https://riszali.sirv.com/Spins/ex5/white.spin" class="absolute top-1/2 left-1/2 w-[120%] h-[120%] -translate-x-1/2 -translate-y-1/2 border-0" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -231,7 +245,7 @@
                     <!-- Glow behind result card -->
                     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-cyan-600/20 rounded-[3rem] blur-[80px] pointer-events-none z-0"></div>
                     
-                    <div class="glass-panel rounded-[2rem] p-6 sm:p-8 md:p-10 sticky top-24 z-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-t border-l border-cyan-500/30">
+                    <div id="resultCard" class="glass-panel rounded-[2rem] p-6 sm:p-8 md:p-10 sticky top-24 z-10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-t border-l border-cyan-500/30 transition-all duration-300">
                         <h3 class="text-cyan-400 text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-6 block">Estimasi Pembiayaan</h3>
                         
                         <div class="space-y-8">
@@ -279,6 +293,19 @@
 
             </div>
         </section>
+    </div>
+
+    <!-- Mobile Floating Summary (Glassmorphism Footer) -->
+    <div id="mobileFloatingBar" class="fixed bottom-0 left-0 right-0 z-[100] p-4 lg:hidden transform translate-y-full transition-all duration-500 ease-in-out">
+        <div class="glass-panel rounded-2xl p-4 flex justify-between items-center border-t border-cyan-500/40 shadow-[0_-10px_40px_rgba(0,0,0,0.8)]">
+            <div class="flex flex-col">
+                <p class="text-[8px] uppercase tracking-widest text-gray-400 font-bold mb-1">Angsuran / bln</p>
+                <p class="text-xl font-geely text-cyan-400 drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">Rp <span id="floatInstallment">0</span></p>
+            </div>
+            <button onclick="document.getElementById('resultCard').scrollIntoView({behavior:'smooth'})" class="bg-cyan-600 px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-widest text-white shadow-[0_5px_15px_rgba(34,211,238,0.3)] active:scale-95 transition-transform">
+                Lihat Detail
+            </button>
+        </div>
     </div>
 
     <!-- Logika Kalkulator (Vanilla JS) -->
@@ -332,6 +359,10 @@
             const dpPercentSlider = document.getElementById('dpPercent');
             const dpPercentLabel = document.getElementById('dpPercentLabel');
             const tenorRadios = document.querySelectorAll('input[name="tenor"]');
+            
+            const resultCard = document.getElementById('resultCard');
+            const mobileFloatingBar = document.getElementById('mobileFloatingBar');
+            const floatInstallment = document.getElementById('floatInstallment');
 
             // Format Rupiah
             const formatRupiah = (number) => {
@@ -384,6 +415,11 @@
                 const insurance = price * 0.025 * tenor; 
                 const totalDp = dpPure + adminFee + insurance + installment; 
 
+                // Pulse Effect on Update
+                resultCard.classList.remove('animate-pulse-cyan');
+                void resultCard.offsetWidth; // Trigger reflow
+                resultCard.classList.add('animate-pulse-cyan');
+
                 // Update UI dengan animasi ringan (fade)
                 const resultElements = ['resultInstallment', 'resultTdp', 'detailOtr', 'detailPrincipal', 'detailRate'];
                 resultElements.forEach(id => {
@@ -392,11 +428,15 @@
                 });
 
                 setTimeout(() => {
-                    document.getElementById('resultInstallment').innerText = formatRupiah(installment);
+                    const installmentFormatted = formatRupiah(installment);
+                    document.getElementById('resultInstallment').innerText = installmentFormatted;
                     document.getElementById('resultTdp').innerText = formatRupiah(totalDp);
                     document.getElementById('detailOtr').innerText = 'Rp ' + formatRupiah(price);
                     document.getElementById('detailPrincipal').innerText = 'Rp ' + formatRupiah(principal);
                     document.getElementById('detailRate').innerText = interestRate.toFixed(2) + '% p.a';
+                    
+                    // Update Floating Mobile Bar
+                    floatInstallment.innerText = installmentFormatted;
 
                     resultElements.forEach(id => {
                         const el = document.getElementById(id);
@@ -405,6 +445,23 @@
                     });
                 }, 150);
             };
+
+            // Scroll Logic to show/hide Floating Bar
+            window.addEventListener('scroll', () => {
+                const rect = resultCard.getBoundingClientRect();
+                const isVisible = (rect.top >= 0 && rect.bottom <= window.innerHeight);
+                
+                // Jika kartu hasil tidak terlihat di layar, munculkan bar (hanya di mobile)
+                if (window.innerWidth < 1024) {
+                    if (rect.top > window.innerHeight || rect.bottom < 0) {
+                        mobileFloatingBar.classList.remove('translate-y-full');
+                        mobileFloatingBar.classList.add('translate-y-0');
+                    } else {
+                        mobileFloatingBar.classList.add('translate-y-full');
+                        mobileFloatingBar.classList.remove('translate-y-0');
+                    }
+                }
+            });
 
             // Event Listeners untuk Tombol Pemilihan Model
             modelBtns.forEach(btn => {

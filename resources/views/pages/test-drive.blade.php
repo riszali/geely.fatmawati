@@ -89,7 +89,6 @@
                         <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
                         <span class="text-[9px] font-bold tracking-[0.3em] uppercase text-cyan-300">Geely Fatmawati Booking</span>
                     </div>
-                    <!-- Judul diperkecil lebih lanjut sesuai permintaan -->
                     <h1 class="font-geely text-2xl sm:text-3xl lg:text-4xl text-white font-bold uppercase tracking-tight leading-[1.1] drop-shadow-2xl">
                         Unlock<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-500">The Future.</span>
                     </h1>
@@ -268,11 +267,16 @@
                 const modelLabel = db_visuals[modelValue].title;
                 
                 const targetWA = "6285772087335";
-                const message = `Halo Geely Fatmawati,%0A%0ASaya ingin melakukan *Test Drive*:%0A%0A` +
-                                `*Model:* ${modelLabel}%0A` +
-                                `*Nama:* ${name}%0A` +
-                                `*WhatsApp:* ${phone}%0A` +
-                                `*Jadwal:* ${date} pukul ${time}%0A%0AMohon konfirmasinya. Terima kasih!`;
+                
+                // Menggunakan \n untuk baris baru, lalu nanti di-encode
+                const message = `Halo Geely Fatmawati,\n\nSaya ingin melakukan *Test Drive*:\n\n` +
+                                `*Model:* ${modelLabel}\n` +
+                                `*Nama:* ${name}\n` +
+                                `*WhatsApp:* ${phone}\n` +
+                                `*Jadwal:* ${date} pukul ${time}\n\nMohon konfirmasinya. Terima kasih!`;
+
+                // Pastikan pesan aman dilewatkan ke URL dengan encodeURIComponent
+                const waUrl = `https://wa.me/${targetWA}?text=${encodeURIComponent(message)}`;
 
                 const btn = document.getElementById('submitBtn');
                 btn.innerHTML = `
@@ -286,12 +290,15 @@
                 `;
                 btn.disabled = true;
 
+                // [PERBAIKAN]: Eksekusi langsung tanpa setTimeout agar tidak diblokir browser
+                window.open(waUrl, '_blank');
+
+                // Update UI disembunyikan dalam hitungan detik setelah eksekusi tab baru
                 setTimeout(() => {
-                    window.open(`https://wa.me/${targetWA}?text=${message}`, '_blank');
                     form.style.display = 'none';
                     successMsg.classList.remove('hidden');
                     successMsg.classList.add('flex');
-                }, 1200);
+                }, 800);
             });
         });
     </script>

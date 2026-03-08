@@ -62,6 +62,12 @@
                     </div>
                 </div>
                 @endforeach
+
+                <!-- Link Contact Desktop -->
+                <a href="{{ route('contact') }}" class="font-geely text-[11px] font-bold tracking-[0.2em] text-gray-800 hover:text-blue-600 transition-colors uppercase relative group">
+                    Contact
+                    <span class="absolute -bottom-2 left-1/2 w-0 h-[2px] bg-blue-600 group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
+                </a>
             </div>
 
             <div class="hidden lg:flex items-center space-x-8">
@@ -79,7 +85,7 @@
 
             <!-- Mobile Menu Button -->
             <div class="flex items-center lg:hidden relative z-50">
-                <button id="mobile-menu-btn" class="relative w-11 h-11 flex items-center justify-center focus:outline-none text-gray-800 z-50 bg-white/40 backdrop-blur-xl border border-white/60 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-300">
+                <button id="mobile-menu-btn" class="relative w-11 h-11 flex items-center justify-center focus:outline-none text-gray-800 z-50 bg-white/40 backdrop-blur-xl border border-white/60 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:bg-emerald-500 hover:text-emerald-600 transition-all duration-300">
                     <svg id="icon-menu" class="w-5 h-5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -139,6 +145,14 @@
             <!-- Test Drive Link -->
             <a href="{{ route('test-drive') }}" class="font-geely text-lg font-bold tracking-widest text-white uppercase flex items-center justify-between group px-1">
                 <span>Test Drive</span>
+                <span class="w-7 h-7 rounded-full bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-center text-white group-hover:bg-emerald-500 group-hover:border-emerald-400 group-hover:text-black transition-all duration-300 shadow-[0_4px_15px_rgba(0,0,0,0.1)]">
+                    <svg class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </span>
+            </a>
+
+            <!-- Contact Link Mobile -->
+            <a href="{{ route('contact') }}" class="font-geely text-lg font-bold tracking-widest text-white uppercase flex items-center justify-between group px-1">
+                <span>Contact</span>
                 <span class="w-7 h-7 rounded-full bg-white/10 backdrop-blur-md border border-white/10 flex items-center justify-center text-white group-hover:bg-emerald-500 group-hover:border-emerald-400 group-hover:text-black transition-all duration-300 shadow-[0_4px_15px_rgba(0,0,0,0.1)]">
                     <svg class="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </span>

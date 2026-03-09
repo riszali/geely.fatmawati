@@ -149,6 +149,7 @@
         body.lightbox-open { overflow: hidden; }
     </style>
 
+    <!-- SECTION 1: HEADER -->
     <header class="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-[#030712]">
         <div class="absolute inset-0 z-0">
             <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-60 mix-blend-lighten">
@@ -209,9 +210,9 @@
 
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
+    <!-- SECTION 2: GRAND OPENING -->
     <section class="py-24 lg:py-32 relative bg-[#f8fafc] overflow-hidden border-y border-white/10">
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
         <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-green-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
@@ -267,6 +268,7 @@
         </div>
     </section>
 
+    <!-- SECTION 3: EXPERIENCE -->
     <section id="experience" class="py-24 lg:py-32 relative bg-[#030712]">
         <div class="absolute right-0 bottom-0 w-[800px] h-[800px] ambient-glow-emerald opacity-30 pointer-events-none"></div>
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
@@ -335,18 +337,22 @@
         </div>
     </section>
 
-    <section id="lineup" class="py-24 lg:py-32 relative bg-[#030712] bg-noise-overlay overflow-hidden border-y border-white/5">
-        <div class="absolute top-1/4 left-0 w-full h-[500px] ambient-glow-emerald opacity-50 z-0"></div>
+    <!-- SECTION 4: LINEUP -->
+    <section id="lineup" class="py-24 lg:py-32 relative bg-white overflow-hidden border-y border-gray-100">
+        <!-- Background Blobs (Sengaja dibiarkan untuk membiaskan efek Frame Glass) -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-200/40 rounded-full blur-[100px] pointer-events-none z-0"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-200/30 rounded-full blur-[100px] pointer-events-none z-0"></div>
         
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
-            <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24 reveal-up">
-                <span class="text-emerald-400 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Masterpiece Collection</span>
-                <h2 class="font-geely text-4xl sm:text-5xl md:text-7xl uppercase tracking-tighter text-white leading-none">
-                    Intelligent <span class="text-gray-600">Motion</span>
+            <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16 reveal-up">
+                <span class="text-emerald-600 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Masterpiece Collection</span>
+                <h2 class="font-geely text-4xl sm:text-5xl md:text-7xl uppercase tracking-tighter text-gray-900 leading-none">
+                    Intelligent <span class="text-emerald-500">Motion</span>
                 </h2>
             </div>
             
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Diubah menjadi Grid normal tanpa batasan (slider) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8 pb-12">
                 @php
                     $showcase = [
                         [
@@ -383,39 +389,46 @@
                 @endphp
 
                 @foreach($showcase as $car)
-                <div class="glass-island rounded-[2rem] h-[550px] flex flex-col relative reveal-up {{ $car['delay'] }} group cursor-pointer transition-all duration-500">
-                    <div class="relative h-[65%] w-full rounded-t-[2rem] overflow-hidden img-container">
-                        <img src="{{ $car['img'] }}" alt="Spesifikasi {{ $car['name'] }} di Dealer Geely Fatmawati Jakarta" class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/20 to-transparent opacity-90"></div>
-                    </div>
+                <!-- OUTER FRAME (Smoky Dark Glass) - Bebas ruang membesar tanpa batasan container -->
+                <div class="bg-[#030712]/40 backdrop-blur-xl border border-gray-600/30 shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-[2.5rem] p-2 sm:p-3 relative reveal-up {{ $car['delay'] }} group cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_40px_70px_-15px_rgba(16,185,129,0.3)] hover:bg-[#030712]/60 hover:border-emerald-500/40">
                     
-                    <div class="absolute bottom-6 left-6 right-6 glass-panel-dark rounded-3xl p-6 border border-white/10 shadow-[0_15px_40px_-10px_rgba(16,185,129,0.2)] transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_30px_60px_-15px_rgba(16,185,129,0.5)]">
-                        <span class="text-emerald-400 text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">{{ $car['type'] }}</span>
-                        <h3 class="font-geely text-3xl text-white uppercase tracking-tight mb-2">{{ $car['name'] }}</h3>
-                        <p class="text-gray-400 text-xs font-light leading-relaxed mb-4 line-clamp-2">{{ $car['desc'] }}</p>
+                    <!-- INNER CARD (Konten Utama) -->
+                    <div class="bg-[#030712] border border-gray-800/60 rounded-[2rem] h-[550px] flex flex-col relative overflow-hidden w-full transition-colors group-hover:border-emerald-500/40">
+                        <div class="relative h-[65%] w-full rounded-t-[2rem] overflow-hidden img-container">
+                            <img src="{{ $car['img'] }}" alt="Spesifikasi {{ $car['name'] }} di Dealer Geely Fatmawati Jakarta" class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/20 to-transparent opacity-90"></div>
+                        </div>
                         
-                        <div class="flex items-center justify-between border-t border-white/10 pt-4">
-                            <div class="flex gap-4">
-                                <div>
-                                    <p class="text-white font-geely text-lg leading-none">{{ $car['stat1'] }}</p>
-                                    <p class="text-gray-500 text-[8px] uppercase tracking-widest">{{ $car['stat1_lbl'] }}</p>
+                        <div class="absolute bottom-6 left-6 right-6 glass-panel-dark rounded-3xl p-6 border border-white/10 shadow-[0_15px_40px_-10px_rgba(16,185,129,0.2)] transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_30px_60px_-15px_rgba(16,185,129,0.5)]">
+                            <span class="text-emerald-400 text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">{{ $car['type'] }}</span>
+                            <h3 class="font-geely text-3xl text-white uppercase tracking-tight mb-2">{{ $car['name'] }}</h3>
+                            <p class="text-gray-400 text-xs font-light leading-relaxed mb-4 line-clamp-2">{{ $car['desc'] }}</p>
+                            
+                            <div class="flex items-center justify-between border-t border-white/10 pt-4">
+                                <div class="flex gap-4">
+                                    <div>
+                                        <p class="text-white font-geely text-lg leading-none">{{ $car['stat1'] }}</p>
+                                        <p class="text-gray-500 text-[8px] uppercase tracking-widest">{{ $car['stat1_lbl'] }}</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-geely text-lg leading-none">{{ $car['stat2'] }}</p>
+                                        <p class="text-gray-500 text-[8px] uppercase tracking-widest">{{ $car['stat2_lbl'] }}</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p class="text-white font-geely text-lg leading-none">{{ $car['stat2'] }}</p>
-                                    <p class="text-gray-500 text-[8px] uppercase tracking-widest">{{ $car['stat2_lbl'] }}</p>
-                                </div>
+                                <a href="{{ $car['link'] }}" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-emerald-500 group-hover:border-emerald-400 transition-colors">
+                                    <svg class="w-4 h-4 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                </a>
                             </div>
-                            <a href="{{ $car['link'] }}" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white group-hover:bg-emerald-500 group-hover:border-emerald-400 transition-colors">
-                                <svg class="w-4 h-4 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </a>
                         </div>
                     </div>
+
                 </div>
                 @endforeach
             </div>            
         </div>
     </section>
 
+    <!-- SECTION 5: FINANSIAL -->
     <section class="py-24 relative overflow-hidden flex items-center justify-center min-h-[60vh] bg-[#030712]">
         <div class="absolute inset-0 z-0">
             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/2400x0-14-mxB2lNnxMqfjr7pG.webp" alt="Layanan Pembiayaan Kredit Dealer Geely Fatmawati" class="w-full h-full object-cover opacity-50">
@@ -423,7 +436,8 @@
         </div>
         
         <div class="relative z-10 w-full max-w-5xl mx-auto px-6 reveal-up">
-            <div class="glass-island rounded-[3rem] p-10 md:p-16 text-center border-t border-emerald-500/30">
+            <!-- Penambahan style inline khusus untuk override blur agar lebih transparan -->
+            <div class="glass-island rounded-[3rem] p-10 md:p-16 text-center border-t border-emerald-500/30" style="backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);">
                 <div class="inline-block p-4 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 mb-6">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </div>
@@ -648,7 +662,7 @@
                 <div class="absolute bottom-10 right-10 hidden md:block glass-panel-dark p-6 rounded-2xl border border-white/10 shadow-[0_20px_40px_rgba(16,185,129,0.15)] z-20 w-64 reveal-right delay-300">
                     <span class="text-emerald-400 text-[9px] font-bold tracking-widest uppercase block mb-2">Thermal Mgmt</span>
                     <h4 class="font-geely text-2xl text-white uppercase tracking-tight mb-2">Hyper Efficiency</h4>
-                    <p class="text-gray-400 text-[10px] leading-relaxed">Melindungi sel baterai dan memaksimalkan jarak tempuh absolut.</p>
+                    <p class="text-gray-400 text-[10px] leading-relaxed">Melindungi sel baterai dan memaksimal jarak tempuh absolut.</p>
                 </div>
             </div>
             
@@ -724,6 +738,7 @@
         </section>
     </div>
 
+    <!-- SECTION 8 APP -->
     <section id="app-remote" class="py-24 lg:py-32 relative bg-[#f8fafc] overflow-hidden border-t border-gray-200">
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
         <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-green-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
@@ -738,9 +753,10 @@
                 </h2>
             </div>
 
-            <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-6 md:grid md:grid-cols-3 lg:gap-8 pb-8 md:pb-0 px-4 md:px-0">
+            <!-- Diubah menjadi Grid normal tanpa batasan (slider) -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 pt-6 pb-12">
                 
-                <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-100 group img-container">
+                <div class="glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-100 group img-container hover:-translate-y-2 transition-transform duration-500">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6 shadow-sm">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/always-carghed.jpg-sPvzxctIegkiPhzC.webp" alt="Fitur Aplikasi Geely Always Charged" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-emerald-500/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
@@ -751,7 +767,7 @@
                     </div>
                 </div>
 
-                <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-200 group img-container">
+                <div class="glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-200 group img-container hover:-translate-y-2 transition-transform duration-500">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6 shadow-sm">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/never-lost.jpg-9JUUSHg9iMEbQsEN.webp" alt="Fitur Aplikasi Geely GPS Never Lost" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-emerald-500/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
@@ -762,7 +778,7 @@
                     </div>
                 </div>
 
-                <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-300 group img-container">
+                <div class="glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-300 group img-container hover:-translate-y-2 transition-transform duration-500">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6 shadow-sm">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/full-control.jpg-ycOYdP2jZuNB3u9w.webp" alt="Fitur Aplikasi Geely Full Remote Control" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-emerald-500/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
@@ -772,11 +788,6 @@
                         <p class="text-gray-600 text-xs leading-relaxed font-medium">Kendalikan suhu kabin dan akses kunci pintu sebelum Anda tiba di mobil.</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="text-center mt-4 flex md:hidden justify-center items-center gap-2 text-emerald-600 text-[9px] font-bold uppercase tracking-widest animate-pulse">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                Swipe to explore
             </div>
         </div>
     </section>

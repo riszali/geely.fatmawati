@@ -442,7 +442,7 @@
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                 </div>
                 <h2 class="font-geely text-3xl md:text-5xl text-white uppercase tracking-tighter mb-4">
-                    Program Finansial <span class="text-emerald-400">Transparan</span>
+                    Hitung Estimasi <span class="text-emerald-400">Angsuran</span>
                 </h2>
                 <p class="text-gray-300 text-sm md:text-base leading-relaxed mb-10 max-w-2xl mx-auto">
                     Miliki kendaraan masa depan tanpa beban. Kalkulator pintar kami akan menyesuaikan skema cicilan terbaik dengan fleksibilitas penuh khusus area Jakarta Selatan.
@@ -499,7 +499,13 @@
     </section>
 
     <section class="py-24 lg:py-32 relative w-full overflow-hidden bg-[#030712]">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] ambient-glow-emerald opacity-20 pointer-events-none"></div>
+        <!-- NEW BACKGROUND IMAGE DENGAN GRADIENT OVERLAY -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1669295384050-a1d4357bd1d7?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Abstract Topographic Background" class="w-full h-full object-cover opacity-30 mix-blend-lighten">
+            <div class="absolute inset-0 bg-gradient-to-b from-[#030712] via-transparent to-[#030712] opacity-90"></div>
+        </div>
+        
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] ambient-glow-emerald opacity-20 pointer-events-none z-10"></div>
 
         <div class="relative z-20 w-full max-w-[1400px] mx-auto px-6 md:px-12">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">

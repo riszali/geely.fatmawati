@@ -800,7 +800,7 @@
                         EM-i <br> <span class="text-gradient-premium">Super Hybrid</span>
                     </h2>
                     <p class="text-gray-400 text-sm md:text-base lg:text-lg font-light leading-relaxed mb-4 lg:mb-10 reveal-up delay-200">
-                        EM-i or E-Motive intelligence is Geely's advanced hybrid technology, combining the benefits of fuel and battery for greater efficiency, capability, and lower emissions.
+                        EM-i atau E-Motive intelligence adalah teknologi hibrida canggih dari Geely, yang menggabungkan manfaat bahan bakar dan baterai untuk efisiensi, kemampuan, dan emisi yang lebih rendah.
                     </p>
                 </div>
 
@@ -819,7 +819,7 @@
                         Highest Thermal Efficiency (46.5%)
                     </h4>
                     <p class="text-gray-400 text-sm md:text-base relative z-10 leading-relaxed font-light">
-                        Globally leading platform thermal efficiency, surpassing industry standards.
+                        Platform dengan efisiensi termal terdepan di dunia, melampaui standar industri.
                     </p>
                 </div>
 
@@ -828,7 +828,7 @@
                         High Efficiency Electric Drive
                     </h4>
                     <p class="text-gray-400 text-sm md:text-base relative z-10 leading-relaxed font-light">
-                        Class-leading PHEV with high-efficiency drive and continuous variable PHEV performance.
+                        PHEV terdepan di kelasnya dengan penggerak efisiensi tinggi dan performa PHEV variabel kontinu.
                     </p>
                 </div>
 

@@ -675,8 +675,8 @@
                         <div class="flex justify-between items-end gap-4">
                             <div>
                                 <span class="text-emerald-600 font-bold text-[9px] tracking-[0.3em] uppercase mb-2 block">02 // Cockpit</span>
-                                <h3 class="font-geely text-2xl md:text-3xl text-gray-900 uppercase tracking-tight leading-none mb-2">Digital Oasis</h3>
-                                <p class="text-gray-600 text-xs leading-relaxed">Ruang kendali futuristik panorama cerdas.</p>
+                                <h3 class="font-geely text-2xl md:text-3xl text-gray-900 uppercase tracking-tight leading-none mb-2">Double The Tech Joy</h3>
+                                <p class="text-gray-600 text-xs leading-relaxed">Mulai dari integrasi Flyme Auto hingga tampilan sasis transparan 540° dan pengisian daya cepat nirkabel, Geely EX2 mendefinisikan ulang seperti apa rasanya mobilitas cerdas.</p>
                             </div>
                             <div class="w-10 h-10 rounded-full bg-white border border-gray-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0">
                                 <svg class="w-4 h-4 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -704,11 +704,11 @@
                     </div>
                 </div>
 
-                <!-- 04: Utility (Col 7 - HTML5 Video Local Asset) -->
+                <!-- 04: Utility (Col 7 - HTML5 Video Zyro CDN) -->
                 <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-7 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 flex flex-col justify-between group">
                     <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[16/9] rounded-[1.5rem] overflow-hidden mb-5 bg-black/5 shadow-inner border border-gray-200/50">
-                        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-                            <source src="{{ asset('build/assets/storage.webm') }}" type="video/webm">
+                        <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover">
+                            <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/storage-Go9jWSFq0yGaDOkj.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>

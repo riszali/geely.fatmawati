@@ -58,7 +58,7 @@
         <section class="relative pt-32 pb-12 md:pt-40 md:pb-16 w-full flex items-center justify-center bg-[#050505] z-10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
                 <div class="reveal-up">
-                    <h1 class="font-geely text-5xl sm:text-6xl md:text-8xl lg:text-[120px] uppercase tracking-tighter leading-none mb-4 md:mb-6 drop-shadow-lg text-white">
+                    <h1 class="font-geely text-4xl sm:text-5xl md:text-7xl lg:text-[80px] uppercase tracking-tighter leading-none mb-4 md:mb-6 drop-shadow-lg text-white">
                         Luxury <span class="text-gradient-cyan">Sanctuary</span>
                     </h1>
                     <p class="text-gray-400 text-[10px] sm:text-xs md:text-sm lg:text-base max-w-2xl mx-auto font-light tracking-[0.2em] md:tracking-widest uppercase drop-shadow-md px-2">
@@ -75,8 +75,6 @@
             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_starray_01-YD0EBleD6kSoMROy.png" alt="Interior Hero" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-[20s] ease-out">
             <!-- Subtle gradient to blend smoothly with the dark section above -->
             <div class="absolute inset-x-0 top-0 h-24 md:h-32 bg-gradient-to-b from-[#050505] to-transparent z-10"></div>
-            <!-- Subtle gradient to blend with the white section below -->
-            <div class="absolute inset-x-0 bottom-0 h-16 md:h-24 bg-gradient-to-t from-white to-transparent z-10"></div>
         </section>
 
         <!-- ==========================================

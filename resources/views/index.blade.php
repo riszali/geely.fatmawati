@@ -103,6 +103,29 @@
             box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
         }
 
+        /* NEW: PURE GLASSMORPHISM FOR EX2 SPOTLIGHT */
+        .ex2-pure-glass {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+            border-right: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 
+                0 20px 40px -10px rgba(16, 185, 129, 0.1), 
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+            transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        
+        .ex2-pure-glass:hover {
+            background: rgba(255, 255, 255, 0.75);
+            transform: translateY(-8px);
+            box-shadow: 
+                0 30px 60px -15px rgba(16, 185, 129, 0.25), 
+                inset 0 1px 0 rgba(255, 255, 255, 1);
+            border-color: rgba(255, 255, 255, 0.9);
+        }
+
         .ambient-glow-emerald {
             background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
             mix-blend-mode: screen;
@@ -122,6 +145,16 @@
             pointer-events: none;
             z-index: 10;
         }
+
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob { animation: blob 10s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
 
         .img-container { overflow: hidden; cursor: pointer; }
         .img-container img { transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1); }
@@ -337,9 +370,8 @@
         </div>
     </section>
 
-    <!-- SECTION 4: LINEUP -->
+    <!-- SECTION 4: LINEUP (Slider Mobile & Grid Desktop) -->
     <section id="lineup" class="py-24 lg:py-32 relative bg-white overflow-hidden border-y border-gray-100">
-        <!-- Background Blobs (Sengaja dibiarkan untuk membiaskan efek Frame Glass) -->
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-200/40 rounded-full blur-[100px] pointer-events-none z-0"></div>
         <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-200/30 rounded-full blur-[100px] pointer-events-none z-0"></div>
         
@@ -351,8 +383,7 @@
                 </h2>
             </div>
             
-            <!-- Diubah menjadi Grid normal tanpa batasan (slider) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8 pb-12">
+            <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-6 md:grid md:grid-cols-2 lg:grid-cols-3 lg:gap-8 pt-8 pb-12 px-4 md:px-0 -mx-4 md:mx-0">
                 @php
                     $showcase = [
                         [
@@ -389,10 +420,7 @@
                 @endphp
 
                 @foreach($showcase as $car)
-                <!-- OUTER FRAME (Smoky Dark Glass) - Bebas ruang membesar tanpa batasan container -->
-                <div class="bg-[#030712]/40 backdrop-blur-xl border border-gray-600/30 shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-[2.5rem] p-2 sm:p-3 relative reveal-up {{ $car['delay'] }} group cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_40px_70px_-15px_rgba(16,185,129,0.3)] hover:bg-[#030712]/60 hover:border-emerald-500/40">
-                    
-                    <!-- INNER CARD (Konten Utama) -->
+                <div class="flex-shrink-0 w-[85vw] md:w-auto snap-center bg-[#030712]/40 backdrop-blur-xl border border-gray-600/30 shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-[2.5rem] p-2 sm:p-3 relative reveal-up {{ $car['delay'] }} group cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_40px_70px_-15px_rgba(16,185,129,0.3)] hover:bg-[#030712]/60 hover:border-emerald-500/40">
                     <div class="bg-[#030712] border border-gray-800/60 rounded-[2rem] h-[550px] flex flex-col relative overflow-hidden w-full transition-colors group-hover:border-emerald-500/40">
                         <div class="relative h-[65%] w-full rounded-t-[2rem] overflow-hidden img-container">
                             <img src="{{ $car['img'] }}" alt="Spesifikasi {{ $car['name'] }} di Dealer Geely Fatmawati Jakarta" class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
@@ -421,10 +449,14 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 @endforeach
             </div>            
+            
+            <div class="text-center mt-2 flex md:hidden justify-center items-center gap-2 text-emerald-600 text-[9px] font-bold uppercase tracking-widest animate-pulse">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                Swipe to explore
+            </div>
         </div>
     </section>
 
@@ -436,7 +468,6 @@
         </div>
         
         <div class="relative z-10 w-full max-w-5xl mx-auto px-6 reveal-up">
-            <!-- Penambahan style inline khusus untuk override blur agar lebih transparan -->
             <div class="glass-island rounded-[3rem] p-10 md:p-16 text-center border-t border-emerald-500/30" style="backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);">
                 <div class="inline-block p-4 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 mb-6">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -499,7 +530,6 @@
     </section>
 
     <section class="py-24 lg:py-32 relative w-full overflow-hidden bg-[#030712]">
-        <!-- NEW BACKGROUND IMAGE DENGAN GRADIENT OVERLAY -->
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1669295384050-a1d4357bd1d7?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Abstract Topographic Background" class="w-full h-full object-cover opacity-30 mix-blend-lighten">
             <div class="absolute inset-0 bg-gradient-to-b from-[#030712] via-transparent to-[#030712] opacity-90"></div>
@@ -563,77 +593,114 @@
         </div>
     </section>
 
-    <section class="py-24 lg:py-32 bg-[#030712] relative overflow-hidden border-t border-white/5">
+    <!-- SECTION SPOTLIGHT GEELY EX2 (Pure Premium Glassmorphism & Lightweight & Pure White Background) -->
+    <section id="ex2-spotlight" class="py-24 lg:py-32 relative overflow-hidden bg-white border-y border-gray-200">
+        
+        <!-- Subtle Floating Orbs (Sangat halus agar membiaskan efek kaca tanpa merusak kesan minimalis putih) -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gray-100/50 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-50/40 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-teal-50/40 rounded-full blur-[100px] pointer-events-none animate-blob"></div>
+
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6 reveal-up">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 lg:mb-16 gap-6 reveal-up">
                 <div class="max-w-2xl">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-10 h-[1px] bg-emerald-500"></div>
-                        <span class="text-emerald-400 text-[9px] md:text-[10px] font-bold tracking-[0.4em] uppercase">Spotlight Geely EX2</span>
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-8 h-[2px] bg-emerald-500"></div>
+                        <span class="text-emerald-600 text-[10px] font-bold tracking-[0.3em] uppercase">Spotlight Geely EX2</span>
                     </div>
-                    <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-white leading-[0.9]">
-                        EX2 <span class="text-gray-600">URBAN</span> <br> BLUEPRINT
+                    <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-gray-900 leading-[0.9]">
+                        Urban <span class="text-emerald-500">Blueprint</span>
                     </h2>
                 </div>
                 <div class="md:text-right pb-2">
-                    <p class="text-gray-400 text-sm md:text-base font-light max-w-sm ml-auto">
-                        Manifestasi arsitektural antara dinamika perkotaan dan tata ruang kabin futuristik pada lini mobil listrik Geely terbaru.
+                    <p class="text-gray-500 text-sm md:text-base font-medium max-w-sm ml-auto">
+                        Eksplorasi dimensi estetika kaca. Presisi arsitektural untuk mobilitas perkotaan yang minimalis dan elegan.
                     </p>
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-4 grid-rows-none md:grid-rows-2 gap-4 md:gap-6 h-auto md:h-[700px] lg:h-[800px] reveal-up delay-100">
+            <!-- Asymmetric Glass Bento Grid with Mobile Slider -->
+            <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-6 lg:grid lg:grid-cols-12 lg:gap-8 reveal-up delay-100 px-4 md:px-0 -mx-4 md:mx-0 pb-8 lg:pb-0">
                 
-                <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg', '01 // Exterior - Aero Stance')" class="col-span-2 md:col-span-2 md:row-span-2 glass-island rounded-[2rem] p-2 cursor-pointer img-container relative">
-                    <div class="w-full h-[300px] md:h-full rounded-[1.5rem] overflow-hidden relative">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg" alt="Desain Eksterior Depan Geely EX2 EV" class="absolute inset-0 w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent opacity-90"></div>
-                        <div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+                <!-- CARD 1: Aero Stance (Large Top Left) -->
+                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-8 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-6 group cursor-pointer flex flex-col justify-between" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg', '01 // Exterior - Aero Stance')">
+                    <div class="relative w-full aspect-video lg:aspect-[21/9] rounded-[1.5rem] overflow-hidden mb-6 shadow-sm border border-black/5">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out" alt="Exterior EX2">
+                        <div class="absolute inset-0 bg-emerald-900/5 group-hover:bg-transparent transition-colors duration-700"></div>
+                    </div>
+                    <div class="px-2 md:px-4 pb-2 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+                        <div>
+                            <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">01 // Exterior</span>
+                            <h3 class="font-geely text-3xl md:text-5xl text-gray-900 uppercase tracking-tight leading-none mb-3">Aero Stance</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed max-w-md">Desain aerodinamis mutakhir yang tidak hanya memukau secara visual, namun membelah angin dengan efisiensi absolut.</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-full bg-white border border-gray-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0">
+                            <svg class="w-5 h-5 transform -rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2: Digital Oasis (Top Right) -->
+                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-4 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-6 group cursor-pointer flex flex-col" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg', '02 // Cockpit - Digital Oasis')">
+                    <div class="relative w-full aspect-video lg:aspect-square rounded-[1.5rem] overflow-hidden mb-6 shadow-sm border border-black/5">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg" class="absolute inset-0 w-full h-full object-cover object-[center_60%] transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out" alt="Interior EX2">
+                    </div>
+                    <div class="px-2 pb-2 mt-auto">
+                        <div class="flex justify-between items-end">
                             <div>
-                                <span class="text-emerald-400 text-[10px] font-bold tracking-[0.3em] uppercase block mb-2">Exterior</span>
-                                <h3 class="font-geely text-3xl md:text-5xl text-white uppercase tracking-tight">Designed for the City</h3>
+                                <span class="text-emerald-600 font-bold text-[9px] tracking-[0.3em] uppercase mb-2 block">02 // Cockpit</span>
+                                <h3 class="font-geely text-2xl md:text-3xl text-gray-900 uppercase tracking-tight leading-none mb-2">Digital Oasis</h3>
+                                <p class="text-gray-600 text-xs leading-relaxed">Ruang kendali futuristik panorama cerdas.</p>
                             </div>
-                            <div class="w-12 h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white border border-white/20">
-                                <svg class="w-5 h-5 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            <div class="w-10 h-10 rounded-full bg-white border border-gray-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0">
+                                <svg class="w-4 h-4 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg', '02 // Cockpit - Digital Oasis')" class="col-span-2 md:col-span-2 md:row-span-1 glass-island rounded-[2rem] p-2 cursor-pointer img-container relative">
-                    <div class="w-full h-[220px] md:h-full rounded-[1.5rem] overflow-hidden relative">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg" alt="Desain Interior Kabin Mobil Geely EX2" class="absolute inset-0 w-full h-full object-cover object-[center_60%]">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent opacity-90"></div>
-                        <div class="absolute bottom-6 left-6">
-                            <span class="text-emerald-400 text-[9px] font-bold tracking-[0.3em] uppercase block mb-2">Cockpit</span>
-                            <h3 class="font-geely text-2xl md:text-4xl text-white uppercase tracking-tight">Built Around You</h3>
+                <!-- CARD 3: Agility (Bottom Left) -->
+                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-4 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-6 group cursor-pointer flex flex-col" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp', '03 // Lifestyle - Agility')">
+                    <div class="relative w-full aspect-video lg:aspect-square rounded-[1.5rem] overflow-hidden mb-6 shadow-sm border border-black/5">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out" alt="Lifestyle EX2">
+                    </div>
+                    <div class="px-2 pb-2 mt-auto">
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <span class="text-emerald-600 font-bold text-[9px] tracking-[0.3em] uppercase mb-2 block">03 // Lifestyle</span>
+                                <h3 class="font-geely text-2xl md:text-3xl text-gray-900 uppercase tracking-tight leading-none mb-2">Agility</h3>
+                                <p class="text-gray-600 text-xs leading-relaxed">Keseimbangan bermanuver kelincahan mutlak.</p>
+                            </div>
+                            <div class="w-10 h-10 rounded-full bg-white border border-gray-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0">
+                                <svg class="w-4 h-4 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp', '03 // Lifestyle - Agility')" class="col-span-1 md:col-span-1 md:row-span-1 glass-island rounded-[2rem] p-2 cursor-pointer img-container relative">
-                    <div class="w-full h-[180px] md:h-full rounded-[1.5rem] overflow-hidden relative">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp" alt="Gaya Hidup Pengguna Geely EX2" class="absolute inset-0 w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#030712] to-transparent opacity-90"></div>
-                        <div class="absolute bottom-6 left-6">
-                            <span class="text-emerald-400 text-[8px] font-bold tracking-[0.3em] uppercase block mb-1">Lifestyle</span>
-                            <h3 class="font-geely text-lg md:text-2xl text-white uppercase tracking-tight leading-none">Effortless Mobility</h3>
+                <!-- CARD 4: Max Cargo (Large Bottom Right) -->
+                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-8 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-6 group cursor-pointer flex flex-col justify-between" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png', '04 // Utility - Max Cargo', true)">
+                    <div class="relative w-full aspect-video lg:aspect-[21/9] rounded-[1.5rem] overflow-hidden mb-6 bg-white/30 border border-white/50 flex items-center justify-center">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png" class="w-[80%] h-[80%] object-contain drop-shadow-xl transform group-hover:scale-110 transition-transform duration-[1.5s] ease-out" alt="Utility EX2">
+                    </div>
+                    <div class="px-2 md:px-4 pb-2 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+                        <div>
+                            <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">04 // Utility</span>
+                            <h3 class="font-geely text-3xl md:text-5xl text-gray-900 uppercase tracking-tight leading-none mb-3">Max Cargo</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed max-w-md">Optimalisasi tata ruang modular dengan kapasitas penyimpanan super fleksibel di setiap inci.</p>
+                        </div>
+                        <div class="w-12 h-12 rounded-full bg-white border border-gray-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0">
+                            <svg class="w-5 h-5 transform -rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </div>
                     </div>
                 </div>
 
-                <div onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png', '04 // Utility - Max Cargo', true)" class="col-span-1 md:col-span-1 md:row-span-1 glass-island rounded-[2rem] p-6 cursor-pointer flex flex-col justify-between relative group">
-                    <div class="absolute inset-0 bg-gradient-to-b from-emerald-900/20 to-transparent rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                    <div class="z-10">
-                        <span class="text-emerald-400 text-[8px] md:text-[9px] font-bold tracking-[0.3em] uppercase block mb-1">Utility</span>
-                        <h3 class="font-geely text-lg md:text-2xl text-white uppercase tracking-tight leading-none">Space Reimagined</h3>
-                    </div>
-                    <div class="relative w-full h-[60%] mt-auto flex items-end justify-center z-10 img-container">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png" alt="Kapasitas Bagasi Luas Geely EX2" class="w-full h-full object-contain origin-bottom">
-                    </div>
-                </div>
-
+            </div>
+            
+            <div class="text-center mt-2 flex lg:hidden justify-center items-center gap-2 text-emerald-600 text-[9px] font-bold uppercase tracking-widest animate-pulse">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                Swipe to explore
             </div>
         </div>
     </section>
@@ -744,7 +811,7 @@
         </section>
     </div>
 
-    <!-- SECTION 8 APP -->
+    <!-- SECTION 8 APP (Slider Mobile & Grid Desktop) -->
     <section id="app-remote" class="py-24 lg:py-32 relative bg-[#f8fafc] overflow-hidden border-t border-gray-200">
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
         <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-green-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
@@ -759,10 +826,9 @@
                 </h2>
             </div>
 
-            <!-- Diubah menjadi Grid normal tanpa batasan (slider) -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 pt-6 pb-12">
+            <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-6 md:grid md:grid-cols-3 lg:gap-8 pt-6 pb-12 px-4 md:px-0 -mx-4 md:mx-0">
                 
-                <div class="glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-100 group img-container hover:-translate-y-2 transition-transform duration-500">
+                <div class="flex-shrink-0 w-[85vw] md:w-auto snap-center glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-100 group img-container hover:-translate-y-2 transition-transform duration-500">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6 shadow-sm">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/always-carghed.jpg-sPvzxctIegkiPhzC.webp" alt="Fitur Aplikasi Geely Always Charged" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-emerald-500/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
@@ -773,7 +839,7 @@
                     </div>
                 </div>
 
-                <div class="glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-200 group img-container hover:-translate-y-2 transition-transform duration-500">
+                <div class="flex-shrink-0 w-[85vw] md:w-auto snap-center glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-200 group img-container hover:-translate-y-2 transition-transform duration-500">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6 shadow-sm">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/never-lost.jpg-9JUUSHg9iMEbQsEN.webp" alt="Fitur Aplikasi Geely GPS Never Lost" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-emerald-500/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
@@ -784,7 +850,7 @@
                     </div>
                 </div>
 
-                <div class="glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-300 group img-container hover:-translate-y-2 transition-transform duration-500">
+                <div class="flex-shrink-0 w-[85vw] md:w-auto snap-center glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-300 group img-container hover:-translate-y-2 transition-transform duration-500">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6 shadow-sm">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/full-control.jpg-ycOYdP2jZuNB3u9w.webp" alt="Fitur Aplikasi Geely Full Remote Control" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-emerald-500/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
@@ -794,6 +860,11 @@
                         <p class="text-gray-600 text-xs leading-relaxed font-medium">Kendalikan suhu kabin dan akses kunci pintu sebelum Anda tiba di mobil.</p>
                     </div>
                 </div>
+            </div>
+            
+            <div class="text-center mt-2 flex md:hidden justify-center items-center gap-2 text-emerald-600 text-[9px] font-bold uppercase tracking-widest animate-pulse">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                Swipe to explore
             </div>
         </div>
     </section>

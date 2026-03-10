@@ -103,7 +103,7 @@
             box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
         }
 
-        /* NEW: PURE GLASSMORPHISM FOR EX2 SPOTLIGHT */
+        /* PURE GLASSMORPHISM FOR EX2 SPOTLIGHT */
         .ex2-pure-glass {
             background: rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(24px);
@@ -181,7 +181,6 @@
 
         body.lightbox-open { overflow: hidden; }
         
-        /* Transition untuk tombol navigasi slider */
         .slider-nav-btn {
             transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
         }
@@ -622,7 +621,7 @@
         </div>
     </section>
 
-    <!-- SECTION SPOTLIGHT GEELY EX2 -->
+    <!-- SECTION SPOTLIGHT GEELY EX2 (MODIFIED) -->
     <section id="ex2-spotlight" class="py-24 lg:py-32 relative overflow-hidden bg-white border-y border-gray-200">
         
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gray-100/50 rounded-full blur-[100px] pointer-events-none"></div>
@@ -648,14 +647,14 @@
                 </div>
             </div>
 
-            <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-6 lg:grid lg:grid-cols-12 lg:gap-8 reveal-up delay-100 px-4 md:px-0 -mx-4 md:mx-0 pb-8 lg:pb-0">
+            <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-6 lg:grid lg:grid-cols-12 lg:gap-6 reveal-up delay-100 px-4 md:px-0 -mx-4 md:mx-0 pb-8 lg:pb-0">
                 
-                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-8 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-6 group cursor-pointer flex flex-col justify-between" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg', '01 // Exterior - Aero Stance')">
-                    <div class="relative w-full aspect-video lg:aspect-[21/9] rounded-[1.5rem] overflow-hidden mb-6 shadow-sm border border-black/5">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out" alt="Exterior EX2">
-                        <div class="absolute inset-0 bg-emerald-900/5 group-hover:bg-transparent transition-colors duration-700"></div>
+                <!-- 01: Exterior (Col 7) -->
+                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-7 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col justify-between" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/lp_ex2_02_indo-1jQVDabXPa2GTqAg.jpg', '01 // Exterior - Aero Stance')">
+                    <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[16/9] rounded-[1.5rem] overflow-hidden mb-5 bg-gray-50/50 border border-gray-200/50 flex items-center justify-center p-2 sm:p-4">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/lp_ex2_02_indo-1jQVDabXPa2GTqAg.jpg" class="w-full h-full object-contain transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Exterior EX2">
                     </div>
-                    <div class="px-2 md:px-4 pb-2 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+                    <div class="px-2 md:px-4 pb-1 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
                         <div>
                             <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">01 // Exterior</span>
                             <h3 class="font-geely text-3xl md:text-5xl text-gray-900 uppercase tracking-tight leading-none mb-3">Aero Stance</h3>
@@ -667,12 +666,13 @@
                     </div>
                 </div>
 
-                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-4 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-6 group cursor-pointer flex flex-col" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg', '02 // Cockpit - Digital Oasis')">
-                    <div class="relative w-full aspect-video lg:aspect-square rounded-[1.5rem] overflow-hidden mb-6 shadow-sm border border-black/5">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_ex2_01-mjE49a4pNXu7kyQv.jpg" class="absolute inset-0 w-full h-full object-cover object-[center_60%] transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out" alt="Interior EX2">
+                <!-- 02: Cockpit (Col 5) -->
+                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-5 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col justify-between" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_color_ex2_02-1-wMrk98nhwyihCNmX.jpg', '02 // Cockpit - Digital Oasis')">
+                    <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[4/3] rounded-[1.5rem] overflow-hidden mb-5 bg-gray-50/50 border border-gray-200/50 flex items-center justify-center p-2 sm:p-4">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_color_ex2_02-1-wMrk98nhwyihCNmX.jpg" class="w-full h-full object-contain transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Interior EX2">
                     </div>
-                    <div class="px-2 pb-2 mt-auto">
-                        <div class="flex justify-between items-end">
+                    <div class="px-2 pb-1 mt-auto">
+                        <div class="flex justify-between items-end gap-4">
                             <div>
                                 <span class="text-emerald-600 font-bold text-[9px] tracking-[0.3em] uppercase mb-2 block">02 // Cockpit</span>
                                 <h3 class="font-geely text-2xl md:text-3xl text-gray-900 uppercase tracking-tight leading-none mb-2">Digital Oasis</h3>
@@ -685,12 +685,13 @@
                     </div>
                 </div>
 
-                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-4 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-6 group cursor-pointer flex flex-col" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp', '03 // Lifestyle - Agility')">
-                    <div class="relative w-full aspect-video lg:aspect-square rounded-[1.5rem] overflow-hidden mb-6 shadow-sm border border-black/5">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior_ex2_05-A1azJbNx5vfMLwxk.webp" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out" alt="Lifestyle EX2">
+                <!-- 03: Lifestyle (Col 5) -->
+                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-5 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col justify-between" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/gambar-10-driving-pleasure-geely-ex2-MJhRNhH2mxqA4wUU.webp', '03 // Lifestyle - Agility')">
+                    <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[4/3] rounded-[1.5rem] overflow-hidden mb-5 bg-gray-50/50 border border-gray-200/50 flex items-center justify-center p-2 sm:p-4">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/gambar-10-driving-pleasure-geely-ex2-MJhRNhH2mxqA4wUU.webp" class="w-full h-full object-contain transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Lifestyle EX2">
                     </div>
-                    <div class="px-2 pb-2 mt-auto">
-                        <div class="flex justify-between items-end">
+                    <div class="px-2 pb-1 mt-auto">
+                        <div class="flex justify-between items-end gap-4">
                             <div>
                                 <span class="text-emerald-600 font-bold text-[9px] tracking-[0.3em] uppercase mb-2 block">03 // Lifestyle</span>
                                 <h3 class="font-geely text-2xl md:text-3xl text-gray-900 uppercase tracking-tight leading-none mb-2">Agility</h3>
@@ -703,18 +704,19 @@
                     </div>
                 </div>
 
-                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-8 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-6 group cursor-pointer flex flex-col justify-between" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png', '04 // Utility - Max Cargo', true)">
-                    <div class="relative w-full aspect-video lg:aspect-[21/9] rounded-[1.5rem] overflow-hidden mb-6 bg-white/30 border border-white/50 flex items-center justify-center">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ldspace-B4XeAula05tXqaeN.png" class="w-[80%] h-[80%] object-contain drop-shadow-xl transform group-hover:scale-110 transition-transform duration-[1.5s] ease-out" alt="Utility EX2">
+                <!-- 04: Utility (Col 7 - HTML5 Video Local Asset) -->
+                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-7 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 flex flex-col justify-between group">
+                    <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[16/9] rounded-[1.5rem] overflow-hidden mb-5 bg-black/5 shadow-inner border border-gray-200/50">
+                        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+                            <source src="{{ asset('build/assets/storage.webm') }}" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
-                    <div class="px-2 md:px-4 pb-2 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
+                    <div class="px-2 md:px-4 pb-1 flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mt-auto">
                         <div>
                             <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">04 // Utility</span>
                             <h3 class="font-geely text-3xl md:text-5xl text-gray-900 uppercase tracking-tight leading-none mb-3">Max Cargo</h3>
                             <p class="text-gray-600 text-sm leading-relaxed max-w-md">Optimalisasi tata ruang modular dengan kapasitas penyimpanan super fleksibel di setiap inci.</p>
-                        </div>
-                        <div class="w-12 h-12 rounded-full bg-white border border-gray-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0">
-                            <svg class="w-5 h-5 transform -rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </div>
                     </div>
                 </div>

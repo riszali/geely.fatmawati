@@ -53,24 +53,30 @@
     <div class="relative w-full max-w-[1920px] mx-auto bg-[#050505] overflow-x-clip">
 
         <!-- ==========================================
-             SECTION 1: INTERIOR HERO
+             SECTION 1: HERO TITLE (SEPARATED)
         =========================================== -->
-        <section class="relative h-[100svh] w-full flex items-center justify-center overflow-hidden">
-            <div class="absolute inset-0 z-0">
-                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_starray_01-YD0EBleD6kSoMROy.png" alt="Interior Hero" class="w-auto h-auto object-cover brightness-50">
-                <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#050505]"></div>
-            </div>
-
-            <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+        <section class="relative pt-32 pb-12 md:pt-40 md:pb-16 w-full flex items-center justify-center bg-[#050505] z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
                 <div class="reveal-up">
-                    <h1 class="font-geely text-4xl md:text-6xl lg:text-15xl uppercase tracking-tighter leading-none mb-6">
+                    <h1 class="font-geely text-5xl sm:text-6xl md:text-8xl lg:text-[120px] uppercase tracking-tighter leading-none mb-4 md:mb-6 drop-shadow-lg text-white">
                         Luxury <span class="text-gradient-cyan">Sanctuary</span>
                     </h1>
-                    <p class="text-gray-300 text-xs md:text-sm lg:text-base max-w-2xl mx-auto font-light tracking-widest uppercase drop-shadow-md">
+                    <p class="text-gray-400 text-[10px] sm:text-xs md:text-sm lg:text-base max-w-2xl mx-auto font-light tracking-[0.2em] md:tracking-widest uppercase drop-shadow-md px-2">
                         Kombinasi Sempurna Antara Teknologi Pintar dan Kenyamanan Tanpa Batas
                     </p>
                 </div>
             </div>
+        </section>
+
+        <!-- ==========================================
+             SECTION 1.5: HERO IMAGE (UNOBSTRUCTED)
+        =========================================== -->
+        <section class="relative w-full h-[50svh] md:h-[70svh] lg:h-[90svh] overflow-hidden reveal-up delay-100">
+            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_starray_01-YD0EBleD6kSoMROy.png" alt="Interior Hero" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-[20s] ease-out">
+            <!-- Subtle gradient to blend smoothly with the dark section above -->
+            <div class="absolute inset-x-0 top-0 h-24 md:h-32 bg-gradient-to-b from-[#050505] to-transparent z-10"></div>
+            <!-- Subtle gradient to blend with the white section below -->
+            <div class="absolute inset-x-0 bottom-0 h-16 md:h-24 bg-gradient-to-t from-white to-transparent z-10"></div>
         </section>
 
         <!-- ==========================================

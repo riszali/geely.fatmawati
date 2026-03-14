@@ -401,14 +401,14 @@
     </section>
 
     <!-- SECTION 4: LINEUP (Slider Mobile & Grid Desktop) -->
-    <section id="lineup" class="py-24 lg:py-32 relative bg-white overflow-hidden border-y border-gray-100">
-        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-200/40 rounded-full blur-[100px] pointer-events-none z-0"></div>
-        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-teal-200/30 rounded-full blur-[100px] pointer-events-none z-0"></div>
+    <section id="lineup" class="py-24 lg:py-32 relative bg-[#030712] overflow-hidden border-y border-white/5">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] ambient-glow-emerald opacity-30 pointer-events-none z-0"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] ambient-glow-emerald opacity-20 pointer-events-none z-0"></div>
         
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16 reveal-up">
-                <span class="text-emerald-600 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Masterpiece Collection</span>
-                <h2 class="font-geely text-4xl sm:text-5xl md:text-7xl uppercase tracking-tighter text-gray-900 leading-none">
+                <span class="text-emerald-400 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Masterpiece Collection</span>
+                <h2 class="font-geely text-4xl sm:text-5xl md:text-7xl uppercase tracking-tighter text-white leading-none">
                     Intelligent <span class="text-emerald-500">Motion</span>
                 </h2>
             </div>
@@ -483,7 +483,7 @@
                 @endforeach
             </div>            
             
-            <div class="text-center mt-2 flex md:hidden justify-center items-center gap-2 text-emerald-600 text-[9px] font-bold uppercase tracking-widest animate-pulse">
+            <div class="text-center mt-2 flex md:hidden justify-center items-center gap-2 text-emerald-400 text-[9px] font-bold uppercase tracking-widest animate-pulse">
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 Swipe to explore
             </div>

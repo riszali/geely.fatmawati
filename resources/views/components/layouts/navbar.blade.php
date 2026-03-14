@@ -99,7 +99,7 @@
 <div id="mobile-overlay" class="fixed inset-0 w-full h-full bg-slate-900/30 backdrop-blur-xl z-[45] opacity-0 pointer-events-none transition-all duration-500 ease-in-out lg:hidden"></div>
 
 <!-- BALANCED BLACK/GREEN/WHITE GLASSMORPHISM MOBILE MENU (Dipindah ke Luar Nav) -->
-<div id="mobile-menu" class="fixed top-24 right-4 left-4 sm:left-auto sm:w-[380px] bg-black/90 backdrop-blur-[40px] backdrop-saturate-[1.5] z-[55] opacity-0 pointer-events-none transition-all duration-400 ease-[cubic-bezier(0.3,0,0,1)] flex flex-col justify-start p-5 pb-6 lg:hidden overflow-hidden border border-white/20 rounded-[2rem] shadow-[0_30px_60px_rgba(0,0,0,0.4)] scale-95 origin-top sm:origin-top-right">
+<div id="mobile-menu" class="fixed top-24 right-4 left-4 sm:left-auto sm:w-[380px] bg-black/90 backdrop-blur-[40px] backdrop-saturate-[1.5] z-[55] opacity-0 pointer-events-none transition-all duration-400 ease-[cubic-bezier(0.3,0,0,1)] flex flex-col justify-start p-5 pb-12 lg:hidden overflow-hidden border border-white/20 rounded-[2rem] shadow-[0_30px_60px_rgba(0,0,0,0.4)] scale-95 origin-top sm:origin-top-right">
     
     <!-- Decorative Orbs for Glass Effect -->
     <div class="absolute -top-10 -right-10 w-40 h-40 bg-emerald-500/20 rounded-full blur-[50px] pointer-events-none"></div>
@@ -160,7 +160,7 @@
         </a>
     </div>
 
-    <div id="mobile-menu-footer" class="relative z-10 mt-6 transform translate-y-6 transition-transform duration-500 ease-out delay-150">
+    <div id="mobile-menu-footer" class="relative z-10 mt-8 transform translate-y-6 transition-transform duration-500 ease-out delay-150">
         <!-- Glassy Green CTA Button - BALANCED -->
         <a href="{{ route('credit-simulation') }}" class="w-full flex items-center justify-center gap-2 bg-emerald-500/90 backdrop-blur-xl border border-emerald-400/50 text-black py-3.5 rounded-2xl font-geely text-xs font-bold tracking-[0.2em] uppercase transition-all duration-300 shadow-[0_4px_15px_rgba(16,185,129,0.2)] hover:shadow-[0_8px_20px_rgba(16,185,129,0.3)] hover:bg-emerald-400 hover:-translate-y-0.5">
             Credit Simulation 

@@ -266,7 +266,7 @@
         <div id="section-slider" class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth w-full">
             
             <!-- SLIDE 1: GRAND OPENING (Theme: Light & Clean Professional) -->
-            <div id="grand-opening" class="w-full flex-shrink-0 snap-center py-16 lg:py-20 relative bg-[#f8fafc] overflow-hidden flex flex-col justify-center">
+            <div id="grand-opening" class="w-full flex-shrink-0 snap-center pt-20 pb-16 lg:pt-24 lg:pb-20 relative bg-[#f8fafc] overflow-hidden flex flex-col justify-start">
                 <!-- Elegan & Subtle Gradient Background tanpa checkered pattern -->
                 <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-emerald-100/40 to-emerald-200/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
                 <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-gradient-to-tr from-teal-100/40 to-emerald-100/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
@@ -320,7 +320,7 @@
             </div>
 
             <!-- SLIDE 2: EXPERIENCE (Theme: Dark) -->
-            <div id="experience" class="w-full flex-shrink-0 snap-center py-16 lg:py-20 relative bg-[#030712] overflow-hidden border-l border-white/5 flex flex-col justify-center">
+            <div id="experience" class="w-full flex-shrink-0 snap-center pt-20 pb-16 lg:pt-24 lg:pb-20 relative bg-[#030712] overflow-hidden border-l border-white/5 flex flex-col justify-start">
                 <div class="absolute right-0 bottom-0 w-[800px] h-[800px] ambient-glow-emerald opacity-30 pointer-events-none"></div>
                 <div class="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 relative z-10">
                     

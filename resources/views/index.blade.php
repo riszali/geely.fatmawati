@@ -265,16 +265,16 @@
         <!-- Slider Container -->
         <div id="section-slider" class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth w-full">
             
-            <!-- SLIDE 1: GRAND OPENING (Theme: Light) -->
+            <!-- SLIDE 1: GRAND OPENING (Theme: Light & Clean Professional) -->
             <div id="grand-opening" class="w-full flex-shrink-0 snap-center py-16 lg:py-20 relative bg-[#f8fafc] overflow-hidden flex flex-col justify-center">
-                <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
-                <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-green-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
-                <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPHBhdGggZD0iTTAgNDBMMCAwTDIwIDBMNDAgMEw0MCA0MEwyMCA0MEwwIDQweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgc3Ryb2tlLXdpZHRoPSIxIi8+Cjwvc3ZnPg==')] pointer-events-none z-0"></div>
+                <!-- Elegan & Subtle Gradient Background tanpa checkered pattern -->
+                <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-emerald-100/40 to-emerald-200/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
+                <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-gradient-to-tr from-teal-100/40 to-emerald-100/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
 
                 <div class="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 relative z-10">
                     <div class="text-center max-w-3xl mx-auto mb-10 md:mb-12 reveal-up">
                         <span class="text-emerald-600 text-[10px] font-bold tracking-[0.4em] uppercase block mb-3 md:mb-4">Milestone Moment</span>
-                        <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl uppercase tracking-tighter text-gray-900 leading-[1.1] mb-4 md:mb-6">
+                        <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl uppercase tracking-tighter text-gray-900 leading-[1.1] mb-4 md:mb-6 drop-shadow-sm">
                             Grand <span class="text-emerald-500">Opening</span>
                         </h2>
                         <p class="text-gray-600 text-sm md:text-base leading-relaxed font-medium">
@@ -282,9 +282,9 @@
                         </p>
                     </div>
 
-                    <!-- Peningkatan tinggi grid untuk meminimalisir ruang kosong -->
+                    <!-- Grid Layout -->
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 h-auto md:h-[450px] lg:h-[500px]">
-                        <div class="col-span-2 md:col-span-2 row-span-2 glass-island-light rounded-[2rem] p-2 relative reveal-up img-container" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-diresmikan-sO5Dd7FcvFkX3wX5.jpg', 'Grand Opening Geely Fatmawati', true)">
+                        <div class="col-span-2 md:col-span-2 row-span-2 glass-island-light rounded-[2rem] p-2 relative reveal-up img-container shadow-sm" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-diresmikan-sO5Dd7FcvFkX3wX5.jpg', 'Grand Opening Geely Fatmawati', true)">
                             <div class="w-full h-[300px] md:h-full rounded-[1.5rem] overflow-hidden relative">
                                 <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-diresmikan-sO5Dd7FcvFkX3wX5.jpg" alt="Peresmian Dealer Showroom Geely Fatmawati Jakarta Selatan" class="absolute inset-0 w-full h-full object-cover object-center">
                                 <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent"></div>
@@ -298,19 +298,19 @@
                             </div>
                         </div>
 
-                        <div class="col-span-2 md:col-span-2 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-left delay-100 img-container" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-3-RgnRXLNbpMYB75ky.webp', 'Suasana Kemeriahan Grand Opening', true)">
+                        <div class="col-span-2 md:col-span-2 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-left delay-100 img-container shadow-sm" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-3-RgnRXLNbpMYB75ky.webp', 'Suasana Kemeriahan Grand Opening', true)">
                             <div class="w-full h-[200px] md:h-full rounded-[1.5rem] overflow-hidden relative">
                                 <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-3-RgnRXLNbpMYB75ky.webp" alt="Suasana Event Peluncuran Dealer Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center">
                             </div>
                         </div>
 
-                        <div class="col-span-1 md:col-span-1 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-up delay-200 img-container" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-7-G2FMRCtHFFy6nvBp.jpeg', 'Penerimaan Pelanggan Perdana', true)">
+                        <div class="col-span-1 md:col-span-1 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-up delay-200 img-container shadow-sm" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-7-G2FMRCtHFFy6nvBp.jpeg', 'Penerimaan Pelanggan Perdana', true)">
                             <div class="w-full h-[200px] md:h-full rounded-[1.5rem] overflow-hidden relative">
                                 <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-7-G2FMRCtHFFy6nvBp.jpeg" alt="Layanan Pelanggan Dealer Resmi Geely" class="absolute inset-0 w-full h-full object-cover object-[center_60%]">
                             </div>
                         </div>
 
-                        <div class="col-span-1 md:col-span-1 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-up delay-300 img-container" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/p1010662-scaled-4y1qGH08npg8QHKO.jpg', 'Lini Kendaraan Masa Depan', true)">
+                        <div class="col-span-1 md:col-span-1 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-up delay-300 img-container shadow-sm" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/p1010662-scaled-4y1qGH08npg8QHKO.jpg', 'Lini Kendaraan Masa Depan', true)">
                             <div class="w-full h-[200px] md:h-full rounded-[1.5rem] overflow-hidden relative">
                                 <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/p1010662-scaled-4y1qGH08npg8QHKO.jpg" alt="Mobil Display Geely di Showroom Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center">
                             </div>
@@ -848,22 +848,22 @@
 
     <!-- SECTION 8 APP -->
     <section id="app-remote" class="py-24 lg:py-32 relative bg-[#f8fafc] overflow-hidden border-t border-gray-200">
-        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
-        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-green-200/40 rounded-full blur-[120px] pointer-events-none z-0"></div>
-        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CjxwYXRoIGQ9Ik0wIDBoNDB2NDBIMHoiIGZpbGw9Im5vbmUiLz4KPHBhdGggZD0iTTAgNDBMMCAwTDIwIDBMNDAgMEw0MCA0MEwyMCA0MEwwIDQweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgc3Ryb2tlLXdpZHRoPSIxIi8+Cjwvc3ZnPg==')] pointer-events-none z-0"></div>
+        <!-- Clean gradient blobs, no checkered SVG -->
+        <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-emerald-100/40 to-emerald-200/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
+        <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-gradient-to-tr from-teal-100/40 to-emerald-100/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
 
         <div class="max-w-[1400px] w-full mx-auto px-6 md:px-12 relative z-10">
             
             <div class="text-center mb-16 md:mb-24 reveal-up">
                 <span class="text-emerald-600 text-[10px] font-bold tracking-[0.4em] uppercase mb-4 block">Flyme Auto</span>
-                <h2 class="font-geely text-4xl md:text-6xl uppercase tracking-tighter text-gray-900 mb-6">
+                <h2 class="font-geely text-4xl md:text-6xl uppercase tracking-tighter text-gray-900 mb-6 drop-shadow-sm">
                     Control At Your <span class="text-emerald-500">Fingertips</span>
                 </h2>
             </div>
 
             <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-6 md:grid md:grid-cols-3 lg:gap-8 pt-6 pb-12 px-4 md:px-0 -mx-4 md:mx-0">
                 
-                <div class="flex-shrink-0 w-[85vw] md:w-auto snap-center glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-100 group img-container hover:-translate-y-2 transition-transform duration-500">
+                <div class="flex-shrink-0 w-[85vw] md:w-auto snap-center glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-100 group img-container hover:-translate-y-2 transition-transform duration-500 shadow-sm">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6 shadow-sm">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/always-carghed.jpg-sPvzxctIegkiPhzC.webp" alt="Fitur Aplikasi Geely Always Charged" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-emerald-500/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
@@ -874,7 +874,7 @@
                     </div>
                 </div>
 
-                <div class="flex-shrink-0 w-[85vw] md:w-auto snap-center glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-200 group img-container hover:-translate-y-2 transition-transform duration-500">
+                <div class="flex-shrink-0 w-[85vw] md:w-auto snap-center glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-200 group img-container hover:-translate-y-2 transition-transform duration-500 shadow-sm">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6 shadow-sm">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/never-lost.jpg-9JUUSHg9iMEbQsEN.webp" alt="Fitur Aplikasi Geely GPS Never Lost" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-emerald-500/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>
@@ -885,7 +885,7 @@
                     </div>
                 </div>
 
-                <div class="flex-shrink-0 w-[85vw] md:w-auto snap-center glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-300 group img-container hover:-translate-y-2 transition-transform duration-500">
+                <div class="flex-shrink-0 w-[85vw] md:w-auto snap-center glass-island-light bg-white/60 rounded-[2rem] p-3 flex flex-col reveal-up delay-300 group img-container hover:-translate-y-2 transition-transform duration-500 shadow-sm">
                     <div class="w-full aspect-[4/3] rounded-[1.5rem] overflow-hidden relative mb-6 shadow-sm">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/full-control.jpg-ycOYdP2jZuNB3u9w.webp" alt="Fitur Aplikasi Geely Full Remote Control" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-emerald-500/20 mix-blend-multiply group-hover:opacity-0 transition-opacity duration-500"></div>

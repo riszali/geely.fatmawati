@@ -186,28 +186,29 @@
         }
     </style>
 
-    <!-- SECTION 1: HEADER -->
-    <header class="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-[#030712]">
-        <div class="absolute inset-0 z-0">
-            <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-60 mix-blend-lighten">
-                <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/say-hi-to-the-geely-ex5---geely-auto-uk-1080p-h264-_1-Sz3UdvLVUW0EehYY.mp4" type="video/mp4">
-            </video>
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#030712_100%)]"></div>
-        </div>
+<!-- SECTION 1: HEADER -->
+<!-- 1. Tambahkan pt-28 pb-12 lg:pt-32 lg:pb-20 di header agar jarak seimbang -->
+<header class="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-[#030712] pt-28 pb-12 lg:pt-32 lg:pb-20">
+    <div class="absolute inset-0 z-0">
+        <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-60 mix-blend-lighten">
+            <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/say-hi-to-the-geely-ex5---geely-auto-uk-1080p-h264-_1-Sz3UdvLVUW0EehYY.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#030712_100%)]"></div>
+    </div>
 
-        <div class="relative z-20 w-full max-w-[1400px] mx-auto px-6 mt-28 lg:mt-32 reveal-up">
-            <div class="glass-island rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 lg:p-20 relative overflow-hidden">
-                <div class="absolute -top-32 -left-32 w-96 h-96 ambient-glow-emerald z-0 pointer-events-none"></div>
-                <div class="absolute -bottom-32 -right-32 w-96 h-96 ambient-glow-emerald z-0 pointer-events-none"></div>
+    <!-- 2. Hapus mt-28 lg:mt-32 di div ini -->
+    <div class="relative z-20 w-full max-w-[1400px] mx-auto px-6 reveal-up">
+        <div class="glass-island rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 lg:p-20 relative overflow-hidden">
+            <div class="absolute -top-32 -left-32 w-96 h-96 ambient-glow-emerald z-0 pointer-events-none"></div>
+            <div class="absolute -bottom-32 -right-32 w-96 h-96 ambient-glow-emerald z-0 pointer-events-none"></div>
+            
+            <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    
-                    <div class="lg:col-span-7 flex flex-col">
-                        <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 mb-6 backdrop-blur-md w-max">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_10px_#34d399]"></span>
-                            <span class="text-emerald-300 text-[10px] font-bold tracking-widest uppercase">Dealer Resmi Geely Fatmawati</span>
-                        </div>
-                        
+                <div class="lg:col-span-7 flex flex-col">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 mb-6 backdrop-blur-md w-max">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_10px_#34d399]"></span>
+                        <span class="text-emerald-300 text-[10px] font-bold tracking-widest uppercase">Dealer Resmi Geely Fatmawati</span>
+                    </div>
                         <h1 class="font-geely text-5xl sm:text-6xl md:text-7xl lg:text-[90px] text-white uppercase leading-[0.9] tracking-tighter mb-4 lg:mb-8 drop-shadow-lg w-full">
                             Elevate <br>
                             <span class="text-gradient-premium">The Future.</span>
@@ -658,13 +659,12 @@
                     </div>
                     <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
                         <div class="flex flex-col w-full h-full">
-                            <div>
+                            <!-- Tinggi spesifik untuk area Judul agar teks deskripsi memulainya sejajar -->
+                            <div class="h-[5rem] sm:h-[5.5rem] lg:h-[6.5rem]">
                                 <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">01 // Exterior</span>
-                                <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-gray-900 uppercase tracking-tight leading-none mb-3">Aero Stance</h3>
+                                <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-gray-900 uppercase tracking-tight leading-none">Aero Stance</h3>
                             </div>
-                            <div class="flex-grow flex items-end">
-                                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Desain aerodinamis mutakhir yang tidak hanya memukau secara visual, namun membelah angin dengan efisiensi absolut.</p>
-                            </div>
+                            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Desain aerodinamis mutakhir yang tidak hanya memukau secara visual, namun membelah angin dengan efisiensi absolut.</p>
                         </div>
                         <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0 mb-2">
                             <svg class="w-4 h-4 md:w-5 md:h-5 transform -rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -679,13 +679,12 @@
                     </div>
                     <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
                         <div class="flex flex-col w-full h-full">
-                            <div>
+                            <!-- Tinggi spesifik untuk area Judul agar teks deskripsi memulainya sejajar -->
+                            <div class="h-[5rem] sm:h-[5.5rem] lg:h-[6.5rem]">
                                 <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">02 // Cockpit</span>
-                                <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-gray-900 uppercase tracking-tight leading-none mb-3">Double Tech Joy</h3>
+                                <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-gray-900 uppercase tracking-tight leading-none">Double Tech Joy</h3>
                             </div>
-                            <div class="flex-grow flex items-end">
-                                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Integrasi Flyme Auto mutakhir dan pengisian daya nirkabel mendefinisikan ulang rasanya mobilitas cerdas.</p>
-                            </div>
+                            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Integrasi Flyme Auto mutakhir dan pengisian daya nirkabel mendefinisikan ulang rasanya mobilitas cerdas.</p>
                         </div>
                         <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0 mb-2">
                             <svg class="w-4 h-4 md:w-5 md:h-5 transform -rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -700,13 +699,12 @@
                     </div>
                     <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
                         <div class="flex flex-col w-full h-full">
-                            <div>
+                            <!-- Tinggi spesifik untuk area Judul agar teks deskripsi memulainya sejajar -->
+                            <div class="h-[5rem] sm:h-[5.5rem] lg:h-[6.5rem]">
                                 <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">03 // Lifestyle</span>
-                                <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-gray-900 uppercase tracking-tight leading-none mb-3">Agility</h3>
+                                <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-gray-900 uppercase tracking-tight leading-none">Agility</h3>
                             </div>
-                            <div class="flex-grow flex items-end">
-                                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Keseimbangan bermanuver dan kelincahan mutlak menembus kepadatan kota Jakarta.</p>
-                            </div>
+                            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Keseimbangan bermanuver dan kelincahan mutlak menembus kepadatan kota Jakarta.</p>
                         </div>
                         <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0 mb-2">
                             <svg class="w-4 h-4 md:w-5 md:h-5 transform -rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -723,13 +721,12 @@
                     </div>
                     <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
                         <div class="flex flex-col w-full h-full">
-                            <div>
+                            <!-- Tinggi spesifik untuk area Judul agar teks deskripsi memulainya sejajar -->
+                            <div class="h-[5rem] sm:h-[5.5rem] lg:h-[6.5rem]">
                                 <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">04 // Utility</span>
-                                <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-gray-900 uppercase tracking-tight leading-none mb-3">Max Cargo</h3>
+                                <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-gray-900 uppercase tracking-tight leading-none">Max Cargo</h3>
                             </div>
-                            <div class="flex-grow flex items-end">
-                                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Optimalisasi tata ruang modular dengan kapasitas penyimpanan super fleksibel di setiap inci untuk kepraktisan Anda.</p>
-                            </div>
+                            <p class="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Optimalisasi tata ruang modular dengan kapasitas penyimpanan super fleksibel di setiap inci untuk kepraktisan Anda.</p>
                         </div>
                     </div>
                 </div>

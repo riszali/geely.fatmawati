@@ -186,7 +186,6 @@
         }
     </style>
 
-    <!-- SECTION 1: HEADER -->
     <header class="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-[#030712]">
         <div class="absolute inset-0 z-0">
             <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-60 mix-blend-lighten">
@@ -195,7 +194,7 @@
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#030712_100%)]"></div>
         </div>
 
-        <div class="relative z-20 w-full max-w-[1400px] mx-auto px-6 mt-16 reveal-up">
+        <div class="relative z-20 w-full max-w-[1400px] mx-auto px-6 mt-28 lg:mt-32 reveal-up">
             <div class="glass-island rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 lg:p-20 relative overflow-hidden">
                 <div class="absolute -top-32 -left-32 w-96 h-96 ambient-glow-emerald z-0 pointer-events-none"></div>
                 <div class="absolute -bottom-32 -right-32 w-96 h-96 ambient-glow-emerald z-0 pointer-events-none"></div>

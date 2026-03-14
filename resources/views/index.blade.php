@@ -186,6 +186,7 @@
         }
     </style>
 
+    <!-- SECTION 1: HEADER -->
     <header class="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-[#030712]">
         <div class="absolute inset-0 z-0">
             <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-60 mix-blend-lighten">
@@ -246,7 +247,8 @@
 
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
     <!-- COMBINED SECTION: GRAND OPENING & EXPERIENCE SLIDER -->
     <section class="relative w-full overflow-hidden group bg-[#030712]">
@@ -620,7 +622,7 @@
         </div>
     </section>
 
-    <!-- SECTION SPOTLIGHT GEELY EX2 (MODIFIED) -->
+    <!-- SECTION SPOTLIGHT GEELY EX2 (MODIFIED UNTUK PENJAJARAN SEMPURNA) -->
     <section id="ex2-spotlight" class="py-24 lg:py-32 relative overflow-hidden bg-white border-y border-gray-200">
         
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gray-100/50 rounded-full blur-[100px] pointer-events-none"></div>
@@ -646,76 +648,88 @@
                 </div>
             </div>
 
-            <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-6 lg:grid lg:grid-cols-12 lg:gap-6 reveal-up delay-100 px-4 md:px-0 -mx-4 md:mx-0 pb-8 lg:pb-0">
+            <!-- Ditambahkan items-stretch agar tinggi card sama rata -->
+            <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory items-stretch gap-6 lg:grid lg:grid-cols-12 lg:gap-6 reveal-up delay-100 px-4 md:px-0 -mx-4 md:mx-0 pb-8 lg:pb-0">
                 
                 <!-- 01: Exterior (Col 7) -->
-                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-7 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col justify-between" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/lp_ex2_02_indo-1jQVDabXPa2GTqAg.jpg', '01 // Exterior - Aero Stance')">
-                    <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[16/9] rounded-[1.5rem] overflow-hidden mb-5 bg-gray-50/50 border border-gray-200/50 flex items-center justify-center p-2 sm:p-4">
+                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-7 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col h-full" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/lp_ex2_02_indo-1jQVDabXPa2GTqAg.jpg', '01 // Exterior - Aero Stance')">
+                    <div class="relative w-full h-[240px] sm:h-[280px] lg:h-[340px] rounded-[1.5rem] overflow-hidden mb-6 bg-gray-50/50 border border-gray-200/50 flex items-center justify-center p-2 sm:p-4 flex-shrink-0">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/lp_ex2_02_indo-1jQVDabXPa2GTqAg.jpg" class="w-full h-full object-contain transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Exterior EX2">
                     </div>
-                    <div class="px-2 md:px-4 pb-1 flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
-                        <div>
-                            <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">01 // Exterior</span>
-                            <h3 class="font-geely text-3xl md:text-5xl text-gray-900 uppercase tracking-tight leading-none mb-3">Aero Stance</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed max-w-md">Desain aerodinamis mutakhir yang tidak hanya memukau secara visual, namun membelah angin dengan efisiensi absolut.</p>
+                    <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
+                        <div class="flex flex-col w-full h-full">
+                            <div>
+                                <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">01 // Exterior</span>
+                                <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-gray-900 uppercase tracking-tight leading-none mb-3">Aero Stance</h3>
+                            </div>
+                            <div class="flex-grow flex items-end">
+                                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Desain aerodinamis mutakhir yang tidak hanya memukau secara visual, namun membelah angin dengan efisiensi absolut.</p>
+                            </div>
                         </div>
-                        <div class="w-12 h-12 rounded-full bg-white border border-gray-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0">
-                            <svg class="w-5 h-5 transform -rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0 mb-2">
+                            <svg class="w-4 h-4 md:w-5 md:h-5 transform -rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </div>
                     </div>
                 </div>
 
                 <!-- 02: Cockpit (Col 5) -->
-                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-5 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col justify-between" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_color_ex2_02-1-wMrk98nhwyihCNmX.jpg', '02 // Cockpit - Digital Oasis')">
-                    <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[4/3] rounded-[1.5rem] overflow-hidden mb-5 bg-gray-50/50 border border-gray-200/50 flex items-center justify-center p-2 sm:p-4">
+                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-5 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col h-full" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_color_ex2_02-1-wMrk98nhwyihCNmX.jpg', '02 // Cockpit - Digital Oasis')">
+                    <div class="relative w-full h-[240px] sm:h-[280px] lg:h-[340px] rounded-[1.5rem] overflow-hidden mb-6 bg-gray-50/50 border border-gray-200/50 flex items-center justify-center p-2 sm:p-4 flex-shrink-0">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_color_ex2_02-1-wMrk98nhwyihCNmX.jpg" class="w-full h-full object-contain transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Interior EX2">
                     </div>
-                    <div class="px-2 pb-1 mt-auto">
-                        <div class="flex justify-between items-end gap-4">
+                    <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
+                        <div class="flex flex-col w-full h-full">
                             <div>
-                                <span class="text-emerald-600 font-bold text-[9px] tracking-[0.3em] uppercase mb-2 block">02 // Cockpit</span>
-                                <h3 class="font-geely text-2xl md:text-3xl text-gray-900 uppercase tracking-tight leading-none mb-2">Double The Tech Joy</h3>
-                                <p class="text-gray-600 text-xs leading-relaxed">Mulai dari integrasi Flyme Auto hingga tampilan sasis transparan 540° dan pengisian daya cepat nirkabel, Geely EX2 mendefinisikan ulang seperti apa rasanya mobilitas cerdas.</p>
+                                <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">02 // Cockpit</span>
+                                <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-gray-900 uppercase tracking-tight leading-none mb-3">Double Tech Joy</h3>
                             </div>
-                            <div class="w-10 h-10 rounded-full bg-white border border-gray-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0">
-                                <svg class="w-4 h-4 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            <div class="flex-grow flex items-end">
+                                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Integrasi Flyme Auto mutakhir dan pengisian daya nirkabel mendefinisikan ulang rasanya mobilitas cerdas.</p>
                             </div>
+                        </div>
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0 mb-2">
+                            <svg class="w-4 h-4 md:w-5 md:h-5 transform -rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </div>
                     </div>
                 </div>
 
                 <!-- 03: Lifestyle (Col 5) -->
-                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-5 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col justify-between" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/gambar-10-driving-pleasure-geely-ex2-MJhRNhH2mxqA4wUU.webp', '03 // Lifestyle - Agility')">
-                    <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[4/3] rounded-[1.5rem] overflow-hidden mb-5 bg-gray-50/50 border border-gray-200/50 flex items-center justify-center p-2 sm:p-4">
+                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-5 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col h-full" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/gambar-10-driving-pleasure-geely-ex2-MJhRNhH2mxqA4wUU.webp', '03 // Lifestyle - Agility')">
+                    <div class="relative w-full h-[240px] sm:h-[280px] lg:h-[340px] rounded-[1.5rem] overflow-hidden mb-6 bg-gray-50/50 border border-gray-200/50 flex items-center justify-center p-2 sm:p-4 flex-shrink-0">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/gambar-10-driving-pleasure-geely-ex2-MJhRNhH2mxqA4wUU.webp" class="w-full h-full object-contain transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Lifestyle EX2">
                     </div>
-                    <div class="px-2 pb-1 mt-auto">
-                        <div class="flex justify-between items-end gap-4">
+                    <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
+                        <div class="flex flex-col w-full h-full">
                             <div>
-                                <span class="text-emerald-600 font-bold text-[9px] tracking-[0.3em] uppercase mb-2 block">03 // Lifestyle</span>
-                                <h3 class="font-geely text-2xl md:text-3xl text-gray-900 uppercase tracking-tight leading-none mb-2">Agility</h3>
-                                <p class="text-gray-600 text-xs leading-relaxed">Keseimbangan bermanuver kelincahan mutlak.</p>
+                                <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">03 // Lifestyle</span>
+                                <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-gray-900 uppercase tracking-tight leading-none mb-3">Agility</h3>
                             </div>
-                            <div class="w-10 h-10 rounded-full bg-white border border-gray-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0">
-                                <svg class="w-4 h-4 transform -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            <div class="flex-grow flex items-end">
+                                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Keseimbangan bermanuver dan kelincahan mutlak menembus kepadatan kota Jakarta.</p>
                             </div>
+                        </div>
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-gray-100 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0 mb-2">
+                            <svg class="w-4 h-4 md:w-5 md:h-5 transform -rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                         </div>
                     </div>
                 </div>
 
-                <!-- 04: Utility (Col 7 - HTML5 Video Zyro CDN) -->
-                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-7 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 flex flex-col justify-between group">
-                    <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[16/9] rounded-[1.5rem] overflow-hidden mb-5 bg-black/5 shadow-inner border border-gray-200/50">
+                <!-- 04: Utility (Col 7 - HTML5 Video) -->
+                <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-7 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 flex flex-col h-full group">
+                    <div class="relative w-full h-[240px] sm:h-[280px] lg:h-[340px] rounded-[1.5rem] overflow-hidden mb-6 bg-black/5 shadow-inner border border-gray-200/50 flex-shrink-0">
                         <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover">
                             <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/storage-Go9jWSFq0yGaDOkj.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="px-2 md:px-4 pb-1 flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mt-auto">
-                        <div>
-                            <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">04 // Utility</span>
-                            <h3 class="font-geely text-3xl md:text-5xl text-gray-900 uppercase tracking-tight leading-none mb-3">Max Cargo</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed max-w-md">Optimalisasi tata ruang modular dengan kapasitas penyimpanan super fleksibel di setiap inci.</p>
+                    <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
+                        <div class="flex flex-col w-full h-full">
+                            <div>
+                                <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">04 // Utility</span>
+                                <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-gray-900 uppercase tracking-tight leading-none mb-3">Max Cargo</h3>
+                            </div>
+                            <div class="flex-grow flex items-end">
+                                <p class="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Optimalisasi tata ruang modular dengan kapasitas penyimpanan super fleksibel di setiap inci untuk kepraktisan Anda.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

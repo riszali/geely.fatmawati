@@ -701,10 +701,10 @@
 
                     <!-- Video Side (Order 2 on mobile, Right Span on Desktop) -->
                     <div class="lg:col-span-7 reveal-right order-2 lg:col-start-6 lg:row-span-2 flex flex-col justify-center relative z-10">
-                        <div class="relative w-full aspect-video rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-[0_30px_60px_rgba(234,179,8,0.3)] border border-yellow-500/30 bg-black group">
-                            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-[3s] ease-out">
-                                <source src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/euro-ncap-crash-safety-tests-of-geely-ex5-2025---euro-ncap-720p-h264-YKb3MOZVQjsbVQ84.mp4" type="video/mp4">
-                            </video>
+                    <div class="relative w-full aspect-video rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-[0_30px_60px_rgba(234,179,8,0.3)] border border-yellow-500/30 bg-black group">
+                    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-[3s] ease-out">
+                    <source src="/videos/crash-test.mp4" type="video/mp4">
+                    </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
                             <div class="absolute bottom-16 sm:bottom-20 lg:bottom-8 left-6 md:left-8 pointer-events-none">
                                 <span class="text-yellow-400 text-[10px] md:text-xs tracking-[0.3em] font-bold uppercase drop-shadow-md">Crash Test</span>

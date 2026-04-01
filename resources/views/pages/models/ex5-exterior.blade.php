@@ -187,12 +187,12 @@
                     <span class="text-cyan-300 text-[9px] md:text-[11px] tracking-[0.4em] font-bold uppercase drop-shadow-md">Exterior Design</span>
                 </div>
 
-                <!-- Text size set to 3xl-6xl with max-w-5xl to ensure 2 lines -->
-                <h1 class="font-geely text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white uppercase leading-[1.1] tracking-tighter drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] mb-6 reveal-up delay-100 max-w-5xl mx-auto">
+                <!-- Text size set to 2xl-5xl with max-w-4xl to ensure 2 lines -->
+                <h1 class="font-geely text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white uppercase leading-[1.1] tracking-tighter drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)] mb-4 reveal-up delay-100 max-w-4xl mx-auto">
                     SEE HOW <span class="text-liquid">INNOVATION</span> <br> FUELS EVERY JOURNEY
                 </h1>
                 
-                <p class="text-gray-300 text-sm md:text-lg font-light tracking-wide uppercase reveal-up delay-200 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
+                <p class="text-gray-300 text-xs md:text-base font-light tracking-wide uppercase reveal-up delay-200 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
                     Elegansi futuristik yang membelah angin, meredefinisi standar SUV elektrik modern.
                 </p>
             </div>
@@ -247,13 +247,11 @@
         <section class="relative w-full bg-[#050505] bg-noise">
             <!-- Sticky Background Image -->
             <div class="sticky top-0 w-full h-[100vh] z-0 overflow-hidden">
-                <img src="{{ asset('images/exterior-01.webp') }}" alt="Aerodynamic Design" class="w-full h-full object-cover opacity-60 mix-blend-lighten">
+                <img src="{{ asset('images/exterior-01.webp') }}" alt="Aerodynamic Design" class="w-full h-full object-cover">
                 
                 <!-- Colorful gradients to blend smoothly -->
                 <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#050505] to-transparent z-10"></div>
                 <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#050505] to-transparent z-10"></div>
-                <!-- Subtle cyan overlay -->
-                <div class="absolute inset-0 bg-gradient-to-tr from-[#050505]/80 via-transparent to-cyan-900/20 z-10 pointer-events-none"></div>
             </div>
 
             <!-- Scrolling Content Over the Sticky Background -->
@@ -310,9 +308,11 @@
                     <div class="bento-card bento-item-1 glass-panel group">
                         <div class="absolute -top-20 -left-20 w-64 h-64 bg-cyan-500/20 rounded-full blur-[60px] group-hover:bg-cyan-400/40 transition-colors duration-500 pointer-events-none"></div>
                         <div class="bento-card-inner">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2642-Aq2qroZX2GsMyae6.jpeg" alt="EX5 Headlamp Detail">
+                            <img src="{{ asset('images/2400x0 (8).jpg') }}" alt="EX5 Headlamp Detail">
                             <div class="bento-overlay"></div>
-                            <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 lg:p-10 z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <!-- Tambahan shadow gradien dari atas agar teks tetap terbaca jelas -->
+                            <div class="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-[#050505]/90 to-transparent pointer-events-none z-0 transition-opacity duration-500"></div>
+                            <div class="absolute top-0 left-0 w-full p-6 md:p-8 lg:p-10 z-10 transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                                 <span class="text-cyan-400 text-[10px] tracking-[0.3em] font-bold uppercase mb-2 block drop-shadow-md">Illumination</span>
                                 <h4 class="font-geely text-2xl md:text-3xl lg:text-4xl text-white tracking-tight font-bold leading-tight drop-shadow-lg">Crystal LED <br>Headlights</h4>
                             </div>
@@ -322,7 +322,7 @@
                     <!-- Item 2 (Kanan Atas Lebar) -->
                     <div class="bento-card bento-item-2 glass-panel group">
                         <div class="bento-card-inner">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2630-YKbEQrPbrlT67eB4.jpeg" alt="EX5 Wheel Detail">
+                            <img src="{{ asset('images/exterior-04.webp') }}" alt="EX5 Wheel Detail">
                             <div class="bento-overlay"></div>
                             <div class="absolute bottom-0 left-0 w-full p-6 md:p-8 z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                                 <span class="text-blue-400 text-[10px] tracking-[0.3em] font-bold uppercase mb-2 block drop-shadow-md">Aerodynamics</span>
@@ -334,7 +334,7 @@
                     <!-- Item 3 (Kanan Bawah Kiri) -->
                     <div class="bento-card bento-item-3 glass-panel group">
                         <div class="bento-card-inner">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/sunroof-YX4ak1DoWru68Xpb.jpg" alt="EX5 Panoramic Sunroof View">
+                            <img src="{{ asset('images/exterior-03.webp') }}" alt="EX5 Panoramic Sunroof View">
                             <div class="bento-overlay"></div>
                             <div class="absolute bottom-0 left-0 w-full p-6 z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                                 <span class="text-purple-400 text-[10px] tracking-[0.3em] font-bold uppercase mb-2 block drop-shadow-md">Space</span>
@@ -346,7 +346,7 @@
                     <!-- Item 4 (Kanan Bawah Kanan) -->
                     <div class="bento-card bento-item-4 glass-panel group">
                         <div class="bento-card-inner">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2618-YD0BN4r09pIWlR3v.jpeg" alt="EX5 Side Profile">
+                            <img src="{{ asset('images/exterior-02.webp') }}" alt="EX5 Side Profile">
                             <div class="bento-overlay"></div>
                             <div class="absolute bottom-0 left-0 w-full p-6 z-10 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                                 <span class="text-cyan-400 text-[10px] tracking-[0.3em] font-bold uppercase mb-2 block drop-shadow-md">Silhouette</span>

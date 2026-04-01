@@ -413,7 +413,8 @@
                         <div class="glass-panel p-2 md:p-3 rounded-[1.5rem] md:rounded-[2rem] relative z-10">
                             <div class="relative w-full aspect-video rounded-[1rem] md:rounded-[1.5rem] overflow-hidden">
                                 <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover transform md:hover:scale-105 transition-transform duration-700">
-                                    <source src="{{ asset('build/assets/benefits-of-em-i.mp4') }}" type="video/mp4">
+                                    <!-- Path diubah ke folder public/videos/ agar tidak terhapus saat di-build -->
+                                    <source src="/videos/benefits-of-em-i.mp4" type="video/mp4">
                                 </video>
                             </div>
                         </div>
@@ -481,29 +482,39 @@
                         </h2>
                     </div>
 
-                    <!-- Layout menggunakan gambar dengan rasio asli, tanpa efek transisi hover atau bayangan pembungkus (shadow) -->
-                    <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory gap-4 md:grid md:grid-cols-12 md:gap-6 lg:gap-8 md:auto-rows-min pb-8 md:pb-0 px-4 md:px-0">
-                        <!-- Image 1 -->
-                        <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto md:col-span-8 md:row-span-2 reveal-up delay-100">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/02-exterior-geely-starray-em-i-geely-ambara-group-2-Yle40rlOKLC0yp5b.webp" alt="Geely Starray Exterior 1" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
+                    <!-- Slider Container Baru dengan Tombol Navigasi -->
+                    <div class="relative w-full group">
+                        <!-- Tombol Prev -->
+                        <button id="ext-btn-prev" class="nav-btn absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 text-white p-3 rounded-full transition-all hidden md:flex items-center justify-center cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+                            <svg class="w-5 h-5 hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                        </button>
+
+                        <div id="desktop-slider" class="flex flex-nowrap w-full overflow-x-auto overscroll-x-contain snap-x snap-mandatory gap-4 pb-8 md:pb-0 px-4 md:px-0 scroll-smooth cursor-grab active:cursor-grabbing" style="scrollbar-width: none; -ms-overflow-style: none;">
+                            <!-- Image 1 -->
+                            <div class="flex-shrink-0 w-[85vw] md:w-[70vw] lg:w-[60vw] snap-center reveal-up delay-100">
+                                <!-- Menggunakan path absolut biasa agar tidak nyangkut cache APP_URL Laravel -->
+                                <img src="/images/02-exterior-geely-starray-em-i-geely-ambara-group-2-AVLxzgj4K6TXQRbW.webp" alt="Geely Starray Exterior 1" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
+                            </div>
+                            <!-- Image 2 -->
+                            <div class="flex-shrink-0 w-[85vw] md:w-[70vw] lg:w-[60vw] snap-center reveal-up delay-200">
+                                <img src="/images/03-exterior-geely-starray-em-i-geely-ambara-group-dOqZ7gex2Oc0v1R7.webp" alt="Geely Starray Exterior 2" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
+                            </div>
+                            <!-- Image 3 -->
+                            <div class="flex-shrink-0 w-[85vw] md:w-[70vw] lg:w-[60vw] snap-center reveal-up delay-300">
+                                <img src="/images/04-exterior-geely-starray-em-i-geely-ambara-group-Awv8JKwezJHoy7ow.webp" alt="Geely Starray Exterior 3" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
+                            </div>
+                            <!-- Image 4 -->
+                            <div class="flex-shrink-0 w-[85vw] md:w-[70vw] lg:w-[60vw] snap-center reveal-up delay-400">
+                                <img src="/images/exterior_starray_05-AMqD4DLqGPiyZ8xX.jpg" alt="Geely Starray Exterior 4" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
+                            </div>
                         </div>
-                        <!-- Image 2 -->
-                        <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto md:col-span-4 reveal-up delay-200">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/03-exterior-geely-starray-em-i-geely-ambara-group-AoP4bO7nnqtgNNa9.webp" alt="Geely Starray Exterior 2" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
-                        </div>
-                        <!-- Image 3 -->
-                        <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto md:col-span-4 reveal-up delay-300">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/04-exterior-geely-starray-em-i-geely-ambara-group-AMqDzy6j7WcN8pZn.webp" alt="Geely Starray Exterior 3" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
-                        </div>
-                        <!-- Image 4 -->
-                        <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto md:col-span-6 reveal-up delay-100">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/exterior_starray_04-m7VD9nNqgziXkEl5.jpg" alt="Geely Starray Exterior 4" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
-                        </div>
-                        <!-- Image 5 -->
-                        <div class="flex-shrink-0 w-[85vw] snap-center md:w-auto md:col-span-6 reveal-up delay-200">
-                            <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/exterior_starray_05-YD0Eo27a1GFvLEpa.jpg" alt="Geely Starray Exterior 5" draggable="false" loading="lazy" class="w-full h-auto rounded-[1rem] md:rounded-[1.5rem] select-none pointer-events-none">
-                        </div>
+
+                        <!-- Tombol Next -->
+                        <button id="ext-btn-next" class="nav-btn absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 text-white p-3 rounded-full transition-all hidden md:flex items-center justify-center cursor-pointer shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
+                            <svg class="w-5 h-5 hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </button>
                     </div>
+
                 </div>
             </section>
         </div> <!-- End of Sticky Wrapper Section 6 & 7 -->
@@ -1114,6 +1125,55 @@
                 window.addEventListener('resize', () => {
                     stopAutoSlide();
                     startAutoSlide();
+                });
+            }
+
+            // 5. Logika Drag to Scroll Desktop Slider (Exterior) & Tombol Navigasi
+            const desktopSlider = document.getElementById('desktop-slider');
+            const extPrevBtn = document.getElementById('ext-btn-prev');
+            const extNextBtn = document.getElementById('ext-btn-next');
+            
+            if (desktopSlider) {
+                // Navigasi Tombol Slider Eksterior
+                const scrollExtAmount = window.innerWidth * 0.6; // Scroll sebesar 60% lebar layar
+                extPrevBtn?.addEventListener('click', () => {
+                    desktopSlider.scrollBy({ left: -scrollExtAmount, behavior: 'smooth' });
+                });
+                extNextBtn?.addEventListener('click', () => {
+                    desktopSlider.scrollBy({ left: scrollExtAmount, behavior: 'smooth' });
+                });
+
+                // Logika Drag dengan Mouse (seperti sebelumnya)
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+
+                desktopSlider.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    desktopSlider.classList.add('active');
+                    desktopSlider.style.scrollSnapType = 'none'; 
+                    startX = e.pageX - desktopSlider.offsetLeft;
+                    scrollLeft = desktopSlider.scrollLeft;
+                });
+
+                desktopSlider.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    desktopSlider.classList.remove('active');
+                    desktopSlider.style.scrollSnapType = 'x mandatory'; 
+                });
+
+                desktopSlider.addEventListener('mouseup', () => {
+                    isDown = false;
+                    desktopSlider.classList.remove('active');
+                    desktopSlider.style.scrollSnapType = 'x mandatory';
+                });
+
+                desktopSlider.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - desktopSlider.offsetLeft;
+                    const walk = (x - startX) * 2; 
+                    desktopSlider.scrollLeft = scrollLeft - walk;
                 });
             }
         });

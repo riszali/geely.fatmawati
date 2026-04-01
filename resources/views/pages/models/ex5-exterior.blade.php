@@ -161,24 +161,24 @@
     <div class="w-full overflow-x-clip bg-[#050505] text-white">
 
         <!-- ==========================================
-             SECTION 1: HERO (COLORFUL CARD & BLURRED BG)
+             SECTION 1: HERO (FULL BACKGROUND IMAGE)
         =========================================== -->
-        <section class="relative min-h-[100svh] w-full flex flex-col justify-center items-center overflow-hidden bg-[#050505] py-24 lg:py-32">
-            <!-- Heavily Blurred Background with Ambient Glows -->
-            <div class="absolute inset-0 z-0 bg-[#050505] bg-noise overflow-hidden">
-                <!-- Blurred version of the image to create dynamic ambient colors -->
-                <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2642-Aq2qroZX2GsMyae6.jpeg" alt="Ambient Blur Background" class="absolute inset-0 w-full h-full object-cover opacity-60 blur-[80px] transform scale-125 pointer-events-none">
+        <section class="relative min-h-[100svh] w-full flex flex-col justify-start items-center overflow-hidden bg-[#050505] pt-20 md:pt-24 lg:pt-32 pb-12">
+            <!-- Full Background Image (Tanpa Efek Filter) -->
+            <div class="absolute inset-0 z-0 bg-[#050505] overflow-hidden">
+                <!-- Mobile Background -->
+                <img src="{{ asset('images/ex5-1-mobile.jpg') }}" alt="Geely EX5 Hero Mobile" class="absolute inset-0 w-full h-full object-cover md:hidden">
+                <!-- Desktop Background -->
+                <img src="{{ asset('images/ex5-1-desktop.jpg') }}" alt="Geely EX5 Hero Desktop" class="absolute inset-0 w-full h-full object-cover hidden md:block">
                 
-                <!-- Additional Ambient Glowing Orbs -->
-                <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-cyan-600/30 rounded-full blur-[120px] pointer-events-none"></div>
-                <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-purple-600/30 rounded-full blur-[150px] pointer-events-none"></div>
-                
-                <!-- Darken Overlay for better contrast -->
-                <div class="absolute inset-0 bg-[#050505]/40 z-10 pointer-events-none"></div>
+                <!-- Gradasi dipindah ke atas agar teks yang berada di atas tetap jelas terbaca -->
+                <div class="absolute inset-x-0 top-0 h-[60%] md:h-[50%] bg-gradient-to-b from-[#050505] via-[#050505]/70 to-transparent z-10 pointer-events-none"></div>
+                <!-- Gradasi tipis di bawah untuk transisi ke section selanjutnya -->
+                <div class="absolute inset-x-0 bottom-0 h-[20%] bg-gradient-to-t from-[#050505] to-transparent z-10 pointer-events-none"></div>
             </div>
 
-            <!-- Konten Teks -->
-            <div class="relative z-20 w-full max-w-7xl mx-auto px-6 text-center mb-8 md:mb-12">
+            <!-- Konten Teks di bagian atas section -->
+            <div class="relative z-20 w-full max-w-7xl mx-auto px-6 text-center">
                 <div class="inline-flex items-center gap-3 mb-6 px-5 py-2.5 rounded-full border border-cyan-500/30 bg-cyan-500/10 backdrop-blur-xl reveal-up shadow-[0_0_30px_rgba(34,211,238,0.2)]">
                     <span class="relative flex h-2 w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
@@ -195,20 +195,6 @@
                 <p class="text-gray-300 text-sm md:text-lg font-light tracking-wide uppercase reveal-up delay-200 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
                     Elegansi futuristik yang membelah angin, meredefinisi standar SUV elektrik modern.
                 </p>
-            </div>
-
-            <!-- Hero Image as a Glass Card -->
-            <div class="relative z-20 w-full max-w-6xl mx-auto px-4 sm:px-6 reveal-up delay-300">
-                <div class="glass-panel p-2 md:p-4 rounded-[2rem] md:rounded-[3rem] shadow-[0_40px_80px_rgba(0,0,0,0.8)] group w-full border border-white/20 hover:border-cyan-400/50 transition-colors duration-500">
-                    <div class="relative w-full aspect-video md:aspect-[21/9] rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden bg-[#111]">
-                        <!-- Gambar Tajam di Dalam Card -->
-                        <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2637-m6LjeJ81zPhPgr5a.jpeg" alt="Geely EX5 Mobile" class="w-full h-full object-cover md:hidden transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out">
-                        <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2642-Aq2qroZX2GsMyae6.jpeg" alt="Geely EX5 Desktop" class="w-full h-full object-cover hidden md:block transform group-hover:scale-105 transition-transform duration-[1.5s] ease-out">
-                        
-                        <!-- Subtle gradient inside the image card for premium feel -->
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/80 via-transparent to-transparent opacity-80 pointer-events-none"></div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -261,7 +247,7 @@
         <section class="relative w-full bg-[#050505] bg-noise">
             <!-- Sticky Background Image -->
             <div class="sticky top-0 w-full h-[100vh] z-0 overflow-hidden">
-                <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2627-dJo5X4l0GXTnz2B8.jpeg" alt="Aerodynamic Design" class="w-full h-full object-cover opacity-60 mix-blend-lighten">
+                <img src="{{ asset('images/exterior-01.webp') }}" alt="Aerodynamic Design" class="w-full h-full object-cover opacity-60 mix-blend-lighten">
                 
                 <!-- Colorful gradients to blend smoothly -->
                 <div class="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#050505] to-transparent z-10"></div>

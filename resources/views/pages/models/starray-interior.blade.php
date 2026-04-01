@@ -337,26 +337,8 @@
         </section>
 
         <!-- ==========================================
-             SECTION 8: FOOTER CTA
+             SECTION 12: DIVE INTO THE DETAILS
         =========================================== -->
-        <section class="py-24 md:py-32 bg-[#050505] text-center relative overflow-hidden border-t border-white/5">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-600/10 rounded-full blur-[150px] pointer-events-none"></div>
-            
-            <div class="relative z-10 max-w-4xl mx-auto px-6 reveal-up">
-                <h2 class="font-geely text-4xl md:text-6xl lg:text-7xl text-white uppercase tracking-tighter mb-10 leading-tight">
-                    Experience the <br> <span class="text-gradient-cyan">Difference</span>
-                </h2>
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
-                    <a href="{{ route('test-drive') }}" class="w-full sm:w-auto px-12 py-5 bg-white text-black font-bold rounded-full text-[10px] md:text-xs uppercase tracking-[0.2em] hover:scale-105 transition-transform shadow-[0_10px_30px_rgba(255,255,255,0.15)] text-center">
-                        Book a Test Drive
-                    </a>
-                    <a href="{{ route('models.starray.specification') }}" class="w-full sm:w-auto px-12 py-5 border border-white/20 text-white font-bold rounded-full text-[10px] md:text-xs uppercase tracking-[0.2em] hover:bg-white/10 transition-colors text-center">
-                        Full Specifications
-                    </a>
-                </div>
-            </div>
-        </section>
-
         <section id="details" class="py-16 md:py-24 lg:py-32 relative z-30 bg-white overflow-hidden border-t border-gray-100">
             <!-- Subtle Light Background Elements -->
             <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-100/50 rounded-full blur-[150px] pointer-events-none z-0"></div>
@@ -381,7 +363,7 @@
                     <div class="order-2 lg:order-1 lg:col-span-7 flex flex-col gap-4 reveal-left w-full">
                         
                         <!-- Exterior Link Card -->
-                        <a href="#exterior-page" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-gray-200">
+                        <a href="{{ route('models.starray.exterior') }}" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-gray-200">
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-starray-em-i_3-scaled-YNqMpg35Mvc0vRPX.webp" alt="Exterior" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
                             <!-- Overlay Gradient for Readability -->
                             <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
@@ -399,7 +381,7 @@
                         </a>
 
                         <!-- Interior Link Card -->
-                        <a href="#interior-page" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-gray-200">
+                        <a href="{{ route('models.starray.interior') }}" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-gray-200">
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_starray_01-YD0EBleD6kSoMROy.png" alt="Interior" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
                             <!-- Overlay Gradient for Readability -->
                             <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
@@ -417,7 +399,7 @@
                         </a>
 
                         <!-- Specification Link Card -->
-                        <a href="#specification-page" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-gray-200">
+                        <a href="{{ route('models.starray.specification') }}" class="relative w-full h-[120px] sm:h-[160px] lg:h-[200px] rounded-[1.5rem] overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-gray-200">
                             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/super-hybrid-starray-AVLxbx7nnlclXbQM.jpg" alt="Specification" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
                             <!-- Overlay Gradient for Readability -->
                             <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>

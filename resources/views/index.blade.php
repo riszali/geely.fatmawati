@@ -818,7 +818,7 @@
                     <div class="glass-island p-2 rounded-[2rem] relative z-10">
                         <div class="relative w-full aspect-video rounded-[1.5rem] overflow-hidden img-container">
                             <video autoplay muted loop playsinline aria-label="Geely Starray EM-i Engine" class="absolute inset-0 w-full h-full object-cover">
-                                <source src="{{ asset('build/assets/benefits-of-em-i.mp4') }}" type="video/mp4">
+                                <source src="/videos/benefits-of-em-i.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>

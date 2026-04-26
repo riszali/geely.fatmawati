@@ -1,5 +1,4 @@
 <x-layouts.app>
-    <!-- OPTIMASI SEO ON-PAGE -->
     @section('title', 'Dealer Resmi Geely Fatmawati Jakarta Selatan | Promo & Test Drive')
     @section('meta_description', 'Kunjungi Showroom Dealer Resmi Geely Fatmawati Jakarta Selatan. Dapatkan promo harga terbaru, simulasi kredit, dan booking test drive Geely EX5, EX2 & Starray.')
     @section('og_image', 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG')
@@ -103,7 +102,6 @@
             box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
         }
 
-        /* PURE GLASSMORPHISM FOR EX2 SPOTLIGHT */
         .ex2-pure-glass {
             background: rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(24px);
@@ -186,7 +184,6 @@
         }
     </style>
 
-<!-- SECTION 1: HEADER -->
 <header class="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-[#030712] pt-28 pb-12 lg:pt-32 lg:pb-20">
     <div class="absolute inset-0 z-0">
         <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-60 mix-blend-lighten">
@@ -249,10 +246,8 @@
         </div>
     </header>
 
-    <!-- COMBINED SECTION: GRAND OPENING & EXPERIENCE SLIDER -->
     <section class="relative w-full overflow-hidden group bg-[#030712]">
         
-        <!-- Desktop Navigation Buttons -->
         <button id="slide-prev" class="slider-nav-btn absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-50 hidden md:flex items-center justify-center w-14 h-14 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white hover:bg-emerald-500 hover:border-emerald-400 hover:scale-110 shadow-[0_10px_30px_rgba(0,0,0,0.5)] opacity-0 group-hover:opacity-100 disabled:opacity-0 disabled:pointer-events-none transition-all duration-300">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
         </button>
@@ -260,12 +255,9 @@
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
         </button>
 
-        <!-- Slider Container -->
         <div id="section-slider" class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth w-full">
             
-            <!-- SLIDE 1: GRAND OPENING (Theme: Light & Clean Professional) -->
             <div id="grand-opening" class="w-full flex-shrink-0 snap-center pt-20 pb-16 lg:pt-24 lg:pb-20 relative bg-[#f8fafc] overflow-hidden flex flex-col justify-start">
-                <!-- Elegan & Subtle Gradient Background tanpa checkered pattern -->
                 <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-emerald-100/40 to-emerald-200/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
                 <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-gradient-to-tr from-teal-100/40 to-emerald-100/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
 
@@ -280,7 +272,6 @@
                         </p>
                     </div>
 
-                    <!-- Grid Layout -->
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 h-auto md:h-[450px] lg:h-[500px]">
                         <div class="col-span-2 md:col-span-2 row-span-2 glass-island-light rounded-[2rem] p-2 relative reveal-up img-container shadow-sm" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-diresmikan-sO5Dd7FcvFkX3wX5.jpg', 'Grand Opening Geely Fatmawati', true)">
                             <div class="w-full h-[300px] md:h-full rounded-[1.5rem] overflow-hidden relative">
@@ -317,7 +308,6 @@
                 </div>
             </div>
 
-            <!-- SLIDE 2: EXPERIENCE (Theme: Dark) -->
             <div id="experience" class="w-full flex-shrink-0 snap-center pt-20 pb-16 lg:pt-24 lg:pb-20 relative bg-[#030712] overflow-hidden border-l border-white/5 flex flex-col justify-start">
                 <div class="absolute right-0 bottom-0 w-[800px] h-[800px] ambient-glow-emerald opacity-30 pointer-events-none"></div>
                 <div class="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 relative z-10">
@@ -391,14 +381,12 @@
             
         </div>
 
-        <!-- Mobile Indicator Dots -->
         <div class="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 z-40 flex gap-3 px-4 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/10">
             <div class="section-indicator w-2.5 h-2.5 rounded-full bg-emerald-500 transition-colors duration-300"></div>
             <div class="section-indicator w-2.5 h-2.5 rounded-full bg-white/40 transition-colors duration-300"></div>
         </div>
     </section>
 
-    <!-- SECTION 4: LINEUP (Slider Mobile & Grid Desktop) -->
     <section id="lineup" class="py-24 lg:py-32 relative bg-[#030712] overflow-hidden border-y border-white/5">
         <div class="absolute top-0 right-0 w-[600px] h-[600px] ambient-glow-emerald opacity-30 pointer-events-none z-0"></div>
         <div class="absolute bottom-0 left-0 w-[500px] h-[500px] ambient-glow-emerald opacity-20 pointer-events-none z-0"></div>
@@ -488,7 +476,6 @@
         </div>
     </section>
 
-    <!-- SECTION 5: FINANSIAL -->
     <section class="py-24 relative overflow-hidden flex items-center justify-center min-h-[60vh] bg-[#030712]">
         <div class="absolute inset-0 z-0">
             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/2400x0-14-mxB2lNnxMqfjr7pG.webp" alt="Layanan Pembiayaan Kredit Dealer Geely Fatmawati" class="w-full h-full object-cover opacity-50">
@@ -513,17 +500,14 @@
         </div>
     </section>
 
-    <!-- SECTION 6: KESEIMBANGAN SEMPURNA -->
     <section class="py-24 lg:py-32 bg-[#030712] relative overflow-hidden border-t border-white/5">
         <div class="absolute top-32 right-[-10%] w-[600px] h-[600px] ambient-glow-emerald opacity-40 z-0"></div>
         <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] ambient-glow-emerald opacity-40 z-0"></div>
 
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
-            <!-- Menambahkan lg:items-stretch agar tinggi dari kedua kolom menyamai tinggi penuh grid yang ada -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-16 items-center lg:items-stretch">
                 
                 <div class="lg:col-span-7 order-1 lg:order-2 reveal-right h-full relative z-10">
-                    <!-- Menambahkan lg:h-full dan lg:min-h-[600px] untuk memastikan kotak menyesuaikan tinggi sekaligus tidak kerdil -->
                     <div class="glass-island rounded-[2rem] p-2 relative h-[50vh] lg:h-full lg:min-h-[600px] overflow-hidden">
                         <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative">
                             <video autoplay muted loop playsinline aria-label="Geely EX5 Video Showcase" class="absolute inset-0 w-full h-full object-cover">
@@ -538,10 +522,8 @@
                     </div>
                 </div>
 
-                <!-- Menambahkan lg:h-full ke wrapper dan flex-col agar kotak teks secara spesifik bisa merentang dan tengah otomatis -->
                 <div class="lg:col-span-5 order-2 lg:order-1 reveal-left relative z-20 -mt-16 sm:-mt-24 lg:mt-0 mx-2 sm:mx-8 lg:mx-0 lg:h-full">
                     <div class="glass-island p-8 md:p-12 lg:p-14 rounded-[3rem] shadow-[0_-20px_40px_-15px_rgba(0,0,0,0.5)] lg:shadow-none bg-[#030712]/80 lg:bg-transparent backdrop-blur-3xl lg:h-full flex flex-col justify-center">
-                        <!-- Menambahkan w-fit ke badge agar tidak melebar sendirinya karena efek container flex yang baru -->
                         <div class="inline-flex items-center gap-3 mb-6 px-5 py-2.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 w-fit">
                             <span class="text-emerald-400 text-[9px] font-bold tracking-[0.4em] uppercase">Redefining Joyful Rides</span>
                         </div>
@@ -626,7 +608,6 @@
         </div>
     </section>
 
-    <!-- SECTION SPOTLIGHT GEELY EX2 (MODIFIED UNTUK PENJAJARAN SEMPURNA) -->
     <section id="ex2-spotlight" class="py-24 lg:py-32 relative overflow-hidden bg-white border-y border-gray-200">
         
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gray-100/50 rounded-full blur-[100px] pointer-events-none"></div>
@@ -652,17 +633,14 @@
                 </div>
             </div>
 
-            <!-- Ditambahkan items-stretch agar tinggi card sama rata -->
             <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory items-stretch gap-6 lg:grid lg:grid-cols-12 lg:gap-6 reveal-up delay-100 px-4 md:px-0 -mx-4 md:mx-0 pb-8 lg:pb-0">
                 
-                <!-- 01: Exterior (Col 7) -->
                 <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-7 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col h-full" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/lp_ex2_02_indo-1jQVDabXPa2GTqAg.jpg', '01 // Exterior - Aero Stance')">
                     <div class="relative w-full h-[240px] sm:h-[280px] lg:h-[340px] rounded-[1.5rem] overflow-hidden mb-6 bg-gray-50/50 border border-gray-200/50 flex items-center justify-center p-2 sm:p-4 flex-shrink-0">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/lp_ex2_02_indo-1jQVDabXPa2GTqAg.jpg" class="w-full h-full object-contain transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Exterior EX2">
                     </div>
                     <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
                         <div class="flex flex-col w-full h-full">
-                            <!-- Tinggi spesifik untuk area Judul agar teks deskripsi memulainya sejajar -->
                             <div class="h-[5rem] sm:h-[5.5rem] lg:h-[6.5rem]">
                                 <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">01 // Exterior</span>
                                 <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-gray-900 uppercase tracking-tight leading-none">Aero Stance</h3>
@@ -675,14 +653,12 @@
                     </div>
                 </div>
 
-                <!-- 02: Cockpit (Col 5) -->
                 <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-5 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col h-full" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_color_ex2_02-1-wMrk98nhwyihCNmX.jpg', '02 // Cockpit - Digital Oasis')">
                     <div class="relative w-full h-[240px] sm:h-[280px] lg:h-[340px] rounded-[1.5rem] overflow-hidden mb-6 bg-gray-50/50 border border-gray-200/50 flex items-center justify-center p-2 sm:p-4 flex-shrink-0">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_color_ex2_02-1-wMrk98nhwyihCNmX.jpg" class="w-full h-full object-contain transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Interior EX2">
                     </div>
                     <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
                         <div class="flex flex-col w-full h-full">
-                            <!-- Tinggi spesifik untuk area Judul agar teks deskripsi memulainya sejajar -->
                             <div class="h-[5rem] sm:h-[5.5rem] lg:h-[6.5rem]">
                                 <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">02 // Cockpit</span>
                                 <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-gray-900 uppercase tracking-tight leading-none">Double Tech Joy</h3>
@@ -695,14 +671,12 @@
                     </div>
                 </div>
 
-                <!-- 03: Lifestyle (Col 5) -->
                 <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-5 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col h-full" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/gambar-10-driving-pleasure-geely-ex2-MJhRNhH2mxqA4wUU.webp', '03 // Lifestyle - Agility')">
                     <div class="relative w-full h-[240px] sm:h-[280px] lg:h-[340px] rounded-[1.5rem] overflow-hidden mb-6 bg-gray-50/50 border border-gray-200/50 flex items-center justify-center p-2 sm:p-4 flex-shrink-0">
                         <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/gambar-10-driving-pleasure-geely-ex2-MJhRNhH2mxqA4wUU.webp" class="w-full h-full object-contain transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Lifestyle EX2">
                     </div>
                     <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
                         <div class="flex flex-col w-full h-full">
-                            <!-- Tinggi spesifik untuk area Judul agar teks deskripsi memulainya sejajar -->
                             <div class="h-[5rem] sm:h-[5.5rem] lg:h-[6.5rem]">
                                 <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">03 // Lifestyle</span>
                                 <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-gray-900 uppercase tracking-tight leading-none">Agility</h3>
@@ -715,7 +689,6 @@
                     </div>
                 </div>
 
-                <!-- 04: Utility (Col 7 - HTML5 Video) -->
                 <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-7 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 flex flex-col h-full group">
                     <div class="relative w-full h-[240px] sm:h-[280px] lg:h-[340px] rounded-[1.5rem] overflow-hidden mb-6 bg-black/5 shadow-inner border border-gray-200/50 flex-shrink-0">
                         <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover">
@@ -724,7 +697,6 @@
                     </div>
                     <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
                         <div class="flex flex-col w-full h-full">
-                            <!-- Tinggi spesifik untuk area Judul agar teks deskripsi memulainya sejajar -->
                             <div class="h-[5rem] sm:h-[5.5rem] lg:h-[6.5rem]">
                                 <span class="text-emerald-600 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">04 // Utility</span>
                                 <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-gray-900 uppercase tracking-tight leading-none">Max Cargo</h3>
@@ -849,9 +821,7 @@
         </section>
     </div>
 
-    <!-- SECTION 8 APP -->
     <section id="app-remote" class="py-24 lg:py-32 relative bg-[#f8fafc] overflow-hidden border-t border-gray-200">
-        <!-- Clean gradient blobs, no checkered SVG -->
         <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-emerald-100/40 to-emerald-200/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
         <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-gradient-to-tr from-teal-100/40 to-emerald-100/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
 
@@ -941,7 +911,6 @@
             const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale');
             revealElements.forEach(el => revealObserver.observe(el));
 
-            // Logika untuk Section 2 & 3 Combined Slider
             const sectionSlider = document.getElementById('section-slider');
             const slidePrev = document.getElementById('slide-prev');
             const slideNext = document.getElementById('slide-next');
@@ -951,16 +920,11 @@
                 const updateSliderUI = () => {
                     const scrollLeft = sectionSlider.scrollLeft;
                     const maxScroll = sectionSlider.scrollWidth - sectionSlider.clientWidth;
-                    // Tentukan index saat ini (0 untuk slide 1, 1 untuk slide 2)
                     const slideIndex = Math.round(scrollLeft / sectionSlider.clientWidth);
 
-                    // Update tombol Prev
                     slidePrev.disabled = scrollLeft <= 5;
-
-                    // Update tombol Next
                     slideNext.disabled = scrollLeft >= maxScroll - 5;
 
-                    // Update warna titik indikator mobile
                     indicators.forEach((ind, i) => {
                         if (i === slideIndex) {
                             ind.classList.replace('bg-white/40', 'bg-emerald-500');
@@ -978,11 +942,9 @@
                     sectionSlider.scrollBy({ left: -sectionSlider.clientWidth, behavior: 'smooth' });
                 });
 
-                // Update UI saat di-scroll (baik swipe mobile atau tekan panah desktop)
                 sectionSlider.addEventListener('scroll', updateSliderUI);
                 window.addEventListener('resize', updateSliderUI);
                 
-                // Set state awal
                 updateSliderUI();
             }
         });

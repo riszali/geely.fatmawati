@@ -1,7 +1,4 @@
 <x-layouts.app>
-    <!-- ==========================================
-         GLOBAL STYLES (Konsisten dengan EX5 Utama)
-    =========================================== -->
     <style>
         html, body { 
             background-color: #050505; 
@@ -10,7 +7,6 @@
             overflow-x: hidden;
         }
         
-        /* Premium Glass Panel - Bento Box Style */
         .glass-panel {
             background: linear-gradient(135deg, rgba(25, 25, 30, 0.4) 0%, rgba(25, 25, 30, 0.2) 100%);
             backdrop-filter: blur(32px);
@@ -25,7 +21,6 @@
             transform: translateY(-4px);
         }
 
-        /* Text Gradients */
         .text-gradient-cyan {
             background: linear-gradient(to right, #22d3ee, #3b82f6);
             -webkit-background-clip: text;
@@ -33,7 +28,6 @@
             -webkit-text-fill-color: transparent;
         }
 
-        /* Animated Blue Gradient for Blade Battery */
         .text-gradient-blue-animated {
             background: linear-gradient(90deg, #3b82f6, #22d3ee, #60a5fa, #3b82f6);
             background-size: 200% auto;
@@ -47,7 +41,6 @@
             to { background-position: 200% center; }
         }
 
-        /* Compact Hoverable Table Row Styles for Bento */
         .spec-row {
             display: flex;
             justify-content: space-between;
@@ -71,7 +64,6 @@
             border-radius: 6px;
         }
 
-        /* Shimmer Button from Main Page */
         .btn-shimmer {
             position: relative;
             overflow: hidden;
@@ -91,7 +83,6 @@
             100% { transform: rotate(45deg) translateX(100%); }
         }
 
-        /* Pattern Background for Blueprint Box */
         .bg-grid-pattern {
             background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
                               linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
@@ -100,12 +91,10 @@
     </style>
 
     <div class="w-full overflow-hidden pt-24 pb-24 relative min-h-screen">
-        <!-- Ambient Glow -->
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-cyan-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
         <div class="max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8 relative z-10">
             
-            <!-- Breadcrumb & Header -->
             <div class="mb-10 md:mb-14 flex flex-col items-center text-center">
                 <a href="{{ route('models.ex5') }}" class="inline-flex items-center gap-2 text-gray-400 hover:text-cyan-400 text-[10px] md:text-xs font-bold tracking-widest uppercase transition-colors mb-6 group">
                     <svg class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
@@ -120,12 +109,8 @@
                 </h1>
             </div>
 
-            <!-- ==========================================
-                 BENTO GRID LAYOUT
-            =========================================== -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 auto-rows-min">
                 
-                <!-- BENTO ITEM 1: Blueprint Graphic -->
                 <div class="glass-panel rounded-[2rem] md:col-span-2 lg:row-span-2 relative overflow-hidden group h-full flex flex-col justify-between">
                     <div class="absolute inset-0 bg-grid-pattern opacity-50 z-0 pointer-events-none"></div>
                     <div class="p-6 md:p-8 z-10 flex justify-between items-start">
@@ -142,7 +127,6 @@
                     </div>
                 </div>
 
-                <!-- BENTO ITEM 2: Range Highlight -->
                 <div class="glass-panel p-6 md:p-8 rounded-[2rem] flex flex-col justify-center items-center text-center h-full relative overflow-hidden">
                     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-cyan-500/20 rounded-full blur-[40px] pointer-events-none"></div>
                     <p class="text-gray-400 text-[9px] font-bold tracking-[0.2em] uppercase mb-2 relative z-10">Driving Range (WLTP)</p>
@@ -151,7 +135,6 @@
                     </h3>
                 </div>
 
-                <!-- BENTO ITEM 3: Warranty -->
                 <div class="glass-panel p-6 md:p-8 rounded-[2rem] flex flex-col justify-center items-center text-center gap-4 border-t-4 border-emerald-500 hover:border-emerald-400 h-full">
                     <div class="w-14 h-14 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
                         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -162,7 +145,6 @@
                     </div>
                 </div>
 
-                <!-- BENTO ITEM 4: Dimensions -->
                 <div class="glass-panel p-6 sm:p-8 rounded-[2rem] h-full flex flex-col">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-8 h-8 rounded-full bg-cyan-500/20 border border-cyan-400/30 flex items-center justify-center text-cyan-400 shrink-0">
@@ -194,7 +176,6 @@
                     </div>
                 </div>
 
-                <!-- BENTO ITEM 5: Powertrain -->
                 <div class="glass-panel p-6 sm:p-8 rounded-[2rem] h-full flex flex-col">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-8 h-8 rounded-full bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center text-indigo-400 shrink-0">
@@ -230,7 +211,6 @@
                     </div>
                 </div>
 
-                <!-- BENTO ITEM 6: Safety Data -->
                 <div class="glass-panel p-6 sm:p-8 rounded-[2rem] h-full flex flex-col md:col-span-2 lg:col-span-1">
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-8 h-8 rounded-full bg-red-500/20 border border-red-500/30 flex items-center justify-center text-red-400 shrink-0">
@@ -266,7 +246,6 @@
                     </div>
                 </div>
 
-                <!-- BENTO ITEM 7: GEA Architecture -->
                 <div class="glass-panel p-0 rounded-[2rem] flex flex-col lg:flex-row relative overflow-hidden group md:col-span-2 lg:col-span-3 border-t border-cyan-500/20 hover:border-cyan-400/50">
                     <div class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-[80px] pointer-events-none group-hover:bg-cyan-500/20 transition-colors duration-700"></div>
                     <div class="p-6 md:p-8 lg:p-10 flex flex-col justify-center w-full lg:w-5/12 relative z-20">
@@ -281,13 +260,15 @@
                             Arsitektur cerdas 4-in-1 yang menggabungkan kemajuan signifikan dalam desain, efisiensi energi, keselamatan, kecerdasan AI, dan kinerja berkendara.
                         </p>
                     </div>
-                    <div class="w-full lg:w-7/12 relative min-h-[250px] sm:min-h-[300px] lg:min-h-[350px] overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#050505] via-[#050505]/40 lg:via-[#050505]/20 to-transparent z-10 pointer-events-none"></div>
-                        <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2466-AzG3xgX8EeU2wDqk.webp" alt="Global Intelligent New Energy Architecture" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out opacity-80 group-hover:opacity-100 object-center">
+                    <div class="w-full lg:w-7/12 relative overflow-hidden flex items-center justify-center bg-black/20">
+                        <video autoplay muted loop playsinline preload="auto" class="relative z-0 w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-[2s] ease-out opacity-90 group-hover:opacity-100">
+                            <source src="{{ asset('assets/videos/geaexplain.mp4') }}" type="video/mp4">
+                            <source src="{{ asset('videos/geaexplain.mp4') }}" type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-[#050505] via-transparent to-transparent z-10 pointer-events-none"></div>
                     </div>
                 </div>
 
-                <!-- BENTO ITEM 8: CTB Architecture -->
                 <div class="glass-panel p-0 rounded-[2rem] flex flex-col-reverse lg:flex-row relative overflow-hidden group md:col-span-2 lg:col-span-3 border-t border-indigo-500/20 hover:border-indigo-400/50 bg-[#0a0a0c]">
                     <div class="absolute bottom-0 right-0 w-80 h-80 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none group-hover:bg-indigo-500/20 transition-colors duration-700"></div>
                     <div class="p-6 md:p-8 lg:p-10 flex flex-col justify-center w-full lg:w-1/2 relative z-20">
@@ -336,11 +317,10 @@
                     </div>
                     <div class="w-full lg:w-1/2 relative min-h-[250px] sm:min-h-[350px] overflow-hidden flex items-center justify-center p-6 bg-gradient-to-b lg:bg-gradient-to-r from-transparent via-white/5 to-white/5">
                         <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.1)_0%,transparent_70%)] pointer-events-none"></div>
-                        <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/ctb-Aq2q3NX9QourKNVv.webp" alt="CTB Architecture" class="relative z-10 w-full max-w-lg h-auto object-contain transform group-hover:scale-105 transition-transform duration-[2s] ease-out drop-shadow-2xl">
+                        <img src="{{ asset('images/ctb.webp') }}" alt="CTB Architecture" class="relative z-10 w-full max-w-lg h-auto object-contain transform group-hover:scale-105 transition-transform duration-[2s] ease-out drop-shadow-2xl">
                     </div>
                 </div>
 
-                <!-- BENTO ITEM: 11-in-1 INTELLIGENT ELECTRIC DRIVE -->
                 <div class="glass-panel p-6 md:p-10 rounded-[2rem] flex flex-col lg:flex-row gap-10 items-center md:col-span-2 lg:col-span-3 border-t border-cyan-500/20 group relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-600/5 rounded-full blur-[100px] pointer-events-none"></div>
                     <div class="w-full lg:w-1/2 relative z-10">
@@ -376,15 +356,16 @@
                         </ul>
                     </div>
                     <div class="w-full lg:w-1/2 relative flex justify-center">
-                        <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/ied-YyvZj2oZ41u6Vgv6.webp" alt="11-in-1 Drive Unit" class="w-full max-w-md h-auto object-contain transform group-hover:scale-105 transition-transform duration-[2s] drop-shadow-[0_0_30px_rgba(34,211,238,0.2)]">
+                        <img src="{{ asset('images/ied.webp') }}" alt="11-in-1 Drive Unit" class="w-full max-w-md h-auto object-contain transform group-hover:scale-105 transition-transform duration-[2s] drop-shadow-[0_0_30px_rgba(34,211,238,0.2)]">
                     </div>
                 </div>
 
-                <!-- BENTO ITEM: Efficiency & Category Leadership -->
                 <div class="glass-panel p-0 rounded-[2rem] overflow-hidden flex flex-col md:flex-row md:col-span-2 lg:col-span-3 border-t border-white/10 group bg-[#06070a]">
-                    <div class="w-full md:w-7/12 relative min-h-[300px] overflow-hidden">
-                        <img src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/img_2619-m2WaDQ1WJeFeWZ3b.jpeg" alt="Electric Drive Efficiency" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-[4s]">
-                        <div class="absolute inset-0 bg-gradient-to-r from-[#06070a] via-transparent to-transparent z-10"></div>
+                    <div class="w-full md:w-7/12 relative overflow-hidden flex items-center justify-center bg-black/20">
+                        <video autoplay muted loop playsinline preload="auto" class="relative z-0 w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-[4s] opacity-90 group-hover:opacity-100">
+                            <source src="{{ asset('videos/vid3.mp4') }}" type="video/mp4">
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-r from-[#06070a] via-[#06070a]/40 to-transparent z-10 pointer-events-none"></div>
                     </div>
                     <div class="w-full md:w-5/12 p-8 md:p-12 flex flex-col justify-center relative z-20">
                         <div class="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 w-max">
@@ -397,9 +378,7 @@
                     </div>
                 </div>
 
-                <!-- BENTO ITEM: AEGIS SHORT BLADE BATTERY -->
                 <div class="glass-panel p-0 rounded-[2rem] flex flex-col lg:flex-row relative overflow-hidden group md:col-span-2 lg:col-span-3 border-t border-blue-500/20 hover:border-blue-500/40 transition-colors duration-500">
-                    <!-- Text Content -->
                     <div class="p-8 md:p-12 lg:p-14 flex flex-col justify-center w-full lg:w-5/12 relative z-20">
                         <div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 w-max shadow-[0_0_15px_rgba(59,130,246,0.1)]">
                             <span class="text-blue-400 text-[9px] md:text-[10px] tracking-[0.2em] font-bold uppercase">Battery Technology</span>
@@ -415,7 +394,6 @@
                         </p>
                     </div>
 
-                    <!-- Video Content -->
                     <div class="w-full lg:w-7/12 relative min-h-[300px] md:min-h-[400px] lg:min-h-[500px] overflow-hidden bg-black">
                         <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-[4s] ease-out">
                             <source src="https://a-ap.storyblok.com/f/3000753/x/f2b58cc59a/shortblade_battery.mp4" type="video/mp4">
@@ -424,9 +402,7 @@
                     </div>
                 </div>
 
-                <!-- BENTO ITEM: FASTER CHARGING (NEW) -->
                 <div class="glass-panel p-0 rounded-[2rem] flex flex-col lg:flex-row-reverse relative overflow-hidden group md:col-span-2 lg:col-span-3 border-t border-cyan-500/20 hover:border-cyan-400/40 bg-[#08080a]">
-                    <!-- Text Content -->
                     <div class="p-8 md:p-12 lg:p-14 flex flex-col justify-center w-full lg:w-6/12 relative z-20">
                         <div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 w-max">
                             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
@@ -436,7 +412,6 @@
                             Faster <span class="text-gradient-cyan">Charging</span>
                         </h3>
                         
-                        <!-- Core Stats -->
                         <div class="grid grid-cols-2 gap-4 mb-8">
                             <div class="p-6 rounded-[1.5rem] bg-white/5 border border-white/5 group-hover:border-cyan-500/30 transition-all duration-500">
                                 <p class="text-[10px] text-gray-400 uppercase tracking-widest mb-1 font-bold">DC Fast Charging</p>
@@ -450,7 +425,6 @@
                             </div>
                         </div>
 
-                        <!-- Technical Grid Condensed -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 border-t border-white/5 pt-8">
                             <div class="flex flex-col">
                                 <span class="text-gray-500 text-[9px] uppercase font-bold tracking-widest mb-1">Max DC Input</span>
@@ -470,26 +444,23 @@
                         </div>
                     </div>
 
-                    <!-- Video Content -->
                     <div class="w-full lg:w-6/12 relative min-h-[350px] md:min-h-[450px] lg:min-h-full overflow-hidden">
                         <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-[4s]">
                             <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/black2-m6L2DO0kVbuDJkwz.mp4" type="video/mp4">
                         </video>
-                        <!-- Gradient Overlays for integration -->
                         <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-[#08080a] via-[#08080a]/30 to-transparent z-10"></div>
                         <div class="absolute inset-0 bg-cyan-500/5 mix-blend-overlay"></div>
                     </div>
                 </div>
 
-                <!-- BENTO ITEM 9: Safety NCAP Video -->
-                <div class="glass-panel p-2 md:p-3 rounded-[2rem] relative overflow-hidden group border-t border-red-500/20 hover:border-red-500/40 h-[250px] md:h-auto min-h-[250px] md:col-span-2 flex flex-col">
+                <div class="glass-panel p-2 md:p-3 rounded-[2rem] relative overflow-hidden group border-t border-red-500/20 hover:border-red-500/40 md:col-span-2">
                     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-red-500/15 rounded-full blur-[80px] pointer-events-none group-hover:bg-red-500/25 transition-colors duration-700"></div>
-                    <div class="relative w-full h-full rounded-[1.5rem] overflow-hidden bg-black/50 flex-grow">
-                        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-[2s] ease-out opacity-80 group-hover:opacity-100">
-                            <source src="https://assets.zyrosite.com/YanqXEb2OrfDkrOX/euro-ncap-crash-safety-tests-of-geely-ex5-2025---euro-ncap-720p-h264-YKb3MOZVQjsbVQ84.mp4" type="video/mp4">
+                    <div class="relative w-full rounded-[1.5rem] overflow-hidden bg-black/20">
+                        <video autoplay muted loop playsinline preload="auto" class="relative z-0 w-full h-auto block transform group-hover:scale-105 transition-transform duration-[2s] ease-out opacity-80 group-hover:opacity-100">
+                            <source src="{{ asset('videos/crash-test.mp4') }}" type="video/mp4">
                         </video>
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent pointer-events-none"></div>
-                        <div class="absolute bottom-6 left-6 md:bottom-8 md:left-8 z-10 pointer-events-none">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent pointer-events-none z-10"></div>
+                        <div class="absolute bottom-6 left-6 md:bottom-8 md:left-8 z-20 pointer-events-none">
                             <div class="inline-flex items-center gap-2 mb-2 md:mb-3 px-3 py-1.5 md:px-4 md:py-1.5 rounded-full bg-red-500/20 border border-red-500/30 backdrop-blur-md shadow-[0_0_15px_rgba(239,68,68,0.2)]">
                                 <span class="text-red-400 text-[8px] md:text-[9px] tracking-[0.3em] font-bold uppercase">Euro NCAP</span>
                             </div>
@@ -499,7 +470,6 @@
                     </div>
                 </div>
 
-                <!-- BENTO ITEM 10: Call to Action (Test Drive) -->
                 <div class="glass-panel p-6 md:p-8 rounded-[2rem] flex flex-col justify-center items-center text-center h-full relative overflow-hidden group">
                     <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-white/5 mb-6 group-hover:bg-white/10 transition-colors">

@@ -187,7 +187,6 @@
     </style>
 
 <!-- SECTION 1: HEADER -->
-<!-- 1. Tambahkan pt-28 pb-12 lg:pt-32 lg:pb-20 di header agar jarak seimbang -->
 <header class="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-[#030712] pt-28 pb-12 lg:pt-32 lg:pb-20">
     <div class="absolute inset-0 z-0">
         <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-60 mix-blend-lighten">
@@ -196,7 +195,6 @@
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#030712_100%)]"></div>
     </div>
 
-    <!-- 2. Hapus mt-28 lg:mt-32 di div ini -->
     <div class="relative z-20 w-full max-w-[1400px] mx-auto px-6 reveal-up">
         <div class="glass-island rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 lg:p-20 relative overflow-hidden">
             <div class="absolute -top-32 -left-32 w-96 h-96 ambient-glow-emerald z-0 pointer-events-none"></div>
@@ -515,15 +513,18 @@
         </div>
     </section>
 
+    <!-- SECTION 6: KESEIMBANGAN SEMPURNA -->
     <section class="py-24 lg:py-32 bg-[#030712] relative overflow-hidden border-t border-white/5">
         <div class="absolute top-32 right-[-10%] w-[600px] h-[600px] ambient-glow-emerald opacity-40 z-0"></div>
         <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] ambient-glow-emerald opacity-40 z-0"></div>
 
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-16 items-center">
+            <!-- Menambahkan lg:items-stretch agar tinggi dari kedua kolom menyamai tinggi penuh grid yang ada -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-16 items-center lg:items-stretch">
                 
                 <div class="lg:col-span-7 order-1 lg:order-2 reveal-right h-full relative z-10">
-                    <div class="glass-island rounded-[2rem] p-2 relative h-[50vh] lg:h-[600px] overflow-hidden">
+                    <!-- Menambahkan lg:h-full dan lg:min-h-[600px] untuk memastikan kotak menyesuaikan tinggi sekaligus tidak kerdil -->
+                    <div class="glass-island rounded-[2rem] p-2 relative h-[50vh] lg:h-full lg:min-h-[600px] overflow-hidden">
                         <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative">
                             <video autoplay muted loop playsinline aria-label="Geely EX5 Video Showcase" class="absolute inset-0 w-full h-full object-cover">
                                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/say-hi-to-the-geely-ex5---geely-auto-uk-1080p-h264-_1-Sz3UdvLVUW0EehYY.mp4" type="video/mp4">
@@ -537,9 +538,11 @@
                     </div>
                 </div>
 
-                <div class="lg:col-span-5 order-2 lg:order-1 reveal-left relative z-20 -mt-16 sm:-mt-24 lg:mt-0 mx-2 sm:mx-8 lg:mx-0">
-                    <div class="glass-island p-8 md:p-12 lg:p-14 rounded-[3rem] shadow-[0_-20px_40px_-15px_rgba(0,0,0,0.5)] lg:shadow-none bg-[#030712]/80 lg:bg-transparent backdrop-blur-3xl">
-                        <div class="inline-flex items-center gap-3 mb-6 px-5 py-2.5 rounded-full border border-emerald-500/30 bg-emerald-500/10">
+                <!-- Menambahkan lg:h-full ke wrapper dan flex-col agar kotak teks secara spesifik bisa merentang dan tengah otomatis -->
+                <div class="lg:col-span-5 order-2 lg:order-1 reveal-left relative z-20 -mt-16 sm:-mt-24 lg:mt-0 mx-2 sm:mx-8 lg:mx-0 lg:h-full">
+                    <div class="glass-island p-8 md:p-12 lg:p-14 rounded-[3rem] shadow-[0_-20px_40px_-15px_rgba(0,0,0,0.5)] lg:shadow-none bg-[#030712]/80 lg:bg-transparent backdrop-blur-3xl lg:h-full flex flex-col justify-center">
+                        <!-- Menambahkan w-fit ke badge agar tidak melebar sendirinya karena efek container flex yang baru -->
+                        <div class="inline-flex items-center gap-3 mb-6 px-5 py-2.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 w-fit">
                             <span class="text-emerald-400 text-[9px] font-bold tracking-[0.4em] uppercase">Redefining Joyful Rides</span>
                         </div>
                         

@@ -5,14 +5,12 @@
         <meta name="keywords" content="Geely EX2 Eksterior, Desain Geely EX2, Mobil Listrik Urban, Crossover EV Geely, 360 Geely EX2, Geely Fatmawati">
         <link rel="canonical" href="https://geelyfatmawati.id/models/ex2/exterior">
 
-        <!-- Open Graph / Facebook / WhatsApp -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://geelyfatmawati.id/models/ex2/exterior">
         <meta property="og:title" content="Eksterior Geely EX2 2024 | Desain Crossover Listrik Futuristik">
         <meta property="og:description" content="Jelajahi setiap detail eksterior Geely EX2. Desain pemenang penghargaan dengan pencahayaan LED cerdas dan proporsi Golden Ratio.">
         <meta property="og:image" content="https://assets.zyrosite.com/Yle46KEPN6IkVONg/banner_ex2b-Rcl937dqFR7EP4xN.jpg">
 
-        <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:url" content="https://geelyfatmawati.id/models/ex2/exterior">
         <meta property="twitter:title" content="Eksterior Geely EX2 2024 | Crossover Listrik Futuristik">
@@ -315,7 +313,6 @@
             </div>
         </section>
 
-        <!-- GALLERY FOTO EKSTERIOR (BENTO GRID INOVATIF - BACKGROUND HIJAU GRADASI HITAM) -->
         <section class="py-16 md:py-32 relative z-20 overflow-hidden bg-gradient-to-b from-emerald-900 to-[#050505] bg-noise">
             <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-emerald-500/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
             <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-teal-500/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
@@ -329,7 +326,6 @@
                     </div>
                 </div>
 
-                <!-- Innovative Bento Grid for Mobile & Desktop -->
                 <div class="grid grid-cols-2 md:grid-cols-4 grid-flow-dense gap-2 sm:gap-4 md:gap-6 auto-rows-[140px] sm:auto-rows-[180px] md:auto-rows-[250px]">
                     @php
                         $gallery_images = [
@@ -350,7 +346,6 @@
                                 <img src="{{ $img['src'] }}" alt="Gallery Geely EX2" loading="lazy" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-80 group-hover:mix-blend-normal group-hover:opacity-100 group-hover:scale-105 transition-all duration-700">
                                 <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 
-                                <!-- Action Icon (Hover / Interactive) -->
                                 <div class="absolute bottom-2 right-2 sm:bottom-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0 border border-white/20">
                                     <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
                                 </div>
@@ -422,7 +417,6 @@
             </div>
         </section>
 
-        <!-- SECTION CAGE BODY -->
         <section class="py-24 md:py-32 relative z-20 overflow-hidden border-t border-white/10 bg-gradient-to-b from-[#4a1000] to-[#050505] bg-noise">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-orange-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
@@ -518,7 +512,6 @@
             </div>
         </section>
 
-        <!-- SEKSI DIVE INTO DETAILS -->
         <section id="details" class="py-16 md:py-24 lg:py-32 relative z-30 bg-[#050505] overflow-hidden border-t border-white/10">
             <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-teal-600/20 rounded-full blur-[150px] pointer-events-none z-0"></div>
 
@@ -634,7 +627,6 @@
 
     </div>
 
-    <!-- LIGHTBOX MODAL -->
     <div id="lightbox" class="fixed inset-0 hidden items-center justify-center bg-[#050505]/95 backdrop-blur-xl opacity-0 transition-opacity duration-300" style="z-index: 9999;" onclick="closeLightbox(event)">
         <button onclick="closeLightbox(event)" class="absolute top-6 right-6 md:top-10 md:right-10 text-white/60 hover:text-white transition-colors bg-white/5 p-2 rounded-full border border-white/10 hover:bg-white/10 cursor-pointer" style="z-index: 10000;">
             <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -646,7 +638,6 @@
         </div>
     </div>
 
-    <!-- Instagram Floating Button -->
     <a href="https://www.instagram.com/geelyfatmawati.id/?hl=en" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 flex items-center justify-center w-14 h-14 bg-gradient-to-tr from-[#f09433] via-[#e6683c] to-[#bc1888] rounded-full shadow-[0_10px_25px_rgba(225,48,108,0.5)] hover:scale-110 hover:shadow-[0_15px_35px_rgba(225,48,108,0.7)] transition-all duration-300 group">
         <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
@@ -695,7 +686,6 @@
             });
         });
 
-        // Lightbox Logic
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
 

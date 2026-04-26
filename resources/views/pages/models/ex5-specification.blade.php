@@ -104,14 +104,25 @@
             background-size: 30px 30px;
         }
 
-        /* Custom Utilities to Bypass Version Mismatch Linter Warnings */
         .custom-w-800 { width: 800px; }
+        .custom-w-500 { width: 500px; }
+        .custom-w-400 { width: 400px; }
+        
         .custom-h-500 { height: 500px; }
+        .custom-h-400 { height: 400px; }
         .custom-h-250 { height: 250px; }
-        .custom-max-w-1400 { max-width: 1400px; }
+        .custom-h-120 { height: 120px; }
+        
+        .custom-max-w-1600 { max-width: 1600px; }
+        
         .custom-rounded-2rem { border-radius: 2rem; }
         .custom-rounded-1-5rem { border-radius: 1.5rem; }
+        
         .custom-blur-40 { filter: blur(40px); }
+        .custom-blur-80 { filter: blur(80px); }
+        .custom-blur-100 { filter: blur(100px); }
+        .custom-blur-150 { filter: blur(150px); }
+        
         .custom-min-h-250 { min-height: 250px; }
         .custom-min-h-300 { min-height: 300px; }
         .custom-min-h-350 { min-height: 350px; }
@@ -123,14 +134,17 @@
         .custom-bg-gradient-to-l { background-image: linear-gradient(to left, var(--tw-gradient-stops)); }
 
         @media (min-width: 640px) {
+            .custom-sm-h-160 { height: 160px; }
             .custom-sm-min-h-300 { min-height: 300px; }
             .custom-sm-min-h-350 { min-height: 350px; }
         }
         @media (min-width: 768px) {
             .custom-md-min-h-400 { min-height: 400px; }
             .custom-md-min-h-450 { min-height: 450px; }
+            .custom-md-rounded-2rem { border-radius: 2rem; }
         }
         @media (min-width: 1024px) {
+            .custom-lg-h-200 { height: 200px; }
             .custom-lg-min-h-350 { min-height: 350px; }
             .custom-lg-min-h-500 { min-height: 500px; }
             .custom-lg-bg-gradient-to-r { background-image: linear-gradient(to right, var(--tw-gradient-stops)); }
@@ -139,9 +153,9 @@
     </style>
 
     <div class="w-full overflow-hidden pt-24 pb-24 relative min-h-screen">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 custom-w-800 custom-h-500 bg-cyan-600/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 custom-w-800 custom-h-500 bg-cyan-600/10 rounded-full custom-blur-150 pointer-events-none z-0"></div>
 
-        <div class="custom-max-w-1400 mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+        <div class="custom-max-w-1600 mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 relative z-10">
             
             <div class="mb-10 md:mb-14 flex flex-col items-center text-center">
                 <a href="{{ route('models.ex5') }}" class="inline-flex items-center gap-2 text-gray-400 hover:text-cyan-400 text-[10px] md:text-xs font-bold tracking-widest uppercase transition-colors mb-6 group">
@@ -150,7 +164,7 @@
                 </a>
                 
                 <div class="inline-flex items-center gap-3 mb-4 px-5 py-2.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-xl shadow-lg">
-                    <span class="text-cyan-400 text-[9px] tracking-[0.4em] font-bold uppercase">GEELY EX5</span>
+                    <span class="text-cyan-400 text-[9px] tracking-[0.4em] font-bold uppercase">Technical Data</span>
                 </div>
                 <h1 class="font-geely text-4xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-white leading-tight drop-shadow-xl">
                     Full <span class="text-gradient-cyan">Specifications</span>
@@ -295,7 +309,7 @@
                 </div>
 
                 <div class="glass-panel p-0 custom-rounded-2rem flex flex-col lg:flex-row relative overflow-hidden group md:col-span-2 lg:col-span-3 border-t border-cyan-500/20 hover:border-cyan-400/50">
-                    <div class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full blur-[80px] pointer-events-none group-hover:bg-cyan-500/20 transition-colors duration-700"></div>
+                    <div class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-cyan-500/10 rounded-full custom-blur-80 pointer-events-none group-hover:bg-cyan-500/20 transition-colors duration-700"></div>
                     <div class="p-6 md:p-8 lg:p-10 flex flex-col justify-center w-full lg:w-5/12 relative z-20">
                         <div class="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 w-max shadow-[0_0_15px_rgba(34,211,238,0.1)]">
                             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
@@ -309,7 +323,7 @@
                         </p>
                     </div>
                     <div class="w-full lg:w-7/12 relative custom-min-h-250 custom-sm-min-h-300 custom-lg-min-h-350 overflow-hidden flex items-center justify-center bg-black/20">
-                        <video autoplay muted loop playsinline preload="auto" class="relative z-0 w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-[2s] ease-out opacity-90 group-hover:opacity-100">
+                        <video autoplay muted loop playsinline preload="auto" class="relative z-0 w-full h-auto block transform group-hover:scale-105 transition-transform duration-[2s] ease-out opacity-90 group-hover:opacity-100">
                             <source src="{{ asset('assets/videos/geaexplain.mp4') }}" type="video/mp4">
                             <source src="{{ asset('videos/geaexplain.mp4') }}" type="video/mp4">
                         </video>
@@ -318,7 +332,7 @@
                 </div>
 
                 <div class="glass-panel p-0 custom-rounded-2rem flex flex-col-reverse lg:flex-row relative overflow-hidden group md:col-span-2 lg:col-span-3 border-t border-indigo-500/20 hover:border-indigo-400/50 bg-[#0a0a0c]">
-                    <div class="absolute bottom-0 right-0 w-80 h-80 bg-indigo-500/10 rounded-full blur-[100px] pointer-events-none group-hover:bg-indigo-500/20 transition-colors duration-700"></div>
+                    <div class="absolute bottom-0 right-0 w-80 h-80 bg-indigo-500/10 rounded-full custom-blur-100 pointer-events-none group-hover:bg-indigo-500/20 transition-colors duration-700"></div>
                     <div class="p-6 md:p-8 lg:p-10 flex flex-col justify-center w-full lg:w-1/2 relative z-20">
                         <div class="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 w-max shadow-[0_0_15px_rgba(99,102,241,0.1)]">
                             <svg class="w-4 h-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
@@ -329,7 +343,7 @@
                         </h3>
                         <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed mb-8">Integrated Body & Battery Structure</p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
-                            <div class="flex items-center gap-4 p-4 rounded-[1.25rem] bg-[#1a1b26]/50 border border-white/5 hover:border-indigo-500/30 transition-colors">
+                            <div class="flex items-center gap-4 p-4 custom-rounded-1-25rem bg-[#1a1b26]/50 border border-white/5 hover:border-indigo-500/30 transition-colors">
                                 <div class="flex items-center justify-center shrink-0">
                                     <svg class="w-6 h-6 text-indigo-400 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 12h16M7 9v6M17 9v6M4 10v4M20 10v4"></path></svg>
                                 </div>
@@ -339,7 +353,7 @@
                                     <p class="text-gray-400 text-[9px] md:text-[10px] leading-snug">Side Collision Cell 0 Compression</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-4 p-4 rounded-[1.25rem] bg-[#1a1b26]/50 border border-white/5 hover:border-indigo-500/30 transition-colors">
+                            <div class="flex items-center gap-4 p-4 custom-rounded-1-25rem bg-[#1a1b26]/50 border border-white/5 hover:border-indigo-500/30 transition-colors">
                                 <div class="flex items-center justify-center shrink-0">
                                     <svg class="w-6 h-6 text-indigo-400 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
                                 </div>
@@ -349,7 +363,7 @@
                                     <p class="text-gray-400 text-[9px] md:text-[10px] leading-snug">Lower the floor height</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-4 p-4 rounded-[1.25rem] bg-[#1a1b26]/50 border border-white/5 hover:border-indigo-500/30 transition-colors">
+                            <div class="flex items-center gap-4 p-4 custom-rounded-1-25rem bg-[#1a1b26]/50 border border-white/5 hover:border-indigo-500/30 transition-colors">
                                 <div class="flex items-center justify-center shrink-0">
                                     <svg class="w-6 h-6 text-indigo-400 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
                                 </div>
@@ -359,7 +373,7 @@
                                     <p class="text-gray-400 text-[9px] md:text-[10px] leading-snug">31000N·m/deg</p>
                                 </div>
                             </div>
-                            <div class="flex items-center gap-4 p-4 rounded-[1.25rem] bg-[#1a1b26]/50 border border-white/5 hover:border-indigo-500/30 transition-colors">
+                            <div class="flex items-center gap-4 p-4 custom-rounded-1-25rem bg-[#1a1b26]/50 border border-white/5 hover:border-indigo-500/30 transition-colors">
                                 <div class="flex items-center justify-center shrink-0">
                                     <svg class="w-6 h-6 text-indigo-400 drop-shadow-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path></svg>
                                 </div>
@@ -378,7 +392,7 @@
                 </div>
 
                 <div class="glass-panel p-6 md:p-10 custom-rounded-2rem flex flex-col lg:flex-row gap-10 items-center md:col-span-2 lg:col-span-3 border-t border-cyan-500/20 group relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-600/5 rounded-full blur-[100px] pointer-events-none"></div>
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-600/5 rounded-full custom-blur-100 pointer-events-none"></div>
                     <div class="w-full lg:w-1/2 relative z-10">
                         <div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20">
                             <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
@@ -418,7 +432,7 @@
 
                 <div class="glass-panel p-0 custom-rounded-2rem overflow-hidden flex flex-col md:flex-row md:col-span-2 lg:col-span-3 border-t border-white/10 group bg-[#06070a]">
                     <div class="w-full md:w-7/12 relative custom-min-h-300 overflow-hidden">
-                        <video autoplay muted loop playsinline preload="auto" class="relative z-0 w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-[4s] opacity-90 group-hover:opacity-100">
+                        <video autoplay muted loop playsinline preload="auto" class="relative z-0 w-full h-auto block transform group-hover:scale-105 transition-transform duration-[4s] opacity-90 group-hover:opacity-100">
                             <source src="{{ asset('videos/vid3.mp4') }}" type="video/mp4">
                         </video>
                         <div class="absolute inset-0 custom-bg-gradient-to-r from-[#06070a] via-transparent to-transparent z-10 pointer-events-none"></div>
@@ -510,7 +524,7 @@
                 </div>
 
                 <div class="glass-panel p-2 md:p-3 custom-rounded-2rem relative overflow-hidden group border-t border-red-500/20 hover:border-red-500/40 md:col-span-2">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-red-500/15 rounded-full blur-[80px] pointer-events-none group-hover:bg-red-500/25 transition-colors duration-700"></div>
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-64 bg-red-500/15 rounded-full custom-blur-80 pointer-events-none group-hover:bg-red-500/25 transition-colors duration-700"></div>
                     <div class="relative w-full custom-rounded-1-5rem overflow-hidden bg-black/20">
                         <video autoplay muted loop playsinline preload="auto" class="relative z-0 w-full h-auto block transform group-hover:scale-105 transition-transform duration-[2s] ease-out opacity-80 group-hover:opacity-100">
                             <source src="{{ asset('videos/crash-test.mp4') }}" type="video/mp4">
@@ -547,4 +561,123 @@
             </div>
         </div>
     </div>
+
+    <section id="details" class="py-16 md:py-24 lg:py-32 relative z-30 bg-[#050505] overflow-hidden border-t border-white/10 bg-noise">
+        <div class="absolute top-1/2 right-0 -translate-y-1/2 custom-w-500 custom-h-500 bg-cyan-600/20 rounded-full custom-blur-150 pointer-events-none z-0"></div>
+        <div class="absolute bottom-0 left-0 custom-w-400 custom-h-400 bg-purple-600/10 rounded-full custom-blur-150 pointer-events-none z-0"></div>
+
+        <div class="custom-max-w-1600 w-full mx-auto px-4 sm:px-8 md:px-12 lg:px-16 relative z-10">
+            <div class="text-center mb-12 md:mb-20 max-w-4xl mx-auto px-4 reveal-up">
+                <div class="inline-flex items-center gap-3 mb-4 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-300">
+                    <span class="text-[10px] tracking-[0.3em] font-bold uppercase">The Blueprint</span>
+                </div>
+                <h2 class="font-geely text-xl sm:text-3xl md:text-4xl lg:text-5xl uppercase tracking-tighter text-white mb-6 leading-tight drop-shadow-lg">
+                    Dive Into <span class="text-gradient-cyan">The Details</span>
+                </h2>
+                <p class="text-gray-400 text-xs sm:text-sm md:text-base lg:text-lg font-light leading-relaxed">
+                    Get a closer look at the Geely EX5’s advanced features and specifications, designed to set a new standard for EV.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+                
+                <div class="order-2 lg:order-1 lg:col-span-7 flex flex-col gap-4 reveal-left w-full">
+                    
+                    <a href="{{ route('models.ex5.exterior') }}" class="relative w-full custom-h-120 custom-sm-h-160 custom-lg-h-200 custom-rounded-1-5rem overflow-hidden group block shadow-md hover:shadow-[0_20px_40px_rgba(34,211,238,0.2)] transition-all duration-500 border border-white/10 hover:border-cyan-400/50">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/sunroof-yx4ak1dowru68xpb-1-YbN4az2lObuDROkG.jpg" alt="Exterior" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                        <div class="absolute inset-0 custom-bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
+                        <div class="absolute inset-0 p-6 md:p-8 flex items-end justify-between">
+                            <div>
+                                <p class="text-gray-400 text-[10px] uppercase font-bold tracking-widest mb-1 group-hover:text-cyan-300 transition-colors">Explore</p>
+                                <h3 class="text-white font-geely text-2xl md:text-4xl uppercase tracking-tighter drop-shadow-md">Exterior</h3>
+                            </div>
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-cyan-600 transition-colors duration-300 border border-white/30 group-hover:border-cyan-400">
+                                <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" class="relative w-full custom-h-120 custom-sm-h-160 custom-lg-h-200 custom-rounded-1-5rem overflow-hidden group block shadow-md hover:shadow-xl transition-shadow duration-500 border border-cyan-400">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex5-interior-6-yd0bq7dwjki2vqwz-mp84nv1zw8hwGV83.jpg" alt="Interior" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out mirror-rhd">
+                        <div class="absolute inset-0 custom-bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
+                        <div class="absolute inset-0 p-6 md:p-8 flex items-end justify-between">
+                            <div>
+                                <p class="text-cyan-400 text-[10px] uppercase font-bold tracking-widest mb-1 group-hover:text-cyan-300 transition-colors drop-shadow-md">Currently Viewing</p>
+                                <h3 class="text-white font-geely text-2xl md:text-4xl uppercase tracking-tighter drop-shadow-md">Interior</h3>
+                            </div>
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-cyan-600 backdrop-blur-md flex items-center justify-center text-white border border-cyan-400 transition-colors duration-300">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="{{ route('models.ex5.specification') }}" class="relative w-full custom-h-120 custom-sm-h-160 custom-lg-h-200 custom-rounded-1-5rem overflow-hidden group block shadow-md hover:shadow-[0_20px_40px_rgba(34,211,238,0.2)] transition-all duration-500 border border-white/10 hover:border-cyan-400/50">
+                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/ied-tF2sW5R0UW8pMCMV.webp" alt="Specification" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out">
+                        <div class="absolute inset-0 custom-bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
+                        <div class="absolute inset-0 p-6 md:p-8 flex items-end justify-between">
+                            <div>
+                                <p class="text-gray-400 text-[10px] uppercase font-bold tracking-widest mb-1 group-hover:text-cyan-300 transition-colors">Learn More</p>
+                                <h3 class="text-white font-geely text-2xl md:text-4xl uppercase tracking-tighter drop-shadow-md">Specification</h3>
+                            </div>
+                            <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-cyan-600 transition-colors duration-300 border border-white/30 group-hover:border-cyan-400">
+                                <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="order-1 lg:order-2 lg:col-span-5 flex flex-col gap-8 reveal-right delay-200 w-full">
+                    
+                    <div class="glass-panel border border-white/10 p-6 md:p-8 custom-rounded-1-5rem custom-md-rounded-2rem flex flex-col shadow-2xl relative overflow-hidden group hover:border-cyan-400/50 transition-colors duration-500">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/20 rounded-full custom-blur-40 group-hover:bg-cyan-400/30 transition-colors duration-500 pointer-events-none"></div>
+
+                        <h4 class="text-white font-geely text-2xl md:text-3xl mb-1 relative z-10 drop-shadow-md">Dimensions</h4>
+                        <p class="text-gray-400 text-[10px] md:text-xs font-bold tracking-widest uppercase mb-8 relative z-10">(in milimeters)</p>
+                        
+                        <div class="grid grid-cols-2 gap-6 md:gap-8 relative z-10 mb-4">
+                            <div class="border-l-2 border-cyan-500 pl-4 group-hover:border-cyan-400 transition-colors">
+                                <p class="text-gray-400 text-[10px] uppercase tracking-wider mb-1">Length</p>
+                                <p class="font-geely text-3xl md:text-4xl text-white drop-shadow-md">4615</p>
+                            </div>
+                            <div class="border-l-2 border-cyan-500 pl-4 group-hover:border-cyan-400 transition-colors">
+                                <p class="text-gray-400 text-[10px] uppercase tracking-wider mb-1">Width</p>
+                                <p class="font-geely text-3xl md:text-4xl text-white drop-shadow-md">1901</p>
+                            </div>
+                            <div class="border-l-2 border-cyan-500 pl-4 group-hover:border-cyan-400 transition-colors">
+                                <p class="text-gray-400 text-[10px] uppercase tracking-wider mb-1">Height</p>
+                                <p class="font-geely text-3xl md:text-4xl text-white drop-shadow-md">1670</p>
+                            </div>
+                            <div class="border-l-2 border-cyan-500 pl-4 group-hover:border-cyan-400 transition-colors">
+                                <p class="text-gray-400 text-[10px] uppercase tracking-wider mb-1">Wheelbase</p>
+                                <p class="font-geely text-3xl md:text-4xl text-white drop-shadow-md">2750</p>
+                            </div>
+                        </div>
+
+                        <div class="w-full relative mt-8 mix-blend-screen opacity-80 group-hover:opacity-100 transition-opacity duration-500">
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/sketch-ex5-1-r25s8xkUhZrQbzAj.webp" alt="Geely EX5 Sketch" loading="lazy" class="w-full h-auto object-contain invert">
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-3 w-full">
+                        <a href="#" class="btn-shimmer w-full py-4 md:py-5 rounded-full bg-white text-black font-bold text-[10px] md:text-xs tracking-[0.2em] uppercase text-center hover:scale-[1.02] transition-transform duration-300 shadow-[0_10px_30px_rgba(255,255,255,0.15)]">
+                            Show Full Specs
+                        </a>
+                        <div class="flex flex-col sm:flex-row gap-3 w-full">
+                            <a href="#" class="w-full sm:w-1/2 py-3 md:py-4 rounded-full border border-white/20 glass-panel text-white font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-center hover:bg-white/10 hover:border-white/40 transition-colors duration-300 flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                                Brochure
+                            </a>
+                            <a href="#" class="w-full sm:w-1/2 py-3 md:py-4 rounded-full border border-white/20 glass-panel text-white font-bold text-[9px] md:text-[10px] tracking-widest uppercase text-center hover:bg-white/10 hover:border-white/40 transition-colors duration-300 flex items-center justify-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                Owner's Manual
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
 </x-layouts.app>

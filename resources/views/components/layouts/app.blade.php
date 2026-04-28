@@ -2,15 +2,14 @@
 <html lang="id" class="scroll-smooth">
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNRZND8DXE"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=GT-W6JZKWDR"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-RNRZND8DXE');
       gtag('config', 'GT-W6JZKWDR');
+      gtag('config', 'G-RNRZND8DXE');
     </script>
 
     <meta charset="UTF-8">

@@ -624,7 +624,7 @@
 
     <div class="relative w-full pb-10 bg-[#030712]">
         
-        <div class="sticky top-[calc(50vh-28.125vw)] md:top-0 w-full aspect-video md:aspect-auto md:h-[100vh] overflow-hidden z-0 flex items-center justify-center">
+        <div class="sticky top-0 w-full h-[100vh] overflow-hidden z-0 flex items-center justify-center">
             <video autoplay muted loop playsinline aria-label="Teknologi EM-i Hybrid Geely" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-lighten">
                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely---coming-soon-starray-em-i---geely-epping-1080p-h264-YZ9EbbbjRws55ErL.mp4" type="video/mp4">
             </video>
@@ -632,7 +632,7 @@
             <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#030712] to-transparent pointer-events-none z-10"></div>
         </div>
 
-        <section class="mt-[40vh] md:mt-[70vh] py-16 md:py-24 lg:py-32 bg-[#030712] relative z-30 min-h-[100vh] rounded-t-[2rem] md:rounded-t-[3rem] border-t-[3px] border-emerald-500 shadow-none">
+        <section class="mt-[60vh] md:mt-[70vh] py-16 md:py-24 lg:py-32 bg-[#030712] relative z-30 min-h-[100vh] rounded-t-[2rem] md:rounded-t-[3rem] border-t-[3px] border-emerald-500 shadow-none">
             
             <div class="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-20 lg:gap-y-12 items-center lg:items-start">
                 

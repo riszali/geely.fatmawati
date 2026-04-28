@@ -335,8 +335,7 @@
         </div>
     </section>
 
-    <!-- Mengamankan z-index section sebelumnya agar transisi scroll sempurna -->
-    <section class="py-24 relative z-10 overflow-hidden flex items-center justify-center min-h-[60vh] bg-[#030712]">
+    <section class="py-24 relative overflow-hidden flex items-center justify-center min-h-[60vh] bg-[#030712]">
         <div class="absolute inset-0 z-0">
             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/2400x0-14-mxB2lNnxMqfjr7pG.webp" alt="Layanan Pembiayaan Kredit Dealer Geely Fatmawati" class="w-full h-full object-cover opacity-50">
             <div class="absolute inset-0 bg-gradient-to-r from-[#030712]/90 via-emerald-900/40 to-[#030712]/90"></div>
@@ -360,43 +359,42 @@
         </div>
     </section>
 
-    <!-- SECTION STICKY KESEIMBANGAN SEMPURNA: Dioptimalkan untuk Mobile -->
-    <section class="py-10 sm:py-16 lg:py-32 bg-[#030712] sticky top-0 z-0 overflow-hidden border-t border-white/5 min-h-[100svh] flex flex-col justify-center">
+    <section class="py-24 lg:py-32 bg-[#030712] relative overflow-hidden border-t border-white/5">
         <div class="absolute top-32 right-[-10%] w-[600px] h-[600px] ambient-glow-emerald opacity-40 z-0"></div>
         <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] ambient-glow-emerald opacity-40 z-0"></div>
 
-        <div class="max-w-[1600px] w-full mx-auto px-4 sm:px-6 md:px-12 lg:px-16 relative z-10">
+        <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-16 items-center lg:items-stretch">
                 
                 <div class="lg:col-span-7 order-1 lg:order-2 reveal-right h-full relative z-10">
-                    <div class="glass-island rounded-[1.5rem] sm:rounded-[2rem] p-1.5 sm:p-2 relative h-[38vh] sm:h-[45vh] lg:h-full lg:min-h-[600px] overflow-hidden">
-                        <div class="w-full h-full rounded-[1.2rem] sm:rounded-[1.5rem] overflow-hidden relative">
+                    <div class="glass-island rounded-[2rem] p-2 relative h-[50vh] lg:h-full lg:min-h-[600px] overflow-hidden">
+                        <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative">
                             <video autoplay muted loop playsinline aria-label="Geely EX5 Video Showcase" class="absolute inset-0 w-full h-full object-cover">
                                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/say-hi-to-the-geely-ex5---geely-auto-uk-1080p-h264-_1-Sz3UdvLVUW0EehYY.mp4" type="video/mp4">
                             </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-[#030712]/90 via-[#030712]/40 to-transparent"></div>
-                            <div class="absolute bottom-4 sm:bottom-8 left-5 sm:left-8 pr-5">
-                                <span class="text-emerald-400 text-[9px] sm:text-[10px] tracking-[0.3em] font-bold uppercase block mb-1.5 sm:mb-2 drop-shadow-md">Flyme Auto</span>
-                                <h4 class="font-geely text-2xl sm:text-3xl md:text-4xl uppercase tracking-tight text-white drop-shadow-lg leading-none">Future in Motion.</h4>
+                            <div class="absolute bottom-20 lg:bottom-8 left-6 lg:left-8 pr-6">
+                                <span class="text-emerald-400 text-[10px] tracking-[0.3em] font-bold uppercase block mb-2 drop-shadow-md">Flyme Auto</span>
+                                <h4 class="font-geely text-2xl md:text-4xl uppercase tracking-tight text-white drop-shadow-lg leading-none">Future in Motion.</h4>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="lg:col-span-5 order-2 lg:order-1 reveal-left relative z-20 -mt-10 sm:-mt-16 lg:mt-0 mx-3 sm:mx-8 lg:mx-0 lg:h-full">
-                    <div class="glass-island p-6 sm:p-8 md:p-12 lg:p-14 rounded-[2rem] sm:rounded-[3rem] shadow-[0_-20px_40px_-15px_rgba(0,0,0,0.5)] lg:shadow-none bg-[#030712]/80 lg:bg-transparent backdrop-blur-3xl lg:h-full flex flex-col justify-center">
-                        <div class="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 w-fit">
-                            <span class="text-emerald-400 text-[8px] sm:text-[9px] font-bold tracking-[0.4em] uppercase">Redefining Joyful Rides</span>
+                <div class="lg:col-span-5 order-2 lg:order-1 reveal-left relative z-20 -mt-16 sm:-mt-24 lg:mt-0 mx-2 sm:mx-8 lg:mx-0 lg:h-full">
+                    <div class="glass-island p-8 md:p-12 lg:p-14 rounded-[3rem] shadow-[0_-20px_40px_-15px_rgba(0,0,0,0.5)] lg:shadow-none bg-[#030712]/80 lg:bg-transparent backdrop-blur-3xl lg:h-full flex flex-col justify-center">
+                        <div class="inline-flex items-center gap-3 mb-6 px-5 py-2.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 w-fit">
+                            <span class="text-emerald-400 text-[9px] font-bold tracking-[0.4em] uppercase">Redefining Joyful Rides</span>
                         </div>
                         
-                        <h2 class="font-geely text-3xl sm:text-4xl md:text-5xl uppercase tracking-tighter text-white mb-4 sm:mb-6 leading-[1.1]">
+                        <h2 class="font-geely text-3xl sm:text-4xl md:text-5xl uppercase tracking-tighter text-white mb-6 leading-[1.1]">
                             Keseimbangan <br> <span class="text-gradient-premium">Sempurna</span>
                         </h2>
                         
-                        <div class="space-y-3 sm:space-y-4 text-gray-400 text-xs sm:text-sm md:text-base font-light leading-relaxed">
-                            <p>Geely EX5 hadir sebagai pilihan terbaik bagi Anda yang mencari SUV dengan performa tangguh, desain elegan, serta teknologi canggih.</p>
-                            <p>Desain eksterior modern aerodinamis menawarkan efisiensi optimal. Interior dirancang untuk kenyamanan maksimal dengan layar cerdas.</p>
-                            <p class="hidden sm:block">Dilengkapi sistem keamanan tingkat tinggi seperti Adaptive Cruise Control dan Blind Spot Monitoring untuk perlindungan ekstra.</p>
+                        <div class="space-y-4 text-gray-400 text-sm md:text-base font-light leading-relaxed">
+                            <p>Geely EX5 hadir sebagai pilihan terbaik bagi Anda yang mencari SUV dengan performa tangguh, desain elegan, serta teknologi canggih. Ditenagai mesin efisien dan fitur keselamatan lengkap.</p>
+                            <p>Desain eksterior modern aerodinamis menawarkan efisiensi optimal. Interior dirancang untuk kenyamanan maksimal dengan material premium dan layar infotainment cerdas.</p>
+                            <p>Dilengkapi sistem keamanan tingkat tinggi seperti Adaptive Cruise Control dan Blind Spot Monitoring untuk perlindungan ekstra.</p>
                         </div>
                     </div>
                 </div>
@@ -405,8 +403,7 @@
         </div>
     </section>
 
-    <!-- Ditambahkan z-10 agar menutupi / meluncur mulus menimpa section sticky sebelumnya -->
-    <section class="py-24 lg:py-32 relative z-10 w-full overflow-hidden bg-[#030712]">
+    <section class="py-24 lg:py-32 relative w-full overflow-hidden bg-[#030712]">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1669295384050-a1d4357bd1d7?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Abstract Topographic Background" class="w-full h-full object-cover opacity-30 mix-blend-lighten">
             <div class="absolute inset-0 bg-gradient-to-b from-[#030712] via-transparent to-[#030712] opacity-90"></div>
@@ -631,11 +628,11 @@
             <video autoplay muted loop playsinline aria-label="Teknologi EM-i Hybrid Geely" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-lighten">
                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely---coming-soon-starray-em-i---geely-epping-1080p-h264-YZ9EbbbjRws55ErL.mp4" type="video/mp4">
             </video>
-            <div class="absolute inset-x-0 top-0 h-16 md:h-32 bg-gradient-to-b from-[#030712] to-transparent pointer-events-none z-10"></div>
-            <div class="absolute inset-x-0 bottom-0 h-16 md:h-32 bg-gradient-to-t from-[#030712] to-transparent pointer-events-none z-10"></div>
+            <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#030712] to-transparent pointer-events-none z-10"></div>
+            <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#030712] to-transparent pointer-events-none z-10"></div>
         </div>
 
-        <section class="mt-[80vh] md:mt-[70vh] py-16 md:py-24 lg:py-32 bg-[#030712] relative z-30 min-h-[100vh] rounded-t-[2rem] md:rounded-t-[3rem] border-t-[3px] border-emerald-500 shadow-none">
+        <section class="mt-[40vh] md:mt-[70vh] py-16 md:py-24 lg:py-32 bg-[#030712] relative z-30 min-h-[100vh] rounded-t-[2rem] md:rounded-t-[3rem] border-t-[3px] border-emerald-500 shadow-none">
             
             <div class="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-20 lg:gap-y-12 items-center lg:items-start">
                 

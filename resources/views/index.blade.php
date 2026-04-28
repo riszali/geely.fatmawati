@@ -335,7 +335,8 @@
         </div>
     </section>
 
-    <section class="py-24 relative overflow-hidden flex items-center justify-center min-h-[60vh] bg-[#030712]">
+    <!-- Mengamankan z-index section sebelumnya agar transisi scroll sempurna -->
+    <section class="py-24 relative z-10 overflow-hidden flex items-center justify-center min-h-[60vh] bg-[#030712]">
         <div class="absolute inset-0 z-0">
             <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/2400x0-14-mxB2lNnxMqfjr7pG.webp" alt="Layanan Pembiayaan Kredit Dealer Geely Fatmawati" class="w-full h-full object-cover opacity-50">
             <div class="absolute inset-0 bg-gradient-to-r from-[#030712]/90 via-emerald-900/40 to-[#030712]/90"></div>
@@ -359,11 +360,14 @@
         </div>
     </section>
 
-    <section class="py-24 lg:py-32 bg-[#030712] relative overflow-hidden border-t border-white/5">
+    <!-- SECTION STICKY KESEIMBANGAN SEMPURNA: 
+         Hanya ditambahkan fungsi sticky top-0, z-0, dan min-h-[100svh] 
+         untuk efek tumpuk scroll tanpa mengubah hierarki/susunan kolom dalam sama sekali -->
+    <section class="py-24 lg:py-32 bg-[#030712] sticky top-0 z-0 overflow-hidden border-t border-white/5 min-h-[100svh] flex flex-col justify-center">
         <div class="absolute top-32 right-[-10%] w-[600px] h-[600px] ambient-glow-emerald opacity-40 z-0"></div>
         <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] ambient-glow-emerald opacity-40 z-0"></div>
 
-        <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
+        <div class="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-16 items-center lg:items-stretch">
                 
                 <div class="lg:col-span-7 order-1 lg:order-2 reveal-right h-full relative z-10">
@@ -403,7 +407,8 @@
         </div>
     </section>
 
-    <section class="py-24 lg:py-32 relative w-full overflow-hidden bg-[#030712]">
+    <!-- Ditambahkan z-10 agar menutupi / meluncur mulus menimpa section sticky sebelumnya -->
+    <section class="py-24 lg:py-32 relative z-10 w-full overflow-hidden bg-[#030712]">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1669295384050-a1d4357bd1d7?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Abstract Topographic Background" class="w-full h-full object-cover opacity-30 mix-blend-lighten">
             <div class="absolute inset-0 bg-gradient-to-b from-[#030712] via-transparent to-[#030712] opacity-90"></div>
@@ -628,11 +633,11 @@
             <video autoplay muted loop playsinline aria-label="Teknologi EM-i Hybrid Geely" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-lighten">
                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely---coming-soon-starray-em-i---geely-epping-1080p-h264-YZ9EbbbjRws55ErL.mp4" type="video/mp4">
             </video>
-            <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#030712] to-transparent pointer-events-none z-10"></div>
-            <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#030712] to-transparent pointer-events-none z-10"></div>
+            <div class="absolute inset-x-0 top-0 h-16 md:h-32 bg-gradient-to-b from-[#030712] to-transparent pointer-events-none z-10"></div>
+            <div class="absolute inset-x-0 bottom-0 h-16 md:h-32 bg-gradient-to-t from-[#030712] to-transparent pointer-events-none z-10"></div>
         </div>
 
-        <section class="mt-[40vh] md:mt-[70vh] py-16 md:py-24 lg:py-32 bg-[#030712] relative z-30 min-h-[100vh] rounded-t-[2rem] md:rounded-t-[3rem] border-t-[3px] border-emerald-500 shadow-none">
+        <section class="mt-[80vh] md:mt-[70vh] py-16 md:py-24 lg:py-32 bg-[#030712] relative z-30 min-h-[100vh] rounded-t-[2rem] md:rounded-t-[3rem] border-t-[3px] border-emerald-500 shadow-none">
             
             <div class="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-x-20 lg:gap-y-12 items-center lg:items-start">
                 

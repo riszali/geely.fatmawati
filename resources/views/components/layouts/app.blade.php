@@ -21,12 +21,12 @@
     <title>@yield('title', 'Geely Fatmawati | Innovation for Tomorrow')</title>
     <meta name="description" content="@yield('meta_description', 'Website resmi Dealer Geely Fatmawati Jakarta Selatan. Menghadirkan kendaraan cerdas dengan teknologi masa depan.')">
     <meta name="keywords" content="Geely Fatmawati, Geely Jakarta Selatan, Geely EX5, Geely Starray, Geely EX2, Mobil Listrik Jakarta, SUV Geely">
-    <link rel="canonical" href="{{ url()->current() }}">
+    <link rel="canonical" href="https://geelyfatmawati.id{{ request()->getPathInfo() === '/' ? '' : request()->getPathInfo() }}">
 
     <meta property="og:site_name" content="Geely Fatmawati">
     <meta property="og:title" content="@yield('title', 'Geely Fatmawati')">
     <meta property="og:description" content="@yield('meta_description', 'Inovasi masa depan otomotif di Jakarta Selatan bersama Geely Fatmawati.')">
-    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:url" content="https://geelyfatmawati.id{{ request()->getPathInfo() === '/' ? '' : request()->getPathInfo() }}">
     <meta property="og:type" content="website">
     <meta property="og:image" content="@yield('og_image', asset('images/og-default.jpg'))">
 

@@ -622,15 +622,14 @@
         </div>
     </section>
 
-    <!-- BAGIAN YANG DIPERBAIKI: STICKY DENGAN ASPECT RATIO 16:9 DI HP -->
     <div class="relative w-full pb-10 bg-[#030712]">
         
-        <div class="sticky top-0 w-full h-[100vh] overflow-hidden z-0 flex items-center justify-center">
-            <video autoplay muted loop playsinline aria-label="Teknologi EM-i Hybrid Geely" class="w-full aspect-video md:h-full object-cover opacity-60 mix-blend-lighten">
+        <div class="sticky top-[calc(50vh-28.125vw)] md:top-0 w-full aspect-video md:aspect-auto md:h-[100vh] overflow-hidden z-0 flex items-center justify-center">
+            <video autoplay muted loop playsinline aria-label="Teknologi EM-i Hybrid Geely" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-lighten">
                 <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely---coming-soon-starray-em-i---geely-epping-1080p-h264-YZ9EbbbjRws55ErL.mp4" type="video/mp4">
             </video>
-            <div class="absolute inset-x-0 top-0 h-16 md:h-32 bg-gradient-to-b from-[#030712] to-transparent pointer-events-none z-10"></div>
-            <div class="absolute inset-x-0 bottom-0 h-16 md:h-32 bg-gradient-to-t from-[#030712] to-transparent pointer-events-none z-10"></div>
+            <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#030712] to-transparent pointer-events-none z-10"></div>
+            <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#030712] to-transparent pointer-events-none z-10"></div>
         </div>
 
         <section class="mt-[40vh] md:mt-[70vh] py-16 md:py-24 lg:py-32 bg-[#030712] relative z-30 min-h-[100vh] rounded-t-[2rem] md:rounded-t-[3rem] border-t-[3px] border-emerald-500 shadow-none">
@@ -737,7 +736,7 @@
         </div>
     </section>
 
-    <!-- SECTION SLIDER YANG SUDAH DIPINDAHKAN KE BAWAH -->
+    <!-- SECTION SLIDER -->
     <section class="relative w-full overflow-hidden group bg-[#030712]">
         
         <button id="slide-prev" class="slider-nav-btn absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-50 hidden md:flex items-center justify-center w-14 h-14 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white hover:bg-emerald-500 hover:border-emerald-400 hover:scale-110 shadow-[0_10px_30px_rgba(0,0,0,0.5)] opacity-0 group-hover:opacity-100 disabled:opacity-0 disabled:pointer-events-none transition-all duration-300">
@@ -749,58 +748,8 @@
 
         <div id="section-slider" class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth w-full">
             
-            <div id="grand-opening" class="w-full flex-shrink-0 snap-center pt-20 pb-16 lg:pt-24 lg:pb-20 relative bg-[#f8fafc] overflow-hidden flex flex-col justify-start">
-                <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-emerald-100/40 to-emerald-200/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
-                <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-gradient-to-tr from-teal-100/40 to-emerald-100/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
-
-                <div class="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 relative z-10">
-                    <div class="text-center max-w-3xl mx-auto mb-10 md:mb-12 reveal-up">
-                        <span class="text-emerald-600 text-[10px] font-bold tracking-[0.4em] uppercase block mb-3 md:mb-4">Milestone Moment</span>
-                        <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl uppercase tracking-tighter text-gray-900 leading-[1.1] mb-4 md:mb-6 drop-shadow-sm">
-                            Grand <span class="text-emerald-500">Opening</span>
-                        </h2>
-                        <p class="text-gray-600 text-sm md:text-base leading-relaxed font-medium">
-                            Menandai babak baru mobilitas premium di Jakarta Selatan. Geely Fatmawati resmi beroperasi penuh untuk menghadirkan layanan kelas dunia, inovasi mutakhir, dan pengalaman kendaraan listrik yang tak terlupakan.
-                        </p>
-                    </div>
-
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 h-auto md:h-[450px] lg:h-[500px]">
-                        <div class="col-span-2 md:col-span-2 row-span-2 glass-island-light rounded-[2rem] p-2 relative reveal-up img-container shadow-sm" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-diresmikan-sO5Dd7FcvFkX3wX5.jpg', 'Grand Opening Geely Fatmawati', true)">
-                            <div class="w-full h-[300px] md:h-full rounded-[1.5rem] overflow-hidden relative">
-                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-diresmikan-sO5Dd7FcvFkX3wX5.jpg" alt="Peresmian Dealer Showroom Geely Fatmawati Jakarta Selatan" class="absolute inset-0 w-full h-full object-cover object-center">
-                                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent"></div>
-                                <div class="absolute bottom-6 left-6 right-6">
-                                    <span class="text-emerald-400 text-[10px] font-bold tracking-[0.3em] uppercase mb-1 block drop-shadow-md">Celebration</span>
-                                    <h3 class="font-geely text-2xl md:text-4xl text-white uppercase tracking-tight">Resmi Beroperasi</h3>
-                                </div>
-                                <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/40 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-span-2 md:col-span-2 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-left delay-100 img-container shadow-sm" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-3-RgnRXLNbpMYB75ky.webp', 'Suasana Kemeriahan Grand Opening', true)">
-                            <div class="w-full h-[200px] md:h-full rounded-[1.5rem] overflow-hidden relative">
-                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-3-RgnRXLNbpMYB75ky.webp" alt="Suasana Event Peluncuran Dealer Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center">
-                            </div>
-                        </div>
-
-                        <div class="col-span-1 md:col-span-1 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-up delay-200 img-container shadow-sm" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-7-G2FMRCtHFFy6nvBp.jpeg', 'Penerimaan Pelanggan Perdana', true)">
-                            <div class="w-full h-[200px] md:h-full rounded-[1.5rem] overflow-hidden relative">
-                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-7-G2FMRCtHFFy6nvBp.jpeg" alt="Layanan Pelanggan Dealer Resmi Geely" class="absolute inset-0 w-full h-full object-cover object-[center_60%]">
-                            </div>
-                        </div>
-
-                        <div class="col-span-1 md:col-span-1 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-up delay-300 img-container shadow-sm" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/p1010662-scaled-4y1qGH08npg8QHKO.jpg', 'Lini Kendaraan Masa Depan', true)">
-                            <div class="w-full h-[200px] md:h-full rounded-[1.5rem] overflow-hidden relative">
-                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/p1010662-scaled-4y1qGH08npg8QHKO.jpg" alt="Mobil Display Geely di Showroom Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="experience" class="w-full flex-shrink-0 snap-center pt-20 pb-16 lg:pt-24 lg:pb-20 relative bg-[#030712] overflow-hidden border-l border-white/5 flex flex-col justify-start">
+            <!-- ITEM PERTAMA SEKARANG: EXPERIENCE / OASIS OF INNOVATION -->
+            <div id="experience" class="w-full flex-shrink-0 snap-center pt-20 pb-16 lg:pt-24 lg:pb-20 relative bg-[#030712] overflow-hidden flex flex-col justify-start">
                 <div class="absolute right-0 bottom-0 w-[800px] h-[800px] ambient-glow-emerald opacity-30 pointer-events-none"></div>
                 <div class="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 relative z-10">
                     
@@ -865,6 +814,58 @@
                                     <h4 class="font-geely text-xl md:text-2xl text-white uppercase tracking-tight mb-2">VIP Concierge</h4>
                                     <p class="text-gray-400 text-xs font-light leading-relaxed">Asisten pribadi terdedikasi perawatan.</p>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM KEDUA SEKARANG: GRAND OPENING -->
+            <div id="grand-opening" class="w-full flex-shrink-0 snap-center pt-20 pb-16 lg:pt-24 lg:pb-20 relative bg-[#f8fafc] overflow-hidden flex flex-col justify-start">
+                <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-emerald-100/40 to-emerald-200/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
+                <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-gradient-to-tr from-teal-100/40 to-emerald-100/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
+
+                <div class="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 relative z-10">
+                    <div class="text-center max-w-3xl mx-auto mb-10 md:mb-12 reveal-up">
+                        <span class="text-emerald-600 text-[10px] font-bold tracking-[0.4em] uppercase block mb-3 md:mb-4">Milestone Moment</span>
+                        <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl uppercase tracking-tighter text-gray-900 leading-[1.1] mb-4 md:mb-6 drop-shadow-sm">
+                            Grand <span class="text-emerald-500">Opening</span>
+                        </h2>
+                        <p class="text-gray-600 text-sm md:text-base leading-relaxed font-medium">
+                            Menandai babak baru mobilitas premium di Jakarta Selatan. Geely Fatmawati resmi beroperasi penuh untuk menghadirkan layanan kelas dunia, inovasi mutakhir, dan pengalaman kendaraan listrik yang tak terlupakan.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 h-auto md:h-[450px] lg:h-[500px]">
+                        <div class="col-span-2 md:col-span-2 row-span-2 glass-island-light rounded-[2rem] p-2 relative reveal-up img-container shadow-sm" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-diresmikan-sO5Dd7FcvFkX3wX5.jpg', 'Grand Opening Geely Fatmawati', true)">
+                            <div class="w-full h-[300px] md:h-full rounded-[1.5rem] overflow-hidden relative">
+                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-diresmikan-sO5Dd7FcvFkX3wX5.jpg" alt="Peresmian Dealer Showroom Geely Fatmawati Jakarta Selatan" class="absolute inset-0 w-full h-full object-cover object-center">
+                                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/20 to-transparent"></div>
+                                <div class="absolute bottom-6 left-6 right-6">
+                                    <span class="text-emerald-400 text-[10px] font-bold tracking-[0.3em] uppercase mb-1 block drop-shadow-md">Celebration</span>
+                                    <h3 class="font-geely text-2xl md:text-4xl text-white uppercase tracking-tight">Resmi Beroperasi</h3>
+                                </div>
+                                <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/40 opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-span-2 md:col-span-2 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-left delay-100 img-container shadow-sm" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-3-RgnRXLNbpMYB75ky.webp', 'Suasana Kemeriahan Grand Opening', true)">
+                            <div class="w-full h-[200px] md:h-full rounded-[1.5rem] overflow-hidden relative">
+                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-3-RgnRXLNbpMYB75ky.webp" alt="Suasana Event Peluncuran Dealer Geely Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center">
+                            </div>
+                        </div>
+
+                        <div class="col-span-1 md:col-span-1 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-up delay-200 img-container shadow-sm" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-7-G2FMRCtHFFy6nvBp.jpeg', 'Penerimaan Pelanggan Perdana', true)">
+                            <div class="w-full h-[200px] md:h-full rounded-[1.5rem] overflow-hidden relative">
+                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-fatmawati-7-G2FMRCtHFFy6nvBp.jpeg" alt="Layanan Pelanggan Dealer Resmi Geely" class="absolute inset-0 w-full h-full object-cover object-[center_60%]">
+                            </div>
+                        </div>
+
+                        <div class="col-span-1 md:col-span-1 row-span-1 glass-island-light rounded-[2rem] p-2 relative reveal-up delay-300 img-container shadow-sm" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/p1010662-scaled-4y1qGH08npg8QHKO.jpg', 'Lini Kendaraan Masa Depan', true)">
+                            <div class="w-full h-[200px] md:h-full rounded-[1.5rem] overflow-hidden relative">
+                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/p1010662-scaled-4y1qGH08npg8QHKO.jpg" alt="Mobil Display Geely di Showroom Fatmawati" class="absolute inset-0 w-full h-full object-cover object-center">
                             </div>
                         </div>
                     </div>

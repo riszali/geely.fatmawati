@@ -15,6 +15,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="T1Th8NLBf2RUJmMnPZapZHi0TrxLDf60dRpJLEQulOk" />
     
+    <!-- Corporate Identity & Mobile Browser Branding -->
+    <meta name="theme-color" content="#050505">
+    <meta name="author" content="Geely Fatmawati">
+    <meta name="publisher" content="Geely Indonesia">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}?v={{ time() }}">
     <link rel="apple-touch-icon" href="{{ asset('favicon.png') }}?v={{ time() }}">
 
@@ -23,6 +29,8 @@
     <meta name="keywords" content="Geely Fatmawati, Geely Jakarta Selatan, Geely EX5, Geely Starray, Geely EX2, Mobil Listrik Jakarta, SUV Geely">
     <link rel="canonical" href="https://geelyfatmawati.id{{ request()->getPathInfo() === '/' ? '' : request()->getPathInfo() }}">
 
+    <!-- Advanced Open Graph / Social Media -->
+    <meta property="og:locale" content="id_ID">
     <meta property="og:site_name" content="Geely Fatmawati">
     <meta property="og:title" content="@yield('title', 'Geely Fatmawati')">
     <meta property="og:description" content="@yield('meta_description', 'Inovasi masa depan otomotif di Jakarta Selatan bersama Geely Fatmawati.')">
@@ -31,12 +39,38 @@
     <meta property="og:image" content="@yield('og_image', asset('images/og-default.jpg'))">
 
     <meta name="twitter:card" content="summary_large_image">
+    <!-- Solusi: Tambahkan @@ agar tidak dibaca sebagai directive blade -->
+    <meta name="twitter:site" content="@@geelyfatmawati.id">
     <meta name="twitter:title" content="@yield('title', 'Geely Fatmawati')">
     <meta name="twitter:description" content="@yield('meta_description')">
     <meta name="twitter:image" content="@yield('og_image', asset('images/og-default.jpg'))">
 
+    <!-- Global Corporate JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "Organization",
+      "name": "Geely Fatmawati",
+      "url": "https://geelyfatmawati.id",
+      "logo": "https://geelyfatmawati.id/favicon.png",
+      "sameAs": [
+        "https://www.instagram.com/geelyfatmawati.id",
+        "https://www.facebook.com/geelyfatmawati.id",
+        "https://www.tiktok.com/@@geelyfatmawati.id",
+        "https://www.youtube.com/@@geelyfatmawati.id"
+      ],
+      "contactPoint": {
+        "@@type": "ContactPoint",
+        "telephone": "+6285772087335",
+        "contactType": "customer service",
+        "areaServed": "ID",
+        "availableLanguage": "Indonesian"
+      }
+    }
+    </script>
+
+    <!-- Font Preloading for Performance -->
     <link rel="preload" href="https://assets.zyrosite.com/Yle46KEPN6IkVONg/GEELY Bold Regular.woff2" as="font" type="font/woff2" crossorigin>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">

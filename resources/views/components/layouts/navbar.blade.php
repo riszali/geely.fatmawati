@@ -82,7 +82,8 @@
             </div>
 
             <div class="flex items-center lg:hidden relative z-[60]">
-                <button id="mobile-menu-btn" class="relative w-11 h-11 flex flex-col items-center justify-center gap-[4px] focus:outline-none z-[60] bg-white/40 backdrop-blur-xl border border-white/60 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:bg-white/60 transition-all duration-300">
+                <!-- DITAMBAHKAN aria-label="Toggle mobile menu" DI SINI -->
+                <button id="mobile-menu-btn" aria-label="Toggle mobile menu" class="relative w-11 h-11 flex flex-col items-center justify-center gap-[4px] focus:outline-none z-[60] bg-white/40 backdrop-blur-xl border border-white/60 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.08)] hover:bg-white/60 transition-all duration-300">
                     <span id="line-1" class="w-5 h-[2px] bg-gray-800 rounded-full transition-all duration-400 ease-in-out transform origin-center"></span>
                     <span id="line-2" class="w-5 h-[2px] bg-gray-800 rounded-full transition-all duration-300 ease-in-out transform origin-center"></span>
                     <span id="line-3" class="w-5 h-[2px] bg-gray-800 rounded-full transition-all duration-400 ease-in-out transform origin-center"></span>

@@ -39,7 +39,7 @@
         <div class="flex flex-col items-center mb-20">
             <a href="/" class="block group">
                 <img class="h-16 md:h-20 w-auto brightness-0 invert opacity-80 group-hover:opacity-100 transition-all duration-700 transform group-hover:scale-105 drop-shadow-[0_0_15px_rgba(34,211,238,0.2)] group-hover:drop-shadow-[0_0_25px_rgba(34,211,238,0.6)]" 
-                     src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-2023-logo-png_seeklogo-466890-vE98MawSY4Jx911O.png" 
+                     src="/images/logos-geely.png" 
                      alt="Geely Logo">
             </a>
             <div class="mt-6 h-px w-24 bg-gradient-to-r from-transparent via-gray-800 to-transparent"></div>
@@ -129,7 +129,7 @@
                     <p class="text-[10px] uppercase tracking-[0.3em] text-gray-300">powered by   |</p>
                     <a href="https://lundorimagine.com" target="_blank" class="block transform transition-transform group-hover:scale-105">
                         <img class="h-5 md:h-6 w-auto opacity-100 group-hover:opacity-100 transition-all duration-500 sharp-img-footer hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]" 
-                             src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/logo-pink-ma7HGZGFFvICMzRH.png" 
+                             src="/images/logo-lundor-white.png" 
                              alt="Lund'or Imagine Digital">
                     </a>
                 </div>

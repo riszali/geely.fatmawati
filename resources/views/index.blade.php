@@ -187,7 +187,7 @@
 <header class="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-[#030712] pt-28 pb-12 lg:pt-32 lg:pb-20">
     <div class="absolute inset-0 z-0">
         <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-60 mix-blend-lighten">
-            <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/say-hi-to-the-geely-ex5---geely-auto-uk-1080p-h264-_1-Sz3UdvLVUW0EehYY.mp4" type="video/mp4">
+            <source src="/videos/say-geely-ex5.mp4" type="video/mp4">
         </video>
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#030712_100%)]"></div>
     </div>
@@ -213,9 +213,11 @@
                             <div class="w-64 h-64 sm:w-72 sm:h-72 border border-white/10 rounded-full absolute animate-[spin_30s_linear_infinite]"></div>
                             <div class="w-48 h-48 sm:w-56 sm:h-56 border border-emerald-500/30 rounded-full absolute animate-[spin_20s_linear_infinite_reverse]"></div>
                             
-                            <div class="w-full transform z-10 p-[6px] rounded-[2rem] bg-white/5 border border-white/20 border-t-emerald-400/40 border-l-white/30 backdrop-blur-md shadow-[0_25px_50px_-12px_rgba(16,185,129,0.25)] relative">
+                            <div class="w-full z-10 p-[6px] rounded-[2rem] bg-white/5 border border-white/20 border-t-emerald-400/40 border-l-white/30 backdrop-blur-md shadow-[0_25px_50px_-12px_rgba(16,185,129,0.25)] relative">
                                 <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
-                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior-01-7JRFy88F1zfhn2Fx.webp" alt="Mobil Listrik Geely EX5 Warna Putih Jakarta Selatan" class="w-full h-auto rounded-[1.65rem] object-cover relative z-10 pointer-events-none drop-shadow-lg">
+                                <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative z-10 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                                    <img src="/images/exterior-01.webp" alt="Mobil Listrik Geely EX5 Warna Putih Jakarta Selatan" class="w-full h-auto object-cover block pointer-events-none">
+                                </div>
                             </div>
                         </div>
                         
@@ -235,9 +237,11 @@
                         <div class="w-72 h-72 border border-white/10 rounded-full absolute animate-[spin_30s_linear_infinite]"></div>
                         <div class="w-56 h-56 border border-emerald-500/30 rounded-full absolute animate-[spin_20s_linear_infinite_reverse]"></div>
                         
-                        <div class="w-[120%] max-w-none transform translate-x-10 scale-110 z-10 p-[6px] rounded-[2rem] bg-white/5 border border-white/20 border-t-emerald-400/40 border-l-white/30 backdrop-blur-md shadow-[0_25px_50px_-12px_rgba(16,185,129,0.25)] relative">
+                        <div class="w-full z-10 p-[6px] rounded-[2rem] bg-white/5 border border-white/20 border-t-emerald-400/40 border-l-white/30 backdrop-blur-md shadow-[0_25px_50px_-12px_rgba(16,185,129,0.25)] relative">
                             <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-white/10 to-transparent pointer-events-none"></div>
-                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior-01-7JRFy88F1zfhn2Fx.webp" alt="Tampilan Eksterior Depan Mobil Listrik Geely EX5 Jakarta" class="w-full h-auto rounded-[1.65rem] object-cover relative z-10 pointer-events-none drop-shadow-lg">
+                            <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative z-10 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+                                <img src="/images/exterior-01.webp" alt="Tampilan Eksterior Depan Mobil Listrik Geely EX5 Jakarta" class="w-full h-auto object-cover block pointer-events-none">
+                            </div>
                         </div>
                     </div>
 

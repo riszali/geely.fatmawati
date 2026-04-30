@@ -511,7 +511,7 @@
                 
                 <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-7 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col h-full" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/lp_ex2_02_indo-1jQVDabXPa2GTqAg.jpg', '01 // Exterior - Aero Stance')">
                     <div class="relative w-full h-[240px] sm:h-[280px] lg:h-[340px] rounded-[1.5rem] overflow-hidden mb-6 bg-gray-50/50 border border-gray-200/50 flex items-center justify-center p-2 sm:p-4 flex-shrink-0">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/lp_ex2_02_indo-1jQVDabXPa2GTqAg.jpg" class="w-full h-full object-contain transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Exterior EX2">
+                        <img src="/images/lp_ex2_02_indo.jpg" class="w-full h-full object-contain transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Exterior EX2">
                     </div>
                     <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
                         <div class="flex flex-col w-full h-full">
@@ -529,7 +529,7 @@
 
                 <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-5 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col h-full" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_color_ex2_02-1-wMrk98nhwyihCNmX.jpg', '02 // Cockpit - Digital Oasis')">
                     <div class="relative w-full h-[240px] sm:h-[280px] lg:h-[340px] rounded-[1.5rem] overflow-hidden mb-6 bg-gray-50/50 border border-gray-200/50 flex items-center justify-center p-2 sm:p-4 flex-shrink-0">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_color_ex2_02-1-wMrk98nhwyihCNmX.jpg" class="w-full h-full object-contain transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Interior EX2">
+                        <img src="/images/interior_color_ex2_02.jpg" class="w-full h-full object-contain transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Interior EX2">
                     </div>
                     <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
                         <div class="flex flex-col w-full h-full">
@@ -547,7 +547,7 @@
 
                 <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-5 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col h-full" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/gambar-10-driving-pleasure-geely-ex2-MJhRNhH2mxqA4wUU.webp', '03 // Lifestyle - Agility')">
                     <div class="relative w-full h-[240px] sm:h-[280px] lg:h-[340px] rounded-[1.5rem] overflow-hidden mb-6 bg-gray-50/50 border border-gray-200/50 flex items-center justify-center p-2 sm:p-4 flex-shrink-0">
-                        <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/gambar-10-driving-pleasure-geely-ex2-MJhRNhH2mxqA4wUU.webp" class="w-full h-full object-contain transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Lifestyle EX2">
+                        <img src="/images/driving-pleasure.webp" class="w-full h-full object-contain transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Lifestyle EX2">
                     </div>
                     <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
                         <div class="flex flex-col w-full h-full">
@@ -566,7 +566,7 @@
                 <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center lg:col-span-7 ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 flex flex-col h-full group">
                     <div class="relative w-full h-[240px] sm:h-[280px] lg:h-[340px] rounded-[1.5rem] overflow-hidden mb-6 bg-black/5 shadow-inner border border-gray-200/50 flex-shrink-0">
                         <video autoplay muted loop playsinline preload="auto" class="absolute inset-0 w-full h-full object-cover">
-                            <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/storage-Go9jWSFq0yGaDOkj.mp4" type="video/mp4">
+                            <source src="/videos/storage.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
@@ -605,7 +605,7 @@
             <div class="relative w-full aspect-video md:h-[650px] max-w-6xl mx-auto glass-island rounded-[2rem] p-2 flex items-center justify-center reveal-scale">
                 <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative z-10">
                     <video autoplay muted loop playsinline aria-label="Teknologi Platform GEA Geely" class="w-full h-full object-cover opacity-70 mix-blend-screen">
-                        <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-inside-the-gea-intelligent-electric-platform---geely-auto-720p-h264-tjCY49tcStbBVMrV.mp4" type="video/mp4">
+                        <source src="/videos/gea-platform.mp4" type="video/mp4">
                     </video>
                     <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#030712_100%)] opacity-80 pointer-events-none"></div>
                 </div>
@@ -641,7 +641,7 @@
         
         <div class="sticky top-[calc(50vh-28.125vw)] md:top-0 w-full aspect-video md:aspect-auto md:h-[100vh] overflow-hidden z-0 flex items-center justify-center">
             <video autoplay muted loop playsinline aria-label="Teknologi EM-i Hybrid Geely" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-lighten">
-                <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely---coming-soon-starray-em-i---geely-epping-1080p-h264-YZ9EbbbjRws55ErL.mp4" type="video/mp4">
+                <source src="/videos/starray-em-i.mp4" type="video/mp4">
             </video>
             <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#030712] to-transparent pointer-events-none z-10"></div>
             <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#030712] to-transparent pointer-events-none z-10"></div>

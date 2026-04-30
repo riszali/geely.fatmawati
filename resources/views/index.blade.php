@@ -182,6 +182,31 @@
         .slider-nav-btn {
             transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
         }
+
+        /* --- MARQUEE ETALASE SUSHI (SEAMLESS LOOP) --- */
+        @keyframes scroll-marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
+        .marquee-container {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+        }
+        .marquee-container:hover .animate-marquee {
+            animation-play-state: paused;
+        }
+        .animate-marquee {
+            display: flex;
+            min-width: max-content;
+            flex-shrink: 0;
+            /* Ubah angka 35s di bawah untuk mempercepat/memperlambat guliran */
+            animation: scroll-marquee 35s linear infinite;
+        }
+        .fade-edges {
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
     </style>
 
 <header class="relative z-10 min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-[#030712] pt-28 pb-12 lg:pt-32 lg:pb-20">
@@ -744,14 +769,10 @@
                 </div>
             </div>
             
-            <div class="text-center mt-2 flex md:hidden justify-center items-center gap-2 text-emerald-600 text-[9px] font-bold uppercase tracking-widest animate-pulse">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                Swipe to explore
-            </div>
         </div>
     </section>
 
-    <!-- SECTION SLIDER -->
+    <!-- SECTION SLIDER UTAMA (SHOWROOM) -->
     <section class="relative z-10 w-full overflow-hidden group bg-[#030712]">
         
         <button id="slide-prev" class="slider-nav-btn absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-50 hidden md:flex items-center justify-center w-14 h-14 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white hover:bg-emerald-500 hover:border-emerald-400 hover:scale-110 shadow-[0_10px_30px_rgba(0,0,0,0.5)] opacity-0 group-hover:opacity-100 disabled:opacity-0 disabled:pointer-events-none transition-all duration-300">
@@ -762,6 +783,7 @@
         </button>
 
         <div id="section-slider" class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth w-full">            
+            <!-- Slide 1: Experience -->
             <div id="experience" class="w-full flex-shrink-0 snap-center pt-20 pb-16 lg:pt-24 lg:pb-20 relative bg-[#030712] overflow-hidden flex flex-col justify-start">
                 <div class="absolute right-0 bottom-0 w-[800px] h-[800px] ambient-glow-emerald opacity-30 pointer-events-none"></div>
                 <div class="max-w-[1600px] w-full mx-auto px-6 md:px-12 lg:px-16 relative z-10">
@@ -833,7 +855,7 @@
                 </div>
             </div>
 
-
+            <!-- Slide 2: Grand Opening -->
             <div id="grand-opening" class="w-full flex-shrink-0 snap-center pt-20 pb-16 lg:pt-24 lg:pb-20 relative bg-[#f8fafc] overflow-hidden flex flex-col justify-start">
                 <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-emerald-100/40 to-emerald-200/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
                 <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-gradient-to-tr from-teal-100/40 to-emerald-100/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
@@ -856,9 +878,6 @@
                                 <div class="absolute bottom-6 left-6 right-6">
                                     <span class="text-emerald-400 text-[10px] font-bold tracking-[0.3em] uppercase mb-1 block drop-shadow-md">Celebration</span>
                                     <h3 class="font-geely text-2xl md:text-4xl text-white uppercase tracking-tight">Resmi Beroperasi</h3>
-                                </div>
-                                <div class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/40 opacity-0 group-hover:opacity-100 transition-opacity">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
                                 </div>
                             </div>
                         </div>
@@ -892,6 +911,71 @@
         </div>
     </section>
 
+    <!-- NEW SECTION: CUSTOMER DELIVERIES (ETALASE SUSHI MARQUEE) -->
+    <section id="delivery-moments" class="py-24 lg:py-32 relative z-10 bg-[#030712] border-t border-white/5 overflow-hidden">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] ambient-glow-emerald opacity-20 pointer-events-none z-0"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] ambient-glow-emerald opacity-10 pointer-events-none z-0"></div>
+        
+        <div class="w-full relative z-10">
+            <!-- Header Section -->
+            <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16 px-6 md:px-12 reveal-up">
+                <span class="text-emerald-400 text-[10px] font-bold tracking-[0.4em] uppercase block mb-4">Customer Trust</span>
+                <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl uppercase tracking-tighter text-white leading-[1.1] mb-6 drop-shadow-sm">
+                    Happy <span class="text-emerald-500">Customers</span>
+                </h2>
+                <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed">
+                    Bergabunglah bersama para pelanggan yang telah merasakan pengalaman mobilitas masa depan. Kebahagiaan dan kepercayaan Anda adalah prioritas utama kami di Geely Fatmawati.
+                </p>
+            </div>
+
+            <!-- Auto Scrolling "Sushi Belt" Container -->
+            <div class="marquee-container fade-edges pb-8 pt-4 reveal-up">
+                @php
+                    $deliveries = [
+                        '/images/deliveryorder/delivery-order-1.jpeg',
+                        '/images/deliveryorder/delivery-order-2.jpeg',
+                        '/images/deliveryorder/delivery-order-3.jpeg',
+                        '/images/deliveryorder/delivery-order-4.jpeg',
+                        '/images/deliveryorder/delivery-order-5.jpeg',
+                        '/images/deliveryorder/delivery-order-6.jpeg',
+                        '/images/deliveryorder/delivery-order-7.jpeg',
+                    ];
+                @endphp
+
+                <!-- Track 1 -->
+                <div class="animate-marquee gap-4 md:gap-6 pr-4 md:pr-6">
+                    @foreach($deliveries as $index => $img)
+                    <div class="flex-shrink-0 w-[75vw] sm:w-[350px] md:w-[400px] lg:w-[480px] glass-island rounded-[1.5rem] md:rounded-[2.5rem] p-2 relative img-container shadow-[0_10px_30px_rgba(0,0,0,0.3)] group cursor-pointer" onclick="openLightbox('{{ $img }}', 'Penyerahan Unit Geely ke {{ $index + 1 }}')">
+                        <div class="w-full h-[280px] md:h-[350px] lg:h-[400px] rounded-[1.2rem] md:rounded-[2rem] overflow-hidden relative">
+                            <img src="{{ $img }}" alt="Serah Terima Kendaraan Geely Fatmawati {{ $index + 1 }}" class="absolute inset-0 w-full h-full object-cover object-center brightness-90 group-hover:scale-105 group-hover:brightness-100 transition-all duration-700 ease-in-out pointer-events-none">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#030712]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                            <div class="absolute bottom-6 right-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/40 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 pointer-events-none">
+                                <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+                
+                <!-- Track 2 (Clone untuk Seamless Loop) -->
+                <div class="animate-marquee gap-4 md:gap-6 pr-4 md:pr-6" aria-hidden="true">
+                    @foreach($deliveries as $index => $img)
+                    <div class="flex-shrink-0 w-[75vw] sm:w-[350px] md:w-[400px] lg:w-[480px] glass-island rounded-[1.5rem] md:rounded-[2.5rem] p-2 relative img-container shadow-[0_10px_30px_rgba(0,0,0,0.3)] group cursor-pointer" onclick="openLightbox('{{ $img }}', 'Penyerahan Unit Geely ke {{ $index + 1 }}')">
+                        <div class="w-full h-[280px] md:h-[350px] lg:h-[400px] rounded-[1.2rem] md:rounded-[2rem] overflow-hidden relative">
+                            <img src="{{ $img }}" alt="Serah Terima Kendaraan Geely Fatmawati {{ $index + 1 }}" class="absolute inset-0 w-full h-full object-cover object-center brightness-90 group-hover:scale-105 group-hover:brightness-100 transition-all duration-700 ease-in-out pointer-events-none">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#030712]/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                            <div class="absolute bottom-6 right-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/40 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 pointer-events-none">
+                                <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
     <div id="lightbox" class="fixed inset-0 hidden items-center justify-center bg-[#030712]/95 backdrop-blur-md opacity-0 transition-opacity duration-300" style="z-index: 9999;" onclick="closeLightbox(event)">
         <button onclick="closeLightbox(event)" class="absolute top-6 right-6 md:top-10 md:right-10 text-white/60 hover:text-white transition-colors bg-white/5 p-2 rounded-full border border-white/10 hover:bg-white/10 cursor-pointer" style="z-index: 10000;">
             <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
@@ -908,6 +992,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Animasi Scroll Reveal
             const observerOptions = {
                 root: null,
                 rootMargin: '0px',
@@ -926,10 +1011,14 @@
             const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale');
             revealElements.forEach(el => revealObserver.observe(el));
 
+            // ==========================================
+            // LOGIKA SLIDER UTAMA (SHOWROOM)
+            // ==========================================
             const sectionSlider = document.getElementById('section-slider');
             const slidePrev = document.getElementById('slide-prev');
             const slideNext = document.getElementById('slide-next');
             const indicators = document.querySelectorAll('.section-indicator');
+            let mainSlideInterval;
 
             if (sectionSlider && slidePrev && slideNext) {
                 const updateSliderUI = () => {
@@ -949,21 +1038,40 @@
                     });
                 };
 
-                slideNext.addEventListener('click', () => {
-                    sectionSlider.scrollBy({ left: sectionSlider.clientWidth, behavior: 'smooth' });
-                });
+                const scrollMainToRight = () => { sectionSlider.scrollBy({ left: sectionSlider.clientWidth, behavior: 'smooth' }); };
+                const scrollMainToLeft = () => { sectionSlider.scrollBy({ left: -sectionSlider.clientWidth, behavior: 'smooth' }); };
 
-                slidePrev.addEventListener('click', () => {
-                    sectionSlider.scrollBy({ left: -sectionSlider.clientWidth, behavior: 'smooth' });
-                });
+                slideNext.addEventListener('click', scrollMainToRight);
+                slidePrev.addEventListener('click', scrollMainToLeft);
 
                 sectionSlider.addEventListener('scroll', updateSliderUI);
                 window.addEventListener('resize', updateSliderUI);
-                
                 updateSliderUI();
+
+                // FUNGSI AUTO-SLIDE MAIN SLIDER (Setiap 6 Detik)
+                const startMainAutoSlide = () => {
+                    mainSlideInterval = setInterval(() => {
+                        const maxScroll = sectionSlider.scrollWidth - sectionSlider.clientWidth;
+                        if (Math.ceil(sectionSlider.scrollLeft) >= maxScroll - 10) {
+                            sectionSlider.scrollTo({ left: 0, behavior: 'smooth' }); // Kembali ke awal
+                        } else {
+                            scrollMainToRight();
+                        }
+                    }, 6000); 
+                };
+                const stopMainAutoSlide = () => clearInterval(mainSlideInterval);
+
+                startMainAutoSlide();
+                sectionSlider.addEventListener('mouseenter', stopMainAutoSlide);
+                sectionSlider.addEventListener('mouseleave', startMainAutoSlide);
+                sectionSlider.addEventListener('touchstart', stopMainAutoSlide, {passive: true});
+                sectionSlider.addEventListener('touchend', startMainAutoSlide);
             }
         });
 
+        // ==========================================
+        // LOGIKA LIGHTBOX / ZOOM GAMBAR
+        // ==========================================
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxCaption = document.getElementById('lightbox-caption');

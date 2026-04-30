@@ -184,7 +184,7 @@
         }
     </style>
 
-<header class="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-[#030712] pt-28 pb-12 lg:pt-32 lg:pb-20">
+<header class="relative z-10 min-h-[100svh] w-full flex items-center justify-center overflow-hidden bg-[#030712] pt-28 pb-12 lg:pt-32 lg:pb-20">
     <div class="absolute inset-0 z-0">
         <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-60 mix-blend-lighten">
             <source src="/videos/say-geely-ex5.mp4" type="video/mp4">
@@ -250,7 +250,7 @@
         </div>
     </header>
 
-    <section id="lineup" class="py-24 lg:py-32 relative bg-[#030712] overflow-hidden border-y border-white/5">
+    <section id="lineup" class="py-24 lg:py-32 relative z-10 bg-[#030712] overflow-hidden border-y border-white/5">
         <div class="absolute top-0 right-0 w-[600px] h-[600px] ambient-glow-emerald opacity-30 pointer-events-none z-0"></div>
         <div class="absolute bottom-0 left-0 w-[500px] h-[500px] ambient-glow-emerald opacity-20 pointer-events-none z-0"></div>
         
@@ -348,7 +348,8 @@
         </div>
     </section>
 
-    <section class="py-24 relative overflow-hidden flex items-center justify-center min-h-[60vh] bg-[#030712]">
+    <!-- SECTION 3: STICKY REVEAL -->
+    <section class="sticky top-0 z-0 py-24 overflow-hidden flex items-center justify-center min-h-[100vh] bg-[#030712]">
         <div class="absolute inset-0 z-0">
             <img src="/images/2400x0 (6).jpg" alt="Layanan Pembiayaan Kredit Dealer Geely Fatmawati" class="w-full h-full object-cover opacity-50">
             <div class="absolute inset-0 bg-gradient-to-r from-[#030712]/90 via-emerald-900/40 to-[#030712]/90"></div>
@@ -372,7 +373,8 @@
         </div>
     </section>
 
-    <section class="py-24 lg:py-32 bg-[#030712] relative overflow-hidden border-t border-white/5">
+    <!-- KELOMPOK SECTION DENGAN Z-10 AGAR MENUTUPI BAGIAN STICKY SAAT DI-SCROLL -->
+    <section class="py-24 lg:py-32 bg-[#030712] relative z-10 overflow-hidden border-t border-white/5">
         <div class="absolute top-32 right-[-10%] w-[600px] h-[600px] ambient-glow-emerald opacity-40 z-0"></div>
         <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] ambient-glow-emerald opacity-40 z-0"></div>
 
@@ -383,7 +385,7 @@
                     <div class="glass-island rounded-[2rem] p-2 relative h-[50vh] lg:h-full lg:min-h-[600px] overflow-hidden">
                         <div class="w-full h-full rounded-[1.5rem] overflow-hidden relative">
                             <video autoplay muted loop playsinline aria-label="Geely EX5 Video Showcase" class="absolute inset-0 w-full h-full object-cover">
-                                <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/say-hi-to-the-geely-ex5---geely-auto-uk-1080p-h264-_1-Sz3UdvLVUW0EehYY.mp4" type="video/mp4">
+                                <source src="/videos/say-geely-ex5.mp4" type="video/mp4">
                             </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-[#030712]/90 via-[#030712]/40 to-transparent"></div>
                             <div class="absolute bottom-20 lg:bottom-8 left-6 lg:left-8 pr-6">
@@ -416,9 +418,9 @@
         </div>
     </section>
 
-    <section class="py-24 lg:py-32 relative w-full overflow-hidden bg-[#030712]">
+    <section class="py-24 lg:py-32 relative z-10 w-full overflow-hidden bg-[#030712]">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1669295384050-a1d4357bd1d7?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Abstract Topographic Background" class="w-full h-full object-cover opacity-30 mix-blend-lighten">
+            <img src="/images/bg-1.avif" alt="Abstract Topographic Background" class="w-full h-full object-cover opacity-30 mix-blend-lighten">
             <div class="absolute inset-0 bg-gradient-to-b from-[#030712] via-transparent to-[#030712] opacity-90"></div>
         </div>
         
@@ -431,7 +433,7 @@
                     <div class="glass-island p-2 rounded-[2rem] mb-6 md:mb-8">
                         <div class="relative w-full aspect-video rounded-[1.5rem] overflow-hidden">
                             <video autoplay muted loop playsinline aria-label="Interior Geely Atmosphere" class="absolute inset-0 w-full h-full object-cover">
-                                <source src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/video_atmosphere-WPk8K2f2d7da9R4C.mp4" type="video/mp4">
+                                <source src="/videos/atmosphere.mp4" type="video/mp4">
                             </video>
                             <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent opacity-90"></div>
                             <div class="absolute bottom-8 left-8 z-20">
@@ -480,7 +482,7 @@
         </div>
     </section>
 
-    <section id="ex2-spotlight" class="py-24 lg:py-32 relative overflow-hidden bg-white border-y border-gray-200">
+    <section id="ex2-spotlight" class="py-24 lg:py-32 relative z-10 overflow-hidden bg-white border-y border-gray-200">
         
         <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gray-100/50 rounded-full blur-[100px] pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-50/40 rounded-full blur-[100px] pointer-events-none"></div>
@@ -587,7 +589,7 @@
         </div>
     </section>
 
-    <section class="py-24 lg:py-32 bg-[#030712] bg-noise-overlay overflow-hidden relative">
+    <section class="py-24 lg:py-32 bg-[#030712] bg-noise-overlay overflow-hidden relative z-10">
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             
             <div class="text-center max-w-4xl mx-auto mb-16 md:mb-20 reveal-up">
@@ -635,7 +637,7 @@
         </div>
     </section>
 
-    <div class="relative w-full pb-10 bg-[#030712]">
+    <div class="relative w-full pb-10 bg-[#030712] z-10">
         
         <div class="sticky top-[calc(50vh-28.125vw)] md:top-0 w-full aspect-video md:aspect-auto md:h-[100vh] overflow-hidden z-0 flex items-center justify-center">
             <video autoplay muted loop playsinline aria-label="Teknologi EM-i Hybrid Geely" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-lighten">
@@ -693,7 +695,7 @@
         </section>
     </div>
 
-    <section id="app-remote" class="py-24 lg:py-32 relative bg-[#f8fafc] overflow-hidden border-t border-gray-200">
+    <section id="app-remote" class="py-24 lg:py-32 relative z-10 bg-[#f8fafc] overflow-hidden border-t border-gray-200">
         <div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-emerald-100/40 to-emerald-200/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
         <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-gradient-to-tr from-teal-100/40 to-emerald-100/20 rounded-full blur-[100px] pointer-events-none z-0"></div>
 
@@ -750,7 +752,7 @@
     </section>
 
     <!-- SECTION SLIDER -->
-    <section class="relative w-full overflow-hidden group bg-[#030712]">
+    <section class="relative z-10 w-full overflow-hidden group bg-[#030712]">
         
         <button id="slide-prev" class="slider-nav-btn absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-50 hidden md:flex items-center justify-center w-14 h-14 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-white hover:bg-emerald-500 hover:border-emerald-400 hover:scale-110 shadow-[0_10px_30px_rgba(0,0,0,0.5)] opacity-0 group-hover:opacity-100 disabled:opacity-0 disabled:pointer-events-none transition-all duration-300">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>

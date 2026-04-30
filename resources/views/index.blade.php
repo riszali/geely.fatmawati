@@ -155,8 +155,8 @@
         .animation-delay-4000 { animation-delay: 4s; }
 
         .img-container { overflow: hidden; cursor: pointer; }
-        .img-container img { transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1); }
-        .glass-island:hover .img-container img, .glass-island-light:hover .img-container img { transform: scale(1.08); }
+        .img-container img, .img-container video { transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1); }
+        .glass-island:hover .img-container img, .glass-island:hover .img-container video, .glass-island-light:hover .img-container img { transform: scale(1.08); }
 
         .reveal-up { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
         .reveal-left { opacity: 0; transform: translateX(-40px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
@@ -271,7 +271,8 @@
                             'desc' => 'Arsitektur elektrik canggih dengan efisiensi tata ruang maksimal untuk keluarga modern.',
                             'stat1' => '600km', 'stat1_lbl' => 'Range',
                             'stat2' => 'AWD', 'stat2_lbl' => 'Dual Motor',
-                            'img' => 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/exterior-01-7JRFy88F1zfhn2Fx.webp',
+                            'img' => '/images/exterior-01.webp',
+                            'is_video' => false,
                             'link' => '/models/ex5',
                             'delay' => ''
                         ],
@@ -281,7 +282,8 @@
                             'desc' => 'Desain kompak nan agresif, solusi sempurna menembus dinamika kota Jakarta.',
                             'stat1' => '30min', 'stat1_lbl' => 'Fast Charge',
                             'stat2' => 'Agile', 'stat2_lbl' => 'Dynamics',
-                            'img' => 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-ex2-highlight-mP43QkLzBRHoaLz3.jpg',
+                            'img' => '/videos/SMILE-LOOP.mp4',
+                            'is_video' => true,
                             'link' => '/models/ex2',
                             'delay' => 'delay-100'
                         ],
@@ -291,7 +293,8 @@
                             'desc' => 'Revolusi super hybrid dengan tingkat efisiensi termal tertinggi di kelasnya.',
                             'stat1' => '0.22', 'stat1_lbl' => 'Cd Aero',
                             'stat2' => 'EM-i', 'stat2_lbl' => 'Hybrid Tech',
-                            'img' => 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-starray-em-i_3-scaled-YNqMpg35Mvc0vRPX.webp',
+                            'img' => '/images/em-i-1.webp',
+                            'is_video' => false,
                             'link' => '/models/starray-em-i',
                             'delay' => 'delay-200'
                         ]
@@ -302,8 +305,14 @@
                 <div class="flex-shrink-0 w-[85vw] md:w-auto snap-center bg-[#030712]/40 backdrop-blur-xl border border-gray-600/30 shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-[2.5rem] p-2 sm:p-3 relative reveal-up {{ $car['delay'] }} group cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_40px_70px_-15px_rgba(16,185,129,0.3)] hover:bg-[#030712]/60 hover:border-emerald-500/40">
                     <div class="bg-[#030712] border border-gray-800/60 rounded-[2rem] h-[550px] flex flex-col relative overflow-hidden w-full transition-colors group-hover:border-emerald-500/40">
                         <div class="relative h-[65%] w-full rounded-t-[2rem] overflow-hidden img-container">
-                            <img src="{{ $car['img'] }}" alt="Spesifikasi {{ $car['name'] }} di Dealer Geely Fatmawati Jakarta" class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
-                            <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/20 to-transparent opacity-90"></div>
+                            @if(isset($car['is_video']) && $car['is_video'])
+                                <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
+                                    <source src="{{ $car['img'] }}" type="video/mp4">
+                                </video>
+                            @else
+                                <img src="{{ $car['img'] }}" alt="Spesifikasi {{ $car['name'] }} di Dealer Geely Fatmawati Jakarta" class="absolute inset-0 w-full h-full object-cover object-center brightness-90">
+                            @endif
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/20 to-transparent opacity-90 pointer-events-none"></div>
                         </div>
                         
                         <div class="absolute bottom-6 left-6 right-6 glass-panel-dark rounded-3xl p-6 border border-white/10 shadow-[0_15px_40px_-10px_rgba(16,185,129,0.2)] transform transition-transform duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_30px_60px_-15px_rgba(16,185,129,0.5)]">
@@ -341,7 +350,7 @@
 
     <section class="py-24 relative overflow-hidden flex items-center justify-center min-h-[60vh] bg-[#030712]">
         <div class="absolute inset-0 z-0">
-            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/2400x0-14-mxB2lNnxMqfjr7pG.webp" alt="Layanan Pembiayaan Kredit Dealer Geely Fatmawati" class="w-full h-full object-cover opacity-50">
+            <img src="/images/2400x0 (6).jpg" alt="Layanan Pembiayaan Kredit Dealer Geely Fatmawati" class="w-full h-full object-cover opacity-50">
             <div class="absolute inset-0 bg-gradient-to-r from-[#030712]/90 via-emerald-900/40 to-[#030712]/90"></div>
         </div>
         

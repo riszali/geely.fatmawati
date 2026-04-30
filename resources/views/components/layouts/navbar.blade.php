@@ -7,7 +7,7 @@
                 <a href="{{ route('home') }}" class="group block relative">
                     <div class="absolute -inset-2 bg-white/40 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <img class="h-10 md:h-12 w-auto relative z-10 transition-transform duration-500 group-hover:scale-105" 
-                         src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/geely-2023-logo-png_seeklogo-466890-vE98MawSY4Jx911O.png" 
+                         src="/images/logos-geely-black.png" 
                          alt="Geely Logo">
                 </a>
             </div>

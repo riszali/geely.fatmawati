@@ -723,7 +723,7 @@
         <div class="max-w-[1400px] w-full mx-auto px-6 md:px-12 relative z-10">
             
             <div class="text-center mb-16 md:mb-24 reveal-up">
-                <span class="text-emerald-600 text-[10px] font-bold tracking-[0.4em] uppercase mb-4 block">Flyme Auto</span>
+                <span class="text-emerald-600 text-[10px] font-bold tracking-[0.4em] uppercase mb-4 block">Geely Connected Services</span>
                 <h2 class="font-geely text-4xl md:text-6xl uppercase tracking-tighter text-gray-900 mb-6 drop-shadow-sm">
                     Control At Your <span class="text-emerald-500">Fingertips</span>
                 </h2>

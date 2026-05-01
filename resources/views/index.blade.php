@@ -521,15 +521,12 @@
                 </div>
                 <div class="md:text-right pb-2">
                     <p class="text-gray-500 text-sm md:text-base font-medium max-w-sm ml-auto">
-                        Eksplorasi dimensi estetika kaca. Presisi arsitektural untuk mobilitas perkotaan yang minimalis dan elegan.
+                        Kombinasi desain futuristik dan efisiensi tenaga listrik. Dirancang khusus untuk memberikan kenyamanan maksimal dalam mobilitas perkotaan yang dinamis.
                     </p>
                 </div>
             </div>
 
-            <!-- SOLUSI CARD KEPOTONG: Menambahkan py-8 lg:py-10 (padding vertikal) pada pembungkus scroll agar ada ruang untuk animasi translateY(-10px) saat dihover -->
             <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory items-stretch gap-6 lg:grid lg:grid-cols-4 lg:gap-6 reveal-up delay-100 px-4 md:px-4 -mx-4 md:-mx-4 py-8 lg:py-10">
-                
-                <!-- CARD 1 -->
                 <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col h-full" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/lp_ex2_02_indo-1jQVDabXPa2GTqAg.jpg', '01 // Exterior - Aero Stance')">
                     <div class="relative w-full rounded-[1.5rem] overflow-hidden mb-6 bg-black/40 shadow-inner border border-white/10 flex items-center justify-center p-2 sm:p-4 flex-shrink-0">
                         <img src="/images/lp_ex2_02_indo.jpg" class="w-full h-auto block transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Exterior EX2">

@@ -764,7 +764,10 @@
                     </div>
                 </div>
             </div>
-            
+                <div class="text-center mt-2 flex lg:hidden justify-center items-center gap-2 text-emerald-600 text-[9px] font-bold uppercase tracking-widest animate-pulse">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                Swipe to explore
+            </div>
         </div>
     </section>
 

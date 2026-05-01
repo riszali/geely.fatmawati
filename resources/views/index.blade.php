@@ -226,8 +226,7 @@
                 
                 <div class="lg:col-span-7 flex flex-col">
                     <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 mb-6 backdrop-blur-md w-max">
-                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_10px_#34d399]"></span>
-                        <span class="text-emerald-300 text-[10px] font-bold tracking-widest uppercase">Dealer Resmi Geely Fatmawati</span>
+                        <span class="text-emerald-300 text-[10px] font-bold tracking-widest uppercase">Geely Fatmawati</span>
                     </div>
                         <h1 class="font-geely text-5xl sm:text-6xl md:text-7xl lg:text-[90px] text-white uppercase leading-[0.9] tracking-tighter mb-4 lg:mb-8 drop-shadow-lg w-full">
                             Elevate <br>
@@ -247,7 +246,7 @@
                         </div>
                         
                         <p class="text-gray-300 text-sm md:text-lg font-light leading-relaxed max-w-xl mb-10 border-l border-emerald-500/50 pl-6 w-full">
-                            Desain elegan, kabin nyaman, dan teknologi elektrik kini hadir di Jakarta Selatan untuk pengalaman berkendara yang lebih modern.
+                            Jelajahi masa depan mobilitas listrik langsung dari jantung Jakarta Selatan. Geely Fatmawati hadir dengan layanan premium dan unit siap uji.
                         </p>
                         
                         <div class="flex flex-col sm:flex-row gap-4 w-full">

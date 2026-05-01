@@ -102,25 +102,19 @@
             box-shadow: 0 20px 40px rgba(16, 185, 129, 0.15);
         }
 
+        /* PERUBAHAN STYLE CARD: Gradient Hitam ke Hijau Emerald */
         .ex2-pure-glass {
-            background: linear-gradient(145deg, rgba(0, 0, 0, 0.7) 0%, rgba(6, 78, 59, 0.6) 100%);
-            backdrop-filter: blur(24px);
-            -webkit-backdrop-filter: blur(24px);
-            border: 1px solid rgba(16, 185, 129, 0.2);
-            border-top: 1px solid rgba(16, 185, 129, 0.4);
-            border-left: 1px solid rgba(255, 255, 255, 0.05);
-            box-shadow: 
-                0 20px 40px -10px rgba(0, 0, 0, 0.5), 
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            background: linear-gradient(155deg, #050505 0%, #064e3b 100%);
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            border-top: 1px solid rgba(16, 185, 129, 0.3);
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
         }
         
         .ex2-pure-glass:hover {
-            background: linear-gradient(145deg, rgba(0, 0, 0, 0.8) 0%, rgba(4, 120, 87, 0.8) 100%);
-            transform: translateY(-8px);
-            box-shadow: 
-                0 30px 60px -15px rgba(16, 185, 129, 0.4), 
-                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            background: linear-gradient(155deg, #000000 0%, #047857 100%);
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px -15px rgba(16, 185, 129, 0.4);
             border-color: rgba(16, 185, 129, 0.6);
         }
 
@@ -506,12 +500,12 @@
         </div>
     </section>
 
-    <!-- SECTION 3 (EX2 Spotlight) DIUBAH JADI DARK MODE -->
-    <section id="ex2-spotlight" class="py-24 lg:py-32 relative z-10 overflow-hidden bg-[#030712] border-y border-white/5">
+    <!-- SECTION 3 (EX2 Spotlight) KEMBALI KE BACKGROUND PUTIH, TETAPI CARD GELAP -->
+    <section id="ex2-spotlight" class="py-24 lg:py-32 relative z-10 overflow-hidden bg-white border-y border-gray-200">
         
-        <div class="absolute top-0 right-0 w-[600px] h-[600px] ambient-glow-emerald opacity-20 pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] ambient-glow-emerald opacity-10 pointer-events-none"></div>
-        <div class="absolute top-1/2 left-1/4 w-[400px] h-[400px] ambient-glow-emerald opacity-20 pointer-events-none animate-blob"></div>
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-gray-100/50 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-emerald-50/40 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-teal-50/40 rounded-full blur-[100px] pointer-events-none animate-blob"></div>
 
         <div class="max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
             
@@ -519,26 +513,25 @@
                 <div class="max-w-2xl">
                     <div class="flex items-center gap-4 mb-4">
                         <div class="w-8 h-[2px] bg-emerald-500"></div>
-                        <span class="text-emerald-400 text-[10px] font-bold tracking-[0.3em] uppercase">Spotlight Geely EX2</span>
+                        <span class="text-emerald-600 text-[10px] font-bold tracking-[0.3em] uppercase">Spotlight Geely EX2</span>
                     </div>
-                    <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-white leading-[0.9]">
+                    <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter text-gray-900 leading-[0.9]">
                         Urban <span class="text-emerald-500">Blueprint</span>
                     </h2>
                 </div>
                 <div class="md:text-right pb-2">
-                    <p class="text-gray-400 text-sm md:text-base font-medium max-w-sm ml-auto">
+                    <p class="text-gray-500 text-sm md:text-base font-medium max-w-sm ml-auto">
                         Eksplorasi dimensi estetika kaca. Presisi arsitektural untuk mobilitas perkotaan yang minimalis dan elegan.
                     </p>
                 </div>
             </div>
 
-            <!-- PERUBAHAN UTAMA: grid-cols-12 diubah ke grid-cols-4 untuk membuat 1 baris lurus di layar besar -->
-            <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory items-stretch gap-6 lg:grid lg:grid-cols-4 lg:gap-6 reveal-up delay-100 px-4 md:px-0 -mx-4 md:mx-0 pb-8 lg:pb-0">
+            <!-- SOLUSI CARD KEPOTONG: Menambahkan py-8 lg:py-10 (padding vertikal) pada pembungkus scroll agar ada ruang untuk animasi translateY(-10px) saat dihover -->
+            <div class="flex overflow-x-auto overscroll-x-contain hide-scrollbar snap-x snap-mandatory items-stretch gap-6 lg:grid lg:grid-cols-4 lg:gap-6 reveal-up delay-100 px-4 md:px-4 -mx-4 md:-mx-4 py-8 lg:py-10">
                 
                 <!-- CARD 1 -->
                 <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col h-full" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/lp_ex2_02_indo-1jQVDabXPa2GTqAg.jpg', '01 // Exterior - Aero Stance')">
-                    <!-- Tinggi statis dihapus, aspect ratio mengikuti gambar otomatis dengan w-full h-auto -->
-                    <div class="relative w-full rounded-[1.5rem] overflow-hidden mb-6 bg-black/30 border border-white/10 flex items-center justify-center p-2 sm:p-4 flex-shrink-0">
+                    <div class="relative w-full rounded-[1.5rem] overflow-hidden mb-6 bg-black/40 shadow-inner border border-white/10 flex items-center justify-center p-2 sm:p-4 flex-shrink-0">
                         <img src="/images/lp_ex2_02_indo.jpg" class="w-full h-auto block transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Exterior EX2">
                     </div>
                     <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
@@ -547,7 +540,7 @@
                                 <span class="text-emerald-400 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">01 // Exterior</span>
                                 <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-white uppercase tracking-tight leading-none">Aero Stance</h3>
                             </div>
-                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Desain aerodinamis mutakhir yang tidak hanya memukau secara visual, namun membelah angin dengan efisiensi absolut.</p>
+                            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Desain aerodinamis mutakhir yang tidak hanya memukau secara visual, namun membelah angin dengan efisiensi absolut.</p>
                         </div>
                         <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 border border-white/20 text-emerald-400 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0 mb-2">
                             <svg class="w-4 h-4 md:w-5 md:h-5 transform -rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -557,7 +550,7 @@
 
                 <!-- CARD 2 -->
                 <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col h-full" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/interior_color_ex2_02-1-wMrk98nhwyihCNmX.jpg', '02 // Cockpit - Digital Oasis')">
-                    <div class="relative w-full rounded-[1.5rem] overflow-hidden mb-6 bg-black/30 border border-white/10 flex items-center justify-center p-2 sm:p-4 flex-shrink-0">
+                    <div class="relative w-full rounded-[1.5rem] overflow-hidden mb-6 bg-black/40 shadow-inner border border-white/10 flex items-center justify-center p-2 sm:p-4 flex-shrink-0">
                         <img src="/images/interior_color_ex2_02.jpg" class="w-full h-auto block transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Interior EX2">
                     </div>
                     <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
@@ -566,7 +559,7 @@
                                 <span class="text-emerald-400 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">02 // Cockpit</span>
                                 <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-white uppercase tracking-tight leading-none">Double Tech Joy</h3>
                             </div>
-                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Integrasi Flyme Auto mutakhir dan pengisian daya nirkabel mendefinisikan ulang rasanya mobilitas cerdas.</p>
+                            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Integrasi Flyme Auto mutakhir dan pengisian daya nirkabel mendefinisikan ulang rasanya mobilitas cerdas.</p>
                         </div>
                         <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 border border-white/20 text-emerald-400 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0 mb-2">
                             <svg class="w-4 h-4 md:w-5 md:h-5 transform -rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -576,7 +569,7 @@
 
                 <!-- CARD 3 -->
                 <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 group cursor-pointer flex flex-col h-full" onclick="openLightbox('https://assets.zyrosite.com/Yle46KEPN6IkVONg/gambar-10-driving-pleasure-geely-ex2-MJhRNhH2mxqA4wUU.webp', '03 // Lifestyle - Agility')">
-                    <div class="relative w-full rounded-[1.5rem] overflow-hidden mb-6 bg-black/30 border border-white/10 flex items-center justify-center p-2 sm:p-4 flex-shrink-0">
+                    <div class="relative w-full rounded-[1.5rem] overflow-hidden mb-6 bg-black/40 shadow-inner border border-white/10 flex items-center justify-center p-2 sm:p-4 flex-shrink-0">
                         <img src="/images/driving-pleasure.webp" class="w-full h-auto block transform group-hover:scale-[1.03] transition-transform duration-[1.5s] ease-out rounded-xl shadow-sm" alt="Lifestyle EX2">
                     </div>
                     <div class="px-2 md:px-4 flex justify-between items-end gap-4 flex-grow">
@@ -585,7 +578,7 @@
                                 <span class="text-emerald-400 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">03 // Lifestyle</span>
                                 <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-white uppercase tracking-tight leading-none">Agility</h3>
                             </div>
-                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Keseimbangan bermanuver dan kelincahan mutlak menembus kepadatan kota Jakarta.</p>
+                            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Keseimbangan bermanuver dan kelincahan mutlak menembus kepadatan kota Jakarta.</p>
                         </div>
                         <div class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 border border-white/20 text-emerald-400 flex items-center justify-center group-hover:bg-emerald-500 group-hover:border-emerald-500 group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0 mb-2">
                             <svg class="w-4 h-4 md:w-5 md:h-5 transform -rotate-45 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
@@ -595,7 +588,7 @@
 
                 <!-- CARD 4 -->
                 <div class="flex-shrink-0 w-[85vw] lg:w-auto snap-center ex2-pure-glass rounded-[2.5rem] p-4 sm:p-5 flex flex-col h-full group">
-                    <div class="relative w-full rounded-[1.5rem] overflow-hidden mb-6 bg-black/30 shadow-inner border border-white/10 flex-shrink-0">
+                    <div class="relative w-full rounded-[1.5rem] overflow-hidden mb-6 bg-black/40 shadow-inner border border-white/10 flex-shrink-0">
                         <video autoplay muted loop playsinline preload="auto" class="w-full h-auto block rounded-xl">
                             <source src="/videos/storage.mp4" type="video/mp4">
                         </video>
@@ -606,14 +599,14 @@
                                 <span class="text-emerald-400 font-bold text-[10px] tracking-[0.3em] uppercase mb-2 block">04 // Utility</span>
                                 <h3 class="font-geely text-2xl md:text-3xl lg:text-4xl text-white uppercase tracking-tight leading-none">Max Cargo</h3>
                             </div>
-                            <p class="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Optimalisasi tata ruang modular dengan kapasitas penyimpanan super fleksibel di setiap inci untuk kepraktisan Anda.</p>
+                            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed max-w-[90%] mb-2">Optimalisasi tata ruang modular dengan kapasitas penyimpanan super fleksibel di setiap inci untuk kepraktisan Anda.</p>
                         </div>
                     </div>
                 </div>
 
             </div>
             
-            <div class="text-center mt-2 flex lg:hidden justify-center items-center gap-2 text-emerald-400 text-[9px] font-bold uppercase tracking-widest animate-pulse">
+            <div class="text-center mt-2 flex lg:hidden justify-center items-center gap-2 text-emerald-600 text-[9px] font-bold uppercase tracking-widest animate-pulse">
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                 Swipe to explore
             </div>

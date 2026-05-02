@@ -211,8 +211,15 @@
             </div>
         </section>
 
-        <section id="specs" class="py-24 md:py-32 lg:py-48 relative z-30 overflow-hidden bg-[#03050a]">
-            <div class="absolute top-0 right-0 w-[800px] h-[800px] ambient-glow-teal opacity-20 pointer-events-none"></div>
+        <section id="specs" class="py-24 md:py-32 lg:py-48 relative z-30 overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img src="{{ asset('images/glass-emerald.jpg') }}" alt="Intelligent Driving Background" class="w-full h-full object-cover object-center opacity-40 mix-blend-lighten">
+                <div class="absolute inset-0 bg-[#03050a]/80"></div>
+                <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#03050a] to-transparent"></div>
+                <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#03050a] to-transparent"></div>
+            </div>
+            
+            <div class="absolute top-0 right-0 w-[800px] h-[800px] ambient-glow-teal opacity-20 pointer-events-none z-0"></div>
             
             <div class="max-w-[1600px] mx-auto px-4 md:px-12 relative z-10 text-center">
                 
@@ -280,7 +287,8 @@
                 </div>
 
                 <div class="relative reveal-up delay-200 w-full">
-                    <div class="flex gap-6 overflow-x-auto no-scrollbar snap-x-mandatory pb-10 cursor-grab active:cursor-grabbing">
+                    <!-- DITAMBAHKAN mx-auto w-max max-w-full DI SINI AGAR BISA RATA TENGAH DI DESKTOP -->
+                    <div class="flex gap-6 overflow-x-auto no-scrollbar snap-x-mandatory pb-10 cursor-grab active:cursor-grabbing mx-auto w-max max-w-full">
                         
                         <div class="min-w-[85vw] md:min-w-[450px] snap-center">
                             <div class="glass-island rounded-[2.5rem] p-2 h-full group img-container flex flex-col">

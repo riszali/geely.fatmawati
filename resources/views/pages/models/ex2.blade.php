@@ -187,7 +187,7 @@
             </div>
         </section>
 
-        <!-- SECTION 3: INTELLIGENT DRIVING (Tanpa Gradasi) -->
+        <!-- SECTION 3: 360 EXPERIENCE (Tanpa Gradasi) -->
         <section id="specs" class="py-20 md:py-24 lg:py-32 relative z-30 overflow-hidden bg-[#03050a]">
             <div class="absolute inset-0 z-0">
                 <img src="{{ asset('images/glass-emerald.jpg') }}" alt="Intelligent Driving Background" class="w-full h-full object-cover object-center opacity-80">
@@ -199,7 +199,7 @@
             <div class="max-w-[1600px] mx-auto px-4 md:px-12 relative z-10 text-center">
                 
                 <h2 class="font-geely text-3xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter mb-10 md:mb-12 reveal-up leading-tight text-white drop-shadow-lg pt-8">
-                    INTELLIGENT <span class="text-gradient-animated">DRIVING</span>
+                    360° <span class="text-gradient-animated">EXPERIENCE</span>
                 </h2>
 
                 <div class="glass-island p-2 md:p-3 rounded-[2rem] md:rounded-[3rem] overflow-hidden reveal-scale w-full relative z-10 mb-8 aspect-video max-w-5xl mx-auto shadow-2xl border-white/5">

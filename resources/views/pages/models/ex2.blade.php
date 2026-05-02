@@ -162,7 +162,7 @@
                 </p>
 
                 <div class="flex justify-center reveal-up delay-300 w-full">
-                    <a href="#award" class="group flex flex-col items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+                    <a href="#design-philosophy" class="group flex flex-col items-center gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
                         <span class="text-[9px] tracking-[0.3em] uppercase text-white font-medium">Explore Design</span>
                         <div class="w-[1px] h-12 bg-gradient-to-b from-white to-transparent group-hover:h-16 transition-all duration-500"></div>
                     </a>
@@ -170,60 +170,35 @@
             </div>
         </section>
 
-        <section id="award" class="relative py-24 md:py-32 lg:py-48 bg-[#03050a] overflow-hidden border-t border-white/5">
-            <div class="max-w-[1400px] mx-auto px-6 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
-                    
-                    <div class="lg:col-span-5 reveal-left">
-                        <h2 class="font-geely text-4xl md:text-5xl lg:text-6xl text-white uppercase tracking-tighter leading-[1] mb-8">
-                            AWARD-WINNING <br> <span class="text-gradient-teal">EXCELLENCE.</span>
-                        </h2>
-
-                        <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed mb-10 max-w-lg">
-                            Geely EX2 dengan bangga menerima penghargaan bergengsi <strong class="text-white font-medium">European Product Design Award</strong>. Penghargaan ini membuktikan komitmen kami dalam menyelaraskan estetika futuristik dengan fungsionalitas yang berpusat pada manusia.
-                        </p>
-
-                        <div class="flex gap-8 items-center pt-8 border-t border-white/5">
-                            <div>
-                                <span class="text-white font-geely text-2xl md:text-3xl mb-1 block">EUROPE</span>
-                                <span class="text-gray-500 text-[9px] font-bold tracking-[0.2em] uppercase">Design Standards</span>
-                            </div>
-                            <div>
-                                <span class="text-white font-geely text-2xl md:text-3xl mb-1 block">PREMIUM</span>
-                                <span class="text-gray-500 text-[9px] font-bold tracking-[0.2em] uppercase">Material Finish</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="lg:col-span-7 relative reveal-right">
-                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 ambient-glow-teal opacity-40 z-0 pointer-events-none"></div>
-                        
-                        <div class="glass-island p-3 rounded-[2.5rem] relative z-10 img-container shadow-2xl">
-                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/banner_ex2b-Rcl937dqFR7EP4xN.jpg" alt="Latar Belakang Desain EX2" class="w-full h-auto rounded-[2rem] object-cover mix-blend-luminosity opacity-80 hover:opacity-100 transition-opacity duration-700">
-                            
-                            <div class="absolute -bottom-6 -left-6 md:-bottom-10 md:-left-10 w-40 md:w-56 glass-island p-4 md:p-6 rounded-3xl border border-white/10 flex flex-col items-center text-center shadow-2xl">
-                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/screenshot-2026-02-24-201054-hyZg0pSUXLAu1Xx3.png" alt="Lencana Penghargaan" class="w-20 md:w-28 mb-3">
-                                <span class="text-teal-400 text-[8px] md:text-[10px] font-bold tracking-widest uppercase">Winner 2024</span>
-                            </div>
-                        </div>
-                    </div>
+        <!-- SECTION 2: Design Philosophy (Teks Dikecilkan) -->
+        <section id="design-philosophy" class="relative pt-20 pb-16 md:pt-28 md:pb-20 lg:pt-32 lg:pb-24 bg-white overflow-hidden">
+            <div class="max-w-[1200px] mx-auto px-6 relative z-10 text-center">
+                <div class="reveal-up flex flex-col items-center">
+                    <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 uppercase tracking-tighter mb-2 md:mb-3 leading-none">
+                        GEELY EX2
+                    </h2>
+                    <h3 class="font-geely text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-800 uppercase tracking-tighter mb-6 md:mb-8 leading-tight">
+                        DESIGN THAT DEFINES EVERY DETAIL
+                    </h3>
+                    <p class="text-gray-600 text-sm md:text-base lg:text-lg font-light leading-relaxed max-w-2xl mx-auto">
+                        Geely EX2 menggabungkan proporsi klasik, garis dinamis, dan pencahayaan khas untuk menciptakan tampilan yang berani dan seimbang yang terasa abadi sekaligus baru.
+                    </p>
                 </div>
             </div>
         </section>
 
+        <!-- SECTION 3: INTELLIGENT DRIVING (Tanpa Gradasi) -->
         <section id="specs" class="py-20 md:py-24 lg:py-32 relative z-30 overflow-hidden bg-[#03050a]">
             <div class="absolute inset-0 z-0">
                 <img src="{{ asset('images/glass-emerald.jpg') }}" alt="Intelligent Driving Background" class="w-full h-full object-cover object-center opacity-80">
                 <div class="absolute inset-0 bg-[#03050a]/40"></div>
-                <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#03050a] to-transparent"></div>
-                <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#03050a] to-transparent"></div>
             </div>
             
             <div class="absolute top-0 right-0 w-[800px] h-[800px] ambient-glow-teal opacity-20 pointer-events-none z-0"></div>
             
             <div class="max-w-[1600px] mx-auto px-4 md:px-12 relative z-10 text-center">
                 
-                <h2 class="font-geely text-3xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter mb-10 md:mb-12 reveal-up leading-tight text-white drop-shadow-lg">
+                <h2 class="font-geely text-3xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter mb-10 md:mb-12 reveal-up leading-tight text-white drop-shadow-lg pt-8">
                     INTELLIGENT <span class="text-gradient-animated">DRIVING</span>
                 </h2>
 
@@ -274,6 +249,66 @@
             </div>
         </section>
 
+        <section id="award" class="relative py-24 md:py-32 lg:py-48 bg-[#03050a] overflow-hidden border-t border-white/5">
+            <div class="max-w-[1400px] mx-auto px-6 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+                    
+                    <div class="lg:col-span-5 reveal-left">
+                        <h2 class="font-geely text-4xl md:text-5xl lg:text-6xl text-white uppercase tracking-tighter leading-[1] mb-8">
+                            AWARD-WINNING <br> <span class="text-gradient-teal">EXCELLENCE.</span>
+                        </h2>
+
+                        <p class="text-gray-400 text-sm md:text-base font-light leading-relaxed mb-10 max-w-lg">
+                            Geely EX2 dengan bangga menerima penghargaan bergengsi <strong class="text-white font-medium">European Product Design Award</strong>. Penghargaan ini membuktikan komitmen kami dalam menyelaraskan estetika futuristik dengan fungsionalitas yang berpusat pada manusia.
+                        </p>
+
+                        <div class="flex gap-8 items-center pt-8 border-t border-white/5">
+                            <div>
+                                <span class="text-white font-geely text-2xl md:text-3xl mb-1 block">EUROPE</span>
+                                <span class="text-gray-500 text-[9px] font-bold tracking-[0.2em] uppercase">Design Standards</span>
+                            </div>
+                            <div>
+                                <span class="text-white font-geely text-2xl md:text-3xl mb-1 block">PREMIUM</span>
+                                <span class="text-gray-500 text-[9px] font-bold tracking-[0.2em] uppercase">Material Finish</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 relative reveal-right">
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 ambient-glow-teal opacity-40 z-0 pointer-events-none"></div>
+                        
+                        <div class="glass-island p-3 rounded-[2.5rem] relative z-10 img-container shadow-2xl">
+                            <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/banner_ex2b-Rcl937dqFR7EP4xN.jpg" alt="Latar Belakang Desain EX2" class="w-full h-auto rounded-[2rem] object-cover mix-blend-luminosity opacity-80 hover:opacity-100 transition-opacity duration-700">
+                            
+                            <div class="absolute -bottom-6 -left-6 md:-bottom-10 md:-left-10 w-40 md:w-56 glass-island p-4 md:p-6 rounded-3xl border border-white/10 flex flex-col items-center text-center shadow-2xl">
+                                <img src="https://assets.zyrosite.com/Yle46KEPN6IkVONg/screenshot-2026-02-24-201054-hyZg0pSUXLAu1Xx3.png" alt="Lencana Penghargaan" class="w-20 md:w-28 mb-3">
+                                <span class="text-teal-400 text-[8px] md:text-[10px] font-bold tracking-widest uppercase">Winner 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Design Showcase (Full Background Image) di bawah Award dengan Text Overlay -->
+        <section id="design-showcase" class="relative w-full h-[50vh] md:h-[70vh] lg:h-[90vh] bg-[#03050a] overflow-hidden flex items-end">
+            <div class="absolute inset-0 w-full h-full z-0">
+                <!-- Gambar membentang penuh (Full Width & Height) -->
+                <img src="{{ asset('images/2400x0 (6).jpg') }}" alt="Geely EX2 Design Details" class="w-full h-full object-cover object-center transform scale-100 hover:scale-105 transition-transform duration-[3s] ease-out">
+                <!-- Gradien hitam khusus di bagian bawah agar teks putih tetap terbaca -->
+                <div class="absolute inset-x-0 bottom-0 h-1/2 md:h-2/3 bg-gradient-to-t from-[#03050a] via-[#03050a]/60 to-transparent pointer-events-none"></div>
+            </div>
+            
+            <div class="relative z-10 w-full max-w-[1600px] mx-auto px-6 md:px-12 lg:px-16 pb-12 md:pb-20 reveal-up">
+                <h2 class="font-geely text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-2 md:mb-4 tracking-tight drop-shadow-lg">
+                    Geely EX2
+                </h2>
+                <p class="text-white/90 text-xs sm:text-sm md:text-base font-medium tracking-wide drop-shadow-md max-w-2xl">
+                    No. 1 Sales Ranking Across All Vehicle Categories in China
+                </p>
+            </div>
+        </section>
+
         <section id="space" class="py-24 lg:py-40 bg-[#03050a] relative overflow-hidden border-t border-white/5">
             <div class="max-w-[1600px] mx-auto px-6 relative z-10">
                 
@@ -287,7 +322,6 @@
                 </div>
 
                 <div class="relative reveal-up delay-200 w-full">
-                    <!-- DITAMBAHKAN mx-auto w-max max-w-full DI SINI AGAR BISA RATA TENGAH DI DESKTOP -->
                     <div class="flex gap-6 overflow-x-auto no-scrollbar snap-x-mandatory pb-10 cursor-grab active:cursor-grabbing mx-auto w-max max-w-full">
                         
                         <div class="min-w-[85vw] md:min-w-[450px] snap-center">
@@ -366,6 +400,17 @@
                         256 Colors
                     </span>
                 </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Interior Showcase (Original ratio on mobile) -->
+        <section id="interior-showcase" class="relative w-full bg-[#03050a] overflow-hidden border-t border-white/5">
+            <div class="relative w-full h-auto md:h-[70vh] lg:h-[90vh]">
+                <!-- class w-full h-auto akan membuat ratio asli di mobile, sedangkan md:h-full akan membuatnya setinggi layar di desktop -->
+                <img src="{{ asset('images/01-Whole-Interior-scaled.webp') }}" alt="Geely EX2 Interior Detail" class="w-full h-auto md:h-full object-cover object-center transform scale-100 hover:scale-105 transition-transform duration-[3s] ease-out">
+                
+                <div class="hidden md:block absolute inset-x-0 top-0 h-16 md:h-32 bg-gradient-to-b from-[#03050a] to-transparent pointer-events-none"></div>
+                <div class="hidden md:block absolute inset-x-0 bottom-0 h-16 md:h-32 bg-gradient-to-t from-[#03050a] to-transparent pointer-events-none"></div>
             </div>
         </section>
 

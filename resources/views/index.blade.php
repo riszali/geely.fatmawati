@@ -1,7 +1,7 @@
 <x-layouts.app>
     @section('title', 'Dealer Resmi Geely Fatmawati Jakarta Selatan | Promo & Test Drive')
     @section('meta_description', 'Kunjungi Showroom Dealer Resmi Geely Fatmawati Jakarta Selatan. Dapatkan promo harga terbaru, simulasi kredit, dan booking test drive Geely EX5, EX2 & Starray.')
-    @section('og_image', 'https://assets.zyrosite.com/Yle46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG')
+    @section('og_image', 'https://assets.zyrosite.com/Ylgite46KEPN6IkVONg/azs02470-VCvpUDL4Xo3Qi0iF.JPG')
     
     @push('schema')
     <script type="application/ld+json">

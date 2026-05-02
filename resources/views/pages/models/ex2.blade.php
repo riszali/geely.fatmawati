@@ -211,10 +211,10 @@
             </div>
         </section>
 
-        <section id="specs" class="py-24 md:py-32 lg:py-48 relative z-30 overflow-hidden">
+        <section id="specs" class="py-20 md:py-24 lg:py-32 relative z-30 overflow-hidden bg-[#03050a]">
             <div class="absolute inset-0 z-0">
-                <img src="{{ asset('images/glass-emerald.jpg') }}" alt="Intelligent Driving Background" class="w-full h-full object-cover object-center opacity-40 mix-blend-lighten">
-                <div class="absolute inset-0 bg-[#03050a]/80"></div>
+                <img src="{{ asset('images/glass-emerald.jpg') }}" alt="Intelligent Driving Background" class="w-full h-full object-cover object-center opacity-80">
+                <div class="absolute inset-0 bg-[#03050a]/40"></div>
                 <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#03050a] to-transparent"></div>
                 <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#03050a] to-transparent"></div>
             </div>
@@ -223,11 +223,11 @@
             
             <div class="max-w-[1600px] mx-auto px-4 md:px-12 relative z-10 text-center">
                 
-                <h2 class="font-geely text-3xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter mb-16 reveal-up leading-tight text-white drop-shadow-lg">
+                <h2 class="font-geely text-3xl sm:text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter mb-10 md:mb-12 reveal-up leading-tight text-white drop-shadow-lg">
                     INTELLIGENT <span class="text-gradient-animated">DRIVING</span>
                 </h2>
 
-                <div class="glass-island p-2 md:p-3 rounded-[2rem] md:rounded-[3rem] overflow-hidden reveal-scale w-full relative z-10 mb-8 aspect-video max-w-6xl mx-auto shadow-2xl border-white/5">
+                <div class="glass-island p-2 md:p-3 rounded-[2rem] md:rounded-[3rem] overflow-hidden reveal-scale w-full relative z-10 mb-8 aspect-video max-w-5xl mx-auto shadow-2xl border-white/5">
                     <div class="relative w-full h-full rounded-[1.5rem] md:rounded-[2.5rem] overflow-hidden">
                         
                         <div id="360-bg-container" class="absolute inset-0 transition-colors duration-1000" style="background-color: #e2e8f0;">
@@ -245,7 +245,7 @@
                     </div>
                 </div>
 
-                <div class="glass-island flex flex-col md:inline-flex md:flex-row items-center justify-between md:justify-center p-4 md:py-4 md:px-8 rounded-[2rem] md:rounded-full shadow-2xl border-white/10 relative z-30 mx-auto w-full md:w-auto max-w-6xl reveal-up delay-200 gap-4 md:gap-10 backdrop-blur-3xl -mt-16 md:-mt-24">
+                <div class="glass-island flex flex-col md:inline-flex md:flex-row items-center justify-between md:justify-center p-4 md:py-4 md:px-8 rounded-[2rem] md:rounded-full shadow-2xl border-white/10 relative z-30 mx-auto w-full md:w-auto max-w-5xl reveal-up delay-200 gap-4 md:gap-8 backdrop-blur-3xl -mt-12 md:-mt-16 lg:-mt-20">
                     
                     <div class="flex bg-black/20 p-1.5 rounded-full border border-white/5 shrink-0 w-full md:w-auto justify-center">
                         <button id="btn-tab-exterior" class="px-6 py-2.5 rounded-full text-white text-[10px] font-bold tracking-[0.2em] uppercase bg-white/10 shadow-md transition-all">Exterior</button>

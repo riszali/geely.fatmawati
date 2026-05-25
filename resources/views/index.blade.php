@@ -938,6 +938,8 @@
                         '/images/deliveryorder/delivery-order-5.jpeg',
                         '/images/deliveryorder/delivery-order-6.jpeg',
                         '/images/deliveryorder/delivery-order-7.jpeg',
+                        '/images/deliveryorder/delivery-order-8.jpeg',
+                        '/images/deliveryorder/delivery-order-9.jpeg',
                     ];
                 @endphp
 

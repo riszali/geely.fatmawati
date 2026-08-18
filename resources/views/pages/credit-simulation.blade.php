@@ -136,7 +136,7 @@
             <div class="glass-panel p-2 md:p-4 rounded-[2rem] md:rounded-[2.5rem] w-full max-w-5xl mx-auto h-[40vh] md:h-[50vh] min-h-[300px] relative overflow-hidden shadow-[0_30px_60px_rgba(0,0,0,0.8)] mb-16">
                 <div class="absolute inset-0 rounded-[2rem] bg-gradient-to-b from-white/5 to-transparent pointer-events-none z-20"></div>
                 <div class="relative w-full h-full rounded-[1.5rem] md:rounded-[2rem] overflow-hidden flex items-center justify-center">
-                    <iframe id="car-spin-iframe" title="Tampilan 360 Derajat Geely" src="https://riszali.sirv.com/Spins/ex5/white.spin" class="absolute top-1/2 left-1/2 w-[120%] h-[120%] -translate-x-1/2 -translate-y-1/2 border-0" allowfullscreen></iframe>
+                    <iframe id="car-spin-iframe" title="Tampilan 360 Derajat Geely" src="https://riszali.sirv.com/Spins/ex5/white.spin" class="absolute top-[56%] left-1/2 w-[120%] h-[120%] -translate-x-1/2 -translate-y-1/2 border-0" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -312,10 +312,14 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             
-            // Data Terpadu: Model, Varian, Harga OTR & URL Sirv Spin untuk 360 Viewer
+            /* Data Terpadu: Model, Varian, Harga OTR & Position Class Spesifik.
+               EX5 menggunakan posisi 'top-[56%]' untuk menggeser posisi tampilan 360° ke bawah secara presisi
+               sehingga bagian atap memiliki ruang yang pas dan tidak terpotong.
+               EX2 & Starray dipertahankan pada posisi semula ('top-1/2'). */
             const carData = {
                 'ex5': {
                     spin: 'https://riszali.sirv.com/Spins/ex5/white.spin',
+                    positionClass: 'top-[56%] left-1/2 w-[120%] h-[120%] -translate-x-1/2 -translate-y-1/2',
                     variants: [
                         { name: 'PRO (2026 Special Price)', price: 465000000 },
                         { name: 'MAX (2026 Special Price)', price: 505000000 }
@@ -323,6 +327,7 @@
                 },
                 'ex2': {
                     spin: 'https://riszali.sirv.com/Spins/ex2/White.spin',
+                    positionClass: 'top-1/2 left-1/2 w-[120%] h-[120%] -translate-x-1/2 -translate-y-1/2',
                     variants: [
                         { name: 'PRO', price: 239900000 },
                         { name: 'MAX', price: 269900000 }
@@ -330,6 +335,7 @@
                 },
                 'starray': {
                     spin: 'https://riszali.sirv.com/Spins/starray/alphine-white.spin',
+                    positionClass: 'top-1/2 left-1/2 w-[120%] h-[120%] -translate-x-1/2 -translate-y-1/2',
                     variants: [
                         { name: 'EM-i Hybrid', price: 499000000 }
                     ]
@@ -480,10 +486,11 @@
                     const modelKey = target.getAttribute('data-model');
                     const selectedCar = carData[modelKey];
 
-                    // Update Iframe 360 Spin dengan efek fade
+                    // Update Iframe 360 Spin dengan efek fade dan posisi spesifik per model
                     spinIframe.style.opacity = '0';
                     setTimeout(() => {
                         spinIframe.src = selectedCar.spin;
+                        spinIframe.className = `absolute ${selectedCar.positionClass} border-0`;
                         spinIframe.style.transition = 'opacity 0.5s ease';
                         spinIframe.style.opacity = '1';
                     }, 300);
@@ -514,6 +521,7 @@
 
             // Inisialisasi Pertama Kali (Pilih EX5 sebagai default)
             spinIframe.src = carData['ex5'].spin;
+            spinIframe.className = `absolute ${carData['ex5'].positionClass} border-0`;
             populateVariants('ex5');
         });
     </script>

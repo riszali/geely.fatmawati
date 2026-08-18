@@ -168,7 +168,7 @@
 
                         <!-- Harga OTR (Readonly/Auto updated) -->
                         <div>
-                            <label for="otrPrice" class="block text-[11px] font-bold tracking-[0.2em] uppercase text-gray-400 mb-3">Harga OTR (Jakarta)</label>
+                            <label for="otrPriceDisplay" class="block text-[11px] font-bold tracking-[0.2em] uppercase text-gray-400 mb-3">Harga OTR (Jakarta)</label>
                             <div class="relative">
                                 <span class="absolute left-4 top-1/2 -translate-y-1/2 text-cyan-400 font-bold">Rp</span>
                                 <input type="text" id="otrPriceDisplay" readonly class="w-full pl-12 pr-4 py-4 rounded-xl dark-input font-geely text-xl cursor-not-allowed opacity-80" value="0">
@@ -324,8 +324,8 @@
                 'ex2': {
                     spin: 'https://riszali.sirv.com/Spins/ex2/White.spin',
                     variants: [
-                        { name: 'PRO', price: 229900000 },
-                        { name: 'MAX', price: 259900000 }
+                        { name: 'PRO', price: 239900000 },
+                        { name: 'MAX', price: 269900000 }
                     ]
                 },
                 'starray': {
@@ -449,7 +449,6 @@
             // Scroll Logic to show/hide Floating Bar
             window.addEventListener('scroll', () => {
                 const rect = resultCard.getBoundingClientRect();
-                const isVisible = (rect.top >= 0 && rect.bottom <= window.innerHeight);
                 
                 // Jika kartu hasil tidak terlihat di layar, munculkan bar (hanya di mobile)
                 if (window.innerWidth < 1024) {
